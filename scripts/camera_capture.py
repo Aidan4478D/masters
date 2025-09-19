@@ -3,12 +3,18 @@ from datetime import datetime
 from pathlib import Path
 import mss, mss.tools
 
-# SAVE_DIR = Path(r"C:\Users\Aidan\Pictures\screen_caps")
+# SAVE_DIR = Path(r"C:\Users\Aidan\Pictures\screen_caps")  # change if you like
+SAVE_DIR = Path(r"\\wsl.localhost\Ubuntu\home\aidan\repos\masters\scripts\screenshots")
 INTERVAL_S = 10
-REGION = {"left": 300, "top": 200, "width": 640, "height": 480}
+
+# Capture a region (left, top, width, height). Use None to capture full screen.
+REGION = {"left": 320, "top": 290, "width": 1275, "height": 810}
+
 SAVE_DIR.mkdir(parents=True, exist_ok=True)
 
 with mss.mss() as sct:
+    # use the region 
+    # for full screen, pass sct.monitors[1]
     region = REGION
     while True:
         ts = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
