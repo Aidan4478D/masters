@@ -3,7 +3,6 @@ from datetime import datetime
 from pathlib import Path
 import mss, mss.tools
 
-# SAVE_DIR = Path(r"C:\Users\Aidan\Pictures\screen_caps")  # change if you like
 SAVE_DIR = Path(r"\\wsl.localhost\Ubuntu\home\aidan\repos\masters\scripts\screenshots")
 INTERVAL_S = 10
 
