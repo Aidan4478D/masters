@@ -1,0 +1,13 @@
+sedan
+suv
+taxi
+nypd_cruiser
+pickup_truck
+nyc_suv
+van
+ambulence
+bus
+truck
+delivery_truck
+firetruck
+two_wheeler
