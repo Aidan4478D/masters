@@ -332,10 +332,10 @@ INPUT /usr/share/texmf/tex/latex/lm/omxlmex.fd
 INPUT /usr/share/texmf/tex/latex/lm/omxlmex.fd
 INPUT /usr/share/texmf/tex/latex/lm/omxlmex.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/lmex10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr10.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr17.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmr10.tfm
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT build/main.toc
 INPUT build/main.toc
 INPUT build/main.toc
