@@ -4,8 +4,8 @@
   <meta>
     <task>
       <id>4</id>
-      <name>label100cars_bk_atlbqe</name>
-      <size>100</size>
+      <name>test_set</name>
+      <size>120</size>
       <mode>annotation</mode>
       <overlap>0</overlap>
       <bugtracker />
@@ -13,16 +13,8 @@
       <updated>2026-01-29 22:25:55.289242+00:00</updated>
       <subset>default</subset>
       <start_frame>0</start_frame>
-      <stop_frame>99</stop_frame>
+      <stop_frame>119</stop_frame>
       <frame_filter />
-      <segments>
-        <segment>
-          <id>4</id>
-          <start>0</start>
-          <stop>99</stop>
-          <url>http://localhost:8080/api/jobs/4</url>
-        </segment>
-      </segments>
       <owner>
         <username>aidan</username>
         <email>aidancusa@gmail.com</email>
