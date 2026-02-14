@@ -16,5 +16,630 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{world_health_organization_air_nodate}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8179b1fdebe9235e54501d2878c47e1b}{%
+           family={Organization},
+           familyi={O\bibinitperiod},
+           given={World\bibnamedelima Health},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{fullhash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{bibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authorbibnamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authornamehash}{8179b1fdebe9235e54501d2878c47e1b}
+      \strng{authorfullhash}{8179b1fdebe9235e54501d2878c47e1b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Air pollution kills an estimated seven million people worldwide every year. {WHO} data shows that 9 out of 10 people breathe air containing high levels of pollutants. {WHO} is working with countries to monitor air pollution and improve air quality.}
+      \field{langid}{english}
+      \field{title}{Air pollution}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.who.int/health-topics/air-pollution
+      \endverb
+      \verb{url}
+      \verb https://www.who.int/health-topics/air-pollution
+      \endverb
+    \endentry
+    \entry{health_effects_institute_state_2025}{report}{}
+      \name{author}{1}{}{%
+        {{hash=8abf8bf9227c65c33a0c9adaccfd8b50}{%
+           family={Institute},
+           familyi={I\bibinitperiod},
+           given={Health\bibnamedelima Effects},
+           giveni={H\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Health Effects Institute}%
+      }
+      \list{location}{1}{%
+        {Boston, {MA}}%
+      }
+      \strng{namehash}{8abf8bf9227c65c33a0c9adaccfd8b50}
+      \strng{fullhash}{8abf8bf9227c65c33a0c9adaccfd8b50}
+      \strng{bibnamehash}{8abf8bf9227c65c33a0c9adaccfd8b50}
+      \strng{authorbibnamehash}{8abf8bf9227c65c33a0c9adaccfd8b50}
+      \strng{authornamehash}{8abf8bf9227c65c33a0c9adaccfd8b50}
+      \strng{authorfullhash}{8abf8bf9227c65c33a0c9adaccfd8b50}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{State of Global Air 2025: A Report on Air Pollution and Its Role in the World's Leading Causes of Death}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb www.stateofglobalair.org
+      \endverb
+      \verb{url}
+      \verb www.stateofglobalair.org
+      \endverb
+    \endentry
+    \entry{uherek_transport_2010}{article}{}
+      \name{author}{13}{}{%
+        {{hash=d909abbe7a59d05fe019c91e5f10a4de}{%
+           family={Uherek},
+           familyi={U\bibinitperiod},
+           given={Elmar},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2286a5e0158db80c3d5dbedc0b32ce9f}{%
+           family={Halenka},
+           familyi={H\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c63e1ef78cb6fe073502c37e455623c8}{%
+           family={Borken-Kleefeld},
+           familyi={B\bibinithyphendelim K\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3ee71f4d88ad10dde2ef8594fecb49a3}{%
+           family={Balkanski},
+           familyi={B\bibinitperiod},
+           given={Yves},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=bd5e9bf6faaf5c9297dc3992f00ebe3e}{%
+           family={Berntsen},
+           familyi={B\bibinitperiod},
+           given={Terje},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b562c9906baadc9205de3ba633e7123c}{%
+           family={Borrego},
+           familyi={B\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6d9bf8e8fe229884a8fb52864a46e5ae}{%
+           family={Gauss},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bf3f7e042d4b494d370c9e7526b63a27}{%
+           family={Hoor},
+           familyi={H\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2d8ff7aab4a2b45dfccfaa7f5fde0d9b}{%
+           family={Juda-Rezler},
+           familyi={J\bibinithyphendelim R\bibinitperiod},
+           given={Katarzyna},
+           giveni={K\bibinitperiod}}}%
+        {{hash=f8b5b8c728d030dc09eb13262c0f7d69}{%
+           family={Lelieveld},
+           familyi={L\bibinitperiod},
+           given={Jos},
+           giveni={J\bibinitperiod}}}%
+        {{hash=937af5b995a4057544fd2cd709f52c01}{%
+           family={Melas},
+           familyi={M\bibinitperiod},
+           given={Dimitrios},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4548bd9c3793eeca1870cf71cc00c984}{%
+           family={Rypdal},
+           familyi={R\bibinitperiod},
+           given={Kristin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=51942cbb8bd2d51287831dc1cd8d5ac8}{%
+           family={Schmid},
+           familyi={S\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{099ff0e8550ccf0238831f66876e50f8}
+      \strng{fullhash}{00fa43482e64f04c94a11574b018bb86}
+      \strng{bibnamehash}{099ff0e8550ccf0238831f66876e50f8}
+      \strng{authorbibnamehash}{099ff0e8550ccf0238831f66876e50f8}
+      \strng{authornamehash}{099ff0e8550ccf0238831f66876e50f8}
+      \strng{authorfullhash}{00fa43482e64f04c94a11574b018bb86}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Emissions from land transport, and from road transport in particular, have significant impacts on the atmosphere and on climate change. This assessment gives an overview of past, present and future emissions from land transport, of their impacts on the atmospheric composition and air quality, on human health and climate change and on options for mitigation. In the past vehicle exhaust emission control has successfully reduced emissions of nitrogen oxides, carbon monoxide, volatile organic compounds and particulate matter. This contributed to improved air quality and reduced health impacts in industrialised countries. In developing countries however, pollutant emissions have been growing strongly, adversely affecting many populations. In addition, ozone and particulate matter change the radiative balance and hence contribute to global warming on shorter time scales. Latest knowledge on the magnitude of land transport's impact on global warming is reviewed here. In the future, road transport's emissions of these pollutants are expected to stagnate and then decrease globally. This will then help to improve the air quality notably in developing countries. On the contrary, emissions of carbon dioxide and of halocarbons from mobile air conditioners have been globally increasing and are further expected to grow. Consequently, road transport's impact on climate is gaining in importance. The expected efficiency improvements of vehicles and the introduction of biofuels will not be sufficient to offset the expected strong growth in both, passenger and freight transportation. Technical measures could offer a significant reduction potential, but strong interventions would be needed as markets do not initiate the necessary changes. Further reductions would need a resolute expansion of low-carbon fuels, a tripling of vehicle fuel efficiency and a stagnation in absolute transport volumes. Land transport will remain a key sector in climate change mitigation during the next decades.}
+      \field{day}{1}
+      \field{issn}{1352-2310}
+      \field{journaltitle}{Atmospheric Environment}
+      \field{month}{12}
+      \field{number}{37}
+      \field{series}{Transport Impacts on Atmosphere and Climate: The {ATTICA} Assessment Report}
+      \field{shortjournal}{Atmospheric Environment}
+      \field{shorttitle}{Transport impacts on atmosphere and climate}
+      \field{title}{Transport impacts on atmosphere and climate: Land transport}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{44}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{4772\bibrangedash 4816}
+      \range{pages}{45}
+      \verb{doi}
+      \verb 10.1016/j.atmosenv.2010.01.002
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1352231010000099
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1352231010000099
+      \endverb
+      \keyw{Air pollution,Climate impacts,Emission scenarios,Emissions,Health impacts,Mitigation scenarios,Mobile air conditioners,Radiative forcing,Transport: road,rail,inland shipping,Vehicle technologies}
+    \endentry
+    \entry{irankunda_systematic_2025}{article}{}
+      \name{author}{5}{}{%
+        {{hash=4708246a1d39375b49ef3a9ad98ac099}{%
+           family={Irankunda},
+           familyi={I\bibinitperiod},
+           given={Elisephane},
+           giveni={E\bibinitperiod}}}%
+        {{hash=9703027342238581f41b1d94e2c87649}{%
+           family={Menendez},
+           familyi={M\bibinitperiod},
+           given={Monica},
+           giveni={M\bibinitperiod}}}%
+        {{hash=54406da169df8afd97d20a6ed8e56b47}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Basit},
+           giveni={B\bibinitperiod}}}%
+        {{hash=168c8b8e48cb39e4d22fde136146c16d}{%
+           family={Paparella},
+           familyi={P\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0acdc6674c344860a1f2220b6fbcb12f}{%
+           family={Pauluis},
+           familyi={P\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{0dd40128c544be1bc04f86cf7711d336}
+      \strng{fullhash}{3e6bfbdb2d85abf849860ef28b552dad}
+      \strng{bibnamehash}{3e6bfbdb2d85abf849860ef28b552dad}
+      \strng{authorbibnamehash}{3e6bfbdb2d85abf849860ef28b552dad}
+      \strng{authornamehash}{0dd40128c544be1bc04f86cf7711d336}
+      \strng{authorfullhash}{3e6bfbdb2d85abf849860ef28b552dad}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Air pollution is causing a global health, climate, and environmental crisis. Air quality ({AQ}) in hyper-arid regions, such as the Arabian Peninsula, remains under-explored, posing significant concerns for public health and the scientific community. Both long-term and short-term exposure to high pollutant levels, whether from anthropogenic or natural sources, can pose serious health risks. This paper offers a comprehensive review and meta-analysis of urban {AQ} literature published in the region over the past decade (2013–June 2025). We aim to provide guidance and highlight key directions for future research in the field. This paper examines key pollutants, emission sources, implications of urban sources, and the most studied countries, methodologies, limitations, and recommendations from different case studies. Our analysis reveals a significant research gap highlighting insufficient recent literature. Saudi Arabia was the most studied country with 20 papers, followed by the broader Arabian Peninsula (sixteen), Qatar (twelve), the United Arab Emirates and Iraq (seven each), Kuwait (four), Oman (three), Jordan, and Bahrain (one each). The primary methods employed included measurements and sampling (28\%) and remote sensing (24\%), with a focus on pollutants such as dust (23.1\%), {NOx}/{NO}2/{NO} (17.2\%), {PM}2.5 (17.6\%), and {PM}10 (12\%). Industrial emissions (27\%) and natural dust (24\%) were identified as significant emission sources. Monitoring methods included grab sampling (19\%), integrated sampling (34\%), and continuous monitoring (47\%). Notably, 13.3\% of {AQ} sensors were linked to a station, 27.6\% were self-referenced, and 59.1\% did not specify calibration methods. The findings highlight the need for further research, regular calibration of air quality monitors, and the integration of advanced modeling approaches. Moreover, we recommend exploring the links between air pollution and urban development to ensure cleaner air and contribute to the global dialogue on sustainable and cross-border {AQ} solutions.}
+      \field{day}{20}
+      \field{issn}{2073-4433}
+      \field{journaltitle}{Atmosphere}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{number}{8}
+      \field{shortjournal}{Atmosphere}
+      \field{title}{Systematic Review and Meta-Analysis of Urban Air Quality in the Arabian Peninsula}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{16}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{990}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/atmos16080990
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2073-4433/16/8/990
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2073-4433/16/8/990
+      \endverb
+    \endentry
+    \entry{ipcc_climate_2022}{report}{}
+      \name{author}{1}{}{%
+        {{hash=676f7b9b8e5bb30500c01e2385e59174}{%
+           family={{IPCC}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Intergovernmental Panel on Climate Change}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \strng{namehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{fullhash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{bibnamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authorbibnamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authornamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authorfullhash}{676f7b9b8e5bb30500c01e2385e59174}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781009157926}
+      \field{title}{Climate Change 2022: Mitigation of Climate Change. Contribution of Working Group {III} to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1017/9781009157926
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ipcc.ch/report/ar6/wg3/
+      \endverb
+      \verb{url}
+      \verb https://www.ipcc.ch/report/ar6/wg3/
+      \endverb
+    \endentry
+    \entry{creutzig_transport_2015}{article}{}
+      \name{author}{7}{}{%
+        {{hash=71af6b4cd2af12ffee537a278c26fe9c}{%
+           family={Creutzig},
+           familyi={C\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=84c9a874c2f1c54379704080868075b5}{%
+           family={Jochem},
+           familyi={J\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a5a2e2ae12c21c83294d5c0677bf4ec7}{%
+           family={Edelenbosch},
+           familyi={E\bibinitperiod},
+           given={Oreane\bibnamedelima Y.},
+           giveni={O\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=e6d73e1d73f2e3b79a34ee470a590f17}{%
+           family={Mattauch},
+           familyi={M\bibinitperiod},
+           given={Linus},
+           giveni={L\bibinitperiod}}}%
+        {{hash=cfbc88a280bb5b59201a7cb37319b6ca}{%
+           family={Vuuren},
+           familyi={V\bibinitperiod},
+           given={Detlef\bibnamedelimb P.\bibnamedelimi Van},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=ec069eee7f42c0f947f425289d3bfc9f}{%
+           family={{McCollum}},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=02499e75884bc660ae4615aa9b7aad3f}{%
+           family={Minx},
+           familyi={M\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{239ae77705ee39eef6222a95235f8cc0}
+      \strng{fullhash}{316d1c415175782e30947aaa58c53f1b}
+      \strng{bibnamehash}{239ae77705ee39eef6222a95235f8cc0}
+      \strng{authorbibnamehash}{239ae77705ee39eef6222a95235f8cc0}
+      \strng{authornamehash}{239ae77705ee39eef6222a95235f8cc0}
+      \strng{authorfullhash}{316d1c415175782e30947aaa58c53f1b}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Urban mobility solutions foster climate mitigation , Global emissions scenarios studies, such as those informing the Intergovernmental Panel on Climate Change ({IPCC}) 5th Assessment Report ({AR}5), highlight the importance of the transport sector for climate change mitigation—along with the difficulties of achieving deep reductions therein ( 1 ) [supplementary materials ({SM})]. Transport is responsible for about 23\% of total energy-related {CO} 2 emissions worldwide ( 2 ). The sector is growing more rapidly than most others, with emissions projected to double by 2050. Global scenario studies, specifically those produced by integrated assessment models ({IAMs}), communicate aggregate mitigation potentials by sectors in {IPCC} reports. Yet recent evidence indicates that emissions may be reduced further than these global scenario studies suggest—if policy-makers use the full suite of policies at their disposal.}
+      \field{day}{20}
+      \field{issn}{0036-8075, 1095-9203}
+      \field{journaltitle}{Science}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{6263}
+      \field{shortjournal}{Science}
+      \field{shorttitle}{Transport}
+      \field{title}{Transport: A roadblock to climate change mitigation?}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{350}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{911\bibrangedash 912}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1126/science.aac8033
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/10.1126/science.aac8033
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/10.1126/science.aac8033
+      \endverb
+    \endentry
+    \entry{nyc_department_of_city_planning_population_2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0c5f59eddb4e30c6016af4e7dbf9b2a8}{%
+           family={City\bibnamedelima Planning},
+           familyi={C\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={{NYC}\bibnamedelima Department},
+           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c5f59eddb4e30c6016af4e7dbf9b2a8}
+      \strng{fullhash}{0c5f59eddb4e30c6016af4e7dbf9b2a8}
+      \strng{bibnamehash}{0c5f59eddb4e30c6016af4e7dbf9b2a8}
+      \strng{authorbibnamehash}{0c5f59eddb4e30c6016af4e7dbf9b2a8}
+      \strng{authornamehash}{0c5f59eddb4e30c6016af4e7dbf9b2a8}
+      \strng{authorfullhash}{0c5f59eddb4e30c6016af4e7dbf9b2a8}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{7}
+      \field{title}{Population}
+      \field{titleaddon}{Population - Department of City Planning}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nyc.gov/content/planning/pages/planning/population
+      \endverb
+      \verb{url}
+      \verb https://www.nyc.gov/content/planning/pages/planning/population
+      \endverb
+    \endentry
+    \entry{us_epa_greenhouse_2016}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ef2c31aa495858b401d55ff79521c33f}{%
+           family={{US}~{EPA}},
+           familyi={U\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={{OAR}},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef2c31aa495858b401d55ff79521c33f}
+      \strng{fullhash}{ef2c31aa495858b401d55ff79521c33f}
+      \strng{bibnamehash}{ef2c31aa495858b401d55ff79521c33f}
+      \strng{authorbibnamehash}{ef2c31aa495858b401d55ff79521c33f}
+      \strng{authornamehash}{ef2c31aa495858b401d55ff79521c33f}
+      \strng{authorfullhash}{ef2c31aa495858b401d55ff79521c33f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This page answers questions about {GHG} emissions from passenger vehicles and how these emissions are measured and calculated.}
+      \field{day}{12}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{title}{Greenhouse Gas Emissions from a Typical Passenger Vehicle}
+      \field{type}{Overviews and Factsheets}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle
+      \endverb
+      \verb{url}
+      \verb https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle
+      \endverb
+    \endentry
+    \entry{nyc_department_of_health_and_mental_hygiene_traffic_nodate}{online}{}
+      \name{author}{1}{}{%
+        {{hash=6f323c3137f97c77ddb26a60771af29d}{%
+           family={Health\bibnamedelimb \{and\} Mental\bibnamedelima Hygiene},
+           familyi={H\bibinitperiod\bibinitdelim \\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={{NYC}\bibnamedelima Department},
+           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod},
+           prefix={of},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{6f323c3137f97c77ddb26a60771af29d}
+      \strng{fullhash}{6f323c3137f97c77ddb26a60771af29d}
+      \strng{bibnamehash}{6f323c3137f97c77ddb26a60771af29d}
+      \strng{authorbibnamehash}{6f323c3137f97c77ddb26a60771af29d}
+      \strng{authornamehash}{6f323c3137f97c77ddb26a60771af29d}
+      \strng{authorfullhash}{6f323c3137f97c77ddb26a60771af29d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The public health impacts of {PM}2.5 from traffic air pollution in New York City affect neighborhoods differently.}
+      \field{langid}{english}
+      \field{title}{Traffic and {PM}2.5 air pollution}
+      \field{titleaddon}{Environment \& Health Data Portal}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://a816-dohbesp.nyc.gov/IndicatorPublic/data-stories/traffic-and-air-pollution/
+      \endverb
+      \verb{url}
+      \verb https://a816-dohbesp.nyc.gov/IndicatorPublic/data-stories/traffic-and-air-pollution/
+      \endverb
+    \endentry
+    \entry{pinto_de_moura_inequitable_2019}{report}{}
+      \name{author}{2}{}{%
+        {{hash=5af0b2d72940d7c89da31ade1a615afd}{%
+           family={Pinto\bibnamedelimb de\bibnamedelima Moura},
+           familyi={P\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Maria\bibnamedelima Cecilia},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=ce9cb25d148cf8f2932d0537cc1477d4}{%
+           family={Reichmuth},
+           familyi={R\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Union of Concerned Scientists}%
+      }
+      \list{location}{1}{%
+        {Cambridge, {MA}}%
+      }
+      \strng{namehash}{e367ee92feabe105cdb270780fb66e18}
+      \strng{fullhash}{e367ee92feabe105cdb270780fb66e18}
+      \strng{bibnamehash}{e367ee92feabe105cdb270780fb66e18}
+      \strng{authorbibnamehash}{e367ee92feabe105cdb270780fb66e18}
+      \strng{authornamehash}{e367ee92feabe105cdb270780fb66e18}
+      \strng{authorfullhash}{e367ee92feabe105cdb270780fb66e18}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{1}
+      \field{title}{Inequitable Exposure to Air Pollution from Vehicles in the Northeast and Mid-Atlantic}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ucsusa.org/resources/inequitable-exposure-air-pollution-vehicles
+      \endverb
+      \verb{url}
+      \verb https://www.ucsusa.org/resources/inequitable-exposure-air-pollution-vehicles
+      \endverb
+    \endentry
+    \entry{wang_high-resolution_2025}{article}{}
+      \name{author}{9}{}{%
+        {{hash=100a0e40eefecbaad2fd7e3ef38a4168}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yujia},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=bb596c2ad266541ba401586042bb0896}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hongbin},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4ac36eed64badd6f195e86aeecd037a7}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=2c112d9d43345185672db278b5111bc4}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0d7e890310d87e464e1e132a6091bc2b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xinfeng},
+           giveni={X\bibinitperiod}}}%
+        {{hash=487a2c90d9211893cfd74b6d497eb78a}{%
+           family={Si},
+           familyi={S\bibinitperiod},
+           given={Shuchun},
+           giveni={S\bibinitperiod}}}%
+        {{hash=242f4e6de3f40ffff8ea8f342324a063}{%
+           family={Xue},
+           familyi={X\bibinitperiod},
+           given={Likun},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d7d086973fe512b2fb495dadfcf4b727}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Qingzhu},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=1b91ed439957c72ebefb56f65a235ae9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qiao},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{d839ae27760644215f3d1ca017db97cb}
+      \strng{fullhash}{ce615192f70a1d22c8703f691a787a28}
+      \strng{bibnamehash}{d839ae27760644215f3d1ca017db97cb}
+      \strng{authorbibnamehash}{d839ae27760644215f3d1ca017db97cb}
+      \strng{authornamehash}{d839ae27760644215f3d1ca017db97cb}
+      \strng{authorfullhash}{ce615192f70a1d22c8703f691a787a28}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{On-road vehicle emissions play a crucial role in affecting fine-scale air quality and exposure equity in traffic-dense urban areas. They vary largely on both spatial and temporal scales due to the complex distribution patterns of vehicle types and traffic conditions. With the deployment of traffic cameras and big data approaches, we established a bottom-up model that employed interpolation to obtain a spatially continuous on-road vehicle emission mapping for the main urban area of Jinan, revealing fine-scale gradients and emission hotspots intuitively. The results show that the hourly average emissions of nitrogen oxides, carbon monoxide, hydrocarbons, and fine particulate matters from on-road vehicles in urban Jinan were 345.2, 789.7, 69.5, and 5.4 kg, respectively. The emission intensity varied largely with a factor of up to 3 within 1 km on the same road segment. The unique patterns of road vehicle emissions within the urban area were further examined through time series clustering and hotspot analysis. When spatial hotspots coincided with peak hours, emissions were significantly enhanced, making them key targets for traffic pollution control. Based on the established emission model, we predicted that the benefits of vehicle electrification in reducing vehicle emissions could reach 40 \%–80 \%. Overall, this work provides new methods for developing a high-resolution vehicle emission inventory in urban areas and offers detailed and accurate emission data and fine spatiotemporal variation patterns in urban Jinan, which are of great importance for air pollution control, traffic management, policy-making, and public awareness enhancement.}
+      \field{day}{4}
+      \field{issn}{1680-7316}
+      \field{journaltitle}{Atmospheric Chemistry and Physics}
+      \field{month}{6}
+      \field{number}{11}
+      \field{title}{High-resolution mapping of on-road vehicle emissions with real-time traffic datasets based on big data}
+      \field{urlday}{29}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{25}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{5537\bibrangedash 5555}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.5194/acp-25-5537-2025
+      \endverb
+      \verb{urlraw}
+      \verb https://acp.copernicus.org/articles/25/5537/2025/
+      \endverb
+      \verb{url}
+      \verb https://acp.copernicus.org/articles/25/5537/2025/
+      \endverb
+    \endentry
+    \entry{carvalho_air_2016}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c22d36e93b99aa0aff58843ab96df70b}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={Helotonio},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{c22d36e93b99aa0aff58843ab96df70b}
+      \strng{fullhash}{c22d36e93b99aa0aff58843ab96df70b}
+      \strng{bibnamehash}{c22d36e93b99aa0aff58843ab96df70b}
+      \strng{authorbibnamehash}{c22d36e93b99aa0aff58843ab96df70b}
+      \strng{authornamehash}{c22d36e93b99aa0aff58843ab96df70b}
+      \strng{authorfullhash}{c22d36e93b99aa0aff58843ab96df70b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{2213-2619}
+      \field{journaltitle}{The Lancet. Respiratory Medicine}
+      \field{month}{8}
+      \field{number}{8}
+      \field{shortjournal}{Lancet Respir Med}
+      \field{shorttitle}{The air we breathe}
+      \field{title}{The air we breathe: differentials in global air quality monitoring}
+      \field{volume}{4}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{603\bibrangedash 605}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1016/S2213-2600(16)30180-1
+      \endverb
+      \keyw{Air Pollutants,Air Pollution,Environmental Exposure,Environmental Monitoring,Female,Global Health,Humans,Internationality,Male,Public Health,Respiration,World Health Organization}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

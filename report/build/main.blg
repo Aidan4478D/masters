@@ -1,9 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
-[0] Config.pm:310> INFO - Logfile is 'build/main.blg'
-[55] biber:340> INFO - === Sat Jan 31, 2026, 23:38:39
-[65] Biber.pm:418> INFO - Reading 'build/main.bcf'
-[100] Biber.pm:972> INFO - Found 0 citekeys in bib section 0
-[108] bbl.pm:654> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
-[108] bbl.pm:757> INFO - Output to build/main.bbl
-[108] Biber.pm:130> WARN - The file 'build/main.bcf' does not contain any citations!
-[108] Biber.pm:132> INFO - WARNINGS: 1
+[0] Config.pm:310> INFO - Logfile is '/home/aidan/repos/masters/report/build/main.blg'
+[52] biber:340> INFO - === Sat Feb 14, 2026, 13:16:03
+[61] Biber.pm:418> INFO - Reading '/home/aidan/repos/masters/report/build/main.bcf'
+[96] Biber.pm:972> INFO - Found 12 citekeys in bib section 0
+[103] Biber.pm:4383> INFO - Processing section 0
+[113] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[115] bibtex.pm:1713> INFO - LaTeX decoding ...
+[130] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[214] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[214] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[214] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[214] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[224] bbl.pm:654> INFO - Writing '/home/aidan/repos/masters/report/build/main.bbl' with encoding 'UTF-8'
+[232] bbl.pm:757> INFO - Output to /home/aidan/repos/masters/report/build/main.bbl
