@@ -1,0 +1,25 @@
+% src/preamble.tex
+\usepackage[margin=1in]{geometry}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage[backend=biber,style=ieee]{biblatex}
+
+% Paragraph style (choose ONE)
+% Thesis-traditional indent + no extra space:
+% \setlength{\parindent}{15pt}
+% \setlength{\parskip}{0pt}
+
+% Modern block paragraphs (no indent + space between):
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.75em}
+
+\onehalfspacing
+
+% Bibliography file (relative to src/)
+\addbibresource{references.bib}
+
+% Helpful macros (optional)
+\newcommand{\pmtwofive}{\ensuremath{\mathrm{PM}_{2.5}}}
+\newcommand{\coTwo}{\ensuremath{\mathrm{CO}_{2}}}
+
