@@ -1,0 +1,106 @@
+\section{Related Work}
+\subsection{Traditional Air Quality Monitoring Methods}
+
+This section reviews the evolution of methodologies for quantifying urban air
+pollution, ranging from traditional stationary infrastructure to deep learning 
+approaches. It evaluates the strengths and limitations of direct measurement 
+approaches. It identifies the critical data gaps in spatial resolution and source 
+attribution that necessitate the development of high-resolution, vision-based 
+bottom-up inventories.
+
+Rewrite:
+Current approaches to urban air quality assessment are generally categorized into top-down and bottom-up methodologies. Top-down approaches infer emission fluxes from observed atmospheric concentrations, using data from satellite remote sensing or stationary monitoring networks to validate regional models. Conversely, bottom-up approaches calculate emissions at the source by combining activity data (e.g., traffic flow) with emission factors. This section reviews the evolution of these monitoring paradigms, evaluating the limitations of current top-down observation in resolving street-level heterogeneity and identifying the critical need for high-resolution, vision-based activity data to improve bottom-up inventories.
+
+\subsubsection{Stationary Air Quality Monitoring Stations (AQMS)}
+Regulatory-grade stationary networks are the standard for air quality 
+assessment, providing high-quality, standardized data ideal for analyzing 
+spatiotemporal trends across large regions [1]. However, the number of these 
+fixed-site monitors are limited. For example, in U.S. urban areas with 
+continuous monitoring, there are typically only 2-5 monitors per million 
+people [2]. Consequently, they fail to capture hyperlocal, street-by-street 
+variations in pollution, which is the scale at which human exposure and 
+exceedances of ambient standards often occur [1], [2]. Research indicates 
+that concentrations of pollutants such as ultrafine particles (UFP), black 
+carbon (BC), and nitrogen oxides ($NO_x$) can vary by 5–8 times within 
+individual city blocks and fluctuate significantly over distances of less than 
+300 meters [1], [2]. While dispersion models and satellite remote sensing are 
+often used to supplement stationary data, they face intrinsic resolution 
+limitations (discussed further in Section 2.2). Thus, they cannot fully resolve
+the fine-scale gradients (10–300 m) driven by local traffic emissions [2].
+
+\subsubsection{Mobile Monitoring Platforms}
+To address the spatial limitations of fixed networks, mobile monitoring 
+(mounting reference-grade instruments on fleet vehicles) has emerged as a 
+method to capture high-resolution spatial data [1]. Notable implementations 
+include equipping Google Street View cars to repeatedly sample urban roadways, 
+successfully revealing persistent pollution patterns and stable "hotspots" 
+attributable to local sources [2]. This approach allows for the identification 
+of source impacts without a priori assumptions about emission rates [1].
+
+However, while mobile monitoring maximizes spatial coverage, it lacks temporal 
+continuity [1]. Because a vehicle cannot measure all locations simultaneously, 
+data must be aggregated over long periods or modeled to estimate averages [1]. 
+Furthermore, measurement locations are inherently biased toward the roadway 
+(on-road), which can differ from off-road concentrations (e.g., at home 
+addresses) by 20–30\%, necessitating careful adjustment when estimating 
+population exposure [1].
+
+\subsubsection{Low-Cost Sensors and On-Board Diagnostics (OBD)}
+A shifting paradigm in monitoring involves the deployment of portable, 
+lower-cost sensors capable of reporting near real-time data [3]. These devices 
+are generally categorized into gas-phase sensors (electrochemical or metal 
+oxide) and particulate matter sensors (optical scattering) [3]. While these 
+allow for denser deployment and community-based science, they suffer from 
+significant data quality issues. As of April 2026, there are currently no 
+commercially available direct-reading sensors for PM mass (relying instead
+on light-scattering surrogates) or specific hazardous air pollutants, and 
+performance criteria for non-regulatory use remain undefined [3].
+
+Similarly, the mandatory equipping of heavy-duty vehicles with On-Board 
+Diagnostic (OBD) systems offers a potential stream of "big data" for real-time 
+emission monitoring [4]. While this provides an opportunity to supervise in-use
+vehicles remotely, the data quality is often poor and lacks a comprehensive 
+assessment, requiring substantial computational infrastructure to process 
+effectively [4].
+
+\subsection{Satellite-Based Remote Sensing}
+While sensor networks provide point-based measurements, satellite remote 
+sensing offers a top-down approach to air quality monitoring, playing a 
+critical role in developing emission policies and forecasting regional 
+air quality [5], [6].
+
+\subsubsection{Resolution and Instrumentation}
+The landscape of satellite monitoring has shifted with the deployment of
+instruments like the Tropospheric Monitoring Instrument (TROPOMI) on the 
+Sentinel-5P mission. TROPOMI provides daily global measurements at an 
+unprecedented spatial resolution of approximately 3.5 $\times$ 5.5 km$^2$, 
+allowing for the detection of trace gases ($NO_2$, $O_3$, $CO$) and their 
+linkages to human activity [7], [8]. Complementary infrared sounders, such as 
+IASI and AIRS, provide vertical profile data, though at coarser footprint 
+resolutions (~12 km) [9]. Despite these advancements, even "high-resolution" 
+satellite data remains too coarse (>3 km) to resolve the fine-scale gradients
+(10–300 m) driven by urban traffic emissions, effectively smoothing out the 
+street-level heterogeneity that defines urban exposure [2], [10].
+
+\subsubsection{Physical and Environmental Constraints}
+Beyond spatial resolution, satellite retrieval is limited by physical 
+constraints, particularly regarding diurnal variation. "Top-down" observation 
+is highly sensitive to the planetary boundary layer height; in the morning, 
+a shallow boundary layer can mask surface-level pollutants, reducing 
+sensitivityexactly when traffic emissions are often highest [10]. Furthermore, 
+retrieval algorithms struggle with environmental variables such as surface 
+reflectivity and viewing geometry (zenith angles), which can introduce 
+artifacts into the data, particularly at high latitudes or in complex urban 
+terrains [10].
+
+\subsubsection{The Dependency on Bottom-Up Inventories}
+To bridge the gap between regional satellite data and street-level reality, 
+researchers rely on chemical transport models (CTMs) and data assimilation 
+techniques. However, the efficacy of these models is fundamentally limited 
+by the quality of their inputs. Recent reviews indicate that high-resolution
+CTMs require detailed emission inventories (better than 1 km resolution) to
+resolve small-scale dynamical features like urban heat islands and street 
+canyon effects [10]. The current lack of such granular, dynamic "bottom-up"
+inventories remains a bottleneck for effective satellite data assimilation,
+validating the need for improved terrestrial emission modeling [10], [11].
+
