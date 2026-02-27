@@ -85,12 +85,12 @@ project, the entries of the confusion matrix correspond to:
         boxes over the same motorcycle.
     \end{enumerate}
 
-    \item \textbf{True Negative (TN)}: A ground truth vehicle that the model 
+    \item \textbf{False Negative (FN)}: A ground truth vehicle that the model 
     failed to detect entirely, or localized so poorly that it was discarded. 
     For instance, an LDV partially occluded by a building is completely ignored 
     by the model, resulting in an uncounted emissions source.
 
-    \item \textbf{False Negative (FN)}: Conceptually, a true negative represents
+    \item \textbf{True Negative (TN)}: Conceptually, a true negative represents
     every possible empty region in an image (such as patches of bare asphalt, 
     sidewalks, buildings, or sky) where the model correctly predicted that \textit{no} 
     vehicle was present. Because the number of empty background regions in a 
@@ -99,3 +99,41 @@ project, the entries of the confusion matrix correspond to:
     object detection performance calculations.
 \end{itemize}
 
+\subsubsection{Precision-Recall Curve}
+Using the \textit{TP}, \textit{FP}, and \textit{FN} counts defined above, we can calculate Precision and 
+Recall to evaluate the pipeline's ability and reliability in tracking 
+urban traffic.
+
+\begin{itemize}
+    \item \textbf{Precision} measures the reliability of the model’s vehicle predictions.
+
+    \begin{equation}
+    Precision = \frac{TP}{TP + FP}
+    \end{equation}
+
+    In the context of this project, out of all the bounding boxes the model predicted 
+    for a certain class (ex. Claiming to detect 50 HDVs), what fraction were correct? 
+    A high precision score ensures the model is not predicting false ``ghost'' 
+    vehicles or misclassifying vehicle types.
+
+    \item \textbf{Recall} measures the model's ability to find vehicles in the frame.
+
+    \begin{equation}
+    Recall = \frac{TP}{TP + FN}
+    \end{equation}
+
+    Recall indicates out of all the actual ground truth objects present, what 
+    fraction did the model successfully detect? A high recall score ensures 
+    emission sources are not undercounted in the final analysis.
+\end{itemize}
+
+Modern object detectors like the DETR output a confidence score with each 
+predicted bounding box, creating a trade-off between Precision and 
+Recall. Lowering the confidence threshold allows the model to predict more 
+vehicles (increasing Recall), but it simultaneously increases the risk of 
+capturing background noise as valid vehicles (False Positives), thereby 
+lowering Precision. By calculating Precision and Recall at every possible 
+confidence threshold and plotting the results, we generate the Precision-Recall 
+(PR) Curve.
+
+(insert average looking PR curve)
