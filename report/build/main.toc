@@ -9,4 +9,8 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Resolution and Instrumentation}{5}{}%
 \contentsline {subsubsection}{\numberline {2.2.2}Physical and Environmental Constraints}{5}{}%
 \contentsline {subsubsection}{\numberline {2.2.3}The Dependency on Bottom-Up Inventories}{5}{}%
-\contentsline {section}{References}{6}{}%
+\contentsline {section}{\numberline {3}Methodology}{6}{}%
+\contentsline {subsection}{\numberline {3.1}Performance Metrics}{6}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Intersection over Union}{6}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Confusion Matrix}{7}{}%
+\contentsline {section}{References}{8}{}%
