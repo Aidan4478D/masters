@@ -1,16 +1,16 @@
 # Fdb version 3
-["biber /home/aidan/repos/masters/report/build/main"] 1772156985 "/home/aidan/repos/masters/report/build/main.bcf" "/home/aidan/repos/masters/report/build/main.bbl" "/home/aidan/repos/masters/report/build/main" 1772165694
-  "/home/aidan/repos/masters/report/build/main.bcf" 1772165694 108416 b05abe7fe587c1201b5246df0c5f5b34 "pdflatex"
+["biber /home/aidan/repos/masters/report/build/main"] 1772156985 "/home/aidan/repos/masters/report/build/main.bcf" "/home/aidan/repos/masters/report/build/main.bbl" "/home/aidan/repos/masters/report/build/main" 1772222673
+  "/home/aidan/repos/masters/report/build/main.bcf" 1772222672 108416 b05abe7fe587c1201b5246df0c5f5b34 "pdflatex"
   "references.bib" 1771089138 14926 3a223c1f4a72ecb3eb0d0c3e3c9e23a0 ""
   (generated)
   "/home/aidan/repos/masters/report/build/main.bbl"
   "/home/aidan/repos/masters/report/build/main.blg"
-["pdflatex"] 1772165693 "main.tex" "/home/aidan/repos/masters/report/build/main.pdf" "main" 1772165694
+["pdflatex"] 1772222670 "main.tex" "/home/aidan/repos/masters/report/build/main.pdf" "main" 1772222673
   "/etc/texmf/web2c/texmf.cnf" 1759702071 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/aidan/repos/masters/report/build/main.aux" 1772165694 5266 c42cfda1e81ec4869bbcb8115369bd0c "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.aux" 1772222672 5751 c391e22968a0fa327ddf8e60c10da9b6 "pdflatex"
   "/home/aidan/repos/masters/report/build/main.bbl" 1772156986 32197 af75b10ee6cb85e80c6352ce4372e61f "biber /home/aidan/repos/masters/report/build/main"
-  "/home/aidan/repos/masters/report/build/main.run.xml" 1772165694 2402 7c866ed2192e71c57464ed4279aadefa "pdflatex"
-  "/home/aidan/repos/masters/report/build/main.toc" 1772165694 1331 8acb10f1f93daca05868284d19789542 "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.run.xml" 1772222672 2402 7c866ed2192e71c57464ed4279aadefa "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.toc" 1772222672 1415 5aad56a18a78dd96b67fceaa3c809c2c "pdflatex"
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -56,6 +56,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty" 1622581934 1618 786b14c5a3e144c3a51452d08232d18b ""
   "/usr/share/texlive/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc" 1254938640 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc" 1254938640 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc" 1254938640 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc" 1254938640 2327 9d6df24f9c4f7368395224341a95523a ""
@@ -83,6 +84,7 @@
   "/usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb" 1254938640 121021 1bf809ce4a594679006bd72263eba59b ""
   "/usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb" 1254938640 116908 1fca96723793882c2e0160350c192fc8 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb" 1254938640 116427 4a5b1ccaa7cce719091920a86b58608d ""
+  "/usr/share/texmf/fonts/type1/public/lm/lmex10.pfb" 1254938640 23055 2e5b42921de910eaa97b85df04ca4891 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb" 1254938640 30696 2654571912f9cd384da9f7cb8a60c568 ""
   "/usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb" 1254938640 30635 833ec815d446ec453a4913fc26d24cbc ""
   "/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb" 1254938640 119235 f35b44530a1d90eb90fe15d9cba67ea0 ""
@@ -103,9 +105,11 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1759706591 4036811 4cb80868003c86b962b6b5ae1e1e2902 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1759706597 1405649 ed67816fea853983ed80a01a43d4baa9 ""
   "chapters/introduction.tex" 1771367799 6270 1efbfd8cd97fff0d2f19f1ba58612f57 ""
-  "chapters/methodology.tex" 1772165693 6729 b7ed6c9a19d04275c09d9071579dfacb ""
+  "chapters/methodology.tex" 1772222667 8590 f93e0c908345f85853c26ffb3cc68f67 ""
   "chapters/related_work.tex" 1771381348 7222 87887f4d48ce2580052f0d629881a505 ""
   "figures/methodology/4_2_confusion_matrix.png" 1772162176 36353 792fe07c381818abf7acadd390ca1049 ""
+  "figures/methodology/4_2_example_pr_curve.png" 1772220709 132526 f2d35345dbf8efa9a389b102210504ca ""
+  "figures/methodology/4_2_example_pr_curve_ap.png" 1772220879 143187 686c58e8e29be290d211d22f3f4d984c ""
   "figures/methodology/4_2_intersection_union.png" 1772160562 69273 08f53eff42c61073ee6b83ce28c5fc1a ""
   "figures/methodology/4_2_iou_calculation.png" 1772160137 7046 d844974a6e0c6da27def4bc51b42de54 ""
   "frontpages/abstract.tex" 1771367680 39 7ed39e54fbf5d5631b458f8e044a631b ""

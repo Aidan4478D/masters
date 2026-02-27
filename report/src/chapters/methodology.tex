@@ -122,7 +122,7 @@ urban traffic.
     Recall = \frac{TP}{TP + FN}
     \end{equation}
 
-    Recall indicates out of all the actual ground truth objects present, what 
+    Out of all the actual ground truth objects present, what 
     fraction did the model successfully detect? A high recall score ensures 
     emission sources are not undercounted in the final analysis.
 \end{itemize}
@@ -136,4 +136,53 @@ lowering Precision. By calculating Precision and Recall at every possible
 confidence threshold and plotting the results, we generate the Precision-Recall 
 (PR) Curve.
 
-(insert average looking PR curve)
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=6.5cm]{figures/methodology/4_2_example_pr_curve.png}
+    \caption{Example Precision-Recall Curve}
+    \label{fig:ex_pr_curve}
+\end{figure}
+
+The PR Curve illustrates the model's overarching stability and allows us to 
+visualize the exact penalty in precision when we tune the model to capture a 
+higher volume of traffic.
+
+\subsubsection{Average Precision and mAP}
+
+To quantify the trade-off depicted in the PR Curve into a single scalar value, 
+we use the Average Precision (AP). AP represents the total area under the PR 
+Curve, depicted below in Figure~\ref{fig:ex_pr_curve_ap}. 
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=6.5cm]{figures/methodology/4_2_example_pr_curve_ap.png}
+    \caption{Average Precision within a Precision-Recall Curve}
+    \label{fig:ex_pr_curve_ap}
+\end{figure}
+
+It represents the model's reliability across every possible confidence 
+threshold for a single specific vehicle class (e.g., evaluating solely the 
+model's ability to isolate Heavy-Duty Vehicles from the rest of the traffic 
+flow). AP is calculated as follows:
+
+\begin{equation}
+AP = \int_{0}^{1} p(r) dr
+\end{equation}
+
+Where $p(r)$ is the precision at recall $r$. By calculating the area under the 
+curve, AP penalizes models that suffer severe drops in precision when attempting 
+to retrieve the hardest-to-find vehicles (such as heavily occluded trucks).
+To evaluate the air quality modeling pipeline across the entire vehicle, the 
+individual AP scores for all distinct classes (LDV, MDV, HDV, Bus, and 
+Two-Wheeler) are averaged to produce the Mean Average Precision (mAP):
+
+\begin{equation}
+mAP = \frac{1}{N} \sum_{i=1}^{N} AP_i
+\end{equation}
+
+Where $N$ is the total number of classes ($N=5$ in this study). The mAP serves 
+as the primary metric for the model's overall performance in localizing and 
+classifying vehicles.
+
+
+

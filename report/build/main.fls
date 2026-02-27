@@ -491,6 +491,16 @@ INPUT figures/methodology/4_2_confusion_matrix.png
 INPUT ./figures/methodology/4_2_confusion_matrix.png
 INPUT ./figures/methodology/4_2_confusion_matrix.png
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmri12.tfm
+INPUT ./figures/methodology/4_2_example_pr_curve.png
+INPUT ./figures/methodology/4_2_example_pr_curve.png
+INPUT figures/methodology/4_2_example_pr_curve.png
+INPUT ./figures/methodology/4_2_example_pr_curve.png
+INPUT ./figures/methodology/4_2_example_pr_curve.png
+INPUT ./figures/methodology/4_2_example_pr_curve_ap.png
+INPUT ./figures/methodology/4_2_example_pr_curve_ap.png
+INPUT figures/methodology/4_2_example_pr_curve_ap.png
+INPUT ./figures/methodology/4_2_example_pr_curve_ap.png
+INPUT ./figures/methodology/4_2_example_pr_curve_ap.png
 INPUT /usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/ot1lmtt.fd
@@ -506,6 +516,7 @@ INPUT /home/aidan/repos/masters/report/build/main.run.xml
 OUTPUT /home/aidan/repos/masters/report/build/main.run.xml
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
@@ -513,6 +524,7 @@ INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb
+INPUT /usr/share/texmf/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmr10.pfb
