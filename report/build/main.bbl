@@ -639,6 +639,499 @@
       \endverb
       \keyw{Air Pollutants,Air Pollution,Environmental Exposure,Environmental Monitoring,Female,Global Health,Humans,Internationality,Male,Public Health,Respiration,World Health Organization}
     \endentry
+    \entry{Krause2013CollectingAL}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=bdb3759bbe6ab0618874848557abd459}{%
+           family={Krause},
+           familyi={K\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0ae7fdc13773f928525f673b05f37149}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Jia},
+           giveni={J\bibinitperiod}}}%
+        {{hash=93fa445b3e108af4e0bc57e8fc211c74}{%
+           family={Stark},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cd00ce5bc45f687c432e52e0fa1a7aa6}{%
+           family={Fei-Fei},
+           familyi={F\bibinithyphendelim F\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{49c82b04c74cd06261401faddca9d940}
+      \strng{fullhash}{4468e53902c3a1792424835d9b7fd93d}
+      \strng{bibnamehash}{4468e53902c3a1792424835d9b7fd93d}
+      \strng{authorbibnamehash}{4468e53902c3a1792424835d9b7fd93d}
+      \strng{authornamehash}{49c82b04c74cd06261401faddca9d940}
+      \strng{authorfullhash}{4468e53902c3a1792424835d9b7fd93d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Collecting a Large-scale Dataset of Fine-grained Cars}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:16632981
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:16632981
+      \endverb
+    \endentry
+    \entry{dong_vehicle_2015}{article}{}
+      \name{author}{4}{}{%
+        {{hash=acc5054a5bc78dfa6ee2c7da37062cd3}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e64a6f8bcb34673f8f76ad3e689a895e}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Yuwei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0ac9a4366c3319fad29c2b113e073238}{%
+           family={Pei},
+           familyi={P\bibinitperiod},
+           given={Mingtao},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3d289786cb39f229d409a397c99f4944}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Yunde},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{8836f1fc556d99f0b40cfccd95d05940}
+      \strng{fullhash}{f47753ae2840d569035f2a78b86fbd81}
+      \strng{bibnamehash}{f47753ae2840d569035f2a78b86fbd81}
+      \strng{authorbibnamehash}{f47753ae2840d569035f2a78b86fbd81}
+      \strng{authornamehash}{8836f1fc556d99f0b40cfccd95d05940}
+      \strng{authorfullhash}{f47753ae2840d569035f2a78b86fbd81}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper, we propose a vehicle type classification method using a semisupervised convolutional neural network from vehicle frontal-view images. In order to capture rich and discriminative information of vehicles, we introduce sparse Laplacian filter learning to obtain the filters of the network with large amounts of unlabeled data. Serving as the output layer of the network, the softmax classifier is trained by multitask learning with small amounts of labeled data. For a given vehicle image, the network can provide the probability of each type to which the vehicle belongs. Unlike traditional methods by using handcrafted visual features, our method is able to automatically learn good features for the classification task. The learned features are discriminative enough to work well in complex scenes. We build the challenging {BIT}-Vehicle dataset, including 9850 high-resolution vehicle frontal-view images. Experimental results on our own dataset and a public dataset demonstrate the effectiveness of the proposed method.}
+      \field{issn}{1558-0016}
+      \field{journaltitle}{{IEEE} Transactions on Intelligent Transportation Systems}
+      \field{month}{8}
+      \field{number}{4}
+      \field{title}{Vehicle Type Classification Using a Semisupervised Convolutional Neural Network}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{16}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2247\bibrangedash 2256}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/TITS.2015.2402438
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/7055873
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/7055873
+      \endverb
+      \keyw{Convolution,Feature learning,Laplace equations,Neural networks,Sociology,Sparse matrices,Three-dimensional displays,Vehicles,filter learning,multitask learning,neural network,vehicle type classification}
+    \endentry
+    \entry{office_of_the_governor_2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=687ddf9110b9a9a49014c165b90e153e}{%
+           family={{Office of the Governor}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{687ddf9110b9a9a49014c165b90e153e}
+      \strng{fullhash}{687ddf9110b9a9a49014c165b90e153e}
+      \strng{bibnamehash}{687ddf9110b9a9a49014c165b90e153e}
+      \strng{authorbibnamehash}{687ddf9110b9a9a49014c165b90e153e}
+      \strng{authornamehash}{687ddf9110b9a9a49014c165b90e153e}
+      \strng{authorfullhash}{687ddf9110b9a9a49014c165b90e153e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{10}
+      \field{title}{Governor Hochul Signs Legislation to Expand Red Light Camera Programs and Protect New Yorkers on the Road}
+      \field{titleaddon}{Governor Kathy Hochul - {NY}.gov}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.governor.ny.gov/news/governor-hochul-signs-legislation-expand-red-light-camera-programs-and-protect-new-yorkers
+      \endverb
+      \verb{url}
+      \verb https://www.governor.ny.gov/news/governor-hochul-signs-legislation-expand-red-light-camera-programs-and-protect-new-yorkers
+      \endverb
+    \endentry
+    \entry{NYCDOT_data_feeds}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{{NYC} {DOT} - Data Feeds}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nyc.gov/html/dot/html/about/datafeeds.shtml
+      \endverb
+      \verb{url}
+      \verb https://www.nyc.gov/html/dot/html/about/datafeeds.shtml
+      \endverb
+    \endentry
+    \entry{NYSDOT_c038145_2025}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=35839065c019664d2760546540a2dc59}{%
+           family={{New York State Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Albany, {NY}}%
+      }
+      \strng{namehash}{35839065c019664d2760546540a2dc59}
+      \strng{fullhash}{35839065c019664d2760546540a2dc59}
+      \strng{bibnamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authorbibnamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authornamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{13}
+      \field{month}{3}
+      \field{title}{C038145, Transportation Management System and Operations ({TMSO}) Support Software \& C038150 {TSMO} Control Software Project Management Support and {QA}/{QC}}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.dot.ny.gov/portal/pls/portal/MEXIS_APP.BC_CONSULTING_NONAE_ADMIN.VIEWFILE?p_file_id=47766
+      \endverb
+      \verb{url}
+      \verb https://www.dot.ny.gov/portal/pls/portal/MEXIS_APP.BC_CONSULTING_NONAE_ADMIN.VIEWFILE?p_file_id=47766
+      \endverb
+    \endentry
+    \entry{511ny_about_rideshare}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{langid}{american}
+      \field{title}{About Us - 511NY Rideshare - 511ny.org}
+      \field{titleaddon}{511NY Rideshare}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://511nyrideshare.org/about-us
+      \endverb
+      \verb{url}
+      \verb https://511nyrideshare.org/about-us
+      \endverb
+    \endentry
+    \entry{NYCDOT_realtime}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8299303a9bcf7ede71d0757177da08ce}{%
+           family={{NYC Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{8299303a9bcf7ede71d0757177da08ce}
+      \strng{fullhash}{8299303a9bcf7ede71d0757177da08ce}
+      \strng{bibnamehash}{8299303a9bcf7ede71d0757177da08ce}
+      \strng{authorbibnamehash}{8299303a9bcf7ede71d0757177da08ce}
+      \strng{authornamehash}{8299303a9bcf7ede71d0757177da08ce}
+      \strng{authorfullhash}{8299303a9bcf7ede71d0757177da08ce}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Real Time Traffic Information}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://webcams.nyctmc.org/cameras-list
+      \endverb
+      \verb{url}
+      \verb https://webcams.nyctmc.org/cameras-list
+      \endverb
+    \endentry
+    \entry{511ny_api_docs}{online}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Provides 511 {API} documentation for developers use.}
+      \field{langid}{english}
+      \field{title}{511NY - {API} Documentation}
+      \field{titleaddon}{{API} Documentation}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://511ny.org/developers/511ny.org
+      \endverb
+      \verb{url}
+      \verb https://511ny.org/developers/511ny.org
+      \endverb
+    \endentry
+    \entry{NYCDOT_realtime_metadata_2010}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
+           family={{New York City Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{fullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{bibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{month}{7}
+      \field{title}{Real Time Traffic Speed Data – Metadata}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nyc.gov/html/dot/downloads/pdf/metadata-trafficspeeds.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.nyc.gov/html/dot/downloads/pdf/metadata-trafficspeeds.pdf
+      \endverb
+    \endentry
+    \entry{NYCDOT_realtime_subscribers}{online}{}
+      \name{author}{1}{}{%
+        {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
+           family={{New York City Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{fullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{bibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Real Time Traffic Information - Subscribers}
+      \field{titleaddon}{Subscribers}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://webcams.nyctmc.org/subscribers
+      \endverb
+      \verb{url}
+      \verb https://webcams.nyctmc.org/subscribers
+      \endverb
+    \endentry
+    \entry{NYCDOT_traffic_signals}{online}{}
+      \name{author}{1}{}{%
+        {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
+           family={{New York City Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{fullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{bibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{NYC} {DOT} - Infrastructure - Traffic Signals}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nyc.gov/html/dot/html/infrastructure/signals.shtml
+      \endverb
+      \verb{url}
+      \verb https://www.nyc.gov/html/dot/html/infrastructure/signals.shtml
+      \endverb
+    \endentry
+    \entry{NYCDOT_item_2014}{report}{}
+      \name{author}{1}{}{%
+        {{hash=35839065c019664d2760546540a2dc59}{%
+           family={{New York State Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {{NYSDOT} Office of Engineering}%
+      }
+      \strng{namehash}{35839065c019664d2760546540a2dc59}
+      \strng{fullhash}{35839065c019664d2760546540a2dc59}
+      \strng{bibnamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authorbibnamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authornamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{number}{683.03120011}
+      \field{title}{Item 683.03120011 – Managed Ethernet Switch – Layer 2}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.dot.ny.gov/spec-repository-us/683.03120011.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.dot.ny.gov/spec-repository-us/683.03120011.pdf
+      \endverb
+    \endentry
+    \entry{NYCDOT_item_2024}{report}{}
+      \name{author}{1}{}{%
+        {{hash=35839065c019664d2760546540a2dc59}{%
+           family={{New York State Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {{NYSDOT} Office of Engineering}%
+      }
+      \strng{namehash}{35839065c019664d2760546540a2dc59}
+      \strng{fullhash}{35839065c019664d2760546540a2dc59}
+      \strng{bibnamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authorbibnamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authornamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{number}{683.03010005}
+      \field{title}{Item 683.03010005 – Networking Equipment}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.dot.ny.gov/spec-repository-us/683.03010005.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.dot.ny.gov/spec-repository-us/683.03010005.pdf
+      \endverb
+    \endentry
+    \entry{bh_photo_video_pelco_2026}{artwork}{}
+      \name{author}{1}{}{%
+        {{hash=8f6ab22973bc9e2a1a255d8b886ac239}{%
+           family={{B\&H Photo Video}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f6ab22973bc9e2a1a255d8b886ac239}
+      \strng{fullhash}{8f6ab22973bc9e2a1a255d8b886ac239}
+      \strng{bibnamehash}{8f6ab22973bc9e2a1a255d8b886ac239}
+      \strng{authorbibnamehash}{8f6ab22973bc9e2a1a255d8b886ac239}
+      \strng{authornamehash}{8f6ab22973bc9e2a1a255d8b886ac239}
+      \strng{authorfullhash}{8f6ab22973bc9e2a1a255d8b886ac239}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Pelco {ES}31C22-2W Esprit Positioning System (24 {VAC}) Product Image}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.bhphotovideo.com/c/product/500013-REG/Pelco_ES31C222W_ES31C22_2W_Esprit_Positioning.html
+      \endverb
+      \verb{url}
+      \verb https://www.bhphotovideo.com/c/product/500013-REG/Pelco_ES31C222W_ES31C22_2W_Esprit_Positioning.html
+      \endverb
+    \endentry
+    \entry{froehlich5220_pelco_2026}{artwork}{}
+      \name{author}{1}{}{%
+        {{hash=1ac3510a63ed48c37109013a753f0c13}{%
+           family={{froehlich5220}},
+           familyi={f\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ac3510a63ed48c37109013a753f0c13}
+      \strng{fullhash}{1ac3510a63ed48c37109013a753f0c13}
+      \strng{bibnamehash}{1ac3510a63ed48c37109013a753f0c13}
+      \strng{authorbibnamehash}{1ac3510a63ed48c37109013a753f0c13}
+      \strng{authornamehash}{1ac3510a63ed48c37109013a753f0c13}
+      \strng{authorfullhash}{1ac3510a63ed48c37109013a753f0c13}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{PELCO} {CM}9760-{CXTA} 16-{PORT} {COAXITRON} {TRANSLATOR} 9760 {SURVEILLANCE} {VIDEO} {SYSTEM}}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ebay.com/itm/177535176993
+      \endverb
+      \verb{url}
+      \verb https://www.ebay.com/itm/177535176993
+      \endverb
+    \endentry
+    \entry{axis_communications_axis_2026}{artwork}{}
+      \name{author}{1}{}{%
+        {{hash=ac6b150c08134b28b0c1299d9cf7c9cc}{%
+           family={{Axis Communications}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \strng{fullhash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \strng{bibnamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \strng{authorbibnamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \strng{authornamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \strng{authorfullhash}{ac6b150c08134b28b0c1299d9cf7c9cc}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{AXIS} Q1614-E Network Camera Product Image}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2002}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.axis.com/products/axis-q1614-e/support
+      \endverb
+      \verb{url}
+      \verb https://www.axis.com/products/axis-q1614-e/support
+      \endverb
+    \endentry
     \entry{lin_microsoft_2015}{inproceedings}{}
       \name{author}{10}{}{%
         {{hash=08f925fe4692d130a1d7cb7d94483351}{%
@@ -701,8 +1194,8 @@
       \strng{authorbibnamehash}{72b744e79c74738c617fd08b4f3d7e36}
       \strng{authornamehash}{72b744e79c74738c617fd08b4f3d7e36}
       \strng{authorfullhash}{63d989c97b4964e8cb9e77f1dea6cd25}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{We present a new dataset with the goal of advancing the state-of-the-art in object recognition by placing the question of object recognition in the context of the broader question of scene understanding. This is achieved by gathering images of complex everyday scenes containing common objects in their natural context. Objects are labeled using per-instance segmentations to aid in precise object localization. Our dataset contains photos of 91 objects types that would be easily recognizable by a 4 year old. With a total of 2.5 million labeled instances in 328k images, the creation of our dataset drew upon extensive crowd worker involvement via novel user interfaces for category detection, instance spotting and instance segmentation. We present a detailed statistical analysis of the dataset in comparison to {PASCAL}, {ImageNet}, and {SUN}. Finally, we provide baseline performance analysis for bounding box and segmentation detection results using a Deformable Parts Model.}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  1 MAR 2026 14:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  2 MAR 2026 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -404,9 +404,32 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen147
 \Gin@req@width=\dimen148
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen149
+\captionmargin@=\dimen150
+\captionwidth=\dimen151
+\caption@tempdima=\dimen152
+\caption@indent=\dimen153
+\caption@parindent=\dimen154
+\caption@hangindent=\dimen155
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count393
+\c@continuedfloat=\count394
+)
+\c@subfigure=\count395
+\c@subtable=\count396
 ))
-\@quotelevel=\count393
-\@quotereset=\count394
+\@quotelevel=\count397
+\@quotereset=\count398
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
 .
 
@@ -484,16 +507,16 @@ Package biblatex Info: Reference segment=0 on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count395
-\scratchdimen=\dimen149
+\scratchcounter=\count399
+\scratchdimen=\dimen156
 \scratchbox=\box51
-\nofMPsegments=\count396
-\nofMParguments=\count397
+\nofMPsegments=\count400
+\nofMParguments=\count401
 \everyMPshowfont=\toks18
-\MPscratchCnt=\count398
-\MPscratchDim=\dimen150
-\MPnumerator=\count399
-\makeMPintoPDFobject=\count400
+\MPscratchCnt=\count402
+\MPscratchDim=\dimen157
+\MPnumerator=\count403
+\makeMPintoPDFobject=\count404
 \everyMPtoPDFconversion=\toks19
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -504,6 +527,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
 (./frontpages/titlepage.tex [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./frontpages/approval.te
@@ -554,54 +580,78 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
 
 ]
-[2]) (./chapters/related_work.tex [3] [4] [5]) (./chapters/methodology.tex
-<figures/methodology/4_2_intersection_union.png, id=43, 640.64343pt x 162.6075p
+[2]) (./chapters/related_work.tex [3] [4] [5]) (./chapters/dataset.tex
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
+33.
+
+(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [6]
+<figures/dataset/3_2_pelco_esprit_camera.png, id=47, 188.95593pt x 193.47281pt>
+
+File: figures/dataset/3_2_pelco_esprit_camera.png Graphic file (type png)
+<use figures/dataset/3_2_pelco_esprit_camera.png>
+Package pdftex.def Info: figures/dataset/3_2_pelco_esprit_camera.png  used on i
+nput line 75.
+(pdftex.def)             Requested size: 111.15433pt x 113.81102pt.
+<figures/dataset/3_2_pelco_9760_camera.png, id=49, 164.11313pt x 126.4725pt>
+File: figures/dataset/3_2_pelco_9760_camera.png Graphic file (type png)
+<use figures/dataset/3_2_pelco_9760_camera.png>
+Package pdftex.def Info: figures/dataset/3_2_pelco_9760_camera.png  used on inp
+ut line 81.
+(pdftex.def)             Requested size: 147.68541pt x 113.81102pt.
+<figures/dataset/3_2_axis_camera.png, id=50, 158.84344pt x 119.69719pt>
+File: figures/dataset/3_2_axis_camera.png Graphic file (type png)
+<use figures/dataset/3_2_axis_camera.png>
+Package pdftex.def Info: figures/dataset/3_2_axis_camera.png  used on input lin
+e 87.
+(pdftex.def)             Requested size: 151.0337pt x 113.81102pt.
+
+Overfull \hbox (0.70866pt too wide) in paragraph at lines 87--88
+ [][] 
+ []
+
+) (./chapters/methodology.tex [7]
+<figures/methodology/4_2_intersection_union.png, id=54, 640.64343pt x 162.6075p
 t>
 File: figures/methodology/4_2_intersection_union.png Graphic file (type png)
 <use figures/methodology/4_2_intersection_union.png>
 Package pdftex.def Info: figures/methodology/4_2_intersection_union.png  used o
 n input line 27.
 (pdftex.def)             Requested size: 392.35599pt x 99.58464pt.
-<figures/methodology/4_2_iou_calculation.png, id=45, 455.45157pt x 256.70906pt>
+<figures/methodology/4_2_iou_calculation.png, id=55, 455.45157pt x 256.70906pt>
 
 File: figures/methodology/4_2_iou_calculation.png Graphic file (type png)
 <use figures/methodology/4_2_iou_calculation.png>
 Package pdftex.def Info: figures/methodology/4_2_iou_calculation.png  used on i
 nput line 34.
 (pdftex.def)             Requested size: 281.85587pt x 158.8681pt.
-
-[6 <./figures/methodology/4_2_intersection_union.png>]
-<figures/methodology/4_2_confusion_matrix.png, id=50, 313.9228pt x 304.88907pt>
+ [8 <./figures/dataset/3_2_pelco_esprit_camera.png> <./figures/dataset/3_2_pelc
+o_9760_camera.png> <./figures/dataset/3_2_axis_camera.png>]
+<figures/methodology/4_2_confusion_matrix.png, id=63, 313.9228pt x 304.88907pt>
 
 File: figures/methodology/4_2_confusion_matrix.png Graphic file (type png)
 <use figures/methodology/4_2_confusion_matrix.png>
 Package pdftex.def Info: figures/methodology/4_2_confusion_matrix.png  used on 
 input line 47.
 (pdftex.def)             Requested size: 190.42923pt x 184.9429pt.
- [7 <./figures/methodology/4_2_iou_calculation.png> <./figures/methodology/4_2_
-confusion_matrix.png>]
-[8]
-<figures/methodology/4_2_example_pr_curve.png, id=61, 514.0806pt x 409.2891pt>
+ [9 <./figures/methodology/4_2_intersection_union.png> <./figures/methodology/4
+_2_iou_calculation.png> <./figures/methodology/4_2_confusion_matrix.png>] [10]
+<figures/methodology/4_2_example_pr_curve.png, id=74, 514.0806pt x 409.2891pt>
 File: figures/methodology/4_2_example_pr_curve.png Graphic file (type png)
 <use figures/methodology/4_2_example_pr_curve.png>
 Package pdftex.def Info: figures/methodology/4_2_example_pr_curve.png  used on 
 input line 141.
 (pdftex.def)             Requested size: 232.29112pt x 184.9429pt.
- [9 <./figures/methodology/4_2_example_pr_curve.png>]
-<figures/methodology/4_2_example_pr_curve_ap.png, id=66, 514.0806pt x 409.2891p
+<figures/methodology/4_2_example_pr_curve_ap.png, id=75, 514.0806pt x 409.2891p
 t>
 File: figures/methodology/4_2_example_pr_curve_ap.png Graphic file (type png)
 <use figures/methodology/4_2_example_pr_curve_ap.png>
 Package pdftex.def Info: figures/methodology/4_2_example_pr_curve_ap.png  used 
 on input line 158.
 (pdftex.def)             Requested size: 232.29112pt x 184.9429pt.
- [10 <./figures/methodology/4_2_example_pr_curve_ap.png>]) [11]
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-48.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [12]
+ [11] [12 <./figures/methodology/4_2_example_pr_curve.png> <./figures/methodolo
+gy/4_2_example_pr_curve_ap.png>] [13]) [14]
 LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 4
 8.
 
@@ -610,24 +660,36 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 48.
- [13]
-(/home/aidan/repos/masters/report/build/main.aux)
+ [15] [16]
+
+Package biblatex Warning: No driver for entry type 'artwork'.
+(biblatex)                Using fallback driver on input line 48.
+
+
+Package biblatex Warning: No driver for entry type 'artwork'.
+(biblatex)                Using fallback driver on input line 48.
+
+
+Package biblatex Warning: No driver for entry type 'artwork'.
+(biblatex)                Using fallback driver on input line 48.
+
+[17] (/home/aidan/repos/masters/report/build/main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 10362 strings out of 480247
- 202286 string characters out of 5896151
- 894910 words of memory out of 5000000
- 28162 multiletter control sequences out of 15000+600000
+ 11793 strings out of 480247
+ 232617 string characters out of 5896151
+ 921278 words of memory out of 5000000
+ 29577 multiletter control sequences out of 15000+600000
  514780 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 65i,8n,71p,2177b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,8n,80p,2177b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texm
+dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr
+/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
+lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texm
 f/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb>
@@ -637,11 +699,11 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on /home/aidan/repos/masters/report/build/main.pdf (18 pages, 57
-6805 bytes).
+Output written on /home/aidan/repos/masters/report/build/main.pdf (22 pages, 66
+8703 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 167 PDF objects out of 1000 (max. 8388607)
+ 99 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
