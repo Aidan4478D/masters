@@ -180,9 +180,47 @@ Two-Wheeler) are averaged to produce the Mean Average Precision (mAP):
 mAP = \frac{1}{N} \sum_{i=1}^{N} AP_i
 \end{equation}
 
-Where $N$ is the total number of classes ($N=5$ in this study). The mAP serves 
-as the primary metric for the model's overall performance in localizing and 
-classifying vehicles.
+Where $N$ is the total number of classes ($N=5$ in this study). 
+Because the mAP score relies on the initial spatial overlap requirement, standard 
+evaluation protocols report performance at different Intersection over Union (IoU) 
+thresholds. A common baseline is AP50 (AP calculated at an IoU threshold of 0.50), which 
+tolerates moderate bounding box looseness. However, modern object detection systems
+evaluate performance using the protocol established by the Microsoft Common 
+Objects in Context (MS COCO) dataset \cite{lin_microsoft_2015}. The COCO-style mAP (often denoted 
+as $AP@[.50:.05:.95]$) averages the mAP across ten distinct IoU thresholds ranging 
+from 0.50 to 0.95 with a step size of 0.05:
 
+\begin{equation}
+mAP_{COCO} = \frac{1}{10} \sum_{t \in T}mAP_t
+\end{equation}
 
+Where $T = \{0.50, 0.55, 0.60, \dots, 0.95\}$ and $mAP_t$ is the Mean Average 
+Precision evaluated at IoU threshold $t$. The primary objective of this thesis 
+is accurately labeling vehicles for emissions modeling which makes the looser 
+spatial tolerance of AP50 an intuitively appealing metric. However, this study 
+utilizes the stricter COCO-style mAP as the primary performance indicator for 
+several reasons:
+\begin{itemize}
+    \item The proposed pipeline relies on cropping the detected bounding boxes 
+    to feed into a secondary classification model (see Section —). A loose 
+    bounding box that barely satisfies a 0.50 IoU may contain excessive background
+    scene or partial features of nearby vehicles. This noise degrades the quality
+    of the image crop, leading to downstream misclassification of the vehicle 
+    type (e.g., confusing an MDV with an HDV). Therefore, accurate vehicle 
+    classification depends on high quality localization.
 
+    \item In heavily congested New York City traffic, relying solely on AP50 can 
+    hide localization failures. Sloppy bounding boxes that overlap multiple 
+    tailgating vehicles can still score under a 0.50 threshold, but will cause
+    the system to merge distinct emission sources, leading to undercounting.
+
+    \item Finally, COCO mAP is the standard in modern computer vision literature. 
+    By integrating across ten spatial strictnesses, it reduces the metric's 
+    sensitivity to any single arbitrary cutoff and prevents the model from 
+    artificially inflating its performance by outputting overly large regions 
+    of interest.
+\end{itemize}
+
+Utilizing the COCO mAP ensures that the detection architecture is not hallucinating
+large active regions, but is learning the boxes required to reliably isolate 
+vehicles in urban environments.

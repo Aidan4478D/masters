@@ -639,6 +639,98 @@
       \endverb
       \keyw{Air Pollutants,Air Pollution,Environmental Exposure,Environmental Monitoring,Female,Global Health,Humans,Internationality,Male,Public Health,Respiration,World Health Organization}
     \endentry
+    \entry{lin_microsoft_2015}{inproceedings}{}
+      \name{author}{10}{}{%
+        {{hash=08f925fe4692d130a1d7cb7d94483351}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Tsung-Yi},
+           giveni={T\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=d980bc6930f008a0fb5fa667785f2309}{%
+           family={Maire},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=044d1db5259b74e4975282f599d8e767}{%
+           family={Belongie},
+           familyi={B\bibinitperiod},
+           given={Serge},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a5d50cf5c085cd3a323d68588dcb89c8}{%
+           family={Bourdev},
+           familyi={B\bibinitperiod},
+           given={Lubomir},
+           giveni={L\bibinitperiod}}}%
+        {{hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           familyi={G\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=797fc3624ba315db58eef7279ace5bf3}{%
+           family={Hays},
+           familyi={H\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e52876f830a8a20786ff3e4d7dd6f083}{%
+           family={Perona},
+           familyi={P\bibinitperiod},
+           given={Pietro},
+           giveni={P\bibinitperiod}}}%
+        {{hash=aedcd3831845183e070aef16857d83ea}{%
+           family={Ramanan},
+           familyi={R\bibinitperiod},
+           given={Deva},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0eae2d56a9cbb037c64028d6573877a7}{%
+           family={Zitnick},
+           familyi={Z\bibinitperiod},
+           given={C.\bibnamedelimi Lawrence},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=ecd149fdcb3e0503881d49e545744c3d}{%
+           family={Dollár},
+           familyi={D\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{72b744e79c74738c617fd08b4f3d7e36}
+      \strng{fullhash}{63d989c97b4964e8cb9e77f1dea6cd25}
+      \strng{bibnamehash}{72b744e79c74738c617fd08b4f3d7e36}
+      \strng{authorbibnamehash}{72b744e79c74738c617fd08b4f3d7e36}
+      \strng{authornamehash}{72b744e79c74738c617fd08b4f3d7e36}
+      \strng{authorfullhash}{63d989c97b4964e8cb9e77f1dea6cd25}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present a new dataset with the goal of advancing the state-of-the-art in object recognition by placing the question of object recognition in the context of the broader question of scene understanding. This is achieved by gathering images of complex everyday scenes containing common objects in their natural context. Objects are labeled using per-instance segmentations to aid in precise object localization. Our dataset contains photos of 91 objects types that would be easily recognizable by a 4 year old. With a total of 2.5 million labeled instances in 328k images, the creation of our dataset drew upon extensive crowd worker involvement via novel user interfaces for category detection, instance spotting and instance segmentation. We present a detailed statistical analysis of the dataset in comparison to {PASCAL}, {ImageNet}, and {SUN}. Finally, we provide baseline performance analysis for bounding box and segmentation detection results using a Deformable Parts Model.}
+      \field{day}{21}
+      \field{eprinttype}{arxiv}
+      \field{month}{2}
+      \field{shorttitle}{Microsoft {COCO}}
+      \field{title}{Microsoft {COCO}: Common Objects in Context}
+      \field{urlday}{1}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1405.0312
+      \endverb
+      \verb{eprint}
+      \verb 1405.0312
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1405.0312
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1405.0312
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
