@@ -16,6 +16,8 @@ By tapping into this existing and continually expanding network,
 this methodology ensures that the proposed vehicle detection pipeline can be 
 deployed and scaled citywide with zero additional physical infrastructure work.
 
+% ------------------------------------------------------------------------------%
+
 \subsection{Data Source}
 
 The primary source of images was the 511NY portal, an official service operated 
@@ -26,6 +28,11 @@ distribution networks such as Skyline
 The 511NY system provides real-time traffic and transit information, including 
 access to hundreds of live traffic cameras deployed across the five boroughs
 \cite{NYCDOT_realtime}.
+According to NYSDOT engineering specifications, the primary purpose of these CCTV 
+cameras is to provide a means to remotely monitor traffic flow on specific sections of roadway.
+By utilizing these live feeds, transportation agencies can actively detect incidents, 
+analyze urban congestion, and broadcast real-time travel conditions to the public
+\cite{NYCDOT_item_2024}.
 
 The data can be accessed online through an online GUI or through the 511NY 
 Developer REST API. Developers with access to this API can query various 
@@ -45,6 +52,8 @@ agreement to access its network of over 900 municipal cameras
 To ensure this research remains easily reproducible without legal barriers, 
 the dataset was built exclusively using the unrestricted NYSDOT and Skyline feeds.
 
+% ==============================================================================
+
 \subsection{Collection Protcol and Camera Hardware}
 
 Because querying the global \verb|GetCameras| endpoint only returned a subset of the 
@@ -59,35 +68,202 @@ intersection patterns \cite{NYCDOT_traffic_signals}.
 By capturing frames every two minutes, the collection 
 protocol inherently acts as a temporal filter, increasing the likelihood that 
 consecutive images capture distinct vehicles rather than oversampling the same 
-traffic scene.
+vehicle from a traffic scene.
 
 The physical infrastructure powering these feeds are industrial-grade pan-tilt-zoom
 (PTZ) cameras. According to NYSDOT engineering specifications, the standard hardware 
 deployed for these remote traffic monitoring tasks includes the Pelco Esprit Model 
 ES31PC22-2N, legacy Pelco 9760 units, and Axis Communications Q1614-E models
-\cite{NYCDOT_item_2014} \cite{NYCDOT_item_2024}.
+\cite{NYCDOT_item_2014} \cite{NYCDOT_item_2024}. These cameras can be seen 
+below in Figure~\ref{fig:ptz-cameras}. 
 
 \begin{figure}[!htbp]
-  \centering
+    \centering
 
-  \begin{subfigure}[c]{0.32\textwidth}
-    \centering
-    \includegraphics[height=4cm]{figures/dataset/3_2_pelco_esprit_camera.png}
-    \caption{Pelco Esprit ES31PC22-2N \cite{bh_photo_video_pelco_2026}.}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[c]{0.32\textwidth}
-    \centering
-    \includegraphics[height=4cm]{figures/dataset/3_2_pelco_9760_camera.png}
-    \caption{Pelco 9760 \cite{froehlich5220_pelco_2026}.}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[c]{0.32\textwidth}
-    \centering
-    \includegraphics[height=4cm]{figures/dataset/3_2_axis_camera.png}
-    \caption{Axis Q1614-E \cite{axis_communications_axis_2026}.}
-  \end{subfigure}
+    \begin{subfigure}[c]{0.32\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/dataset/3_2_pelco_esprit_camera.png}
+        \caption{Pelco Esprit ES31PC22-2N \cite{bh_photo_video_pelco_2026}.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.32\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/dataset/3_2_pelco_9760_camera.png}
+        \caption{Pelco 9760 \cite{froehlich5220_pelco_2026}.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.32\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/dataset/3_2_axis_camera.png}
+        \caption{Axis Q1614-E \cite{axis_communications_axis_2026}.}
+    \end{subfigure}
 
-  \caption{Example PTZ camera models used in NYSDOT/NYC traffic monitoring infrastructure. Note: camera sizes are not to scale.}
-  \label{fig:ptz-cameras}
+    \caption{Example PTZ camera models used in NYSDOT/NYC traffic monitoring infrastructure. Note: camera sizes are not to scale.}
+    \label{fig:ptz-cameras}
 \end{figure}
+
+\FloatBarrier
+
+While these cameras are capable of high-resolution video, the images returned 
+by the 511NY API \verb|GetCamera| endpoint have a resolution of 352x240, and are 
+generally low-quality. Examples of such images can be seen in Figure~\ref{fig:----}
+I assume the images returned from the \verb|GetCamera| endpoint are intentionally 
+downsampled and compressed, as this reduces server bandwidth and inherently 
+enforces privacy by making it impossible to read license plates or use facial 
+recognition. Thus the images used in this dataset all have the dimensions 352x240.
+
+% ==============================================================================
+
+\subsection{Dataset Curation}
+
+To ensure the model learned a robust representation of New York City traffic,
+the data collection targeted a diverse set of intersections from different boroughs 
+and types of roadways (narrow commercial streets, major expressways, and neighborhood
+intersections). 
+
+% ------------------------------------------------------------------------------
+
+\subsubsection{Camera Selection}
+
+The dataset is made up of images from 12 specific camera locations across four boroughs.
+These cameras were chosen based on three criteria: API availability, roadway typology, 
+and location. First, regarding availability, requesting images from certain cameras 
+often resulted in a continuous stream of placeholder graphics displaying "This camera 
+is being serviced" or "No live video camera feed at this time," as shown below in 
+Figure~\ref{fig:camera-down}. 
+Only cameras with reliable uptime during the collection window were selected.
+
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/dataset/3_3_1_camera_serviced.png}
+        \caption{Camera being serviced message.}
+    \end{subfigure}
+    \hspace{0.5em}
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=4cm]{figures/dataset/3_3_1_camera_no_feed.png}
+        \caption{No live camera feed message.}
+    \end{subfigure}
+    \caption{Images returned by unavailble cameras.}
+    \label{fig:camera-down}
+\end{figure}
+
+\FloatBarrier
+
+Additionally, cameras were selected at street-level intersections rather than 
+highways because intersections have accelerating, braking, and idling vehicles
+which produce higher emissions than steady highway cruising 
+\cite{us_epa_moves3_2020}. High-resolution
+studies further demonstrate that emissions vary sharply across short distances, 
+with hotspots frequently forming at congested intersections which is often missed
+by imprecise emission estimates \cite{wang_high-resolution_2025}. 
+Also, NYC’s truck route regulations concentrate
+large through-trucks on designated expressways \cite{NYCDOT_truck_routing}, 
+while local street networks
+are characterized by last-mile delivery vehicles, city transit buses, and other
+urban service fleets \cite{NYCDOT_truck_plan_2021}. 
+As a result, intersections better capture the vehicle 
+composition and operating conditions that drive neighborhood-level emissions, 
+which is the scale of interest in this study. Thus cameras were chosen in 
+different neighborhoods in Manhattan, the Bronx, Queens, and Brooklyn. No cameras
+were chosen in Staten Island as they either returned images shown in 
+Figure~\ref{fig:camera-down} or they were feeds of highways.
+
+
+Twelve cameras that fit these criteria were then chosen based on the viewing 
+angle of the vehicle (ex. Front view, rear view, side view, and any
+combination of each). This is because when developing a model to be deployed 
+on any NYC traffic camera, it is necessary to make sure all views of different 
+vehicle orientations are captured so the model is robust to any view of the vehicle.
+Figure~\ref{fig:vehicle-views} shows four different views of vehicle orientations the cameras can 
+record. The images are colored such that vehicles highlighted in yellow show 
+its front, vehicles highlighted in red show its rear, and vehicles highlighted
+in blue show its side. There are some cameras which only see one orientation 
+of vehicles (Figure~\ref{fig:front-side-view}), but there are also cameras which see two 
+(Figures~\ref{fig:side-rear-view} and \ref{fig:rear-front-view}) or three 
+(Figure~\ref{fig:side-front-rear-view}) different vehicle orientations. The twelve
+chosen cameras are detailed in Table~\ref{tab:camera-locations}, showcasing their
+borough, street intersection, neighborhood, and vehicle views. Their physical 
+locations within NYC are depicted in Figure~\ref{fig:camera-map}.
+
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figures/dataset/3_3_1_front_side_view.png}
+        \caption{Front and side view of vehicles.}
+        \label{fig:front-side-view}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figures/dataset/3_3_1_side_rear_view.png}
+        \caption{Side view and rear view of vehicles.}
+        \label{fig:side-rear-view}
+    \end{subfigure}
+
+    % new row -----------------------
+    \vspace{1.5em}
+
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figures/dataset/3_3_1_rear_front_view.png}
+        \caption{Front and rear view of vehicles.}
+        \label{fig:rear-front-view}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figures/dataset/3_3_1_side_front_rear_view.png}
+        \caption{Front, side, and rear view of vehicles.}
+        \label{fig:side-front-rear-view}
+    \end{subfigure}
+
+    \caption{
+        Different views of vehicles through different traffic cameras.
+        The images are colored such that vehicles highlighted in \textcolor{myyellow}{yellow} show its 
+        front, vehicles highlighted in \textcolor{red}{red} show its rear, and vehicles highlighted 
+        in \textcolor{blue}{blue} show its side.
+    }
+    \label{fig:vehicle-views}
+\end{figure}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Selected CCTV Camera Locations and Viewing Orientations}
+    \label{tab:camera-locations}
+    \begin{tabularx}{\textwidth}{l l l X}
+        \toprule
+        Borough & Intersection & Neighborhood & Vehicle Views \\
+        \midrule
+        Manhattan & 3rd Ave @ 23rd St & Kips Bay & Front, Rear, Side \\
+        Manhattan & 9th Ave @ 49th St & Midtown & Front, Rear \\
+        Manhattan & Houston St @ Bowery St & Lower East Side & Front, Rear, Side \\
+        Manhattan & Church St @ Park Pl & Tribeca & Front \\
+        Manhattan & Canal St @ Baxter St & Chinatown & Front, Rear, Side \\
+        Manhattan & Amsterdam Ave @ 125th St & West Harlem & Front, Rear \\
+        Manhattan & Lenox Ave @ 135th St & Central Harlem & Front, Rear \\
+        Bronx & Fordham Rd @ Hughes Ave & Belmont & Front, Rear \\
+        Queens & Hillside Ave @ Little Neck Pkwy & Glen Oaks & Front, Rear \\
+        Brooklyn & Atlantic Ave @ BQE & Brooklyn Heights & Front, Side \\
+        Brooklyn & Atlantic Ave @ Vanderbilt Ave & Prospect Heights & Front, Rear \\
+        Brooklyn & Ocean Pkwy @ Ditmas Ave & Kensington & Front, Rear \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=10.5cm]{figures/dataset/3_3_1_dataset_cameras_map.png}
+    \caption{Map of selected CCTV cameras in NYC.}
+    \label{fig:camera-map}
+\end{figure}
+
+% ------------------------------------------------------------------------------
+
+\subsubsection{Image Collection}

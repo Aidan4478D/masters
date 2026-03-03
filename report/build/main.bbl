@@ -867,6 +867,38 @@
       \verb https://webcams.nyctmc.org/cameras-list
       \endverb
     \endentry
+    \entry{NYCDOT_item_2024}{report}{}
+      \name{author}{1}{}{%
+        {{hash=35839065c019664d2760546540a2dc59}{%
+           family={{New York State Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {{NYSDOT} Office of Engineering}%
+      }
+      \strng{namehash}{35839065c019664d2760546540a2dc59}
+      \strng{fullhash}{35839065c019664d2760546540a2dc59}
+      \strng{bibnamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authorbibnamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authornamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{number}{683.03010005}
+      \field{title}{Item 683.03010005 – Networking Equipment}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.dot.ny.gov/spec-repository-us/683.03010005.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.dot.ny.gov/spec-repository-us/683.03010005.pdf
+      \endverb
+    \endentry
     \entry{511ny_api_docs}{online}{}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -962,8 +994,8 @@
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{NYC} {DOT} - Infrastructure - Traffic Signals}
@@ -993,7 +1025,7 @@
       \strng{authorbibnamehash}{35839065c019664d2760546540a2dc59}
       \strng{authornamehash}{35839065c019664d2760546540a2dc59}
       \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -1008,38 +1040,6 @@
       \endverb
       \verb{url}
       \verb https://www.dot.ny.gov/spec-repository-us/683.03120011.pdf
-      \endverb
-    \endentry
-    \entry{NYCDOT_item_2024}{report}{}
-      \name{author}{1}{}{%
-        {{hash=35839065c019664d2760546540a2dc59}{%
-           family={{New York State Department of Transportation}},
-           familyi={N\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {{NYSDOT} Office of Engineering}%
-      }
-      \strng{namehash}{35839065c019664d2760546540a2dc59}
-      \strng{fullhash}{35839065c019664d2760546540a2dc59}
-      \strng{bibnamehash}{35839065c019664d2760546540a2dc59}
-      \strng{authorbibnamehash}{35839065c019664d2760546540a2dc59}
-      \strng{authornamehash}{35839065c019664d2760546540a2dc59}
-      \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
-      \field{extraname}{3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{6}
-      \field{number}{683.03010005}
-      \field{title}{Item 683.03010005 – Networking Equipment}
-      \field{year}{2024}
-      \field{dateera}{ce}
-      \verb{urlraw}
-      \verb https://www.dot.ny.gov/spec-repository-us/683.03010005.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.dot.ny.gov/spec-repository-us/683.03010005.pdf
       \endverb
     \endentry
     \entry{bh_photo_video_pelco_2026}{artwork}{}
@@ -1132,6 +1132,111 @@
       \verb https://www.axis.com/products/axis-q1614-e/support
       \endverb
     \endentry
+    \entry{us_epa_moves3_2020}{report}{}
+      \name{author}{1}{}{%
+        {{hash=8233d83a5e663161d707a62961f8f66f}{%
+           family={{U.S. Environmental Protection Agency}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Office of Transportation}%
+        {Air Quality, U.S. Environmental Protection Agency}%
+      }
+      \strng{namehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{fullhash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{bibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{number}{{EPA}-420-B-20-052}
+      \field{title}{{MOVES}3 Technical Guidance: Using {MOVES} to Prepare Emission Inventories for State Implementation Plans and Transportation Conformity}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420b20052.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420b20052.pdf
+      \endverb
+    \endentry
+    \entry{NYCDOT_truck_routing}{online}{}
+      \name{author}{1}{}{%
+        {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
+           family={{New York City Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{fullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{bibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \field{extraname}{4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{NYC} {DOT} - Truck Routing}
+      \field{titleaddon}{Truck Routing}
+      \field{urlday}{3}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nyc.gov/html/dot/html/motorist/truckrouting.shtml
+      \endverb
+      \verb{url}
+      \verb https://www.nyc.gov/html/dot/html/motorist/truckrouting.shtml
+      \endverb
+    \endentry
+    \entry{NYCDOT_truck_plan_2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
+           family={{New York City Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}}%
+      }
+      \list{publisher}{1}{%
+        {New York City Department of Transportation ({NYC} {DOT})}%
+      }
+      \strng{namehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{fullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{bibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \field{extraname}{5}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{13}
+      \field{month}{5}
+      \field{title}{Delivering New York: A Smart Truck Management Plan for New York City}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nyc.gov/html/dot/downloads/pdf/smart-truck-management-plan.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.nyc.gov/html/dot/downloads/pdf/smart-truck-management-plan.pdf
+      \endverb
+    \endentry
     \entry{lin_microsoft_2015}{inproceedings}{}
       \name{author}{10}{}{%
         {{hash=08f925fe4692d130a1d7cb7d94483351}{%
@@ -1194,8 +1299,8 @@
       \strng{authorbibnamehash}{72b744e79c74738c617fd08b4f3d7e36}
       \strng{authornamehash}{72b744e79c74738c617fd08b4f3d7e36}
       \strng{authorfullhash}{63d989c97b4964e8cb9e77f1dea6cd25}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{We present a new dataset with the goal of advancing the state-of-the-art in object recognition by placing the question of object recognition in the context of the broader question of scene understanding. This is achieved by gathering images of complex everyday scenes containing common objects in their natural context. Objects are labeled using per-instance segmentations to aid in precise object localization. Our dataset contains photos of 91 objects types that would be easily recognizable by a 4 year old. With a total of 2.5 million labeled instances in 328k images, the creation of our dataset drew upon extensive crowd worker involvement via novel user interfaces for category detection, instance spotting and instance segmentation. We present a detailed statistical analysis of the dataset in comparison to {PASCAL}, {ImageNet}, and {SUN}. Finally, we provide baseline performance analysis for bounding box and segmentation detection results using a Deformable Parts Model.}

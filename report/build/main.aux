@@ -57,6 +57,8 @@
 \abx@aux@segm{0}{0}{511ny_about_rideshare}
 \abx@aux@cite{0}{NYCDOT_realtime}
 \abx@aux@segm{0}{0}{NYCDOT_realtime}
+\abx@aux@cite{0}{NYCDOT_item_2024}
+\abx@aux@segm{0}{0}{NYCDOT_item_2024}
 \abx@aux@cite{0}{511ny_api_docs}
 \abx@aux@segm{0}{0}{511ny_api_docs}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Dataset}{6}{}\protected@file@percent }
@@ -91,24 +93,51 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Example PTZ camera models used in NYSDOT/NYC traffic monitoring infrastructure. Note: camera sizes are not to scale.\relax }}{8}{}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:ptz-cameras}{{1}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Performance Metrics}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Intersection over Union}{8}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces IoU Calculation\relax }}{9}{}\protected@file@percent }
-\newlabel{fig:iou_calc}{{2}{9}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Confusion Matrix}{9}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Confusion Matrix\relax }}{9}{}\protected@file@percent }
-\newlabel{fig:conf_matrix}{{3}{9}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Precision-Recall Curve}{11}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Average Precision and mAP}{11}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Example Precision-Recall Curve\relax }}{12}{}\protected@file@percent }
-\newlabel{fig:ex_pr_curve}{{4}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Average Precision within a Precision-Recall Curve\relax }}{12}{}\protected@file@percent }
-\newlabel{fig:ex_pr_curve_ap}{{5}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Dataset Curation}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Camera Selection}{8}{}\protected@file@percent }
+\abx@aux@cite{0}{us_epa_moves3_2020}
+\abx@aux@segm{0}{0}{us_epa_moves3_2020}
+\abx@aux@cite{0}{wang_high-resolution_2025}
+\abx@aux@segm{0}{0}{wang_high-resolution_2025}
+\abx@aux@cite{0}{NYCDOT_truck_routing}
+\abx@aux@segm{0}{0}{NYCDOT_truck_routing}
+\abx@aux@cite{0}{NYCDOT_truck_plan_2021}
+\abx@aux@segm{0}{0}{NYCDOT_truck_plan_2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Images returned by unavailble cameras.\relax }}{9}{}\protected@file@percent }
+\newlabel{fig:camera-down}{{2}{9}}
+\newlabel{fig:front-side-view}{{3a}{10}}
+\newlabel{sub@fig:front-side-view}{{a}{10}}
+\newlabel{fig:side-rear-view}{{3b}{10}}
+\newlabel{sub@fig:side-rear-view}{{b}{10}}
+\newlabel{fig:rear-front-view}{{3c}{10}}
+\newlabel{sub@fig:rear-front-view}{{c}{10}}
+\newlabel{fig:side-front-rear-view}{{3d}{10}}
+\newlabel{sub@fig:side-front-rear-view}{{d}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces  Different views of vehicles through different traffic cameras. The images are colored such that vehicles highlighted in \leavevmode {\color  {myyellow}yellow} show its front, vehicles highlighted in \leavevmode {\color  {red}red} show its rear, and vehicles highlighted in \leavevmode {\color  {blue}blue} show its side. \relax }}{10}{}\protected@file@percent }
+\newlabel{fig:vehicle-views}{{3}{10}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Selected CCTV Camera Locations and Viewing Orientations\relax }}{10}{}\protected@file@percent }
+\newlabel{tab:camera-locations}{{1}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Map of selected CCTV cameras in NYC.\relax }}{11}{}\protected@file@percent }
+\newlabel{fig:camera-map}{{4}{11}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Image Collection}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Performance Metrics}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Intersection over Union}{12}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces IoU Calculation\relax }}{12}{}\protected@file@percent }
+\newlabel{fig:iou_calc}{{5}{12}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Confusion Matrix}{12}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Confusion Matrix\relax }}{13}{}\protected@file@percent }
+\newlabel{fig:conf_matrix}{{6}{13}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Precision-Recall Curve}{14}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Example Precision-Recall Curve\relax }}{15}{}\protected@file@percent }
+\newlabel{fig:ex_pr_curve}{{7}{15}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Average Precision and mAP}{15}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Average Precision within a Precision-Recall Curve\relax }}{15}{}\protected@file@percent }
+\newlabel{fig:ex_pr_curve_ap}{{8}{15}}
 \abx@aux@cite{0}{lin_microsoft_2015}
 \abx@aux@segm{0}{0}{lin_microsoft_2015}
-\@writefile{toc}{\contentsline {section}{References}{14}{}\protected@file@percent }
-\abx@aux@read@bbl@mdfivesum{38E579D92F64CE10358F90808236DB02}
+\@writefile{toc}{\contentsline {section}{References}{17}{}\protected@file@percent }
+\abx@aux@read@bbl@mdfivesum{9E5331897092DDEB0A688CB435B9817D}
 \abx@aux@defaultrefcontext{0}{world_health_organization_air_nodate}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{health_effects_institute_state_2025}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{uherek_transport_2010}{none/global//global/global}
@@ -128,14 +157,17 @@
 \abx@aux@defaultrefcontext{0}{NYSDOT_c038145_2025}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{511ny_about_rideshare}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{NYCDOT_realtime}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{NYCDOT_item_2024}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{511ny_api_docs}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{NYCDOT_realtime_metadata_2010}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{NYCDOT_realtime_subscribers}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{NYCDOT_traffic_signals}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{NYCDOT_item_2014}{none/global//global/global}
-\abx@aux@defaultrefcontext{0}{NYCDOT_item_2024}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{bh_photo_video_pelco_2026}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{froehlich5220_pelco_2026}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{axis_communications_axis_2026}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{us_epa_moves3_2020}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{NYCDOT_truck_routing}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{NYCDOT_truck_plan_2021}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{lin_microsoft_2015}{none/global//global/global}
-\gdef \@abspage@last{22}
+\gdef \@abspage@last{27}
