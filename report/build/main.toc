@@ -11,14 +11,15 @@
 \contentsline {subsubsection}{\numberline {2.2.3}The Dependency on Bottom-Up Inventories}{5}{}%
 \contentsline {section}{\numberline {3}Dataset}{6}{}%
 \contentsline {subsection}{\numberline {3.1}Data Source}{6}{}%
-\contentsline {subsection}{\numberline {3.2}Collection Protcol and Camera Hardware}{7}{}%
+\contentsline {subsection}{\numberline {3.2}Camera Hardware}{7}{}%
 \contentsline {subsection}{\numberline {3.3}Dataset Curation}{8}{}%
 \contentsline {subsubsection}{\numberline {3.3.1}Camera Selection}{8}{}%
 \contentsline {subsubsection}{\numberline {3.3.2}Image Collection}{11}{}%
-\contentsline {section}{\numberline {4}Methodology}{11}{}%
-\contentsline {subsection}{\numberline {4.1}Performance Metrics}{11}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}Intersection over Union}{12}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}Confusion Matrix}{12}{}%
-\contentsline {subsubsection}{\numberline {4.1.3}Precision-Recall Curve}{14}{}%
-\contentsline {subsubsection}{\numberline {4.1.4}Average Precision and mAP}{15}{}%
-\contentsline {section}{References}{17}{}%
+\contentsline {subsection}{\numberline {3.4}Data Labeling}{13}{}%
+\contentsline {section}{\numberline {4}Methodology}{13}{}%
+\contentsline {subsection}{\numberline {4.1}Performance Metrics}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Intersection over Union}{13}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}Confusion Matrix}{14}{}%
+\contentsline {subsubsection}{\numberline {4.1.3}Precision-Recall Curve}{15}{}%
+\contentsline {subsubsection}{\numberline {4.1.4}Average Precision and mAP}{17}{}%
+\contentsline {section}{References}{19}{}%

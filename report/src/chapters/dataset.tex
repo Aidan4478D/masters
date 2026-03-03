@@ -54,21 +54,7 @@ the dataset was built exclusively using the unrestricted NYSDOT and Skyline feed
 
 % ==============================================================================
 
-\subsection{Collection Protcol and Camera Hardware}
-
-Because querying the global \verb|GetCameras| endpoint only returned a subset of the 
-total network, a collection script was developed in Python to save specific, 
-known camera images directly. Although the 511NY API allows up to 10 requests per
-minute (once every six seconds), and the physical cameras refresh their static 
-feeds approximately every 15 seconds, a sampling rate of two minutes was chosen
-\cite{511ny_api_docs} \cite{NYCDOT_realtime_subscribers}. 
-This was selected to align with New York City's traffic signal cycles, which 
-typically range from 45 to 120 seconds depending on local traffic volumes and 
-intersection patterns \cite{NYCDOT_traffic_signals}. 
-By capturing frames every two minutes, the collection 
-protocol inherently acts as a temporal filter, increasing the likelihood that 
-consecutive images capture distinct vehicles rather than oversampling the same 
-vehicle from a traffic scene.
+\subsection{Camera Hardware}
 
 The physical infrastructure powering these feeds are industrial-grade pan-tilt-zoom
 (PTZ) cameras. According to NYSDOT engineering specifications, the standard hardware 
@@ -106,7 +92,7 @@ below in Figure~\ref{fig:ptz-cameras}.
 
 While these cameras are capable of high-resolution video, the images returned 
 by the 511NY API \verb|GetCamera| endpoint have a resolution of 352x240, and are 
-generally low-quality. Examples of such images can be seen in Figure~\ref{fig:----}
+generally low-quality. Examples of such images can be seen in Figure~\ref{fig:image-weather-conditions}
 I assume the images returned from the \verb|GetCamera| endpoint are intentionally 
 downsampled and compressed, as this reduces server bandwidth and inherently 
 enforces privacy by making it impossible to read license plates or use facial 
@@ -267,3 +253,79 @@ locations within NYC are depicted in Figure~\ref{fig:camera-map}.
 % ------------------------------------------------------------------------------
 
 \subsubsection{Image Collection}
+
+To automate the collection of the camera images, a Python script was developed to
+save the 12 selected camera images from the 511NY API directly. Although the API 
+allows up to 10 requests per minute (once every six seconds) \cite{511ny_api_docs},
+and the physical 
+cameras refresh their static feeds approximately every 15 seconds 
+\cite{NYCDOT_realtime_subscribers}, a sampling rate
+of two minutes was chosen. This was selected to align with New York City's traffic
+signal cycles, which typically range from 45 to 120 seconds depending on local 
+traffic volumes and intersection patterns. By capturing frames every two minutes,
+the collection protocol inherently acts as a temporal filter, increasing the 
+likelihood that consecutive images capture distinct vehicles rather than oversampling
+the same traffic scene.
+
+Data was collected on October 1st (Wednesday), 16th (Thursday), 20th (Monday), and 
+November 3rd (Monday). Figure~\ref{fig:vehicles-hour-chart} shows the distribution
+of the counts of images in the dataset by hour of the day. It shows that all images 
+were taken from 9 AM to 12 AM, with the majority of images in the early afternoon, 
+and during the afternoon peak traffic window (3 PM to 6 PM).
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=4.5cm]{figures/dataset/3_3_2_vehicles_hour_chart.png}
+    \caption{Counts of images in the dataset by hour of day.}
+    \label{fig:vehicles-hour-chart}
+\end{figure}
+
+Images were collected during various weather and lighting patterns so that the 
+model learns a robust representation of vehicles under different conditions. 
+Examples of different conditions are shown below:
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figures/dataset/3_3_2_condition_sunny.png}
+        \caption{Image with sun glare.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figures/dataset/3_3_2_condition_rainy.png}
+        \caption{Image taken while raining.}
+    \end{subfigure}
+
+    % new row -----------------------
+    \vspace{1.5em}
+
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figures/dataset/3_3_2_condition_night.png}
+        \caption{Image taken during the night.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figures/dataset/3_3_2_condition_normal.png}
+        \caption{Image taken under normal sunny/cloudy conditions.}
+    \end{subfigure}
+
+    \caption{
+        Different views of vehicles through different traffic cameras.
+        The images are colored such that vehicles highlighted in \textcolor{myyellow}{yellow} show its 
+        front, vehicles highlighted in \textcolor{red}{red} show its rear, and vehicles highlighted 
+        in \textcolor{blue}{blue} show its side.
+    }
+    \label{fig:image-weather-conditions}
+\end{figure}
+
+The final curated dataset consists of 1,200 unique images collected from 12 
+camera locations (100 images per camera) across four boroughs.
+
+% ------------------------------------------------------------------------------
+
+\subsection{Data Labeling}
+

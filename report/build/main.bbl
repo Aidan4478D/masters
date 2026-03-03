@@ -951,65 +951,6 @@
       \verb https://www.nyc.gov/html/dot/downloads/pdf/metadata-trafficspeeds.pdf
       \endverb
     \endentry
-    \entry{NYCDOT_realtime_subscribers}{online}{}
-      \name{author}{1}{}{%
-        {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
-           family={{New York City Department of Transportation}},
-           familyi={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \strng{fullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \strng{bibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Real Time Traffic Information - Subscribers}
-      \field{titleaddon}{Subscribers}
-      \field{urlday}{2}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://webcams.nyctmc.org/subscribers
-      \endverb
-      \verb{url}
-      \verb https://webcams.nyctmc.org/subscribers
-      \endverb
-    \endentry
-    \entry{NYCDOT_traffic_signals}{online}{}
-      \name{author}{1}{}{%
-        {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
-           family={{New York City Department of Transportation}},
-           familyi={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \strng{fullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \strng{bibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \field{extraname}{3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{{NYC} {DOT} - Infrastructure - Traffic Signals}
-      \field{urlday}{2}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.nyc.gov/html/dot/html/infrastructure/signals.shtml
-      \endverb
-      \verb{url}
-      \verb https://www.nyc.gov/html/dot/html/infrastructure/signals.shtml
-      \endverb
-    \endentry
     \entry{NYCDOT_item_2014}{report}{}
       \name{author}{1}{}{%
         {{hash=35839065c019664d2760546540a2dc59}{%
@@ -1026,8 +967,8 @@
       \strng{authornamehash}{35839065c019664d2760546540a2dc59}
       \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
       \field{extraname}{3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
@@ -1180,9 +1121,9 @@
       \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \field{extraname}{4}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{NYC} {DOT} - Truck Routing}
@@ -1216,9 +1157,9 @@
       \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \field{extraname}{5}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{13}
@@ -1235,6 +1176,36 @@
       \endverb
       \verb{url}
       \verb https://www.nyc.gov/html/dot/downloads/pdf/smart-truck-management-plan.pdf
+      \endverb
+    \endentry
+    \entry{NYCDOT_realtime_subscribers}{online}{}
+      \name{author}{1}{}{%
+        {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
+           family={{New York City Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{fullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{bibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \field{extraname}{4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Real Time Traffic Information - Subscribers}
+      \field{titleaddon}{Subscribers}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://webcams.nyctmc.org/subscribers
+      \endverb
+      \verb{url}
+      \verb https://webcams.nyctmc.org/subscribers
       \endverb
     \endentry
     \entry{lin_microsoft_2015}{inproceedings}{}

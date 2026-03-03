@@ -1,16 +1,16 @@
 # Fdb version 3
-["biber /home/aidan/repos/masters/report/build/main"] 1772499369 "/home/aidan/repos/masters/report/build/main.bcf" "/home/aidan/repos/masters/report/build/main.bbl" "/home/aidan/repos/masters/report/build/main" 1772499663
-  "/home/aidan/repos/masters/report/build/main.bcf" 1772499663 111423 bcf78e81fdf15deb100f4f10845aa817 "pdflatex"
+["biber /home/aidan/repos/masters/report/build/main"] 1772507313 "/home/aidan/repos/masters/report/build/main.bcf" "/home/aidan/repos/masters/report/build/main.bbl" "/home/aidan/repos/masters/report/build/main" 1772507628
+  "/home/aidan/repos/masters/report/build/main.bcf" 1772507628 111293 b2ad959ed5eecb773c16267c13377e9a "pdflatex"
   "references.bib" 1772497987 23593 c4c3e795577408bb9d711c17d8f40749 ""
   (generated)
   "/home/aidan/repos/masters/report/build/main.bbl"
   "/home/aidan/repos/masters/report/build/main.blg"
-["pdflatex"] 1772499661 "main.tex" "/home/aidan/repos/masters/report/build/main.pdf" "main" 1772499663
+["pdflatex"] 1772507626 "main.tex" "/home/aidan/repos/masters/report/build/main.pdf" "main" 1772507628
   "/etc/texmf/web2c/texmf.cnf" 1759702071 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/aidan/repos/masters/report/build/main.aux" 1772499663 12034 fc2194ff73f5f48ec605d7835edb59ff "pdflatex"
-  "/home/aidan/repos/masters/report/build/main.bbl" 1772499371 61482 9e5331897092ddeb0a688cb435b9817d "biber /home/aidan/repos/masters/report/build/main"
-  "/home/aidan/repos/masters/report/build/main.run.xml" 1772499663 2402 7c866ed2192e71c57464ed4279aadefa "pdflatex"
-  "/home/aidan/repos/masters/report/build/main.toc" 1772499663 1842 479c941b4e16f959e2512de0813e9b6a "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.aux" 1772507628 12635 07b62909284b32a86b6921600dee7340 "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.bbl" 1772507314 60283 05105413b96da699b5743eacd0f71968 "biber /home/aidan/repos/masters/report/build/main"
+  "/home/aidan/repos/masters/report/build/main.run.xml" 1772507628 2402 7c866ed2192e71c57464ed4279aadefa "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.toc" 1772507628 1885 0ccd2cbca77a09fb82ee5ab1ee22867f "pdflatex"
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -115,9 +115,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1759706591 4036811 4cb80868003c86b962b6b5ae1e1e2902 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1759706597 1405649 ed67816fea853983ed80a01a43d4baa9 ""
-  "chapters/dataset.tex" 1772499659 13514 c7afa09a336eb7718f0bc44bcdde0172 ""
+  "chapters/dataset.tex" 1772507522 15860 c1c752f975303a6917a70c899a13f2e4 ""
   "chapters/introduction.tex" 1771367799 6270 1efbfd8cd97fff0d2f19f1ba58612f57 ""
-  "chapters/methodology.tex" 1772391862 11021 4abd2f834896e5d8ec67acbfa281d7fe ""
+  "chapters/methodology.tex" 1772507626 11026 271347b878918c25dd92ab180598edfa ""
   "chapters/related_work.tex" 1771381348 7222 87887f4d48ce2580052f0d629881a505 ""
   "figures/dataset/3_2_axis_camera.png" 1772481614 23461 bfdb4ea973603c047b131d46d3b01b7e ""
   "figures/dataset/3_2_pelco_9760_camera.png" 1772481562 15251 0b74b647bf2c933a63231c54b69929fd ""
@@ -129,6 +129,11 @@
   "figures/dataset/3_3_1_rear_front_view.png" 1772485916 332297 01711c20e2cdfcf07e38f26c07e1f280 ""
   "figures/dataset/3_3_1_side_front_rear_view.png" 1772485952 413962 c6f19dd315b31c38ea25a2e52ac542ab ""
   "figures/dataset/3_3_1_side_rear_view.png" 1772485886 366718 e39477d3368d443c237e5bccfa739f28 ""
+  "figures/dataset/3_3_2_condition_night.png" 1772506488 451501 235b401b45f7aebe34a43c468f90981e ""
+  "figures/dataset/3_3_2_condition_normal.png" 1772506419 561870 1bbe403fe01805b654a0b83515d5f80b ""
+  "figures/dataset/3_3_2_condition_rainy.png" 1772506385 380519 b825f6f1337769a02f5dd9f46a7ff793 ""
+  "figures/dataset/3_3_2_condition_sunny.png" 1772506339 336138 452618f681472f58101b2f9b8b42eff2 ""
+  "figures/dataset/3_3_2_vehicles_hour_chart.png" 1772506300 82183 977afcd1468e490f1cbfdf3f34d22669 ""
   "figures/methodology/4_2_confusion_matrix.png" 1772162176 36353 792fe07c381818abf7acadd390ca1049 ""
   "figures/methodology/4_2_example_pr_curve.png" 1772220709 132526 f2d35345dbf8efa9a389b102210504ca ""
   "figures/methodology/4_2_example_pr_curve_ap.png" 1772220879 143187 686c58e8e29be290d211d22f3f4d984c ""
