@@ -114,11 +114,10 @@ intersections).
 The dataset is made up of images from 12 specific camera locations across four boroughs.
 These cameras were chosen based on three criteria: API availability, roadway typology, 
 and location. First, regarding availability, requesting images from certain cameras 
-often resulted in a continuous stream of placeholder graphics displaying "This camera 
-is being serviced" or "No live video camera feed at this time," as shown below in 
-Figure~\ref{fig:camera-down}. 
+often resulted in a continuous stream of placeholder graphics displaying ``this camera 
+is being serviced'' (Figure~\ref{fig:camera-serviced}) or ``no live video camera 
+feed at this time'' (Figure~\ref{fig:camera-no-feed}).
 Only cameras with reliable uptime during the collection window were selected.
-
 
 \begin{figure}[!htbp]
     \centering
@@ -126,12 +125,14 @@ Only cameras with reliable uptime during the collection window were selected.
         \centering
         \includegraphics[height=4cm]{figures/dataset/3_3_1_camera_serviced.png}
         \caption{Camera being serviced message.}
+        \label{fig:camera-serviced}
     \end{subfigure}
     \hspace{0.5em}
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
         \includegraphics[height=4cm]{figures/dataset/3_3_1_camera_no_feed.png}
         \caption{No live camera feed message.}
+        \label{fig:camera-no-feed}
     \end{subfigure}
     \caption{Images returned by unavailble cameras.}
     \label{fig:camera-down}
