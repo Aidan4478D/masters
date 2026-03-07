@@ -1,5 +1,215 @@
-\section{Related Work}
+\section{Background and Related Work}
+
+\subsection{MOtor Vehicle Emission Simulator (MOVES)}
+
+Accurately estimating the environmental impacts of transportation requires 
+quantifying vehicle activity into pollutant emissions. In the United States, 
+the primary tool for this purpose is the MOtor Vehicle Emission Simulator (MOVES),
+developed and maintained by the U.S. Environmental Protection Agency (EPA). MOVES
+is a comprehensive emissions modeling framework used by government agencies and 
+researchers to estimate emissions from mobile sources at local, state, and regional
+scales \cite{USEPA_tech_2024} \cite{USEPA_overview_2025}. 
+According to the MOVES Technical Guidance, the program is used by state governments
+to: ``develop emission inventories for the development of state implementation 
+plans (SIPs), transportation conformity determinations, and analyses required 
+under the National Environmental Policy Act (NEPA)'' \cite{USEPA_tech_2024}.
+
+MOVES operates by calculating baseline emission rates, or coefficients, for various 
+vehicle classes under specific operating conditions. To compute these coefficients,
+the model requires detailed inputs, including vehicle fleet composition, age 
+distributions, fuel properties, weather conditions, and roadway activity data \cite{USEPA_tech_2024}.
+By scaling these calculated emission coefficients with localized traffic data 
+such as vehicle miles traveled (VMT) and traffic speeds, planners can conduct 
+air quality assessments \cite{NY911_hill_ghg} \cite{california_air_resources_board_brake} \cite{octc_final_2021}, 
+evaluate congestion mitigation strategies \cite{TAYARANI2020102620}, 
+and model the environmental impact
+of infrastructure changes \cite{ZHANG2013307}.
+
+A critical requirement for emissions modeling within MOVES is accurate data on 
+vehicle class distributions. The model relies on distinguishing between multiple 
+vehicle types, as each has vastly different emission characteristics 
+\cite{USEPA_tech_2024}. 
+See Table~\ref{tab:moves-hpms} for the vehicle types trakced by MOVES. 
+Currently, transportation agencies rely on traditional traffic monitoring methods 
+to provide these class counts (See Section~\ref{subsec:traditional-vehicle-monitoring}. 
+However, these methods typically produce sparse or 
+short-duration measurements \cite{FHWA_traffic_2010}. 
+This spatial and temporal limitation prevents the ability to capture the complete 
+distribution of urban traffic at any point in the year, making it difficult to 
+determine localized emissions coefficients.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{MOVES Source Types and Highway Performance Monitoring System (HPMS) Vehicle Types \cite{USEPA_tech_2024}}
+    \label{tab:moves-hpms}
+    \begin{tabular}{l l l}
+        \toprule
+        Source Type ID & Source Type & HPMS Vehicle Type \\
+        \midrule
+        11 & Motorcycle & Motorcycles \\
+        21 & Passenger Car & Light Duty Vehicles \\
+        31 & Passenger Truck & Light Duty Vehicles \\
+        32 & Light Commercial Truck & Light Duty Vehicles \\
+        41 & Other Buses & Buses \\
+        42 & Transit Bus & Buses \\
+        43 & School Bus & Buses \\
+        51 & Refuse Truck & Single Unit Trucks \\
+        52 & Single Unit Short-haul Truck & Single Unit Trucks \\
+        53 & Single Unit Long-haul Truck & Single Unit Trucks \\
+        54 & Motor Home & Single Unit Trucks \\
+        61 & Combination Short-haul Truck & Combination Trucks \\
+        62 & Combination Long-haul Truck & Combination Trucks \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+The approach proposed in this thesis aims to bridge this data gap. By applying 
+computer vision techniques to existing public traffic camera networks, the proposed
+pipeline detects and classifies vehicles to generate continuous, high-resolution 
+traffic composition data. Replacing short-term samples with long-term observations
+allows for a much more accurate calculation of vehicle emissions coefficients. 
+Ultimately, this methodology is built to support the MOVES framework, bridging 
+the gap between static monitoring practices and the dynamic reality of urban traffic.
+
+To understand the necessity of this image-based measurement framework, it is 
+important to examine the current standards and limitations of urban traffic data collection.
 
 \subsection{NYC Traffic Monitoring}
 
 \subsubsection{Traditional Vehicle Monitoring Methods}
+\label{subsec:traditional-vehicle-monitoring}
+
+Historically, traffic monitoring in New York City has relied on a combination of 
+manual observation and automated counts. For intersection and signal studies, 
+NYC DOT states that inspectors conduct manual counts of vehicles and pedestrians, 
+typically during morning and evening rush hours, and that these counts may include 
+turning movements, school-hour activity, and off-peak periods
+\cite{NYCDOT_traffic_signals}.
+
+The NYC DOT also collects roadway traffic volume data using Automatic Traffic 
+Recorders (ATRs), which measure hourly vehicle counts over several weekdays or 
+weekend periods \cite{NYCDOT_traffic_signals} 
+These devices are typically deployed during short-duration 
+monitoring campaigns and are used to estimate traffic conditions such as peak-hour 
+volumes and average daily traffic. Although NYC DOT does not publicly specify 
+the exact sensor types used for each traffic counting campaign, the Federal 
+Highway Administration (FHWA) identifies several technologies commonly used 
+in ATR systems depending on the duration of monitoring and installation constraints
+\cite{FHWA_traffic_2010}.
+
+Long-term ATR sensors are primarily inductive-loop detectors embedded in the 
+roadway surface. Inductive loops consist of wire coils installed beneath the 
+pavement that generate a magnetic field. When a metal vehicle passes over the 
+loop, the vehicle alters the inductance of the loop, allowing the system to 
+detect and count vehicles. Because these sensors are permanently installed and 
+relatively durable, they are commonly used for long-term monitoring stations on 
+highways and major arterial roads
+\cite{FHWA_traffic_2010} \cite{wikipedia_induction_2025}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=6.5cm]{figures/related_work/3_1_1_induction_loops.png}
+    \caption{Inductive loop detectors circled in yellow. Image adapted from \cite{midatlanticentry_induction}}
+    \label{fig:inductive-loops}
+\end{figure}
+
+For short-term traffic counting, which could last from several hours to several 
+weeks, transportation agencies use temporary sensors that can be installed 
+quickly and removed after the counting period. According to the FHWA guidelines,
+these sensors include pneumatic road tubes, piezoelectric strips, tape switches,
+and temporary inductive loop detectors placed on or within the roadway
+\cite{FHWA_traffic_2010}.
+
+The most widely used temporary ATR sensor is the pneumatic road tube. Pneumatic 
+tubes are flexible rubber hoses stretched across the roadway and connected to a 
+roadside data recorder. When a vehicle axle passes over the tube, it compresses 
+the tube and generates a pulse of air that travels through the hose to the
+recorder, which logs the event as a vehicle detection. Using the timing and 
+spacing between pulses, traffic counters can estimate vehicle counts, speed, 
+and sometimes vehicle classification. Pneumatic tube counters are popular because 
+they are inexpensive, portable, and easy to deploy for short-term traffic studies.
+However, the tubes degrade over time due to repeated vehicle loading, their speed
+measurements become less reliable at very low speeds (typically below 10 miles 
+per hour), and their accuracy decreases when monitoring multiple lanes 
+simultaneously \cite{FHWA_traffic_2010} \cite{FHWA_chapter_2014}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=6.5cm]{figures/related_work/3_1_1_pneumatic_tubes.png}
+    \caption{Pneumatic tubes deployed on the road \cite{pneumatic_tubes}.}
+    \label{fig:pneumatic-tubes}
+\end{figure}
+
+\FloatBarrier
+
+The NYC DOT publishes traffic volume counts on the NYC Open Data portal collected 
+by ATRs. The data has been collected since 2007 and includes vehicle counts from 
+more than 2,300 distinct streets across the five boroughs \cite{NYC_open_data_atr}. 
+These records provide valuable insight into traffic volumes across the city and 
+are widely used for transportation planning and infrastructure analysis
+\cite{NYC_mayor_ceqr_2025}.
+
+However, these measurements represent sample counts rather than continuous monitoring.
+The dataset documentation notes that the number of days recorded varies by location
+and year, and many locations are only measured during short-duration campaigns 
+\cite{NYC_open_data_atr} \cite{NYCMTC_hub_2026}.
+In a city as spatially and temporally dynamic as New York, where traffic conditions
+vary significantly by location, season, and time of day, these sampling approaches 
+limit the temporal resolution of available traffic data.
+
+NYC's regional transportation reporting reflects these characteristics of traditional
+monitoring systems. The New York Metropolitan Transportation Council's Hub Bound 
+Travel program, for example, measures travel entering and leaving the Manhattan 
+Central Business District (defined as Manhattan south of 60th Street). The 2024 
+Hub Bound report indicates that the analysis relies on multiple data sources, 
+including NYCDOT tube counts at locations such as 60th Street and the East River
+bridges, as well as toll transaction data from MTA Bridges and Tunnels and the 
+Port Authority. The data they use is collected on a single weekday in the fall 
+(2024 analysis used observations from October 16, 2024) to estimate travel 
+patterns entering the CBD \cite{NYCMTC_hub_2026}. 
+While these datasets provide insights into 
+regional travel behavior, they still depend on periodic counts and aggregated 
+agency data rather than continuous direct observation of traffic flows.
+
+% ------------------------------------------------------------------------------
+
+\subsubsection{Traffic-Camera Based Monitoring}
+
+In recent years, New York City has begun exploring camera based approaches to 
+street monitoring that can capture traffic activity continuously and across more 
+locations. In 2023, NYC DOT launched a pilot program with the analytics company 
+Viva to use ``street activity sensors'' developed by Viva to analyze street activity
+\cite{NYCDOT_viva_colab} \cite{viva_street_monitor}. 
+The goal of the program was to analyze the effectiveness and safety of 
+programs and street designs, prioritize projects for areas most in need of safety
+and other street improvements, and better understand how people are using the 
+streets. The system also counts modes of travel in real-time, including cars, 
+trucks, bicycles, scooters, buses, and pedestrians \cite{NYCDOT_viva_colab}. 
+This approach offers the potential to expand traffic monitoring beyond the 
+spatial and temporal constraints of traditional counting campaigns.
+
+Research efforts have further demonstrated the potential of using existing traffic 
+camera infrastructure as a large-scale sensing network. The NYU C2SMARTER Manhattan
+Congestion Tracker, for instance, analyzes imagery from roughly 400 of the city's 
+more than 900 public traffic cameras to estimate traffic density within and around
+the congestion pricing zone. Images are captured approximately every 30 minutes and
+processed to estimate activity for multiple road users, including cars, trucks, 
+pedestrians, and bicycles \cite{NYU_tracker_2025}. 
+Similarly, recent research by Turkcan et al. proposes a computer-vision pipeline 
+that processes imagery from over 900 traffic cameras across New York City to analyze 
+traffic conditions associated with congestion pricing policies \cite{turkcan2026visionbasedanalysiscongestionpricing}. 
+These studies demonstrate how existing camera infrastructure can be leveraged to 
+support continuous, large-scale traffic monitoring using computer vision.
+
+This context motivates the approach presented in this thesis. While traditional 
+methods such as manual counts and ATR-based sampling remain essential components 
+of transportation monitoring programs, they are inherently limited in spatial 
+coverage, duration, and labor efficiency. Camera-based systems offer the potential 
+for continuous, scalable, and multimodal traffic observation using infrastructure
+that is already deployed across the city. Building on this transition, this thesis 
+proposes a computer-vision pipeline that uses New York City traffic camera imagery 
+to detect and classify vehicles for downstream emissions estimation. In this sense,
+the proposed system extends traditional traffic monitoring practices by transforming
+periodic counting methods into an image-based measurement framework capable of 
+supporting both transportation analysis and environmental assessment.
+
