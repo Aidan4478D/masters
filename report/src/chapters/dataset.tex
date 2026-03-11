@@ -330,3 +330,76 @@ camera locations (100 images per camera) across four boroughs.
 
 \subsection{Data Labeling}
 
+After image collection, all frames were manually annotated to create the ground-truth
+dataset used for model training and evaluation. Because the images were collected 
+from low-resolution traffic CCTV feeds with varying viewpoints, weather conditions, 
+and scene complexity, the labeling process required a tool that allowed precise 
+bounding-box annotation and consistent class management across a large image set. 
+For this purpose, the Computer Vision Annotation Tool (CVAT) was used.
+
+CVAT is a web-based annotation platform designed for computer vision datasets. 
+It supports object detection tasks through rectangular bounding boxes and allows 
+custom class definitions, attribute assignment, and export to multiple machine-learning 
+formats \cite{CVAT_home}. 
+In this study, CVAT was used to draw a bounding box around each visible vehicle 
+and assign it a class label. Additional boolean attributes were attached when a 
+vehicle belonged to a more specific subtype of interest, such as a taxi, police
+vehicle, minivan, or ambulance. This workflow allowed the dataset to preserve both
+a core detection taxonomy and more detailed contextual information without splitting 
+up the main class structure.
+
+\subsubsection{Labeling Class Structure}
+
+The vehicle classes designed to balance two needs: visual distinguishability in 
+low-resolution CCTV imagery and relevance to downstream emissions estimation. 
+Thus, in total, eight classes were used:
+
+\begin{itemize}
+    \item \verb|sedan|
+    \item \verb|suv|
+    \item \verb|pickup_truck|
+    \item \verb|van|
+    \item \verb|bus|
+    \item \verb|truck|
+    \item \verb|two_wheeler|
+    \item \verb|unknown_vehicle|
+\end{itemize}
+
+These labels were chosen because they represent vehicle groupings that are reasonably 
+aligned with broader transportation and emissions categories while still remaining 
+visually identifiable in 352×240 traffic-camera images. In particular, sedans, coupes,
+and hatchbacks were all labeled as \verb|Sedan|, while sport utility vehicles and crossovers 
+were both labeled as \verb|SUV|. This consolidation was intentional. Federal transportation 
+and emissions frameworks generally operate on broader vehicle classes rather than 
+highly specific consumer body styles. For example, the FHWA Traffic Monitoring 
+Guide groups sedans and coupes within the passenger-car category, while EPA and 
+DOE materials similarly distinguish broad classes such as passenger cars, passenger 
+trucks, buses, trucks, and motorcycles for transportation and emissions analysis 
+\cite{FHWA_traffic_2014} \cite{USEPA_def_truck_2019} \cite{USDOE_AFDC}.
+
+This simplification was also necessary because the dataset consists of low-resolution 
+CCTV images, where fine-grained distinctions between similar passenger body styles 
+are often visually unreliable. In many views, a coupe, sedan, and hatchback differ
+primarily in roofline or rear profile, while a crossover and SUV may differ only 
+subtly in ride height or body proportions. In compressed roadside imagery, these 
+features are frequently obscured by distance, motion blur, occlusion, and unfavorable
+camera angle. Grouping visually similar body styles into broader categories therefore 
+reduced annotation ambiguity and helped limit label noise. This is especially 
+important in a manually labeled dataset, where forcing uncertain distinctions can 
+degrade downstream model performance.
+
+At the same time, the annotation classes was intentionally made slightly more 
+specific than the final MOVES mapping. Although SUVs and pickup trucks are later 
+grouped into the MOVES passenger-truck category, they were annotated separately 
+during dataset creation so that the model could first learn more specific visual 
+representations of distinct vehicle forms. EPA’s MOVES framework distinguishes 
+passenger cars from passenger trucks and light commercial trucks as separate 
+source-use types, and EPA explicitly notes that many SUVs and minivans are considered
+light-duty trucks while visual appearance alone is often insufficient to determine 
+the exact analytical classification \cite{USEPA_def_truck_2019}, \cite{USEPA_road_pop_2020}. 
+Separating \verb|suv| and \verb|pickup_truck|at 
+the image-labeling stage therefore helped the model learn more discriminative 
+visual features before later collapsing detections into broader MOVES-compatible
+categories for emissions estimation.
+
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  2 MAR 2026 22:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  11 MAR 2026 17:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -496,9 +496,16 @@ Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
 \TX@delta=\dimen175
 \TX@cols=\count402
 \TX@ftn=\toks21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip73
+\multirow@cntb=\count403
+\multirow@dima=\skip74
+\bigstrutjot=\dimen176
 ))
-\@quotelevel=\count403
-\@quotereset=\count404
+\@quotelevel=\count404
+\@quotereset=\count405
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
 .
 
@@ -576,16 +583,16 @@ Package biblatex Info: Reference segment=0 on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count405
-\scratchdimen=\dimen176
+\scratchcounter=\count406
+\scratchdimen=\dimen177
 \scratchbox=\box55
-\nofMPsegments=\count406
-\nofMParguments=\count407
+\nofMPsegments=\count407
+\nofMParguments=\count408
 \everyMPshowfont=\toks22
-\MPscratchCnt=\count408
-\MPscratchDim=\dimen177
-\MPnumerator=\count409
-\makeMPintoPDFobject=\count410
+\MPscratchCnt=\count409
+\MPscratchDim=\dimen178
+\MPnumerator=\count410
+\makeMPintoPDFobject=\count411
 \everyMPtoPDFconversion=\toks23
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -635,13 +642,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ] (./frontpages/abstract.tex) [1
 
 ]
-(/home/aidan/repos/masters/report/build/main.toc [2
-
-])
+(/home/aidan/repos/masters/report/build/main.toc)
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [3]
+ [2
+
+] [3]
 (./chapters/introduction.tex
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 7.
@@ -650,27 +657,43 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
 
 ]
-[2]) (./chapters/related_work.tex [3] [4] [5]) (./chapters/dataset.tex
+[2]) (./chapters/related_work_v2.tex [3] [4]
+<figures/related_work/2_2_1_induction_loops.png, id=41, 307.1475pt x 228.855pt>
+
+File: figures/related_work/2_2_1_induction_loops.png Graphic file (type png)
+<use figures/related_work/2_2_1_induction_loops.png>
+Package pdftex.def Info: figures/related_work/2_2_1_induction_loops.png  used o
+n input line 113.
+(pdftex.def)             Requested size: 248.22101pt x 184.9429pt.
+ [5 <./figures/related_work/2_2_1_induction_loops.png>]
+<figures/related_work/2_2_1_pneumatic_tubes.png, id=47, 374.14781pt x 243.91125
+pt>
+File: figures/related_work/2_2_1_pneumatic_tubes.png Graphic file (type png)
+<use figures/related_work/2_2_1_pneumatic_tubes.png>
+Package pdftex.def Info: figures/related_work/2_2_1_pneumatic_tubes.png  used o
+n input line 140.
+(pdftex.def)             Requested size: 283.69302pt x 184.9429pt.
+ [6 <./figures/related_work/2_2_1_pneumatic_tubes.png>]
+[7]) (./chapters/dataset.tex [8]
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
 40.
-
-(/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+ (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [6]
-<figures/dataset/3_2_pelco_esprit_camera.png, id=49, 188.95593pt x 193.47281pt>
+)
+<figures/dataset/3_2_pelco_esprit_camera.png, id=59, 188.95593pt x 193.47281pt>
 
 File: figures/dataset/3_2_pelco_esprit_camera.png Graphic file (type png)
 <use figures/dataset/3_2_pelco_esprit_camera.png>
 Package pdftex.def Info: figures/dataset/3_2_pelco_esprit_camera.png  used on i
 nput line 71.
 (pdftex.def)             Requested size: 111.15433pt x 113.81102pt.
-<figures/dataset/3_2_pelco_9760_camera.png, id=51, 164.11313pt x 126.4725pt>
+<figures/dataset/3_2_pelco_9760_camera.png, id=60, 164.11313pt x 126.4725pt>
 File: figures/dataset/3_2_pelco_9760_camera.png Graphic file (type png)
 <use figures/dataset/3_2_pelco_9760_camera.png>
 Package pdftex.def Info: figures/dataset/3_2_pelco_9760_camera.png  used on inp
 ut line 77.
 (pdftex.def)             Requested size: 147.68541pt x 113.81102pt.
-<figures/dataset/3_2_axis_camera.png, id=52, 158.84344pt x 119.69719pt>
+<figures/dataset/3_2_axis_camera.png, id=61, 158.84344pt x 119.69719pt>
 File: figures/dataset/3_2_axis_camera.png Graphic file (type png)
 <use figures/dataset/3_2_axis_camera.png>
 Package pdftex.def Info: figures/dataset/3_2_axis_camera.png  used on input lin
@@ -681,138 +704,140 @@ Overfull \hbox (0.70866pt too wide) in paragraph at lines 83--84
  [][] 
  []
 
-[7 <./figures/dataset/3_2_pelco_esprit_camera.png> <./figures/dataset/3_2_pelco
+[9 <./figures/dataset/3_2_pelco_esprit_camera.png> <./figures/dataset/3_2_pelco
 _9760_camera.png> <./figures/dataset/3_2_axis_camera.png>]
-<figures/dataset/3_3_1_camera_serviced.png, id=61, 366.61969pt x 250.68657pt>
+<figures/dataset/3_3_1_camera_serviced.png, id=69, 366.61969pt x 250.68657pt>
 File: figures/dataset/3_3_1_camera_serviced.png Graphic file (type png)
 <use figures/dataset/3_3_1_camera_serviced.png>
 Package pdftex.def Info: figures/dataset/3_3_1_camera_serviced.png  used on inp
-ut line 127.
+ut line 126.
 (pdftex.def)             Requested size: 166.443pt x 113.81102pt.
-<figures/dataset/3_3_1_camera_no_feed.png, id=62, 406.51875pt x 250.68657pt>
+<figures/dataset/3_3_1_camera_no_feed.png, id=70, 406.51875pt x 250.68657pt>
 File: figures/dataset/3_3_1_camera_no_feed.png Graphic file (type png)
 <use figures/dataset/3_3_1_camera_no_feed.png>
 Package pdftex.def Info: figures/dataset/3_3_1_camera_no_feed.png  used on inpu
 t line 133.
 (pdftex.def)             Requested size: 184.55692pt x 113.81102pt.
- [8 <./figures/dataset/3_3_1_camera_serviced.png> <./figures/dataset/3_3_1_came
-ra_no_feed.png>]
-<figures/dataset/3_3_1_front_side_view.png, id=68, 461.47406pt x 313.17pt>
+ [10 <./figures/dataset/3_3_1_camera_serviced.png> <./figures/dataset/3_3_1_cam
+era_no_feed.png>]
+<figures/dataset/3_3_1_front_side_view.png, id=76, 461.47406pt x 313.17pt>
 File: figures/dataset/3_3_1_front_side_view.png Graphic file (type png)
 <use figures/dataset/3_3_1_front_side_view.png>
 Package pdftex.def Info: figures/dataset/3_3_1_front_side_view.png  used on inp
-ut line 183.
+ut line 184.
 (pdftex.def)             Requested size: 209.64006pt x 142.26378pt.
-<figures/dataset/3_3_1_side_rear_view.png, id=69, 457.71pt x 311.66437pt>
+<figures/dataset/3_3_1_side_rear_view.png, id=77, 457.71pt x 311.66437pt>
 File: figures/dataset/3_3_1_side_rear_view.png Graphic file (type png)
 <use figures/dataset/3_3_1_side_rear_view.png>
 Package pdftex.def Info: figures/dataset/3_3_1_side_rear_view.png  used on inpu
-t line 190.
+t line 191.
 (pdftex.def)             Requested size: 208.92885pt x 142.26378pt.
-<figures/dataset/3_3_1_rear_front_view.png, id=70, 459.96844pt x 310.91156pt>
+<figures/dataset/3_3_1_rear_front_view.png, id=78, 459.96844pt x 310.91156pt>
 File: figures/dataset/3_3_1_rear_front_view.png Graphic file (type png)
 <use figures/dataset/3_3_1_rear_front_view.png>
 Package pdftex.def Info: figures/dataset/3_3_1_rear_front_view.png  used on inp
-ut line 200.
+ut line 201.
 (pdftex.def)             Requested size: 210.46507pt x 142.26378pt.
-<figures/dataset/3_3_1_side_front_rear_view.png, id=71, 458.46281pt x 310.91156
+<figures/dataset/3_3_1_side_front_rear_view.png, id=79, 458.46281pt x 310.91156
 pt>
 File: figures/dataset/3_3_1_side_front_rear_view.png Graphic file (type png)
 <use figures/dataset/3_3_1_side_front_rear_view.png>
 Package pdftex.def Info: figures/dataset/3_3_1_side_front_rear_view.png  used o
-n input line 207.
+n input line 208.
 (pdftex.def)             Requested size: 209.77615pt x 142.26378pt.
-<figures/dataset/3_3_1_dataset_cameras_map.png, id=72, 822.07124pt x 493.845pt>
+<figures/dataset/3_3_1_dataset_cameras_map.png, id=80, 822.07124pt x 493.845pt>
 
 File: figures/dataset/3_3_1_dataset_cameras_map.png Graphic file (type png)
 <use figures/dataset/3_3_1_dataset_cameras_map.png>
 Package pdftex.def Info: figures/dataset/3_3_1_dataset_cameras_map.png  used on
- input line 248.
+ input line 249.
 (pdftex.def)             Requested size: 497.31073pt x 298.75394pt.
 
-Overfull \hbox (27.55571pt too wide) in paragraph at lines 248--249
+Overfull \hbox (27.55571pt too wide) in paragraph at lines 249--250
  [][] 
  []
 
-[9] [10 <./figures/dataset/3_3_1_front_side_view.png> <./figures/dataset/3_3_1_
-side_rear_view.png> <./figures/dataset/3_3_1_rear_front_view.png> <./figures/da
-taset/3_3_1_side_front_rear_view.png>]
-<figures/dataset/3_3_2_vehicles_hour_chart.png, id=83, 1068.99374pt x 389.20406
+[11] [12 <./figures/dataset/3_3_1_front_side_view.png> <./figures/dataset/3_3_1
+_side_rear_view.png> <./figures/dataset/3_3_1_rear_front_view.png> <./figures/d
+ataset/3_3_1_side_front_rear_view.png>]
+<figures/dataset/3_3_2_vehicles_hour_chart.png, id=91, 1068.99374pt x 389.20406
 pt>
 File: figures/dataset/3_3_2_vehicles_hour_chart.png Graphic file (type png)
 <use figures/dataset/3_3_2_vehicles_hour_chart.png>
 Package pdftex.def Info: figures/dataset/3_3_2_vehicles_hour_chart.png  used on
- input line 278.
+ input line 279.
 (pdftex.def)             Requested size: 351.67615pt x 128.0374pt.
- [11 <./figures/dataset/3_3_1_dataset_cameras_map.png>]
-<figures/dataset/3_3_2_condition_sunny.png, id=88, 517.18219pt x 353.06906pt>
+ [13 <./figures/dataset/3_3_1_dataset_cameras_map.png>]
+<figures/dataset/3_3_2_condition_sunny.png, id=97, 517.18219pt x 353.06906pt>
 File: figures/dataset/3_3_2_condition_sunny.png Graphic file (type png)
 <use figures/dataset/3_3_2_condition_sunny.png>
 Package pdftex.def Info: figures/dataset/3_3_2_condition_sunny.png  used on inp
-ut line 291.
+ut line 292.
 (pdftex.def)             Requested size: 208.39227pt x 142.26378pt.
-<figures/dataset/3_3_2_condition_rainy.png, id=89, 516.42938pt x 352.31625pt>
+<figures/dataset/3_3_2_condition_rainy.png, id=98, 516.42938pt x 352.31625pt>
 File: figures/dataset/3_3_2_condition_rainy.png Graphic file (type png)
 <use figures/dataset/3_3_2_condition_rainy.png>
 Package pdftex.def Info: figures/dataset/3_3_2_condition_rainy.png  used on inp
-ut line 297.
+ut line 298.
 (pdftex.def)             Requested size: 208.53023pt x 142.26378pt.
-<figures/dataset/3_3_2_condition_night.png, id=90, 516.42938pt x 352.31625pt>
+<figures/dataset/3_3_2_condition_night.png, id=99, 516.42938pt x 352.31625pt>
 File: figures/dataset/3_3_2_condition_night.png Graphic file (type png)
 <use figures/dataset/3_3_2_condition_night.png>
 Package pdftex.def Info: figures/dataset/3_3_2_condition_night.png  used on inp
-ut line 306.
+ut line 307.
 (pdftex.def)             Requested size: 208.53023pt x 142.26378pt.
-<figures/dataset/3_3_2_condition_normal.png, id=91, 516.42938pt x 351.56343pt>
+<figures/dataset/3_3_2_condition_normal.png, id=100, 516.42938pt x 351.56343pt>
+
 File: figures/dataset/3_3_2_condition_normal.png Graphic file (type png)
 <use figures/dataset/3_3_2_condition_normal.png>
 Package pdftex.def Info: figures/dataset/3_3_2_condition_normal.png  used on in
-put line 312.
+put line 313.
 (pdftex.def)             Requested size: 208.97151pt x 142.26378pt.
- [12 <./figures/dataset/3_3_2_vehicles_hour_chart.png> <./figures/dataset/3_3_2
+ [14 <./figures/dataset/3_3_2_vehicles_hour_chart.png> <./figures/dataset/3_3_2
 _condition_sunny.png> <./figures/dataset/3_3_2_condition_rainy.png> <./figures/
 dataset/3_3_2_condition_night.png> <./figures/dataset/3_3_2_condition_normal.pn
-g>]) (./chapters/methodology.tex
-<figures/methodology/4_2_intersection_union.png, id=100, 640.64343pt x 162.6075
+g>] [15]) (./chapters/methodology.tex [16]
+<figures/methodology/4_2_intersection_union.png, id=115, 640.64343pt x 162.6075
 pt>
 File: figures/methodology/4_2_intersection_union.png Graphic file (type png)
 <use figures/methodology/4_2_intersection_union.png>
 Package pdftex.def Info: figures/methodology/4_2_intersection_union.png  used o
 n input line 27.
 (pdftex.def)             Requested size: 392.35599pt x 99.58464pt.
-<figures/methodology/4_2_iou_calculation.png, id=101, 455.45157pt x 256.70906pt
+<figures/methodology/4_2_iou_calculation.png, id=116, 455.45157pt x 256.70906pt
 >
 File: figures/methodology/4_2_iou_calculation.png Graphic file (type png)
 <use figures/methodology/4_2_iou_calculation.png>
 Package pdftex.def Info: figures/methodology/4_2_iou_calculation.png  used on i
 nput line 34.
 (pdftex.def)             Requested size: 281.85587pt x 158.8681pt.
- [13 <./figures/methodology/4_2_intersection_union.png>]
-<figures/methodology/4_2_confusion_matrix.png, id=107, 313.9228pt x 304.88907pt
+<figures/methodology/4_2_confusion_matrix.png, id=117, 313.9228pt x 304.88907pt
 >
 File: figures/methodology/4_2_confusion_matrix.png Graphic file (type png)
 <use figures/methodology/4_2_confusion_matrix.png>
 Package pdftex.def Info: figures/methodology/4_2_confusion_matrix.png  used on 
 input line 47.
 (pdftex.def)             Requested size: 190.42923pt x 184.9429pt.
- [14 <./figures/methodology/4_2_iou_calculation.png> <./figures/methodology/4_2
-_confusion_matrix.png>] [15]
-<figures/methodology/4_2_example_pr_curve.png, id=117, 514.0806pt x 409.2891pt>
+ [17 <./figures/methodology/4_2_intersection_union.png>] [18 <./figures/methodo
+logy/4_2_iou_calculation.png> <./figures/methodology/4_2_confusion_matrix.png>]
+ [19]
+<figures/methodology/4_2_example_pr_curve.png, id=133, 514.0806pt x 409.2891pt>
 
 File: figures/methodology/4_2_example_pr_curve.png Graphic file (type png)
 <use figures/methodology/4_2_example_pr_curve.png>
 Package pdftex.def Info: figures/methodology/4_2_example_pr_curve.png  used on 
 input line 141.
 (pdftex.def)             Requested size: 232.29112pt x 184.9429pt.
- [16 <./figures/methodology/4_2_example_pr_curve.png>]
-<figures/methodology/4_2_example_pr_curve_ap.png, id=122, 514.0806pt x 409.2891
+ [20]
+<figures/methodology/4_2_example_pr_curve_ap.png, id=138, 514.0806pt x 409.2891
 pt>
 File: figures/methodology/4_2_example_pr_curve_ap.png Graphic file (type png)
 <use figures/methodology/4_2_example_pr_curve_ap.png>
 Package pdftex.def Info: figures/methodology/4_2_example_pr_curve_ap.png  used 
 on input line 158.
 (pdftex.def)             Requested size: 232.29112pt x 184.9429pt.
- [17 <./figures/methodology/4_2_example_pr_curve_ap.png>]) [18] [19]
+ [21 <./figures/methodology/4_2_example_pr_curve.png> <./figures/methodology/4_
+2_example_pr_curve_ap.png>] [22]) [23]
 LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 4
 8.
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
@@ -820,7 +845,13 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 48.
- [20]
+ [24]
+[25] [26] [27]
+
+Package biblatex Warning: No driver for entry type 'artwork'.
+(biblatex)                Using fallback driver on input line 48.
+
+[28]
 
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 48.
@@ -829,27 +860,23 @@ Package biblatex Warning: No driver for entry type 'artwork'.
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 48.
 
-
-Package biblatex Warning: No driver for entry type 'artwork'.
-(biblatex)                Using fallback driver on input line 48.
-
-[21] [22] (/home/aidan/repos/masters/report/build/main.aux)
+[29] [30] (/home/aidan/repos/masters/report/build/main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12677 strings out of 480247
- 248019 string characters out of 5896151
- 940166 words of memory out of 5000000
- 30426 multiletter control sequences out of 15000+600000
+ 12857 strings out of 480247
+ 254409 string characters out of 5896151
+ 943833 words of memory out of 5000000
+ 30599 multiletter control sequences out of 15000+600000
  514780 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,10n,80p,2177b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr
-/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
-lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texm
+/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips
+/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texm
 f/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb>
@@ -859,11 +886,11 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on /home/aidan/repos/masters/report/build/main.pdf (28 pages, 56
-26712 bytes).
+Output written on /home/aidan/repos/masters/report/build/main.pdf (36 pages, 63
+71373 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 240 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

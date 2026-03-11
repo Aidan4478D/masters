@@ -639,6 +639,640 @@
       \endverb
       \keyw{Air Pollutants,Air Pollution,Environmental Exposure,Environmental Monitoring,Female,Global Health,Humans,Internationality,Male,Public Health,Respiration,World Health Organization}
     \endentry
+    \entry{USEPA_tech_2024}{report}{}
+      \name{author}{1}{}{%
+        {{hash=8233d83a5e663161d707a62961f8f66f}{%
+           family={{U.S. Environmental Protection Agency}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Office of Transportation}%
+        {Air Quality, U.S. Environmental Protection Agency}%
+      }
+      \list{location}{1}{%
+        {Ann Arbor, {MI}}%
+      }
+      \strng{namehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{fullhash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{bibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{number}{{EPA}-420-B-24-043}
+      \field{title}{{MOVES}5 Technical Guidance: Using {MOVES} to Prepare Emission Inventories for State Implementation Plans and Transportation Conformity}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nepis.epa.gov/Exe/ZyPDF.cgi?Dockey=P101CTM3.pdf
+      \endverb
+      \verb{url}
+      \verb https://nepis.epa.gov/Exe/ZyPDF.cgi?Dockey=P101CTM3.pdf
+      \endverb
+    \endentry
+    \entry{USEPA_overview_2025}{report}{}
+      \name{author}{1}{}{%
+        {{hash=8233d83a5e663161d707a62961f8f66f}{%
+           family={{U.S. Environmental Protection Agency}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Office of Transportation}%
+        {Air Quality, U.S. Environmental Protection Agency}%
+      }
+      \strng{namehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{fullhash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{bibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{number}{{EPA}-420-R-25-005}
+      \field{title}{Overview of {EPA}’s {MOtor} Vehicle Emission Simulator ({MOVES}5)}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nepis.epa.gov/Exe/ZyPDF.cgi?Dockey=P101DQ9V.pdf
+      \endverb
+      \verb{url}
+      \verb https://nepis.epa.gov/Exe/ZyPDF.cgi?Dockey=P101DQ9V.pdf
+      \endverb
+    \endentry
+    \entry{NY911_hill_ghg}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=d46e9ffc3e534255160299d171e1928e}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Homer},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{d46e9ffc3e534255160299d171e1928e}
+      \strng{fullhash}{d46e9ffc3e534255160299d171e1928e}
+      \strng{bibnamehash}{d46e9ffc3e534255160299d171e1928e}
+      \strng{authorbibnamehash}{d46e9ffc3e534255160299d171e1928e}
+      \strng{authornamehash}{d46e9ffc3e534255160299d171e1928e}
+      \strng{authorfullhash}{d46e9ffc3e534255160299d171e1928e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{September 11th Memorial Program for Transportation Planning}
+      \field{title}{Producing a {NYMTC} {GHG} Inventory}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nymtc.org/portals/0/pdf/presentations/inventory_911.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.nymtc.org/portals/0/pdf/presentations/inventory_911.pdf
+      \endverb
+    \endentry
+    \entry{california_air_resources_board_brake}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0c1ac4ccdff9816f13f3769edce9ccbd}{%
+           family={{California Air Resources Board}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c1ac4ccdff9816f13f3769edce9ccbd}
+      \strng{fullhash}{0c1ac4ccdff9816f13f3769edce9ccbd}
+      \strng{bibnamehash}{0c1ac4ccdff9816f13f3769edce9ccbd}
+      \strng{authorbibnamehash}{0c1ac4ccdff9816f13f3769edce9ccbd}
+      \strng{authornamehash}{0c1ac4ccdff9816f13f3769edce9ccbd}
+      \strng{authorfullhash}{0c1ac4ccdff9816f13f3769edce9ccbd}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Brake \& Tire Wear Emissions}
+      \field{titleaddon}{California Air Resources Board}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ww2.arb.ca.gov/resources/documents/brake-tire-wear-emissions
+      \endverb
+      \verb{url}
+      \verb https://ww2.arb.ca.gov/resources/documents/brake-tire-wear-emissions
+      \endverb
+    \endentry
+    \entry{octc_final_2021}{report}{}
+      \name{author}{1}{}{%
+        {{hash=c0027c8a9b5860865331e83250ff4551}{%
+           family={{Orange County Transportation Council (OCTC)}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Orange County Transportation Council ({OCTC})}%
+      }
+      \list{location}{1}{%
+        {Goshen, {NY}}%
+      }
+      \strng{namehash}{c0027c8a9b5860865331e83250ff4551}
+      \strng{fullhash}{c0027c8a9b5860865331e83250ff4551}
+      \strng{bibnamehash}{c0027c8a9b5860865331e83250ff4551}
+      \strng{authorbibnamehash}{c0027c8a9b5860865331e83250ff4551}
+      \strng{authornamehash}{c0027c8a9b5860865331e83250ff4551}
+      \strng{authorfullhash}{c0027c8a9b5860865331e83250ff4551}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{2}
+      \field{month}{3}
+      \field{title}{Final Transportation/Air Quality Conformity Determination for the Orange County Portion of the {NY}-{NJ}-{CT} PM2.5 Maintenance Area}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.orangecountygov.com/Archive/ViewFile/Item/1212
+      \endverb
+      \verb{url}
+      \verb https://www.orangecountygov.com/Archive/ViewFile/Item/1212
+      \endverb
+    \endentry
+    \entry{TAYARANI2020102620}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7b616775b37eac5b79bfbfab4b1aa319}{%
+           family={Tayarani},
+           familyi={T\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a9f0cfdad35254ce9452945853e4106d}{%
+           family={Baghestani},
+           familyi={B\bibinitperiod},
+           given={Amirhossein},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1a67a4aea893aeab94619ced449aa348}{%
+           family={Allahviranloo},
+           familyi={A\bibinitperiod},
+           given={Mahdieh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8c45fef2322bb7839f0a2fefdae013bb}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={H.\bibnamedelimi Oliver},
+           giveni={H\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb74c00924b1d0ef2205ba50bcfa9852}
+      \strng{fullhash}{90f78e6d4537b467678281d1d3b142aa}
+      \strng{bibnamehash}{90f78e6d4537b467678281d1d3b142aa}
+      \strng{authorbibnamehash}{90f78e6d4537b467678281d1d3b142aa}
+      \strng{authornamehash}{fb74c00924b1d0ef2205ba50bcfa9852}
+      \strng{authorfullhash}{90f78e6d4537b467678281d1d3b142aa}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1361-9209}
+      \field{journaltitle}{Transportation Research Part D: Transport and Environment}
+      \field{title}{Spatial/temporal variability in transportation emissions and air quality in NYC cordon pricing}
+      \field{volume}{89}
+      \field{year}{2020}
+      \field{pages}{102620}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.trd.2020.102620
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1361920920308051
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1361920920308051
+      \endverb
+      \keyw{Travel demand management,Congestion pricing,Air quality,Spatial analysis}
+    \endentry
+    \entry{ZHANG2013307}{article}{}
+      \name{author}{2}{}{%
+        {{hash=accfaf086a407bfb746d7875478d9130}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7e0b7ece22bb70a28eaba61227323a16}{%
+           family={Batterman},
+           familyi={B\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{95b75ab647d7deb6e6c1a79175e7b565}
+      \strng{fullhash}{95b75ab647d7deb6e6c1a79175e7b565}
+      \strng{bibnamehash}{95b75ab647d7deb6e6c1a79175e7b565}
+      \strng{authorbibnamehash}{95b75ab647d7deb6e6c1a79175e7b565}
+      \strng{authornamehash}{95b75ab647d7deb6e6c1a79175e7b565}
+      \strng{authorfullhash}{95b75ab647d7deb6e6c1a79175e7b565}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0048-9697}
+      \field{journaltitle}{Science of The Total Environment}
+      \field{title}{Air pollution and health risks due to vehicle traffic}
+      \field{volume}{450-451}
+      \field{year}{2013}
+      \field{pages}{307\bibrangedash 316}
+      \range{pages}{10}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.scitotenv.2013.01.074
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0048969713001290
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0048969713001290
+      \endverb
+      \keyw{Congestion,Morbidity,Mortality,NO,Risk assessment,Traffic-related air pollution}
+    \endentry
+    \entry{FHWA_traffic_2010}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b3514fa8307aa3a8a763bab4787e7ac8}{%
+           family={{Federal Highway Administration}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{fullhash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{bibnamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authorbibnamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authornamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authorfullhash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Traffic Monitoring: A Guidebook — 4. Traffic Monitoring Equipment Capabilities \& Limitations}
+      \field{titleaddon}{Center for Local Aid Support ({CTIP} Publications) — Federal Highway Administration}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.fhwa.dot.gov/clas/ctip/traffic_monitoring_guidebook/ch_4.aspx
+      \endverb
+      \verb{url}
+      \verb https://www.fhwa.dot.gov/clas/ctip/traffic_monitoring_guidebook/ch_4.aspx
+      \endverb
+    \endentry
+    \entry{NYCDOT_traffic_signals}{online}{}
+      \name{author}{1}{}{%
+        {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
+           family={{New York City Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{fullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{bibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{NYC} {DOT} - Infrastructure - Traffic Signals}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nyc.gov/html/dot/html/infrastructure/signals.shtml
+      \endverb
+      \verb{url}
+      \verb https://www.nyc.gov/html/dot/html/infrastructure/signals.shtml
+      \endverb
+    \endentry
+    \entry{wikipedia_induction_2025}{inreference}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An induction or inductive loop is an electromagnetic communication or detection system which uses a moving magnet or an alternating current to induce an electric current in a nearby wire. Induction loops are used for transmission and reception of communication signals, or for detection of metal objects in metal detectors or vehicle presence indicators. A common modern use for induction loops is to provide hearing assistance to hearing-aid users.}
+      \field{booktitle}{Wikipedia}
+      \field{day}{14}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{note}{Page Version {ID}: 1295587875}
+      \field{title}{Induction loop}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/w/index.php?title=Induction_loop&oldid=1295587875
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/w/index.php?title=Induction_loop&oldid=1295587875
+      \endverb
+    \endentry
+    \entry{midatlanticentry_induction}{online}{}
+      \name{author}{1}{}{%
+        {{hash=23ddc21404aabc2eb85a18a1d5b89fe3}{%
+           family={{Mid-Atlantic Entry Systems}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{23ddc21404aabc2eb85a18a1d5b89fe3}
+      \strng{fullhash}{23ddc21404aabc2eb85a18a1d5b89fe3}
+      \strng{bibnamehash}{23ddc21404aabc2eb85a18a1d5b89fe3}
+      \strng{authorbibnamehash}{23ddc21404aabc2eb85a18a1d5b89fe3}
+      \strng{authornamehash}{23ddc21404aabc2eb85a18a1d5b89fe3}
+      \strng{authorfullhash}{23ddc21404aabc2eb85a18a1d5b89fe3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Vehicle Detection Loops: How They Work and Why They Fail}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.midatlanticentry.com/article/vehicle-detection-loops-how-they-work-and-why-they-fail/
+      \endverb
+      \verb{url}
+      \verb https://www.midatlanticentry.com/article/vehicle-detection-loops-how-they-work-and-why-they-fail/
+      \endverb
+    \endentry
+    \entry{FHWA_chapter_2014}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b3514fa8307aa3a8a763bab4787e7ac8}{%
+           family={{Federal Highway Administration}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{fullhash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{bibnamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authorbibnamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authornamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authorfullhash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{7}
+      \field{month}{11}
+      \field{title}{Chapter 4 - In-roadway Sensor Technologies - Vehicle Detection and Surveillance Technologies}
+      \field{titleaddon}{Office of Highway Policy Information - Policy {|} Federal Highway Administration}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.fhwa.dot.gov/policyinformation/pubs/vdstits2007/04.cfm
+      \endverb
+      \verb{url}
+      \verb https://www.fhwa.dot.gov/policyinformation/pubs/vdstits2007/04.cfm
+      \endverb
+    \endentry
+    \entry{pneumatic_tubes}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Using four pneumatic tubes, this vehicle counter can collect data from two neighbouring traffic lanes simultaneously.}
+      \field{title}{{RoadPod} {VT}4 {|} 4-Tube Vehicle Counter}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.metrocount.com/traffic-counters-classifiers/roadpod-vt4
+      \endverb
+      \verb{url}
+      \verb https://www.metrocount.com/traffic-counters-classifiers/roadpod-vt4
+      \endverb
+    \endentry
+    \entry{NYC_open_data_atr}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{Automated Traffic Volume Counts {|} {NYC} Open Data}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://data.cityofnewyork.us/Transportation/Automated-Traffic-Volume-Counts/7ym2-wayt/about_data
+      \endverb
+      \verb{url}
+      \verb https://data.cityofnewyork.us/Transportation/Automated-Traffic-Volume-Counts/7ym2-wayt/about_data
+      \endverb
+    \endentry
+    \entry{NYC_mayor_ceqr_2025}{report}{}
+      \name{author}{1}{}{%
+        {{hash=119f7819d9664d4fb9cf8dba1a03c6d4}{%
+           family={{New York City Mayor’s Office of Environmental Coordination}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {New York City Mayor’s Office of Environmental Coordination}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}}%
+      }
+      \strng{namehash}{119f7819d9664d4fb9cf8dba1a03c6d4}
+      \strng{fullhash}{119f7819d9664d4fb9cf8dba1a03c6d4}
+      \strng{bibnamehash}{119f7819d9664d4fb9cf8dba1a03c6d4}
+      \strng{authorbibnamehash}{119f7819d9664d4fb9cf8dba1a03c6d4}
+      \strng{authornamehash}{119f7819d9664d4fb9cf8dba1a03c6d4}
+      \strng{authorfullhash}{119f7819d9664d4fb9cf8dba1a03c6d4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{{CEQR} Technical Manual, December 2025 Edition: Appendix: Transportation}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nyc.gov/assets/oec/technical-manual/2025_ceqr_tm_appendix_transportation.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.nyc.gov/assets/oec/technical-manual/2025_ceqr_tm_appendix_transportation.pdf
+      \endverb
+    \endentry
+    \entry{NYCMTC_hub_2026}{report}{}
+      \name{author}{1}{}{%
+        {{hash=cc68ec2db40021e05720add2d2041c6e}{%
+           family={{New York Metropolitan Transportation Council}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {New York Metropolitan Transportation Council ({NYMTC})}%
+      }
+      \list{location}{1}{%
+        {New York, {NY}}%
+      }
+      \strng{namehash}{cc68ec2db40021e05720add2d2041c6e}
+      \strng{fullhash}{cc68ec2db40021e05720add2d2041c6e}
+      \strng{bibnamehash}{cc68ec2db40021e05720add2d2041c6e}
+      \strng{authorbibnamehash}{cc68ec2db40021e05720add2d2041c6e}
+      \strng{authornamehash}{cc68ec2db40021e05720add2d2041c6e}
+      \strng{authorfullhash}{cc68ec2db40021e05720add2d2041c6e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hub Bound Travel Data Report 2024}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nymtc.org/Portals/0/Pdf/Hub%20Bound/2025%20Hub%20Bound/2024%20Hub%20Bound%20Report%20(2).pdf?ver=K0jQ6a7ZBmPSZaM8WYDkAg%3d%3d
+      \endverb
+      \verb{url}
+      \verb https://www.nymtc.org/Portals/0/Pdf/Hub%20Bound/2025%20Hub%20Bound/2024%20Hub%20Bound%20Report%20(2).pdf?ver=K0jQ6a7ZBmPSZaM8WYDkAg%3d%3d
+      \endverb
+    \endentry
+    \entry{NYCDOT_viva_colab}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{title}{{NYC} {DOT} to Test New Technology to Improve Street Safety by Better Measuring and Analyzing Transportation Uses on {NYC} Streets}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nyc.gov/html/dot/html/pr2023/dot-new-technology-improve-safety.shtml
+      \endverb
+      \verb{url}
+      \verb https://www.nyc.gov/html/dot/html/pr2023/dot-new-technology-improve-safety.shtml
+      \endverb
+    \endentry
+    \entry{viva_street_monitor}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Viva's Artificial Intelligence solution provides detailed and anonymous data insights to help optimize the transport network and improve urban infrastructure.}
+      \field{langid}{american}
+      \field{title}{Viva - Smarter, Safer, Sustainable Cities}
+      \field{titleaddon}{Viva North America}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://vivacitylabs.com/north-america/
+      \endverb
+      \verb{url}
+      \verb https://vivacitylabs.com/north-america/
+      \endverb
+    \endentry
+    \entry{NYU_tracker_2025}{online}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{MANHATTAN} {CONGESTION} {TRACKER} {DATA} {DASHBOARD}: C2SMART Multimodal Density Tracker This visualization draws from approximately 400 of New York City’s 900+ public traffic cameras located within and around the congestion pricing zone. Using vast snapshots captured every 30 minutes, we apply advanced computer vision techniques to estimate multimodal traffic density—including passenger vehicles, trucks, pedestrians, and bicycles. Average}
+      \field{day}{1}
+      \field{langid}{american}
+      \field{month}{4}
+      \field{title}{Manhattan Congestion Tracker Dashboard\_Viz1 - C2SMART Home}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://c2smart.engineering.nyu.edu/manhattan-congestion-tracker-dashboard_viz1/
+      \endverb
+      \verb{url}
+      \verb https://c2smart.engineering.nyu.edu/manhattan-congestion-tracker-dashboard_viz1/
+      \endverb
+    \endentry
+    \entry{turkcan2026visionbasedanalysiscongestionpricing}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=d82cf0aca628128e33303decb8ba450f}{%
+           family={Turkcan},
+           familyi={T\bibinitperiod},
+           given={Mehmet\bibnamedelima Kerem},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=95a8bc3049d2d43de89a5e6c0922905a}{%
+           family={Tavori},
+           familyi={T\bibinitperiod},
+           given={Jhonatan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9aee8d24e0a7722b6b93731d806a5e3e}{%
+           family={Ghaderi},
+           familyi={G\bibinitperiod},
+           given={Javad},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3477a66aa7a80999eb2b0b26f002db0c}{%
+           family={Zussman},
+           familyi={Z\bibinitperiod},
+           given={Gil},
+           giveni={G\bibinitperiod}}}%
+        {{hash=53ff10220e00ad1e436099cbfa440508}{%
+           family={Kostic},
+           familyi={K\bibinitperiod},
+           given={Zoran},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=e67e6b97dc1e552603b1dc5438e05c8b}{%
+           family={Smyth},
+           familyi={S\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{541384ec801b4638bde41c34d2fe8f35}
+      \strng{fullhash}{6d1b1c8426633d4c03fbce4da97a8ddb}
+      \strng{bibnamehash}{6d1b1c8426633d4c03fbce4da97a8ddb}
+      \strng{authorbibnamehash}{6d1b1c8426633d4c03fbce4da97a8ddb}
+      \strng{authornamehash}{541384ec801b4638bde41c34d2fe8f35}
+      \strng{authorfullhash}{6d1b1c8426633d4c03fbce4da97a8ddb}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{A Vision-Based Analysis of Congestion Pricing in New York City}
+      \field{year}{2026}
+      \verb{eprint}
+      \verb 2602.03015
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2602.03015
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2602.03015
+      \endverb
+    \endentry
     \entry{Krause2013CollectingAL}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=bdb3759bbe6ab0618874848557abd459}{%
@@ -668,8 +1302,8 @@
       \strng{authorbibnamehash}{4468e53902c3a1792424835d9b7fd93d}
       \strng{authornamehash}{49c82b04c74cd06261401faddca9d940}
       \strng{authorfullhash}{4468e53902c3a1792424835d9b7fd93d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Collecting a Large-scale Dataset of Fine-grained Cars}
@@ -710,8 +1344,8 @@
       \strng{authorbibnamehash}{f47753ae2840d569035f2a78b86fbd81}
       \strng{authornamehash}{8836f1fc556d99f0b40cfccd95d05940}
       \strng{authorfullhash}{f47753ae2840d569035f2a78b86fbd81}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In this paper, we propose a vehicle type classification method using a semisupervised convolutional neural network from vehicle frontal-view images. In order to capture rich and discriminative information of vehicles, we introduce sparse Laplacian filter learning to obtain the filters of the network with large amounts of unlabeled data. Serving as the output layer of the network, the softmax classifier is trained by multitask learning with small amounts of labeled data. For a given vehicle image, the network can provide the probability of each type to which the vehicle belongs. Unlike traditional methods by using handcrafted visual features, our method is able to automatically learn good features for the classification task. The learned features are discriminative enough to work well in complex scenes. We build the challenging {BIT}-Vehicle dataset, including 9850 high-resolution vehicle frontal-view images. Experimental results on our own dataset and a public dataset demonstrate the effectiveness of the proposed method.}
@@ -752,8 +1386,8 @@
       \strng{authorbibnamehash}{687ddf9110b9a9a49014c165b90e153e}
       \strng{authornamehash}{687ddf9110b9a9a49014c165b90e153e}
       \strng{authorfullhash}{687ddf9110b9a9a49014c165b90e153e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{23}
@@ -774,8 +1408,8 @@
       \endverb
     \endentry
     \entry{NYCDOT_data_feeds}{online}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{title}{{NYC} {DOT} - Data Feeds}
       \field{urlday}{2}
@@ -805,8 +1439,8 @@
       \strng{authornamehash}{35839065c019664d2760546540a2dc59}
       \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{13}
@@ -822,8 +1456,8 @@
       \endverb
     \endentry
     \entry{511ny_about_rideshare}{online}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labeltitlesource}{title}
       \field{langid}{american}
       \field{title}{About Us - 511NY Rideshare - 511ny.org}
@@ -851,8 +1485,8 @@
       \strng{authorbibnamehash}{8299303a9bcf7ede71d0757177da08ce}
       \strng{authornamehash}{8299303a9bcf7ede71d0757177da08ce}
       \strng{authorfullhash}{8299303a9bcf7ede71d0757177da08ce}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Real Time Traffic Information}
@@ -883,8 +1517,8 @@
       \strng{authornamehash}{35839065c019664d2760546540a2dc59}
       \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{6}
@@ -900,8 +1534,8 @@
       \endverb
     \endentry
     \entry{511ny_api_docs}{online}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{abstract}{Provides 511 {API} documentation for developers use.}
       \field{langid}{english}
@@ -930,9 +1564,9 @@
       \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{20}
@@ -967,8 +1601,8 @@
       \strng{authornamehash}{35839065c019664d2760546540a2dc59}
       \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
       \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
@@ -995,8 +1629,8 @@
       \strng{authorbibnamehash}{8f6ab22973bc9e2a1a255d8b886ac239}
       \strng{authornamehash}{8f6ab22973bc9e2a1a255d8b886ac239}
       \strng{authorfullhash}{8f6ab22973bc9e2a1a255d8b886ac239}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pelco {ES}31C22-2W Esprit Positioning System (24 {VAC}) Product Image}
@@ -1025,8 +1659,8 @@
       \strng{authorbibnamehash}{1ac3510a63ed48c37109013a753f0c13}
       \strng{authornamehash}{1ac3510a63ed48c37109013a753f0c13}
       \strng{authorfullhash}{1ac3510a63ed48c37109013a753f0c13}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{PELCO} {CM}9760-{CXTA} 16-{PORT} {COAXITRON} {TRANSLATOR} 9760 {SURVEILLANCE} {VIDEO} {SYSTEM}}
@@ -1055,8 +1689,8 @@
       \strng{authorbibnamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
       \strng{authornamehash}{ac6b150c08134b28b0c1299d9cf7c9cc}
       \strng{authorfullhash}{ac6b150c08134b28b0c1299d9cf7c9cc}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{AXIS} Q1614-E Network Camera Product Image}
@@ -1089,8 +1723,9 @@
       \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
       \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
       \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extraname}{3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{11}
@@ -1121,9 +1756,9 @@
       \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extraname}{3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{NYC} {DOT} - Truck Routing}
@@ -1157,9 +1792,9 @@
       \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \field{extraname}{3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extraname}{4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{13}
@@ -1190,9 +1825,9 @@
       \strng{authorbibnamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
-      \field{extraname}{4}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{extraname}{5}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Real Time Traffic Information - Subscribers}
@@ -1206,6 +1841,162 @@
       \endverb
       \verb{url}
       \verb https://webcams.nyctmc.org/subscribers
+      \endverb
+    \endentry
+    \entry{CVAT_home}{online}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Annotate smarter with {CVAT}, the industry-leading visual data annotation platform for machine learning. Used and trusted by teams at any scale, for data of any scale.}
+      \field{langid}{english}
+      \field{title}{Leading Data Annotation Platform for Images, Videos and 3D {|} {CVAT}}
+      \field{titleaddon}{{CVAT}.ai}
+      \field{urlday}{11}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cvat.ai
+      \endverb
+      \verb{url}
+      \verb https://www.cvat.ai
+      \endverb
+    \endentry
+    \entry{FHWA_traffic_2014}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b3514fa8307aa3a8a763bab4787e7ac8}{%
+           family={{Federal Highway Administration}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{fullhash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{bibnamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authorbibnamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authornamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authorfullhash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \field{extraname}{3}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{7}
+      \field{month}{11}
+      \field{title}{Traffic Monitoring Guide (2013): Appendix C. Vehicle Types}
+      \field{titleaddon}{Office of Highway Policy Information ({OHPI}) – Traffic Monitoring Guide}
+      \field{urlday}{11}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.fhwa.dot.gov/policyinformation/tmguide/tmg_2013/vehicle-types.cfm
+      \endverb
+      \verb{url}
+      \verb https://www.fhwa.dot.gov/policyinformation/tmguide/tmg_2013/vehicle-types.cfm
+      \endverb
+    \endentry
+    \entry{USEPA_def_truck_2019}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8233d83a5e663161d707a62961f8f66f}{%
+           family={{U.S. Environmental Protection Agency}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{fullhash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{bibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
+      \field{extraname}{4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There are two definitions used in {MOVES} for light duty trucks ...}
+      \field{day}{22}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{title}{How does {MOVES} Define Light Duty Trucks?}
+      \field{type}{Overviews and Factsheets}
+      \field{urlday}{11}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.epa.gov/moves/how-does-moves-define-light-duty-trucks
+      \endverb
+      \verb{url}
+      \verb https://www.epa.gov/moves/how-does-moves-define-light-duty-trucks
+      \endverb
+    \endentry
+    \entry{USDOE_AFDC}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7f6cd5b5b184ad5dcf66198edda1fe77}{%
+           family={{U.S. Department of Energy}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{fullhash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{bibnamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authorbibnamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authornamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \strng{authorfullhash}{7f6cd5b5b184ad5dcf66198edda1fe77}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{langid}{american}
+      \field{shorttitle}{Alternative Fuels Data Center}
+      \field{title}{Alternative Fuels Data Center: Maps and Data - Vehicle Weight Classes and Categories}
+      \field{urlday}{11}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://afdc.energy.gov/data/10380
+      \endverb
+      \verb{url}
+      \verb https://afdc.energy.gov/data/10380
+      \endverb
+    \endentry
+    \entry{USEPA_road_pop_2020}{report}{}
+      \name{author}{1}{}{%
+        {{hash=8233d83a5e663161d707a62961f8f66f}{%
+           family={{U.S. Environmental Protection Agency}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Office of Transportation}%
+        {Air Quality, U.S. Environmental Protection Agency}%
+      }
+      \strng{namehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{fullhash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{bibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
+      \field{extraname}{5}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{number}{{EPA}-420-R-20-023}
+      \field{title}{Population and Activity of Onroad Vehicles in {MOVES}3}
+      \field{urlday}{11}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420r20023.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420r20023.pdf
       \endverb
     \endentry
     \entry{lin_microsoft_2015}{inproceedings}{}
@@ -1270,8 +2061,8 @@
       \strng{authorbibnamehash}{72b744e79c74738c617fd08b4f3d7e36}
       \strng{authornamehash}{72b744e79c74738c617fd08b4f3d7e36}
       \strng{authorfullhash}{63d989c97b4964e8cb9e77f1dea6cd25}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{We present a new dataset with the goal of advancing the state-of-the-art in object recognition by placing the question of object recognition in the context of the broader question of scene understanding. This is achieved by gathering images of complex everyday scenes containing common objects in their natural context. Objects are labeled using per-instance segmentations to aid in precise object localization. Our dataset contains photos of 91 objects types that would be easily recognizable by a 4 year old. With a total of 2.5 million labeled instances in 328k images, the creation of our dataset drew upon extensive crowd worker involvement via novel user interfaces for category detection, instance spotting and instance segmentation. We present a detailed statistical analysis of the dataset in comparison to {PASCAL}, {ImageNet}, and {SUN}. Finally, we provide baseline performance analysis for bounding box and segmentation detection results using a Deformable Parts Model.}
