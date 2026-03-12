@@ -337,6 +337,15 @@ and scene complexity, the labeling process required a tool that allowed precise
 bounding-box annotation and consistent class management across a large image set. 
 For this purpose, the Computer Vision Annotation Tool (CVAT) was used.
 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=7cm]{figures/dataset/3_4_cvat_intro.png}
+    \caption{CVAT environment used to label images.}
+    \label{fig:cvat-labeing}
+\end{figure}
+
+\FloatBarrier
+
 CVAT is a web-based annotation platform designed for computer vision datasets. 
 It supports object detection tasks through rectangular bounding boxes and allows 
 custom class definitions, attribute assignment, and export to multiple machine-learning 
@@ -349,6 +358,7 @@ a core detection taxonomy and more detailed contextual information without split
 up the main class structure.
 
 \subsubsection{Labeling Class Structure}
+\label{sec:label-classes}
 
 The vehicle classes designed to balance two needs: visual distinguishability in 
 low-resolution CCTV imagery and relevance to downstream emissions estimation. 
@@ -414,11 +424,40 @@ rear.
              associated with hatchbacks, thus the vehicle was labeled as \texttt{sedan}.}
 \end{figure}
 
+\FloatBarrier
 
 
 Minivans, when visible with sufficient clarity, were usually distinguished from 
 SUVs by their lower stance and by the alignment of the rear sliding-door handle near 
-the front-door handle. These cues were not treated as absolute rules, but rather as 
+the front-door handle. 
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=3.5cm]{figures/dataset/3_4_1_minivan_heuristics.png}
+        \caption{Minivan handles and vehicle height.}
+        \label{fig:minivan-heuristics}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=3.5cm]{figures/dataset/3_4_1_suv_heuristics.png}
+        \caption{SUV handles and vehicle height.}
+        \label{fig:suv-heuristics}
+    \end{subfigure}
+    \label{fig:minivan-suv-heuristics}
+    \caption{In this example, a vehicle with the attribute \texttt{is\_minivan} 
+             (a) and a vehicle with the label \texttt{suv} (b) are compared in 
+             the same camera position. The handles (boxed in red) on the minivan 
+             are closer together, while the handles on the SUV are farther apart. 
+             Additionally, the body of the minivan is closer to the road compared
+             to the body of the SUV as shown with the yellow arrows.}
+\end{figure}
+
+\FloatBarrier
+
+These cues were not treated as absolute rules, but rather as 
 consistent guidelines used to reduce labeling variability across ambiguous cases. 
 Grouping visually similar body styles into broader categories therefore reduced 
 annotation ambiguity and helped limit label noise, which is especially important 
@@ -497,10 +536,21 @@ subtypes that may be analytically meaningful but are not always reliable as
 standalone detection classes in low-resolution imagery 
 \cite{CVAT_label_guide} \cite{CVAT_attributes}.
 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=5cm]{figures/dataset/3_4_2_minivan_attribute.png}
+    \caption{Example of an attribute given to a vehicle in CVAT. In this case, the 
+             \texttt{van} was given the attriubute \texttt{is\_minivan} due to
+             the labeling heuristics described in Section~\ref{sec:label-classes}.}
+    \label{fig:minivan-attribute}
+\end{figure}
+
+\FloatBarrier
+
 For this reason, the primary classes were reserved for visually robust vehicle 
 groups, while attributes were used to preserve finer-grained semantic information 
 when it could be identified with reasonable confidence. For example, a minivan 
-may appear too visually similar to other vans to justify a separate top-level 
+may appear too visually similar to other vans or SUVs to justify a separate top-level 
 class in 352×240 traffic-camera images, yet it may still be useful to record 
 through an attribute. Similarly, taxis, police vehicles, ambulances, fire trucks, 
 delivery trucks, and city vehicles may be relevant for downstream policy, 
@@ -522,7 +572,7 @@ cases where a vehicle was clearly present but could not be labeled confidently a
 one of the primary types. In practice, this most often occurred when the low image
 quality, occlusion, motion blur, extreme viewing angle, or vehicle distance made 
 it difficult to distinguish between visually similar classes, especially sedans and
-SUVs.
+SUVs. See Figure~\ref{fig:unknown-vehicles} for an example.
 
 Including the \verb|unknown_vehicle| class served two purposes. First, it prevented
 uncertain objects from being forced into incorrect labels, which would introduce 
@@ -530,7 +580,40 @@ label noise into the training data. Second, it allowed the annotation process to
 remain consistent as vehicles were still marked as present in the scene, but without 
 overstating certainty about their exact type. This is especially important in 
 low-resolution urban traffic imagery, where fine-grained body-style distinctions 
-are not always visually reliable.
+are not always visually reliable. 
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.8\textwidth}
+        \centering
+        \includegraphics[height=8cm]{figures/dataset/3_4_3_unknown_example.png}
+        \caption{Image with vehicles that are difficult to distinguish in the background.}
+    \end{subfigure}
+
+    % new row -----------------------
+    \vspace{1.5em}
+
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figures/dataset/3_4_3_unknown_zoomed.png}
+        \caption{Close-up of the background in (a) with unknown vehicles.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5cm]{figures/dataset/3_4_3_unknown_labeled.png}
+        \caption{Vehicles given the unknown vehicle class.}
+    \end{subfigure}
+
+    \caption{
+        Figure (a) shows an example frame with the confident vehicles labeled. 
+        It is unclear though, the classes of the vehicles coming towards the camera
+        behind the crosswalk (b). This is because the side features are not visible
+        to use the heuristics described in Section~\ref{sec:label-classes}. Therefore,
+        these vehicles were assigned the \texttt{unknown\_vehicle} class (c).
+    }
+    \label{fig:unknown-vehicles}
+\end{figure}
 
 Because the goal of the dataset was not simply to maximize the number of labeled 
 vehicles, but to create a high-quality training set for downstream emissions-oriented

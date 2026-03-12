@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  12 MAR 2026 12:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  12 MAR 2026 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -796,63 +796,111 @@ put line 313.
  [14 <./figures/dataset/3_3_2_vehicles_hour_chart.png> <./figures/dataset/3_3_2
 _condition_sunny.png> <./figures/dataset/3_3_2_condition_rainy.png> <./figures/
 dataset/3_3_2_condition_night.png> <./figures/dataset/3_3_2_condition_normal.pn
-g>] [15]
-<figures/dataset/3_4_1_sedan_suv_heuristics.png, id=112, 435.87843pt x 238.6415
+g>]
+<figures/dataset/3_4_cvat_intro.png, id=109, 815.29594pt x 409.53pt>
+File: figures/dataset/3_4_cvat_intro.png Graphic file (type png)
+<use figures/dataset/3_4_cvat_intro.png>
+Package pdftex.def Info: figures/dataset/3_4_cvat_intro.png  used on input line
+ 342.
+(pdftex.def)             Requested size: 396.51282pt x 199.16928pt.
+ [15 <./figures/dataset/3_4_cvat_intro.png>] [16]
+<figures/dataset/3_4_1_sedan_suv_heuristics.png, id=117, 435.87843pt x 238.6415
 6pt>
 File: figures/dataset/3_4_1_sedan_suv_heuristics.png Graphic file (type png)
 <use figures/dataset/3_4_1_sedan_suv_heuristics.png>
 Package pdftex.def Info: figures/dataset/3_4_1_sedan_suv_heuristics.png  used o
-n input line 397.
+n input line 407.
 (pdftex.def)             Requested size: 181.89047pt x 99.58464pt.
-<figures/dataset/3_4_1_sedan_suv_label.png, id=113, 437.38406pt x 257.46187pt>
+<figures/dataset/3_4_1_sedan_suv_label.png, id=118, 437.38406pt x 257.46187pt>
 File: figures/dataset/3_4_1_sedan_suv_label.png Graphic file (type png)
 <use figures/dataset/3_4_1_sedan_suv_label.png>
 Package pdftex.def Info: figures/dataset/3_4_1_sedan_suv_label.png  used on inp
-ut line 403.
+ut line 413.
 (pdftex.def)             Requested size: 169.17757pt x 99.58464pt.
- [16] [17 <./figures/dataset/3_4_1_sedan_suv_heuristics.png> <./figures/dataset
-/3_4_1_sedan_suv_label.png>] [18] [19])
-(./chapters/methodology.tex [20]
-<figures/methodology/4_2_intersection_union.png, id=132, 640.64343pt x 162.6075
+<figures/dataset/3_4_1_minivan_heuristics.png, id=119, 332.74312pt x 151.3153pt
+>
+File: figures/dataset/3_4_1_minivan_heuristics.png Graphic file (type png)
+<use figures/dataset/3_4_1_minivan_heuristics.png>
+Package pdftex.def Info: figures/dataset/3_4_1_minivan_heuristics.png  used on 
+input line 438.
+(pdftex.def)             Requested size: 218.98662pt x 99.58464pt.
+<figures/dataset/3_4_1_suv_heuristics.png, id=120, 316.93407pt x 167.87718pt>
+File: figures/dataset/3_4_1_suv_heuristics.png Graphic file (type png)
+<use figures/dataset/3_4_1_suv_heuristics.png>
+Package pdftex.def Info: figures/dataset/3_4_1_suv_heuristics.png  used on inpu
+t line 445.
+(pdftex.def)             Requested size: 188.00504pt x 99.58464pt.
+ [17 <./figures/dataset/3_4_1_sedan_suv_heuristics.png> <./figures/dataset/3_4_
+1_sedan_suv_label.png> <./figures/dataset/3_4_1_minivan_heuristics.png> <./figu
+res/dataset/3_4_1_suv_heuristics.png>] [18]
+<figures/dataset/3_4_2_minivan_attribute.png, id=131, 451.6875pt x 252.945pt>
+File: figures/dataset/3_4_2_minivan_attribute.png Graphic file (type png)
+<use figures/dataset/3_4_2_minivan_attribute.png>
+Package pdftex.def Info: figures/dataset/3_4_2_minivan_attribute.png  used on i
+nput line 541.
+(pdftex.def)             Requested size: 254.04602pt x 142.26378pt.
+ [19] [20 <./figures/dataset/3_4_2_minivan_attribute.png>]
+<figures/dataset/3_4_3_unknown_example.png, id=140, 676.02562pt x 457.71pt>
+File: figures/dataset/3_4_3_unknown_example.png Graphic file (type png)
+<use figures/dataset/3_4_3_unknown_example.png>
+Package pdftex.def Info: figures/dataset/3_4_3_unknown_example.png  used on inp
+ut line 589.
+(pdftex.def)             Requested size: 336.18616pt x 227.62204pt.
+<figures/dataset/3_4_3_unknown_zoomed.png, id=141, 481.04718pt x 390.70969pt>
+File: figures/dataset/3_4_3_unknown_zoomed.png Graphic file (type png)
+<use figures/dataset/3_4_3_unknown_zoomed.png>
+Package pdftex.def Info: figures/dataset/3_4_3_unknown_zoomed.png  used on inpu
+t line 598.
+(pdftex.def)             Requested size: 175.15869pt x 142.26378pt.
+<figures/dataset/3_4_3_unknown_labeled.png, id=142, 480.29437pt x 395.97937pt>
+File: figures/dataset/3_4_3_unknown_labeled.png Graphic file (type png)
+<use figures/dataset/3_4_3_unknown_labeled.png>
+Package pdftex.def Info: figures/dataset/3_4_3_unknown_labeled.png  used on inp
+ut line 604.
+(pdftex.def)             Requested size: 172.55405pt x 142.26378pt.
+ [21 <./figures/dataset/3_4_3_unknown_example.png> <./figures/dataset/3_4_3_unk
+nown_zoomed.png> <./figures/dataset/3_4_3_unknown_labeled.png>])
+(./chapters/methodology.tex [22]
+<figures/methodology/4_2_intersection_union.png, id=152, 640.64343pt x 162.6075
 pt>
 File: figures/methodology/4_2_intersection_union.png Graphic file (type png)
 <use figures/methodology/4_2_intersection_union.png>
 Package pdftex.def Info: figures/methodology/4_2_intersection_union.png  used o
 n input line 27.
 (pdftex.def)             Requested size: 392.35599pt x 99.58464pt.
-<figures/methodology/4_2_iou_calculation.png, id=133, 455.45157pt x 256.70906pt
+<figures/methodology/4_2_iou_calculation.png, id=153, 455.45157pt x 256.70906pt
 >
 File: figures/methodology/4_2_iou_calculation.png Graphic file (type png)
 <use figures/methodology/4_2_iou_calculation.png>
 Package pdftex.def Info: figures/methodology/4_2_iou_calculation.png  used on i
 nput line 34.
 (pdftex.def)             Requested size: 281.85587pt x 158.8681pt.
-<figures/methodology/4_2_confusion_matrix.png, id=134, 313.9228pt x 304.88907pt
+<figures/methodology/4_2_confusion_matrix.png, id=154, 313.9228pt x 304.88907pt
 >
 File: figures/methodology/4_2_confusion_matrix.png Graphic file (type png)
 <use figures/methodology/4_2_confusion_matrix.png>
 Package pdftex.def Info: figures/methodology/4_2_confusion_matrix.png  used on 
 input line 47.
 (pdftex.def)             Requested size: 190.42923pt x 184.9429pt.
- [21 <./figures/methodology/4_2_intersection_union.png> <./figures/methodology/
-4_2_iou_calculation.png>] [22 <./figures/methodology/4_2_confusion_matrix.png>]
-<figures/methodology/4_2_example_pr_curve.png, id=146, 514.0806pt x 409.2891pt>
+ [23 <./figures/methodology/4_2_intersection_union.png> <./figures/methodology/
+4_2_iou_calculation.png>] [24 <./figures/methodology/4_2_confusion_matrix.png>]
+<figures/methodology/4_2_example_pr_curve.png, id=166, 514.0806pt x 409.2891pt>
 
 File: figures/methodology/4_2_example_pr_curve.png Graphic file (type png)
 <use figures/methodology/4_2_example_pr_curve.png>
 Package pdftex.def Info: figures/methodology/4_2_example_pr_curve.png  used on 
 input line 141.
 (pdftex.def)             Requested size: 232.29112pt x 184.9429pt.
- [23]
-<figures/methodology/4_2_example_pr_curve_ap.png, id=151, 514.0806pt x 409.2891
+ [25]
+<figures/methodology/4_2_example_pr_curve_ap.png, id=172, 514.0806pt x 409.2891
 pt>
 File: figures/methodology/4_2_example_pr_curve_ap.png Graphic file (type png)
 <use figures/methodology/4_2_example_pr_curve_ap.png>
 Package pdftex.def Info: figures/methodology/4_2_example_pr_curve_ap.png  used 
 on input line 158.
 (pdftex.def)             Requested size: 232.29112pt x 184.9429pt.
- [24 <./figures/methodology/4_2_example_pr_curve.png> <./figures/methodology/4_
-2_example_pr_curve_ap.png>] [25]) [26]
+ [26 <./figures/methodology/4_2_example_pr_curve.png> <./figures/methodology/4_
+2_example_pr_curve_ap.png>] [27]) [28]
 LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 4
 8.
 
@@ -861,12 +909,12 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 48.
- [27] [28] [29] [30]
+ [29] [30] [31] [32]
 
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 48.
 
-[31]
+[33]
 
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 48.
@@ -875,16 +923,16 @@ Package biblatex Warning: No driver for entry type 'artwork'.
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 48.
 
-[32] [33] (/home/aidan/repos/masters/report/build/main.aux)
+[34] [35] (/home/aidan/repos/masters/report/build/main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12884 strings out of 480247
- 255679 string characters out of 5896151
- 944151 words of memory out of 5000000
- 30624 multiletter control sequences out of 15000+600000
+ 12942 strings out of 480247
+ 257971 string characters out of 5896151
+ 944290 words of memory out of 5000000
+ 30675 multiletter control sequences out of 15000+600000
  514780 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,10n,80p,2177b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -901,11 +949,11 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on /home/aidan/repos/masters/report/build/main.pdf (39 pages, 72
-73175 bytes).
+Output written on /home/aidan/repos/masters/report/build/main.pdf (41 pages, 10
+380037 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
+ 276 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

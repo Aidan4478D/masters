@@ -202,13 +202,24 @@
 \abx@aux@cite{0}{CVAT_home}
 \abx@aux@segm{0}{0}{CVAT_home}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Data Labeling}{15}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Labeling Class Structure}{15}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces CVAT environment used to label images.\relax }}{15}{}\protected@file@percent }
+\newlabel{fig:cvat-labeing}{{9}{15}}
 \abx@aux@cite{0}{FHWA_traffic_2014}
 \abx@aux@segm{0}{0}{FHWA_traffic_2014}
 \abx@aux@cite{0}{USEPA_def_truck_2019}
 \abx@aux@segm{0}{0}{USEPA_def_truck_2019}
 \abx@aux@cite{0}{USDOE_AFDC}
 \abx@aux@segm{0}{0}{USDOE_AFDC}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Labeling Class Structure}{16}{}\protected@file@percent }
+\newlabel{sec:label-classes}{{3.4.1}{16}}
+\newlabel{fig:sedan-suv-heuristics}{{\caption@xref {fig:sedan-suv-heuristics}{ on input line 416}}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces In this example, the two vehicles in the front of the image are being compared against each other. Using the vertical arrows as a comparison, the white vehicle has a shorter cabin profile and a more-downward sloping rear compared to the red vehicle. Thus, the white vehicle was labeled as \texttt  {sedan} and the red vehicle was labeled as \texttt  {suv}. The grey vehicle in the back has a thin body profile when compared to the road (grey arrows) and a relatively short cabin profile. These are common features associated with hatchbacks, thus the vehicle was labeled as \texttt  {sedan}.\relax }}{17}{}\protected@file@percent }
+\newlabel{fig:minivan-heuristics}{{11a}{17}}
+\newlabel{sub@fig:minivan-heuristics}{{a}{17}}
+\newlabel{fig:suv-heuristics}{{11b}{17}}
+\newlabel{sub@fig:suv-heuristics}{{b}{17}}
+\newlabel{fig:minivan-suv-heuristics}{{\caption@xref {fig:minivan-suv-heuristics}{ on input line 449}}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces In this example, a vehicle with the attribute \texttt  {is\_minivan} (a) and a vehicle with the label \texttt  {suv} (b) are compared in the same camera position. The handles (boxed in red) on the minivan are closer together, while the handles on the SUV are farther apart. Additionally, the body of the minivan is closer to the road compared to the body of the SUV as shown with the yellow arrows.\relax }}{17}{}\protected@file@percent }
 \abx@aux@cite{0}{USEPA_def_truck_2019}
 \abx@aux@segm{0}{0}{USEPA_def_truck_2019}
 \abx@aux@cite{0}{USEPA_road_pop_2020}
@@ -223,8 +234,6 @@
 \abx@aux@segm{0}{0}{USEPA_road_pop_2020}
 \abx@aux@cite{0}{USEPA_moves3_2020}
 \abx@aux@segm{0}{0}{USEPA_moves3_2020}
-\newlabel{fig:sedan-suv-heuristics}{{\caption@xref {fig:sedan-suv-heuristics}{ on input line 406}}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces In this example, the two vehicles in the front of the image are being compared against each other. Using the vertical arrows as a comparison, the white vehicle has a shorter cabin profile and a more-downward sloping rear compared to the red vehicle. Thus, the white vehicle was labeled as \texttt  {sedan} and the red vehicle was labeled as \texttt  {suv}. The grey vehicle in the back has a thin body profile when compared to the road (grey arrows) and a relatively short cabin profile. These are common features associated with hatchbacks, thus the vehicle was labeled as \texttt  {sedan}.\relax }}{17}{}\protected@file@percent }
 \abx@aux@cite{0}{USEPA_def_truck_2019}
 \abx@aux@segm{0}{0}{USEPA_def_truck_2019}
 \abx@aux@cite{0}{USEPA_road_pop_2020}
@@ -235,28 +244,32 @@
 \abx@aux@segm{0}{0}{CVAT_label_guide}
 \abx@aux@cite{0}{CVAT_attributes}
 \abx@aux@segm{0}{0}{CVAT_attributes}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Attributes}{18}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Attributes}{19}{}\protected@file@percent }
 \abx@aux@cite{0}{CVAT_annotation_quality}
 \abx@aux@segm{0}{0}{CVAT_annotation_quality}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Unknown Vehicle Class}{19}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}Annotation Procedure}{20}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{20}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Performance Metrics}{20}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Intersection over Union}{20}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces IoU Calculation\relax }}{21}{}\protected@file@percent }
-\newlabel{fig:iou_calc}{{10}{21}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Confusion Matrix}{21}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Confusion Matrix\relax }}{22}{}\protected@file@percent }
-\newlabel{fig:conf_matrix}{{11}{22}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Precision-Recall Curve}{23}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Example Precision-Recall Curve\relax }}{24}{}\protected@file@percent }
-\newlabel{fig:ex_pr_curve}{{12}{24}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Average Precision and mAP}{24}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Average Precision within a Precision-Recall Curve\relax }}{24}{}\protected@file@percent }
-\newlabel{fig:ex_pr_curve_ap}{{13}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Example of an attribute given to a vehicle in CVAT. In this case, the \texttt  {van} was given the attriubute \texttt  {is\_minivan} due to the labeling heuristics described in Section\nobreakspace  {}3.4.1\hbox {}.\relax }}{20}{}\protected@file@percent }
+\newlabel{fig:minivan-attribute}{{12}{20}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Unknown Vehicle Class}{20}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces  Figure (a) shows an example frame with the confident vehicles labeled. It is unclear though, the classes of the vehicles coming towards the camera behind the crosswalk (b). This is because the side features are not visible to use the heuristics described in Section\nobreakspace  {}3.4.1\hbox {}. Therefore, these vehicles were assigned the \texttt  {unknown\_vehicle} class (c). \relax }}{21}{}\protected@file@percent }
+\newlabel{fig:unknown-vehicles}{{13}{21}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}Annotation Procedure}{22}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{22}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Performance Metrics}{22}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Intersection over Union}{23}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces IoU Calculation\relax }}{23}{}\protected@file@percent }
+\newlabel{fig:iou_calc}{{14}{23}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Confusion Matrix}{23}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Confusion Matrix\relax }}{24}{}\protected@file@percent }
+\newlabel{fig:conf_matrix}{{15}{24}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Precision-Recall Curve}{25}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Example Precision-Recall Curve\relax }}{26}{}\protected@file@percent }
+\newlabel{fig:ex_pr_curve}{{16}{26}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Average Precision and mAP}{26}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Average Precision within a Precision-Recall Curve\relax }}{26}{}\protected@file@percent }
+\newlabel{fig:ex_pr_curve_ap}{{17}{26}}
 \abx@aux@cite{0}{lin_microsoft_2015}
 \abx@aux@segm{0}{0}{lin_microsoft_2015}
-\@writefile{toc}{\contentsline {section}{References}{26}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{28}{}\protected@file@percent }
 \abx@aux@read@bbl@mdfivesum{9F1FB93F2A5ECE57886E8290A0E030BE}
 \abx@aux@defaultrefcontext{0}{world_health_organization_air_nodate}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{health_effects_institute_state_2025}{none/global//global/global}
@@ -318,4 +331,4 @@
 \abx@aux@defaultrefcontext{0}{CVAT_attributes}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{CVAT_annotation_quality}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{lin_microsoft_2015}{none/global//global/global}
-\gdef \@abspage@last{39}
+\gdef \@abspage@last{41}

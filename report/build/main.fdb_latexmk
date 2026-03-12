@@ -1,16 +1,16 @@
 # Fdb version 3
-["biber /home/aidan/repos/masters/report/build/main"] 1773334350 "/home/aidan/repos/masters/report/build/main.bcf" "/home/aidan/repos/masters/report/build/main.bbl" "/home/aidan/repos/masters/report/build/main" 1773334405
-  "/home/aidan/repos/masters/report/build/main.bcf" 1773334405 116321 35fa9e2d98b1c7dd14080d5cb295e954 "pdflatex"
+["biber /home/aidan/repos/masters/report/build/main"] 1773338047 "/home/aidan/repos/masters/report/build/main.bcf" "/home/aidan/repos/masters/report/build/main.bbl" "/home/aidan/repos/masters/report/build/main" 1773339865
+  "/home/aidan/repos/masters/report/build/main.bcf" 1773339865 116321 35fa9e2d98b1c7dd14080d5cb295e954 "pdflatex"
   "references.bib" 1773328287 35537 21312d6d641ef1f44cb7f5eb0eaf8410 ""
   (generated)
   "/home/aidan/repos/masters/report/build/main.bbl"
   "/home/aidan/repos/masters/report/build/main.blg"
-["pdflatex"] 1773334403 "main.tex" "/home/aidan/repos/masters/report/build/main.pdf" "main" 1773334405
+["pdflatex"] 1773339862 "main.tex" "/home/aidan/repos/masters/report/build/main.pdf" "main" 1773339865
   "/etc/texmf/web2c/texmf.cnf" 1759702071 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/aidan/repos/masters/report/build/main.aux" 1773334405 20685 e5370ca76898e5d09ee7131d8c62be35 "pdflatex"
-  "/home/aidan/repos/masters/report/build/main.bbl" 1773334352 97337 9f1fb93f2a5ece57886e8290a0e030be "biber /home/aidan/repos/masters/report/build/main"
-  "/home/aidan/repos/masters/report/build/main.run.xml" 1773334405 2402 7c866ed2192e71c57464ed4279aadefa "pdflatex"
-  "/home/aidan/repos/masters/report/build/main.toc" 1773334405 1810 dcf9e2cea920261d9d29b6514bcb9331 "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.aux" 1773339865 22613 6e9fb1a8cc249fddfd4bd8658d5da149 "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.bbl" 1773338048 97337 9f1fb93f2a5ece57886e8290a0e030be "biber /home/aidan/repos/masters/report/build/main"
+  "/home/aidan/repos/masters/report/build/main.run.xml" 1773339865 2402 7c866ed2192e71c57464ed4279aadefa "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.toc" 1773339865 1810 7cf2e6a37bbe77d892ecb6cd0a008b09 "pdflatex"
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -116,7 +116,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1759706591 4036811 4cb80868003c86b962b6b5ae1e1e2902 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1759706597 1405649 ed67816fea853983ed80a01a43d4baa9 ""
-  "chapters/dataset.tex" 1773334398 29440 9306c28d553bcc2bc1efdd64d101f408 ""
+  "chapters/dataset.tex" 1773339862 32577 12e0ecf6a66de2966720dcdbc5559eb9 ""
   "chapters/introduction.tex" 1771367799 6270 1efbfd8cd97fff0d2f19f1ba58612f57 ""
   "chapters/methodology.tex" 1772507626 11026 271347b878918c25dd92ab180598edfa ""
   "chapters/related_work_v2.tex" 1772921658 12990 6e0b2acce36002d1f5a48e2b002402c5 ""
@@ -135,8 +135,15 @@
   "figures/dataset/3_3_2_condition_rainy.png" 1772506385 380519 b825f6f1337769a02f5dd9f46a7ff793 ""
   "figures/dataset/3_3_2_condition_sunny.png" 1772506339 336138 452618f681472f58101b2f9b8b42eff2 ""
   "figures/dataset/3_3_2_vehicles_hour_chart.png" 1772506300 82183 977afcd1468e490f1cbfdf3f34d22669 ""
+  "figures/dataset/3_4_1_minivan_heuristics.png" 1773331561 89224 ae46f7e755d2c3c7a9185ba0b615176f ""
   "figures/dataset/3_4_1_sedan_suv_heuristics.png" 1773331478 249852 11a4365cd0e333b990ae8d6722df2a12 ""
   "figures/dataset/3_4_1_sedan_suv_label.png" 1773331503 268421 b85e37d061576d8645e1f967a33abb08 ""
+  "figures/dataset/3_4_1_suv_heuristics.png" 1773331606 95703 cdd156981cde9ad7701c9ca4eedb3ea9 ""
+  "figures/dataset/3_4_2_minivan_attribute.png" 1773331661 199492 de0cf60feb9c591194ba8fd22c4998be ""
+  "figures/dataset/3_4_3_unknown_example.png" 1773333194 596630 6f9066b83e8206018a5414568f583a42 ""
+  "figures/dataset/3_4_3_unknown_labeled.png" 1773333293 273098 3ee37da0bd1ae1f60251986b78b22011 ""
+  "figures/dataset/3_4_3_unknown_zoomed.png" 1773333251 252224 2da919a1220cd15ee030d4ebc564868e ""
+  "figures/dataset/3_4_cvat_intro.png" 1773331739 481426 5e7c161ddd9b4c273469343f05d4f20a ""
   "figures/methodology/4_2_confusion_matrix.png" 1772162176 36353 792fe07c381818abf7acadd390ca1049 ""
   "figures/methodology/4_2_example_pr_curve.png" 1772220709 132526 f2d35345dbf8efa9a389b102210504ca ""
   "figures/methodology/4_2_example_pr_curve_ap.png" 1772220879 143187 686c58e8e29be290d211d22f3f4d984c ""
