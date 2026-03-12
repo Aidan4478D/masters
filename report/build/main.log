@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  11 MAR 2026 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  12 MAR 2026 12:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,13 +642,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ] (./frontpages/abstract.tex) [1
 
 ]
-(/home/aidan/repos/masters/report/build/main.toc)
+(/home/aidan/repos/masters/report/build/main.toc [2
+
+])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [2
-
-] [3]
+ [3]
 (./chapters/introduction.tex
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
 7.
@@ -796,62 +796,77 @@ put line 313.
  [14 <./figures/dataset/3_3_2_vehicles_hour_chart.png> <./figures/dataset/3_3_2
 _condition_sunny.png> <./figures/dataset/3_3_2_condition_rainy.png> <./figures/
 dataset/3_3_2_condition_night.png> <./figures/dataset/3_3_2_condition_normal.pn
-g>] [15]) (./chapters/methodology.tex [16]
-<figures/methodology/4_2_intersection_union.png, id=115, 640.64343pt x 162.6075
+g>] [15]
+<figures/dataset/3_4_1_sedan_suv_heuristics.png, id=112, 435.87843pt x 238.6415
+6pt>
+File: figures/dataset/3_4_1_sedan_suv_heuristics.png Graphic file (type png)
+<use figures/dataset/3_4_1_sedan_suv_heuristics.png>
+Package pdftex.def Info: figures/dataset/3_4_1_sedan_suv_heuristics.png  used o
+n input line 397.
+(pdftex.def)             Requested size: 181.89047pt x 99.58464pt.
+<figures/dataset/3_4_1_sedan_suv_label.png, id=113, 437.38406pt x 257.46187pt>
+File: figures/dataset/3_4_1_sedan_suv_label.png Graphic file (type png)
+<use figures/dataset/3_4_1_sedan_suv_label.png>
+Package pdftex.def Info: figures/dataset/3_4_1_sedan_suv_label.png  used on inp
+ut line 403.
+(pdftex.def)             Requested size: 169.17757pt x 99.58464pt.
+ [16] [17 <./figures/dataset/3_4_1_sedan_suv_heuristics.png> <./figures/dataset
+/3_4_1_sedan_suv_label.png>] [18] [19])
+(./chapters/methodology.tex [20]
+<figures/methodology/4_2_intersection_union.png, id=132, 640.64343pt x 162.6075
 pt>
 File: figures/methodology/4_2_intersection_union.png Graphic file (type png)
 <use figures/methodology/4_2_intersection_union.png>
 Package pdftex.def Info: figures/methodology/4_2_intersection_union.png  used o
 n input line 27.
 (pdftex.def)             Requested size: 392.35599pt x 99.58464pt.
-<figures/methodology/4_2_iou_calculation.png, id=116, 455.45157pt x 256.70906pt
+<figures/methodology/4_2_iou_calculation.png, id=133, 455.45157pt x 256.70906pt
 >
 File: figures/methodology/4_2_iou_calculation.png Graphic file (type png)
 <use figures/methodology/4_2_iou_calculation.png>
 Package pdftex.def Info: figures/methodology/4_2_iou_calculation.png  used on i
 nput line 34.
 (pdftex.def)             Requested size: 281.85587pt x 158.8681pt.
-<figures/methodology/4_2_confusion_matrix.png, id=117, 313.9228pt x 304.88907pt
+<figures/methodology/4_2_confusion_matrix.png, id=134, 313.9228pt x 304.88907pt
 >
 File: figures/methodology/4_2_confusion_matrix.png Graphic file (type png)
 <use figures/methodology/4_2_confusion_matrix.png>
 Package pdftex.def Info: figures/methodology/4_2_confusion_matrix.png  used on 
 input line 47.
 (pdftex.def)             Requested size: 190.42923pt x 184.9429pt.
- [17 <./figures/methodology/4_2_intersection_union.png>] [18 <./figures/methodo
-logy/4_2_iou_calculation.png> <./figures/methodology/4_2_confusion_matrix.png>]
- [19]
-<figures/methodology/4_2_example_pr_curve.png, id=133, 514.0806pt x 409.2891pt>
+ [21 <./figures/methodology/4_2_intersection_union.png> <./figures/methodology/
+4_2_iou_calculation.png>] [22 <./figures/methodology/4_2_confusion_matrix.png>]
+<figures/methodology/4_2_example_pr_curve.png, id=146, 514.0806pt x 409.2891pt>
 
 File: figures/methodology/4_2_example_pr_curve.png Graphic file (type png)
 <use figures/methodology/4_2_example_pr_curve.png>
 Package pdftex.def Info: figures/methodology/4_2_example_pr_curve.png  used on 
 input line 141.
 (pdftex.def)             Requested size: 232.29112pt x 184.9429pt.
- [20]
-<figures/methodology/4_2_example_pr_curve_ap.png, id=138, 514.0806pt x 409.2891
+ [23]
+<figures/methodology/4_2_example_pr_curve_ap.png, id=151, 514.0806pt x 409.2891
 pt>
 File: figures/methodology/4_2_example_pr_curve_ap.png Graphic file (type png)
 <use figures/methodology/4_2_example_pr_curve_ap.png>
 Package pdftex.def Info: figures/methodology/4_2_example_pr_curve_ap.png  used 
 on input line 158.
 (pdftex.def)             Requested size: 232.29112pt x 184.9429pt.
- [21 <./figures/methodology/4_2_example_pr_curve.png> <./figures/methodology/4_
-2_example_pr_curve_ap.png>] [22]) [23]
+ [24 <./figures/methodology/4_2_example_pr_curve.png> <./figures/methodology/4_
+2_example_pr_curve_ap.png>] [25]) [26]
 LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 4
 8.
- (/usr/share/texmf/tex/latex/lm/omslmr.fd
+
+(/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 48.
- [24]
-[25] [26] [27]
+ [27] [28] [29] [30]
 
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 48.
 
-[28]
+[31]
 
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 48.
@@ -860,16 +875,16 @@ Package biblatex Warning: No driver for entry type 'artwork'.
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 48.
 
-[29] [30] (/home/aidan/repos/masters/report/build/main.aux)
+[32] [33] (/home/aidan/repos/masters/report/build/main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 12857 strings out of 480247
- 254409 string characters out of 5896151
- 943833 words of memory out of 5000000
- 30599 multiletter control sequences out of 15000+600000
+ 12884 strings out of 480247
+ 255679 string characters out of 5896151
+ 944151 words of memory out of 5000000
+ 30624 multiletter control sequences out of 15000+600000
  514780 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,10n,80p,2177b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -886,11 +901,11 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on /home/aidan/repos/masters/report/build/main.pdf (36 pages, 63
-71373 bytes).
+Output written on /home/aidan/repos/masters/report/build/main.pdf (39 pages, 72
+73175 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
+ 256 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

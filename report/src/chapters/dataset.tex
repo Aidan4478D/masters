@@ -379,14 +379,52 @@ trucks, buses, trucks, and motorcycles for transportation and emissions analysis
 
 This simplification was also necessary because the dataset consists of low-resolution 
 CCTV images, where fine-grained distinctions between similar passenger body styles 
-are often visually unreliable. In many views, a coupe, sedan, and hatchback differ
-primarily in roofline or rear profile, while a crossover and SUV may differ only 
-subtly in ride height or body proportions. In compressed roadside imagery, these 
-features are frequently obscured by distance, motion blur, occlusion, and unfavorable
-camera angle. Grouping visually similar body styles into broader categories therefore 
-reduced annotation ambiguity and helped limit label noise. This is especially 
-important in a manually labeled dataset, where forcing uncertain distinctions can 
-degrade downstream model performance.
+are often visually unreliable. In many views, a coupe, sedan, and hatchback differ 
+primarily in roofline or rear profile, while a crossover and SUV may differ only subtly 
+in ride height or body proportions. With the low-resolution images, these features are 
+often obscured by distance, motion blur, occlusion, and unfavorable camera angle. To 
+improve consistency when distinguishing visually similar passenger vehicles, labeling 
+decisions were guided by a small set of practical visual heuristics. In side or angled 
+views, SUVs were generally identified by their taller cabin profile, greater apparent 
+ride height, and larger overall body proportions relative to nearby sedans. Sedans were 
+typically lower to the ground, with a thinner body profile and a more downward-sloping 
+rear. 
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=3.5cm]{figures/dataset/3_4_1_sedan_suv_heuristics.png}
+        \caption{Sedan and SUV distinguishing hueristics.}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=3.5cm]{figures/dataset/3_4_1_sedan_suv_label.png}
+        \caption{Sedan (yellow) and SUV (blue) labels used.}
+    \end{subfigure}
+    \label{fig:sedan-suv-heuristics}
+    \caption{In this example, the two vehicles in the front of the image are being
+             compared against each other. Using the vertical arrows as a comparison,
+             the white vehicle has a shorter cabin profile and a more-downward sloping
+             rear compared to the red vehicle. Thus, the white vehicle was labeled as
+             \texttt{sedan} and the red vehicle was labeled as \texttt{suv}. The grey
+             vehicle in the back has a thin body profile when compared to the road (grey arrows)
+             and a relatively short cabin profile. These are common features 
+             associated with hatchbacks, thus the vehicle was labeled as \texttt{sedan}.}
+\end{figure}
+
+
+
+Minivans, when visible with sufficient clarity, were usually distinguished from 
+SUVs by their lower stance and by the alignment of the rear sliding-door handle near 
+the front-door handle. These cues were not treated as absolute rules, but rather as 
+consistent guidelines used to reduce labeling variability across ambiguous cases. 
+Grouping visually similar body styles into broader categories therefore reduced 
+annotation ambiguity and helped limit label noise, which is especially important 
+in a manually labeled dataset where forcing uncertain distinctions can degrade 
+downstream model performance.
+
 
 At the same time, the annotation classes was intentionally made slightly more 
 specific than the final MOVES mapping. Although SUVs and pickup trucks are later 
@@ -397,9 +435,122 @@ passenger cars from passenger trucks and light commercial trucks as separate
 source-use types, and EPA explicitly notes that many SUVs and minivans are considered
 light-duty trucks while visual appearance alone is often insufficient to determine 
 the exact analytical classification \cite{USEPA_def_truck_2019}, \cite{USEPA_road_pop_2020}. 
-Separating \verb|suv| and \verb|pickup_truck|at 
+Separating \verb|suv| and \verb|pickup_truck| at 
 the image-labeling stage therefore helped the model learn more discriminative 
 visual features before later collapsing detections into broader MOVES-compatible
 categories for emissions estimation.
+
+A similar logic applies to \verb|bus| and \verb|truck|, but in the opposite direction. In MOVES,
+buses are divided into other bus, transit bus, and school bus, while trucks are 
+separated into categories such as light commercial truck, refuse truck, single-unit
+short-haul truck, single-unit long-haul truck, combination short-haul truck, and
+combination long-haul truck \cite{USDOE_AFDC} \cite{USEPA_road_pop_2020}. 
+However, these MOVES distinctions are not based on vehicle appearance alone. EPA 
+documentation defines bus categories partly by ownership and service type. For 
+example, transit buses are associated with public transit operations, school 
+buses with K-12 student transport, and other buses with non-transit, non-school use 
+\cite{USEPA_road_pop_2020}. 
+Likewise, truck source types are differentiated partly by vehicle configuration, 
+axle arrangement, haul type, and primary distance of operation, not simply by 
+visual silhouette . 
+In low-resolution 352×240 CCTV imagery, many of these distinctions are either 
+not visible or not reliably inferable from a single frame. A shuttle bus operated
+by a private company and a visually similar shuttle operated by a public transit
+agency may appear nearly identical in the image while belonging to different MOVES
+source types. Similarly, distinguishing a single-unit short-haul truck from a 
+single-unit long-haul truck, or a refuse truck from another heavy truck under 
+occlusion or poor viewing angle, may not be consistently possible from image 
+evidence alone \cite{USEPA_road_pop_2020}, \cite{USEPA_moves3_2020}.
+
+For this reason, all buses were labeled under a single \verb|bus| class and all heavier 
+non-pickup trucks under a single \verb|truck| class. This decision was due to annotation 
+consistency and reduced label noise by avoiding visually ambiguous subtype assignments 
+that could not be made reliably from the available imagery. The result is an 
+annotation scheme that is intentionally image-driven for model learning, even 
+though the later emissions analysis uses a more analytically driven mapping to
+MOVES source types. In other words, the dataset preserves distinctions that are 
+visually robust enough to be learned reliably, while leaving finer operational 
+subdivisions to the downstream emissions-mapping stage rather than the annotation 
+stage \cite{USEPA_def_truck_2019}, \cite{USEPA_road_pop_2020}, \cite{USEPA_moves3_2020}.
+
+\subsubsection{Attributes}
+
+Several classes were assigned boolean attributes to capture subcategories that may 
+be useful for later analysis:
+
+\begin{itemize}
+    \item \verb|sedan|: \verb|is_taxi|, \verb|is_police| 
+    \item \verb|suv|: \verb|is_taxi|, \verb|is_police|
+    \item \verb|pickup_truck|: \verb|is_city_vehicle|
+    \item \verb|van|: \verb|is_taxi|, \verb|is_ambulance|, \verb|is_minivan| 
+    \item \verb|truck|: \verb|is_delivery|, \verb|is_firetruck|
+\end{itemize}
+
+No additional attributes were assigned to \verb|bus|, \verb|two_wheeler|, or 
+\verb|unknown_vehicle|.
+
+This attribute-based design was used to make the dataset more flexible without 
+unnecessarily expanding the number of top-level detection classes. In CVAT, 
+attributes function as additional object properties that can enrich labels
+without introducing a separate object category, making them well suited for 
+subtypes that may be analytically meaningful but are not always reliable as 
+standalone detection classes in low-resolution imagery 
+\cite{CVAT_label_guide} \cite{CVAT_attributes}.
+
+For this reason, the primary classes were reserved for visually robust vehicle 
+groups, while attributes were used to preserve finer-grained semantic information 
+when it could be identified with reasonable confidence. For example, a minivan 
+may appear too visually similar to other vans to justify a separate top-level 
+class in 352×240 traffic-camera images, yet it may still be useful to record 
+through an attribute. Similarly, taxis, police vehicles, ambulances, fire trucks, 
+delivery trucks, and city vehicles may be relevant for downstream policy, 
+fleet-composition, or municipal-operations analyses, even if they are not modeled
+as separate classes in the present detection pipeline.
+
+This design also improves the long-term utility of the dataset. By storing these 
+subtypes as attributes rather than discarding them entirely, the dataset remains
+reusable for other machine-learning or transportation-analysis tasks, including 
+subclass filtering, targeted error analysis, or later regrouping into alternative
+classes. At the same time, keeping visually ambiguous subtypes out of the main 
+class list helps reduce label noise, which is important because noisy or inconsistent 
+annotations can degrade model training and evaluation quality \cite{CVAT_annotation_quality}.
+
+\subsubsection{Unknown Vehicle Class}
+
+An additional class, \verb|unknown_vehicle|, was introduced to handle ambiguous 
+cases where a vehicle was clearly present but could not be labeled confidently as
+one of the primary types. In practice, this most often occurred when the low image
+quality, occlusion, motion blur, extreme viewing angle, or vehicle distance made 
+it difficult to distinguish between visually similar classes, especially sedans and
+SUVs.
+
+Including the \verb|unknown_vehicle| class served two purposes. First, it prevented
+uncertain objects from being forced into incorrect labels, which would introduce 
+label noise into the training data. Second, it allowed the annotation process to
+remain consistent as vehicles were still marked as present in the scene, but without 
+overstating certainty about their exact type. This is especially important in 
+low-resolution urban traffic imagery, where fine-grained body-style distinctions 
+are not always visually reliable.
+
+Because the goal of the dataset was not simply to maximize the number of labeled 
+vehicles, but to create a high-quality training set for downstream emissions-oriented
+classification, preserving uncertainty explicitly rather than introducing mislabeled
+images was preferred.
+
+\subsubsection{Annotation Procedure}
+
+Each image was manually reviewed in CVAT and every visible vehicle of interest was 
+annotated with a rectangular bounding box. The assigned box was drawn tightly 
+around the visible extent of the vehicle body. After drawing the bounding box, the
+most appropriate class label was selected. When applicable, additional attributes 
+were checked to indicate more specific vehicle roles or subtypes.
+
+This annotation procedure was repeated across all 1,200 images in the dataset. 
+Since the images were drawn from multiple camera locations and viewing angles, the
+labeling process captured vehicles under a wide range of perspectives, including 
+front-facing, rear-facing, side-facing, and mixed-angle views. Vehicles also appeared
+under different traffic densities, illumination conditions, and levels of partial
+occlusion. As a result, the final annotated dataset reflects a realistic urban 
+traffic-camera detection environment rather than a controlled benchmark setting.
 
 

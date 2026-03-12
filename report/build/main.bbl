@@ -1999,6 +1999,103 @@
       \verb https://www.epa.gov/sites/default/files/2020-11/documents/420r20023.pdf
       \endverb
     \endentry
+    \entry{USEPA_moves3_2020}{report}{}
+      \name{author}{1}{}{%
+        {{hash=8233d83a5e663161d707a62961f8f66f}{%
+           family={{U.S. Environmental Protection Agency}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Office of Transportation}%
+        {Air Quality, U.S. Environmental Protection Agency}%
+      }
+      \strng{namehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{fullhash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{bibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
+      \field{extraname}{6}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{number}{{EPA}-420-B-20-052}
+      \field{title}{{MOVES}3 Technical Guidance: Using {MOVES} to Prepare Emission Inventories for State Implementation Plans and Transportation Conformity}
+      \field{urlday}{11}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420b20052.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420b20052.pdf
+      \endverb
+    \endentry
+    \entry{CVAT_label_guide}{online}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Why labeling guidelines matter: reduce ambiguity, align annotators, and improve consistency and quality across projects.}
+      \field{langid}{english}
+      \field{shorttitle}{Labeling Guidelines}
+      \field{title}{Labeling Guidelines: How to Keep Annotations Consistent {|} {CVAT} Academy}
+      \field{titleaddon}{{CVAT}.ai}
+      \field{urlday}{11}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cvat.ai/academy/labeling-guidelines
+      \endverb
+      \verb{url}
+      \verb https://www.cvat.ai/academy/labeling-guidelines
+      \endverb
+    \endentry
+    \entry{CVAT_attributes}{online}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Use attributes to enrich labels with properties like color, type, condition, or action—so models learn more than classes.}
+      \field{langid}{english}
+      \field{shorttitle}{Attributes in {CVAT}}
+      \field{title}{Attributes in {CVAT}: Add Object Properties {|} {CVAT} Academy}
+      \field{titleaddon}{{CVAT}.ai}
+      \field{urlday}{11}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cvat.ai/academy/label-attributes
+      \endverb
+      \verb{url}
+      \verb https://www.cvat.ai/academy/label-attributes
+      \endverb
+    \endentry
+    \entry{CVAT_annotation_quality}{online}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Why annotation quality impacts model accuracy, and how to avoid errors that distort results in real-world {ML} datasets.}
+      \field{langid}{english}
+      \field{shorttitle}{Annotation Quality}
+      \field{title}{Annotation Quality: What “Good Labels” Look Like {|} {CVAT} Academy}
+      \field{titleaddon}{{CVAT}.ai}
+      \field{urlday}{12}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cvat.ai/academy/annotation-quality-principles
+      \endverb
+      \verb{url}
+      \verb https://www.cvat.ai/academy/annotation-quality-principles
+      \endverb
+    \endentry
     \entry{lin_microsoft_2015}{inproceedings}{}
       \name{author}{10}{}{%
         {{hash=08f925fe4692d130a1d7cb7d94483351}{%
@@ -2061,8 +2158,8 @@
       \strng{authorbibnamehash}{72b744e79c74738c617fd08b4f3d7e36}
       \strng{authornamehash}{72b744e79c74738c617fd08b4f3d7e36}
       \strng{authorfullhash}{63d989c97b4964e8cb9e77f1dea6cd25}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{We present a new dataset with the goal of advancing the state-of-the-art in object recognition by placing the question of object recognition in the context of the broader question of scene understanding. This is achieved by gathering images of complex everyday scenes containing common objects in their natural context. Objects are labeled using per-instance segmentations to aid in precise object localization. Our dataset contains photos of 91 objects types that would be easily recognizable by a 4 year old. With a total of 2.5 million labeled instances in 328k images, the creation of our dataset drew upon extensive crowd worker involvement via novel user interfaces for category detection, instance spotting and instance segmentation. We present a detailed statistical analysis of the dataset in comparison to {PASCAL}, {ImageNet}, and {SUN}. Finally, we provide baseline performance analysis for bounding box and segmentation detection results using a Deformable Parts Model.}

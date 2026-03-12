@@ -680,6 +680,16 @@ INPUT ./figures/dataset/3_3_2_condition_normal.png
 INPUT figures/dataset/3_3_2_condition_normal.png
 INPUT ./figures/dataset/3_3_2_condition_normal.png
 INPUT ./figures/dataset/3_3_2_condition_normal.png
+INPUT ./figures/dataset/3_4_1_sedan_suv_heuristics.png
+INPUT ./figures/dataset/3_4_1_sedan_suv_heuristics.png
+INPUT figures/dataset/3_4_1_sedan_suv_heuristics.png
+INPUT ./figures/dataset/3_4_1_sedan_suv_heuristics.png
+INPUT ./figures/dataset/3_4_1_sedan_suv_heuristics.png
+INPUT ./figures/dataset/3_4_1_sedan_suv_label.png
+INPUT ./figures/dataset/3_4_1_sedan_suv_label.png
+INPUT figures/dataset/3_4_1_sedan_suv_label.png
+INPUT ./figures/dataset/3_4_1_sedan_suv_label.png
+INPUT ./figures/dataset/3_4_1_sedan_suv_label.png
 INPUT ./chapters/methodology.tex
 INPUT ./chapters/methodology.tex
 INPUT ./chapters/methodology.tex
