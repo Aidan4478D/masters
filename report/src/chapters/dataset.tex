@@ -465,52 +465,67 @@ in a manually labeled dataset where forcing uncertain distinctions can degrade
 downstream model performance.
 
 
-At the same time, the annotation classes was intentionally made slightly more 
-specific than the final MOVES mapping. Although SUVs and pickup trucks are later 
-grouped into the MOVES passenger-truck category, they were annotated separately 
-during dataset creation so that the model could first learn more specific visual 
-representations of distinct vehicle forms. EPA’s MOVES framework distinguishes 
-passenger cars from passenger trucks and light commercial trucks as separate 
-source-use types, and EPA explicitly notes that many SUVs and minivans are considered
-light-duty trucks while visual appearance alone is often insufficient to determine 
-the exact analytical classification \cite{USEPA_def_truck_2019}, \cite{USEPA_road_pop_2020}. 
-Separating \verb|suv| and \verb|pickup_truck| at 
-the image-labeling stage therefore helped the model learn more discriminative 
-visual features before later collapsing detections into broader MOVES-compatible
-categories for emissions estimation.
+At the same time, the annotation classes were intentionally made somewhat more 
+descriptive than the final class structure used in the present training pipeline. 
+Although \verb|suv| and \verb|pickup_truck| are ultimately grouped into the MOVES 
+passenger-truck category during model training and downstream emissions mapping, 
+they were annotated separately in the raw dataset to preserve semantically useful 
+detail at the labeling stage. This decision was made primarily for annotation 
+clarity, interpretability, and dataset flexibility. In practice, SUVs and pickup 
+trucks are often recognizable as distinct vehicle forms in imagery even if they 
+are later collapsed into the same broader analytical category. Retaining these 
+labels in the annotations therefore made the dataset easier to review and also 
+allows it to be reused for future machine-learning tasks that may require a more 
+detailed passenger-vehicle taxonomy. This later aggregation is still consistent 
+with EPA guidance, which places many SUVs and similar vehicles within broader 
+light-duty truck or passenger-truck categories for emissions analysis 
+\cite{USEPA_def_truck_2019}, \cite{USEPA_road_pop_2020}.
 
-A similar logic applies to \verb|bus| and \verb|truck|, but in the opposite direction. In MOVES,
-buses are divided into other bus, transit bus, and school bus, while trucks are 
-separated into categories such as light commercial truck, refuse truck, single-unit
-short-haul truck, single-unit long-haul truck, combination short-haul truck, and
-combination long-haul truck \cite{USDOE_AFDC} \cite{USEPA_road_pop_2020}. 
-However, these MOVES distinctions are not based on vehicle appearance alone. EPA 
-documentation defines bus categories partly by ownership and service type. For 
-example, transit buses are associated with public transit operations, school 
-buses with K-12 student transport, and other buses with non-transit, non-school use 
-\cite{USEPA_road_pop_2020}. 
-Likewise, truck source types are differentiated partly by vehicle configuration, 
-axle arrangement, haul type, and primary distance of operation, not simply by 
-visual silhouette . 
-In low-resolution 352×240 CCTV imagery, many of these distinctions are either 
-not visible or not reliably inferable from a single frame. A shuttle bus operated
-by a private company and a visually similar shuttle operated by a public transit
-agency may appear nearly identical in the image while belonging to different MOVES
-source types. Similarly, distinguishing a single-unit short-haul truck from a 
-single-unit long-haul truck, or a refuse truck from another heavy truck under 
-occlusion or poor viewing angle, may not be consistently possible from image 
-evidence alone \cite{USEPA_road_pop_2020}, \cite{USEPA_moves3_2020}.
+A similar logic applies to \verb|bus| and \verb|truck|, but in the opposite direction. 
+In MOVES, buses are divided into categories such as other bus, transit bus, and 
+school bus, while trucks are separated into source types such as light commercial 
+truck, refuse truck, single-unit short-haul truck, single-unit long-haul truck, 
+combination short-haul truck, and combination long-haul truck 
+\cite{USDOE_AFDC}, \cite{USEPA_road_pop_2020}. However, these distinctions are not 
+based on vehicle appearance alone. EPA documentation defines bus categories partly 
+by ownership and service type. For example, transit buses are associated with 
+public transit operations, school buses with K--12 student transport, and other 
+buses with non-transit, non-school use \cite{USEPA_road_pop_2020}. Likewise, truck 
+source types are differentiated partly by vehicle configuration, axle arrangement, 
+haul type, and primary distance of operation rather than only visual silhouette 
+\cite{USEPA_moves3_2020}.
 
-For this reason, all buses were labeled under a single \verb|bus| class and all heavier 
-non-pickup trucks under a single \verb|truck| class. This decision was due to annotation 
-consistency and reduced label noise by avoiding visually ambiguous subtype assignments 
-that could not be made reliably from the available imagery. The result is an 
-annotation scheme that is intentionally image-driven for model learning, even 
-though the later emissions analysis uses a more analytically driven mapping to
-MOVES source types. In other words, the dataset preserves distinctions that are 
-visually robust enough to be learned reliably, while leaving finer operational 
-subdivisions to the downstream emissions-mapping stage rather than the annotation 
-stage \cite{USEPA_def_truck_2019}, \cite{USEPA_road_pop_2020}, \cite{USEPA_moves3_2020}.
+In low-resolution 352$\times$240 CCTV imagery, many of these distinctions are 
+either not visible or not reliably inferable from a single frame. A shuttle bus 
+operated by a private company and a visually similar shuttle operated by a public 
+transit agency may appear nearly identical in the image while belonging to different 
+MOVES source types. Similarly, distinguishing a single-unit short-haul truck from 
+a single-unit long-haul truck, or a refuse truck from another heavy truck under 
+occlusion, blur, or poor viewing angle, may not be consistently possible from image 
+evidence alone \cite{USEPA_road_pop_2020}, \cite{USEPA_moves3_2020}. For this reason, 
+all buses were labeled under a single \verb|bus| class and all heavier non-pickup 
+trucks under a single \verb|truck| class.
+
+One exception was the addition of the \verb|is_school| attribute for buses. Unlike 
+other MOVES bus subcategories, school buses are often visually distinctive because 
+of their characteristic body shape and highly recognizable yellow color. Rather than 
+creating a separate top-level \verb|school_bus| class, this subtype was recorded as 
+an attribute so that the dataset could preserve potentially useful semantic 
+information without expanding the main detection taxonomy. This attribute-based 
+approach maintains annotation consistency while still allowing future analyses to 
+identify school buses when that visual distinction can be made with reasonable 
+confidence.
+
+Overall, this design prioritizes visually reliable labeling while preserving useful 
+semantic detail where possible. Classes were kept separate when the distinction was 
+clear and potentially useful for future reuse of the dataset, as in the case of 
+\verb|suv| and \verb|pickup_truck|, but were collapsed when finer distinctions 
+depended primarily on operational or contextual information that could not be 
+reliably inferred from low-resolution imagery, as in the case of most MOVES bus and 
+truck subcategories. The result is an annotation scheme that is intentionally 
+image-driven for model development, even though the later emissions analysis uses a 
+more analytically driven mapping to MOVES source types 
+\cite{USEPA_def_truck_2019}, \cite{USEPA_road_pop_2020}, \cite{USEPA_moves3_2020}.
 
 \subsubsection{Attributes}
 
@@ -523,10 +538,10 @@ be useful for later analysis:
     \item \verb|pickup_truck|: \verb|is_city_vehicle|
     \item \verb|van|: \verb|is_taxi|, \verb|is_ambulance|, \verb|is_minivan| 
     \item \verb|truck|: \verb|is_delivery|, \verb|is_firetruck|
+    \item \verb|bus|: \verb|is_school|
 \end{itemize}
 
-No additional attributes were assigned to \verb|bus|, \verb|two_wheeler|, or 
-\verb|unknown_vehicle|.
+No additional attributes were assigned to \verb|two_wheeler|, or \verb|unknown_vehicle|.
 
 This attribute-based design was used to make the dataset more flexible without 
 unnecessarily expanding the number of top-level detection classes. In CVAT, 
@@ -637,3 +652,7 @@ occlusion. As a result, the final annotated dataset reflects a realistic urban
 traffic-camera detection environment rather than a controlled benchmark setting.
 
 
+\subsection{Dataset Statistics}
+
+Here, I will add overall statistics for the dataset with counts of vehicles and 
+maybe touch on the pre-determined splits that I've made and the counts in there.
