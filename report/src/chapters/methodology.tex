@@ -14,26 +14,96 @@ network. This formulation allows fast inference while maintaining strong detecti
 performance, making YOLO well suited for traffic-camera imagery and other 
 real-time scene understanding tasks.
 
-The following section describes how YOLO processes images to generate object 
-detections and the YOLOv11 architecture used in this work.
+% ------------------------------------------------------------------------------
+
+\subsubsection{Convolutional Neural Networks (CNNs)}
+
+Object detection models such as YOLO use convolutional neural networks (CNNs) to 
+extract visual information from images \cite{redmon2016YOLO}. Unlike traditional 
+neural networks that treat an image as a one-dimensional vector of pixel values, 
+CNNs operate directly on the two-dimensional structure of an image. This allows 
+the network to learn patterns based on relationships between neighboring pixels, 
+such as edges, textures, and shapes \cite{geeks4geeks_2017}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=7cm]{figures/methodology/4_1_1_cnn_diagram.png}
+    \caption{Example of convolutional neural network operations. A
+             convolutional kernel slides across the input image and performs
+             a dot product with local pixel values to produce a feature map
+             highlighting the presence of specific patterns. In typical CNN
+             architectures, a nonlinear activation function such as ReLU is
+             applied after convolution. A pooling layer may then downsample
+             the feature map while preserving the strongest activations.
+             Figure adapted from \cite{islam_pooling_2025}.}
+    \label{fig:cnn-diagram}
+\end{figure}
+
+CNNs analyze images using small filters, also called kernels, that slide across 
+the image. At each position, the kernel performs a dot product with the underlying 
+pixels to produce a single output value. Repeating this process across the image 
+produces a feature map, which highlights where the pattern represented by the kernel 
+appears in the image. During training, the network learns kernels that respond to 
+useful visual patterns \cite{Goodfellow-et-al-2016} \cite{oshea2015introCNN}.
+
+Several parameters control how these operations are applied. One important parameter 
+is the stride, which determines how far the kernel moves between successive positions. 
+When the stride is greater than one, the resulting feature map has a lower spatial 
+resolution than the original image. CNN architectures may also include pooling 
+operations, which further reduce the spatial resolution while preserving the most 
+important activations. As convolution and pooling layers are applied sequentially,
+each location in the resulting feature map corresponds to a larger region of the 
+input image, known as the receptive field \cite{oshea2015introCNN}.
+
+In Fig.~\ref{fig:cnn-diagram}, a simple binary image is processed using a 
+$3 \times 3$ kernel with stride $1$, producing a feature map. This feature map 
+is then max-pooled using a $2 \times 2$ filter with stride $2$, resulting in a 
+$2 \times 2$ pooled feature map containing the maximum value from each region. 
+As convolution and pooling operations are repeated throughout the network, feature 
+maps become smaller while their receptive fields grow larger, meaning each location
+summarizes information from a larger portion of the original image.
+
+Because each feature map location corresponds to a region of the input image, CNNs 
+preserve a spatial relationship between feature map positions and image regions. 
+This property allows models to generate localized predictions across the image 
+rather than producing a single output for the entire input. Object detection 
+models such as YOLO leverage this spatial structure to generate predictions at 
+multiple positions in the feature map, enabling the detection of objects in different
+parts of the scene. The following section describes how YOLO processes images to 
+generate object detections and the YOLOv11 architecture used in this work.
 
 % ------------------------------------------------------------------------------
 
 \subsubsection{Grid-Based Prediction}
 
-To perform detection, the input image is conceptually divided into a spatial 
-grid of cells, as illustrated in Figure~\ref{fig:yolo-grid} Each grid cell is 
-responsible for detecting objects whose center point lies within that region. 
-A convolutional neural network (CNN) processes the entire image and produces a 
-set of spatial feature maps from which bounding box predictions are generated at
-each grid location.
+To perform object detection, the input image is conceptually divided into a $W \times H$
+grid of cells, as illustrated in Figure~\ref{fig:yolo-grid}. In practice, this 
+grid corresponds to the spatial resolution of the feature map produced by the 
+convolutional neural network. As stated in the previous section, because convolutional
+layers often use strides greater than one and pooling operations reduce spatial 
+resolution, the feature map is smaller than the original image.
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[height=6cm]{figures/methodology/4_1_1_grid.png}
+    \includegraphics[height=6cm]{figures/methodology/4_1_2_grid.png}
     \caption{Conceptual grid created by the YOLO architecture.}
     \label{fig:yolo-grid}
 \end{figure}
+
+\FloatBarrier
+
+If the network has a stride of $s$, the number of grid cells along the horizontal 
+and vertical axes is approximately:
+
+\begin{equation}
+    W_{grid} = \frac{W_{input}}{s}, \qquad H_{grid} = \frac{H_{input}}{s}
+\end{equation}
+
+Where $W_{input}$ and $H_{input}$ are the width and height of the input image 
+respectively. Each grid location therefore corresponds to a region of the original 
+image and serves as a prediction point. YOLO uses these spatial locations to 
+produce candidate bounding boxes, objectness scores, and class probabilities for
+objects whose centers fall within the corresponding image region.
 
 This grid-based formulation enables the model to perform dense prediction across
 the image, allowing multiple objects to be detected simultaneously within a single
@@ -65,7 +135,7 @@ image. The bounding box predictions are conceptually shown in Figure~\ref{fig:yo
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[height=6cm]{figures/methodology/4_1_2_bounding_box.png}
+    \includegraphics[height=6cm]{figures/methodology/4_1_3_bounding_box.png}
     \caption{Bounding boxes created by the YOLO architecture. The thickness of 
              each box corresponds to the models confidence score. The higher the 
              confidence, the thicker the box.}
@@ -97,10 +167,29 @@ object belongs to each category. These probabilities are predicted independently
 of the bounding box geometry and are conditioned on the presence of an object 
 within the grid cell.
 
+If the model is trained to detect $C$ object classes, each grid cell predicts:
+
+\begin{equation}
+P(\text{Class}_i \mid \text{object})
+\end{equation}
+
+for $i = 1, 2, \ldots, C$. During inference, the final class-specific confidence
+score for a detection is computed by combining the class probability with the
+object confidence score:
+
+\begin{equation}
+\text{Score}_i = c \times P(\text{Class}_i \mid \text{object})
+\end{equation}
+
+This allows the detector to produce a class confidence score for every predicted
+bounding box, which reflects both the likelihood that an object exists and the
+probability that the object belongs to a particular class. The spatial
+distribution of these class predictions across the image is illustrated
+conceptually in Fig.~X \cite{redmon2016YOLO}.
 
 % ==============================================================================
 
-\subsubsection{Performance Metrics}
+\subsection{Performance Metrics}
 
 To determine if using computer vision is an adequate method to estimate 
 emissions coefficients in New York City, the vehicle detection pipeline must be 
