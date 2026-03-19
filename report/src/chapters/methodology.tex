@@ -22,16 +22,16 @@ detections and the YOLOv11 architecture used in this work.
 \subsubsection{Grid-Based Prediction}
 
 To perform detection, the input image is conceptually divided into a spatial 
-grid of cells, as illustrated in Fig. X. Each grid cell is responsible for 
-detecting objects whose center point lies within that region. A convolutional 
-neural network (CNN) processes the entire image and produces a set of spatial 
-feature maps from which bounding box predictions are generated at each grid 
-location.
+grid of cells, as illustrated in Figure~\ref{fig:yolo-grid} Each grid cell is 
+responsible for detecting objects whose center point lies within that region. 
+A convolutional neural network (CNN) processes the entire image and produces a 
+set of spatial feature maps from which bounding box predictions are generated at
+each grid location.
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[height=5cm]{figures/methodology/4_1_1_grid.png}
-    \caption{Conceptual grid created by YOLO architecture.}
+    \includegraphics[height=6cm]{figures/methodology/4_1_1_grid.png}
+    \caption{Conceptual grid created by the YOLO architecture.}
     \label{fig:yolo-grid}
 \end{figure}
 
@@ -41,12 +41,66 @@ forward pass of the network \cite{redmon2016YOLO}.
 
 % ------------------------------------------------------------------------------
 
-\subsection{Bounding Box Prediction}
+\subsubsection{Bounding Box Prediction}
+
+For each grid cell, the CNN predicts $B$ candidate bounding boxes along with
+confidence scores and class probabilities. Each predicted bounding box is
+parameterized by five values:
+
+\begin{equation}
+(x, y, w, h, c)
+\end{equation}
+
+where:
+\begin{itemize}
+    \item $x, y$ represent the center coordinates of the bounding box relative
+    to the grid cell,
+    \item $w, h$ represent the width and height of the bounding box relative
+    to the image dimensions,
+    \item $c$ represents the confidence score associated with the prediction.
+\end{itemize}
+
+These parameters jointly the location and size of the predicted object within the 
+image. The bounding box predictions are conceptually shown in Figure~\ref{fig:yolo-bbox}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=6cm]{figures/methodology/4_1_2_bounding_box.png}
+    \caption{Bounding boxes created by the YOLO architecture. The thickness of 
+             each box corresponds to the models confidence score. The higher the 
+             confidence, the thicker the box.}
+    \label{fig:yolo-bbox}
+\end{figure}
+
+The confidence score represents the model's belief that a predicted bounding box 
+contains an object and is defined as:
+
+\begin{equation}
+c = P(\text{object}) \times \mathrm{IoU}^{\text{truth}}_{\text{pred}}
+\end{equation}
+
+Where $P(\text{object})$ is the probability that an object exists in the predicted region 
+and $\mathrm{IoU}^{\text{truth}}_{\text{pred}}$ is the Intersection over Union 
+(IoU) between the predicted bounding box and the ground truth bounding box \cite{redmon2016YOLO}. 
+See Section~\ref{sec:iou} for more details regarding IoU.
+
+This formulation allows the model to simultaneously capture both object presence 
+and localization accuracy in a single prediction score.
+
+% ------------------------------------------------------------------------------
+
+\subsubsection{Class Probability Prediction}
+
+In addition to predicting bounding boxes, each grid cell also produces a vector 
+of conditional class probabilities representing the likelihood that the detected 
+object belongs to each category. These probabilities are predicted independently
+of the bounding box geometry and are conditioned on the presence of an object 
+within the grid cell.
 
 
 % ==============================================================================
 
-\subsection{Performance Metrics}
+\subsubsection{Performance Metrics}
 
 To determine if using computer vision is an adequate method to estimate 
 emissions coefficients in New York City, the vehicle detection pipeline must be 
@@ -61,6 +115,7 @@ Precision (mAP), and concludes by justifying these choices against traditional
 classification metrics that fall short in dynamic spatial contexts.
 
 \subsubsection{Intersection over Union}
+\label{sec:iou}
 
 Before assessing the classification accuracy of the model, it is necessary to 
 quantify the spatial accuracy of the predicted bounding boxes. This is achieved 
