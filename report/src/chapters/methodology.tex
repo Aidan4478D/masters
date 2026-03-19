@@ -14,6 +14,13 @@ network. This formulation allows fast inference while maintaining strong detecti
 performance, making YOLO well suited for traffic-camera imagery and other 
 real-time scene understanding tasks.
 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=7cm]{figures/methodology/4_1_yolo_diagram.png}
+    \caption{Example of the YOLO pipeline. Figure adapted from \cite{redmon2016YOLO}.} 
+    \label{fig:yolo-pipeline}
+\end{figure}
+
 % ------------------------------------------------------------------------------
 
 \subsubsection{Convolutional Neural Networks (CNNs)}
@@ -27,7 +34,7 @@ such as edges, textures, and shapes \cite{geeks4geeks_2017}.
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[height=7cm]{figures/methodology/4_1_1_cnn_diagram.png}
+    \includegraphics[height=6.5cm]{figures/methodology/4_1_1_cnn_diagram.png}
     \caption{Example of convolutional neural network operations. A
              convolutional kernel slides across the input image and performs
              a dot product with local pixel values to produce a feature map
@@ -86,7 +93,8 @@ resolution, the feature map is smaller than the original image.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=6cm]{figures/methodology/4_1_2_grid.png}
-    \caption{Conceptual grid created by the YOLO architecture.}
+    \caption{Conceptual grid created by the YOLO architecture. 
+             Adapted from \cite{redmon2016YOLO}.}
     \label{fig:yolo-grid}
 \end{figure}
 
@@ -138,7 +146,7 @@ image. The bounding box predictions are conceptually shown in Figure~\ref{fig:yo
     \includegraphics[height=6cm]{figures/methodology/4_1_3_bounding_box.png}
     \caption{Bounding boxes created by the YOLO architecture. The thickness of 
              each box corresponds to the models confidence score. The higher the 
-             confidence, the thicker the box.}
+             confidence, the thicker the box. Adapted from \cite{redmon2016YOLO}.}
     \label{fig:yolo-bbox}
 \end{figure}
 
@@ -185,7 +193,53 @@ This allows the detector to produce a class confidence score for every predicted
 bounding box, which reflects both the likelihood that an object exists and the
 probability that the object belongs to a particular class. The spatial
 distribution of these class predictions across the image is illustrated
-conceptually in Fig.~X \cite{redmon2016YOLO}.
+conceptually in Figure~\ref{fig:yolo-class-prob} \cite{redmon2016YOLO}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=6cm]{figures/methodology/4_1_4_class_prob.png}
+    \caption{Example class predictions within each grid cell.
+             Adapted from \cite{redmon2016YOLO}.}
+    \label{fig:yolo-class-prob}
+\end{figure}
+
+% ------------------------------------------------------------------------------
+
+\subsubsection{Post-Processing and Final Detections}
+
+Because each grid cell may produce multiple candidate bounding boxes, the raw 
+output of the network often contains several overlapping predictions that correspond
+to the same object. To produce the final detections, a post-processing step known 
+as Non-Maximum Suppression (NMS) is applied.
+
+Non-Maximum Suppression operates by:
+\begin{enumerate}
+    \item Ranking all predicted bounding boxes according to their confidence scores.
+    \item Selecting the highest-scoring prediction.
+    \item Removing any remaining predictions whose overlap with the selected box 
+          exceeds a predefined IoU threshold.
+    \item Repeating this process until only high-confidence predictions remain.
+\end{enumerate}
+
+This procedure removes redundant detections while preserving the most confident 
+prediction for each object in the scene. The resulting set of bounding boxes are 
+the final object detections, which include the predicted object class, bounding 
+box coordinates, and associated confidence score, as shown in Figure~\ref{fig:yolo-predictions}.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=6cm]{figures/methodology/4_1_5_predictions.png}
+    \caption{Example final class-predictions and bounding boxes.
+             Adapted from \cite{redmon2016YOLO}.}
+    \label{fig:yolo-predictions}
+\end{figure}
+
+For further information regarding the YOLO architecture and training procedure, 
+please refer to the original work by Redmon et al. \cite{redmon2016YOLO}.
+
+% ------------------------------------------------------------------------------
+
+\subsubsection{YOLOv11 Architecture}
 
 % ==============================================================================
 
