@@ -1,16 +1,55 @@
 \section{Methodology}
 
-\subsection{YOLOv11}
+\subsection{YOLO-Based Object Detection}
 
-Talk about YOLO models here.
-- High level overview
-- Probably talk about CNNs and how they work
-- Refer to paper for more technical details
+Object detection is a computer vision task that involves both localizing objects
+within an image and assigning them class labels. Unlike image classification, 
+which predicts a single label for an entire image, object detection must determine
+both what objects are present and where they are located.
+
+In this work, vehicle detection is performed using the YOLO family of models. 
+This popular framework predicts bounding boxes, provides objectness scores, and
+class probabilities directly from the input image in a single forward pass of the
+network. This formulation allows fast inference while maintaining strong detection
+performance, making YOLO well suited for traffic-camera imagery and other 
+real-time scene understanding tasks.
+
+The following section describes how YOLO processes images to generate object 
+detections and the YOLOv11 architecture used in this work.
+
+% ------------------------------------------------------------------------------
+
+\subsubsection{Grid-Based Prediction}
+
+To perform detection, the input image is conceptually divided into a spatial 
+grid of cells, as illustrated in Fig. X. Each grid cell is responsible for 
+detecting objects whose center point lies within that region. A convolutional 
+neural network (CNN) processes the entire image and produces a set of spatial 
+feature maps from which bounding box predictions are generated at each grid 
+location.
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[height=5cm]{figures/methodology/4_1_1_grid.png}
+    \caption{Conceptual grid created by YOLO architecture.}
+    \label{fig:yolo-grid}
+\end{figure}
+
+This grid-based formulation enables the model to perform dense prediction across
+the image, allowing multiple objects to be detected simultaneously within a single
+forward pass of the network \cite{redmon2016YOLO}.
+
+% ------------------------------------------------------------------------------
+
+\subsection{Bounding Box Prediction}
+
+
+% ==============================================================================
 
 \subsection{Performance Metrics}
 
 To determine if using computer vision is an adequate method to estimate 
-emissionscoefficients in New York City, the vehicle detection pipeline must be 
+emissions coefficients in New York City, the vehicle detection pipeline must be 
 rigorously evaluated. Unlike standard image classification, object detection 
 requires assessing two distinct tasks simultaneously: accurately localizing a 
 vehicle within a complex urban environment and correctly classifying its 

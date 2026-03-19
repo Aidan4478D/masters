@@ -251,30 +251,47 @@
 \abx@aux@segm{0}{0}{CVAT_annotation_quality}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Example of an attribute given to a vehicle in CVAT. In this case, the \texttt  {van} was given the attriubute \texttt  {is\_minivan} due to the labeling heuristics described in Section\nobreakspace  {}3.4.1\hbox {}.\relax }}{20}{}\protected@file@percent }
 \newlabel{fig:minivan-attribute}{{12}{20}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Unknown Vehicle Class}{21}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}Annotation Procedure}{21}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Unknown Vehicle Class}{20}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces  Figure (a) shows an example frame with the confident vehicles labeled. It is unclear though, the classes of the vehicles coming towards the camera behind the crosswalk (b). This is because the side features are not visible to use the heuristics described in Section\nobreakspace  {}3.4.1\hbox {}. Therefore, these vehicles were assigned the \texttt  {unknown\_vehicle} class (c). \relax }}{22}{}\protected@file@percent }
 \newlabel{fig:unknown-vehicles}{{13}{22}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}Annotation Procedure}{23}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Dataset Statistics}{23}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{23}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}YOLOv11}{23}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Performance Metrics}{23}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Intersection over Union}{23}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces IoU Calculation\relax }}{24}{}\protected@file@percent }
-\newlabel{fig:iou_calc}{{14}{24}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Confusion Matrix}{24}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Confusion Matrix\relax }}{24}{}\protected@file@percent }
-\newlabel{fig:conf_matrix}{{15}{24}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Precision-Recall Curve}{26}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4}Average Precision and mAP}{26}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Example Precision-Recall Curve\relax }}{27}{}\protected@file@percent }
-\newlabel{fig:ex_pr_curve}{{16}{27}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Average Precision within a Precision-Recall Curve\relax }}{27}{}\protected@file@percent }
-\newlabel{fig:ex_pr_curve_ap}{{17}{27}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Total annotated vehicle instances by class\relax }}{24}{}\protected@file@percent }
+\newlabel{tab:class_counts}{{3}{24}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Positive attribute counts by parent class\relax }}{24}{}\protected@file@percent }
+\newlabel{tab:attribute_counts}{{4}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Dataset Splits}{25}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Number of images in each dataset split\relax }}{25}{}\protected@file@percent }
+\newlabel{tab:split_image_counts}{{5}{25}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Annotated vehicle instances by class across dataset splits\relax }}{26}{}\protected@file@percent }
+\newlabel{tab:split_class_counts}{{6}{26}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Positive attribute counts across dataset splits\relax }}{26}{}\protected@file@percent }
+\newlabel{tab:split_attribute_counts}{{7}{26}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{26}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}YOLO-Based Object Detection}{26}{}\protected@file@percent }
+\abx@aux@cite{0}{redmon2016YOLO}
+\abx@aux@segm{0}{0}{redmon2016YOLO}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Grid-Based Prediction}{27}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Conceptual grid created by YOLO architecture.\relax }}{27}{}\protected@file@percent }
+\newlabel{fig:yolo-grid}{{14}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Bounding Box Prediction}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Performance Metrics}{28}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Intersection over Union}{28}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces IoU Calculation\relax }}{29}{}\protected@file@percent }
+\newlabel{fig:iou_calc}{{15}{29}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Confusion Matrix\relax }}{29}{}\protected@file@percent }
+\newlabel{fig:conf_matrix}{{16}{29}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Confusion Matrix}{30}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.3}Precision-Recall Curve}{31}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Example Precision-Recall Curve\relax }}{32}{}\protected@file@percent }
+\newlabel{fig:ex_pr_curve}{{17}{32}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.4}Average Precision and mAP}{32}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Average Precision within a Precision-Recall Curve\relax }}{32}{}\protected@file@percent }
+\newlabel{fig:ex_pr_curve_ap}{{18}{32}}
 \abx@aux@cite{0}{lin_microsoft_2015}
 \abx@aux@segm{0}{0}{lin_microsoft_2015}
-\@writefile{toc}{\contentsline {section}{References}{29}{}\protected@file@percent }
-\abx@aux@read@bbl@mdfivesum{9F1FB93F2A5ECE57886E8290A0E030BE}
+\@writefile{toc}{\contentsline {section}{References}{34}{}\protected@file@percent }
+\abx@aux@read@bbl@mdfivesum{BF130B9AD7E0CDC174BB7BB03AA049B0}
 \abx@aux@defaultrefcontext{0}{world_health_organization_air_nodate}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{health_effects_institute_state_2025}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{uherek_transport_2010}{none/global//global/global}
@@ -334,5 +351,6 @@
 \abx@aux@defaultrefcontext{0}{CVAT_label_guide}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{CVAT_attributes}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{CVAT_annotation_quality}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{redmon2016YOLO}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{lin_microsoft_2015}{none/global//global/global}
-\gdef \@abspage@last{42}
+\gdef \@abspage@last{48}

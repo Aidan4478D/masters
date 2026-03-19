@@ -535,13 +535,13 @@ be useful for later analysis:
 \begin{itemize}
     \item \verb|sedan|: \verb|is_taxi|, \verb|is_police| 
     \item \verb|suv|: \verb|is_taxi|, \verb|is_police|
-    \item \verb|pickup_truck|: \verb|is_city_vehicle|
-    \item \verb|van|: \verb|is_taxi|, \verb|is_ambulance|, \verb|is_minivan| 
-    \item \verb|truck|: \verb|is_delivery|, \verb|is_firetruck|
+    \item \verb|van|: \verb|is_taxi|, \verb|is_minivan| 
+    \item \verb|truck|: \verb|is_delivery|, \verb|is_firetruck|, \verb|is_ambulance|
     \item \verb|bus|: \verb|is_school|
 \end{itemize}
 
-No additional attributes were assigned to \verb|two_wheeler|, or \verb|unknown_vehicle|.
+No additional attributes were assigned to \verb|pickup_truck|, \verb|two_wheeler|, 
+or \verb|unknown_vehicle|.
 
 This attribute-based design was used to make the dataset more flexible without 
 unnecessarily expanding the number of top-level detection classes. In CVAT, 
@@ -630,6 +630,8 @@ are not always visually reliable.
     \label{fig:unknown-vehicles}
 \end{figure}
 
+\FloatBarrier
+
 Because the goal of the dataset was not simply to maximize the number of labeled 
 vehicles, but to create a high-quality training set for downstream emissions-oriented
 classification, preserving uncertainty explicitly rather than introducing mislabeled
@@ -654,5 +656,169 @@ traffic-camera detection environment rather than a controlled benchmark setting.
 
 \subsection{Dataset Statistics}
 
-Here, I will add overall statistics for the dataset with counts of vehicles and 
-maybe touch on the pre-determined splits that I've made and the counts in there.
+Across the full dataset, a total of 20,939 vehicle instances were labeled. 
+Table~\ref{tab:class_counts} summarizes the number of annotated instances in each
+class. As expected for urban traffic-camera imagery, the largest category was 
+\verb|unknown_vehicle|, reflecting the frequency of distant, occluded, or visually
+ambiguous vehicles in low-resolution scenes. Among the labeled vehicle classes, 
+\verb|suv| and \verb|sedan| were the most common, followed by \verb|van| and 
+\verb|truck|.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Total annotated vehicle instances by class}
+    \label{tab:class_counts}
+    \begin{tabular}{lr}
+        \toprule
+        \textbf{Class} & \textbf{Count} \\
+        \midrule
+        sedan            & 3,354 \\
+        suv              & 5,017 \\
+        pickup\_truck    & 184 \\
+        van              & 1,324 \\
+        bus              & 596 \\
+        truck            & 829 \\
+        two\_wheeler     & 49 \\
+        unknown\_vehicle & 9,586 \\
+        \midrule
+        \textbf{Total}   & \textbf{20,939} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Table~\ref{tab:attribute_counts} summarizes the number of positively assigned 
+boolean attributes. These attributes were less frequent than the primary class 
+labels, but they preserve useful semantic detail for future analysis, such as 
+distinguishing taxis, police vehicles, school buses, delivery trucks, fire trucks,
+ambulances, and minivans. Because attributes were only assigned when the relevant
+subtype could be identified with reasonable confidence, their counts are 
+substantially smaller than the corresponding parent-class totals.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Positive attribute counts by parent class}
+    \label{tab:attribute_counts}
+    \begin{tabular}{llr}
+        \toprule
+        \textbf{Parent Class} & \textbf{Attribute} & \textbf{Count} \\
+        \midrule
+        bus    & is\_school     & 172 \\
+        \midrule
+        sedan  & is\_taxi       & 17 \\
+        sedan  & is\_police     & 19 \\
+        \midrule
+        suv    & is\_taxi       & 201 \\
+        suv    & is\_police     & 30 \\
+        \midrule
+        truck  & is\_delivery   & 54 \\
+        truck  & is\_firetruck  & 4 \\
+        truck  & is\_ambulance  & 13 \\
+        \midrule
+        van    & is\_taxi       & 161 \\
+        van    & is\_minivan    & 298 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Overall, the annotation design reflects a compromise between detail and reliability.
+The final taxonomy is sufficiently granular to distinguish major vehicle groups 
+relevant to emissions estimation, while remaining simple enough to annotate 
+consistently in noisy, low-resolution CCTV imagery.
+
+\subsection{Dataset Splits}
+
+After annotation, the full dataset was partitioned into training, validation, and
+test subsets using an 80/10/10 split at the image level. To reduce the risk that
+one subset would be dominated by only a few camera viewpoints, the split was 
+constructed so that images from each camera location were evenly distributed across the 
+training, validation, and test sets. The training set was used to fit the model 
+parameters, the validation set was used for model selection and hyperparameter 
+tuning, and the test set was reserved for final evaluation.  The final split 
+contained 960 training images, 120 validation images, and 120 test images, 
+corresponding to the 1,200 total annotated images in the dataset. 
+Table~\ref{tab:split_image_counts} summarizes the number of images in each subset.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Number of images in each dataset split}
+    \label{tab:split_image_counts}
+    \begin{tabular}{lr}
+        \toprule
+        \textbf{Split} & \textbf{Image Count} \\
+        \midrule
+        Train      & 960 \\
+        Validation & 120 \\
+        Test       & 120 \\
+        \midrule
+        \textbf{Total} & \textbf{1,200} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\FloatBarrier
+
+To ensure that the partitioning did not create a severe imbalance in object
+representation, the number of annotated vehicle instances in each class was also
+computed for each split. Table~\ref{tab:split_class_counts} shows the per-class
+distribution across the training, validation, and test sets. Although minor
+variation exists, the dominant categories remain consistent across all three
+subsets, with \verb|unknown_vehicle|, \verb|suv|, and \verb|sedan| comprising the
+largest shares of the labeled objects. This indicates that the split preserved the
+overall class structure of the dataset while maintaining a held-out set for unbiased
+evaluation.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Annotated vehicle instances by class across dataset splits}
+    \label{tab:split_class_counts}
+    \begin{tabular}{lrrr}
+        \toprule
+        \textbf{Class} & \textbf{Train} & \textbf{Validation} & \textbf{Test} \\
+        \midrule
+        bus              & 476   & 53  & 67  \\
+        pickup\_truck    & 142   & 25  & 17  \\
+        sedan            & 2,683 & 311 & 360 \\
+        suv              & 3,955 & 467 & 595 \\
+        truck            & 644   & 120 & 65  \\
+        two\_wheeler     & 37    & 6   & 6   \\
+        unknown\_vehicle & 7,712 & 928 & 946 \\
+        van              & 1,053 & 125 & 146 \\
+        \midrule
+        \textbf{Total}   & \textbf{16,702} & \textbf{2,035} & \textbf{2,202} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\FloatBarrier
+
+Table~\ref{tab:split_attribute_counts} summarizes the distribution of positively
+assigned attributes across the three splits. The counts of each attribute are 
+roughly proportional to the 80/10/10 dataset split. 
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Positive attribute counts across dataset splits}
+    \label{tab:split_attribute_counts}
+    \begin{tabular}{llrrr}
+        \toprule
+        \textbf{Parent Class} & \textbf{Attribute} & \textbf{Train} & \textbf{Validation} & \textbf{Test} \\
+        \midrule
+        bus   & is\_school       & 132 & 15 & 25 \\
+        \midrule
+        sedan & is\_taxi         & 15  & 0  & 2  \\
+        sedan & is\_police       & 16  & 2  & 1  \\
+        \midrule
+        suv   & is\_taxi         & 166 & 25 & 10 \\
+        suv   & is\_police       & 27  & 2  & 1  \\
+        \midrule
+        truck & is\_delivery     & 50  & 4  & 0  \\
+        truck & is\_firetruck    & 3   & 1  & 0  \\
+        truck & is\_ambulance    & 11  & 2  & 0  \\
+        \midrule
+        van   & is\_taxi         & 135 & 15 & 11 \\
+        van   & is\_minivan      & 231 & 32 & 35 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\FloatBarrier

@@ -1,16 +1,16 @@
 # Fdb version 3
-["biber /home/aidan/repos/masters/report/build/main"] 1773622037 "/home/aidan/repos/masters/report/build/main.bcf" "/home/aidan/repos/masters/report/build/main.bbl" "/home/aidan/repos/masters/report/build/main" 1773622520
-  "/home/aidan/repos/masters/report/build/main.bcf" 1773622520 116382 f0d6442ca06776ce595ec926388ddf4d "pdflatex"
-  "references.bib" 1773328287 35537 21312d6d641ef1f44cb7f5eb0eaf8410 ""
+["biber /home/aidan/repos/masters/report/build/main"] 1773899850 "/home/aidan/repos/masters/report/build/main.bcf" "/home/aidan/repos/masters/report/build/main.bbl" "/home/aidan/repos/masters/report/build/main" 1773899863
+  "/home/aidan/repos/masters/report/build/main.bcf" 1773899863 116498 c7e9f6084602006a751afcf1f15366da "pdflatex"
+  "references.bib" 1773898447 35867 00713ac173e1828f700fbe72a5f2b00d ""
   (generated)
   "/home/aidan/repos/masters/report/build/main.bbl"
   "/home/aidan/repos/masters/report/build/main.blg"
-["pdflatex"] 1773622518 "main.tex" "/home/aidan/repos/masters/report/build/main.pdf" "main" 1773622520
+["pdflatex"] 1773899859 "main.tex" "/home/aidan/repos/masters/report/build/main.pdf" "main" 1773899863
   "/etc/texmf/web2c/texmf.cnf" 1759702071 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/aidan/repos/masters/report/build/main.aux" 1773622520 22903 8af2b5dc9bfa0ea65b8672d70e88019e "pdflatex"
-  "/home/aidan/repos/masters/report/build/main.bbl" 1773622038 97337 9f1fb93f2a5ece57886e8290a0e030be "biber /home/aidan/repos/masters/report/build/main"
-  "/home/aidan/repos/masters/report/build/main.run.xml" 1773622520 2402 7c866ed2192e71c57464ed4279aadefa "pdflatex"
-  "/home/aidan/repos/masters/report/build/main.toc" 1773622520 1941 57fee1a58cade4f89d1677e2c8dbb1e4 "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.aux" 1773899863 24590 6051d249877c7fe130386560ed6dcc3b "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.bbl" 1773899852 99064 bf130b9ad7e0cdc174bb7bb03aa049b0 "biber /home/aidan/repos/masters/report/build/main"
+  "/home/aidan/repos/masters/report/build/main.run.xml" 1773899863 2402 7c866ed2192e71c57464ed4279aadefa "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.toc" 1773899863 2183 932e63c30dedd47e24ca5c916a87a8a0 "pdflatex"
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -116,9 +116,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1759706591 4036811 4cb80868003c86b962b6b5ae1e1e2902 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1759706597 1405649 ed67816fea853983ed80a01a43d4baa9 ""
-  "chapters/dataset.tex" 1773622033 33826 f516b2e8bee17edc8df11be497d5b39a ""
+  "chapters/dataset.tex" 1773702835 40299 af056615e993900816b9f5dd5efe489e ""
   "chapters/introduction.tex" 1773621156 6393 de41d9d0dea08a3137659a691ca4efd2 ""
-  "chapters/methodology.tex" 1773621224 11189 2639ff7a10a1764a6eb0532323549ece ""
+  "chapters/methodology.tex" 1773899846 13092 bdb71aecc8a636e131765eff85b66ed2 ""
   "chapters/related_work_v2.tex" 1772921658 12990 6e0b2acce36002d1f5a48e2b002402c5 ""
   "figures/dataset/3_2_axis_camera.png" 1772481614 23461 bfdb4ea973603c047b131d46d3b01b7e ""
   "figures/dataset/3_2_pelco_9760_camera.png" 1772481562 15251 0b74b647bf2c933a63231c54b69929fd ""
@@ -144,6 +144,7 @@
   "figures/dataset/3_4_3_unknown_labeled.png" 1773333293 273098 3ee37da0bd1ae1f60251986b78b22011 ""
   "figures/dataset/3_4_3_unknown_zoomed.png" 1773333251 252224 2da919a1220cd15ee030d4ebc564868e ""
   "figures/dataset/3_4_cvat_intro.png" 1773331739 481426 5e7c161ddd9b4c273469343f05d4f20a ""
+  "figures/methodology/4_1_1_grid.png" 1773899386 621578 e09a9f8241679df9425fa13884fc80eb ""
   "figures/methodology/4_2_confusion_matrix.png" 1772162176 36353 792fe07c381818abf7acadd390ca1049 ""
   "figures/methodology/4_2_example_pr_curve.png" 1772220709 132526 f2d35345dbf8efa9a389b102210504ca ""
   "figures/methodology/4_2_example_pr_curve_ap.png" 1772220879 143187 686c58e8e29be290d211d22f3f4d984c ""
