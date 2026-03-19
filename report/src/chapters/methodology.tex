@@ -241,6 +241,43 @@ please refer to the original work by Redmon et al. \cite{redmon2016YOLO}.
 
 \subsubsection{YOLOv11 Architecture}
 
+The experiments in this work primarily use the YOLOv11 object detection model, 
+a recent member of the YOLO family designed to improve detection accuracy and 
+training efficiency while maintaining the real-time inference capabilities 
+characteristic of YOLO-based detectors. YOLOv11 follows the same general detection
+pipeline described in the previous sections, where bounding boxes, objectness 
+scores, and class probabilities are predicted directly from convolutional feature
+maps in a single forward pass of the network.
+
+Like many modern object detectors, YOLOv11 adopts a backbone-neck-head architecture. 
+The backbone consists of a deep convolutional network that extracts visual features 
+from the input image. These features are then processed by a neck module that 
+aggregates information across multiple spatial scales, allowing the detector to 
+recognize objects of different sizes. Finally, the detection head produces bounding
+box coordinates, objectness scores, and class probability predictions at multiple
+spatial locations in the feature maps \cite{YOLOv11paper}.
+
+Compared to earlier YOLO models, YOLOv11 has several architectural refinements 
+which improves both detection accuracy and computational efficiency. One key 
+improvement is the C3k2 module, an enhanced convolutional block that improves
+feature extraction while reducing computational cost by efficiently reusing 
+intermediate feature representations. The architecture also incorporates improved
+feature aggregation through PAN/FPN-style neck layers, which combine information 
+from multiple feature map resolutions to better detect objects at different 
+spatial scales. In addition, refinements to the detection head improve bounding
+box localization and classification accuracy while maintaining fast inference 
+speeds. Together, these changes enable YOLOv11 to achieve stronger detection 
+performance while remaining computationally efficient for real-time 
+applications \cite{YOLOv11paper}.
+
+For this work, YOLOv11 was selected because it provided the best empirical 
+detection performance on the vehicle detection dataset used in this study while
+maintaining efficient inference suitable for large-scale traffic camera imagery. 
+A detailed description of the YOLOv11 architecture and training procedure is
+available in the Ultralytics model documentation \cite{yolo11_ultralytics}
+and paper by Khanam and Hussain \cite{YOLOv11paper}.
+
+
 % ==============================================================================
 
 \subsection{Performance Metrics}
