@@ -1,16 +1,16 @@
 # Fdb version 3
-["biber /home/aidan/repos/masters/report/build/main"] 1773954317 "/home/aidan/repos/masters/report/build/main.bcf" "/home/aidan/repos/masters/report/build/main.bbl" "/home/aidan/repos/masters/report/build/main" 1773954335
-  "/home/aidan/repos/masters/report/build/main.bcf" 1773954335 118277 c803841d359b8005c0d80b89289f743d "pdflatex"
+["biber /home/aidan/repos/masters/report/build/main"] 1773954317 "/home/aidan/repos/masters/report/build/main.bcf" "/home/aidan/repos/masters/report/build/main.bbl" "/home/aidan/repos/masters/report/build/main" 1774556215
+  "/home/aidan/repos/masters/report/build/main.bcf" 1774556215 118277 c803841d359b8005c0d80b89289f743d "pdflatex"
   "references.bib" 1773953806 38095 39f7e13072a328c59843d309f204c4d4 ""
   (generated)
   "/home/aidan/repos/masters/report/build/main.bbl"
   "/home/aidan/repos/masters/report/build/main.blg"
-["pdflatex"] 1773954330 "main.tex" "/home/aidan/repos/masters/report/build/main.pdf" "main" 1773954335
+["pdflatex"] 1774556212 "main.tex" "/home/aidan/repos/masters/report/build/main.pdf" "main" 1774556215
   "/etc/texmf/web2c/texmf.cnf" 1759702071 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/aidan/repos/masters/report/build/main.aux" 1773954335 29162 3c0e91a23fb3977641ca599f89caa9eb "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.aux" 1774556215 29162 3c0e91a23fb3977641ca599f89caa9eb "pdflatex"
   "/home/aidan/repos/masters/report/build/main.bbl" 1773954319 107140 77b21a69565dcdc56e8fc6748045b4f2 "biber /home/aidan/repos/masters/report/build/main"
-  "/home/aidan/repos/masters/report/build/main.run.xml" 1773954335 2402 7c866ed2192e71c57464ed4279aadefa "pdflatex"
-  "/home/aidan/repos/masters/report/build/main.toc" 1773954335 2540 db57ea4ea87bd34a1620e1ac86df2c73 "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.run.xml" 1774556215 2402 7c866ed2192e71c57464ed4279aadefa "pdflatex"
+  "/home/aidan/repos/masters/report/build/main.toc" 1774556215 2540 db57ea4ea87bd34a1620e1ac86df2c73 "pdflatex"
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -125,7 +125,7 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1759706597 1405649 ed67816fea853983ed80a01a43d4baa9 ""
   "chapters/dataset.tex" 1773702835 40299 af056615e993900816b9f5dd5efe489e ""
   "chapters/introduction.tex" 1773621156 6393 de41d9d0dea08a3137659a691ca4efd2 ""
-  "chapters/methodology.tex" 1773954312 25210 ae0b884232cadfc21c19138eb95e8848 ""
+  "chapters/methodology.tex" 1774556212 25210 e8e2ea1ed3b95b30e61c0f867c1a50af ""
   "chapters/related_work_v2.tex" 1772921658 12990 6e0b2acce36002d1f5a48e2b002402c5 ""
   "figures/dataset/3_2_axis_camera.png" 1772481614 23461 bfdb4ea973603c047b131d46d3b01b7e ""
   "figures/dataset/3_2_pelco_9760_camera.png" 1772481562 15251 0b74b647bf2c933a63231c54b69929fd ""
@@ -154,7 +154,7 @@
   "figures/methodology/4_1_1_cnn_diagram.png" 1773937357 18608 893b8fc8f295f63f8f0d2d937a840399 ""
   "figures/methodology/4_1_2_grid.png" 1773899386 621578 e09a9f8241679df9425fa13884fc80eb ""
   "figures/methodology/4_1_3_bounding_box.png" 1773899548 650949 52ca0bf1eab8f32cdb7d5aafba455473 ""
-  "figures/methodology/4_1_4_class_prob.png" 1773899595 577210 9ae45902f10df6073214bf219f2c29a1 ""
+  "figures/methodology/4_1_4_class_prob.png" 1774013808 194068 61397a52c2f9dae64cab9d8051bb781f ""
   "figures/methodology/4_1_5_predictions.png" 1773899644 621832 9ef13aeb998da9ad0073b2a93652170d ""
   "figures/methodology/4_1_yolo_diagram.png" 1773940583 1020517 b39f5341ae7f7962bc143138333388fa ""
   "figures/methodology/4_2_confusion_matrix.png" 1772162176 36353 792fe07c381818abf7acadd390ca1049 ""
@@ -165,7 +165,7 @@
   "figures/related_work/2_2_1_induction_loops.png" 1772844441 304321 9b47d294fb5d047cee18fbc629b020cb ""
   "figures/related_work/2_2_1_pneumatic_tubes.png" 1772845791 387359 75db9e52d7f3127160a2c3c858534357 ""
   "frontpages/abstract.tex" 1771367680 39 7ed39e54fbf5d5631b458f8e044a631b ""
-  "frontpages/acknowledgements.tex" 1771367665 668 324a69156daa165f0b9c7e7f76065572 ""
+  "frontpages/acknowledgements.tex" 1774556194 895 f62ccbf6933a65f74644dba18701daf2 ""
   "frontpages/approval.tex" 1771367653 737 61b9f3ee4188da24783227611e2e72f6 ""
   "frontpages/titlepage.tex" 1773622517 534 781cc2738e7c9abcd433ec41d30d56f6 ""
   "main.tex" 1772844585 898 ebd827f375b52e1caca7aeee1ad258dc ""
