@@ -1,0 +1,35 @@
+\section{Experimentation and Results}
+
+Vehicle detection experiments in this study were centered on a 6-class taxonomy 
+designed to support emissions-oriented analysis. Several preliminary configurations 
+were explored during early development, but those runs were primarily used to 
+understand the difficulty of the task and refine the problem formulation. Thus,
+the results presented in this section focus on experiments conducted under the 
+final 6-class setting. 
+
+First, YOLO-based experiments are presented, including comparisons across model
+variants and refinements through data-centric strategies such as hard negative 
+mining and dataset refinement. Other detectors like DETR-based models and Faster
+R-CNN were examined to compare architectures within the project’s context. 
+
+After identifying the strongest detector, additional experiments evaluate its 
+robustness through threshold and NMS sensitivity analysis, cross-camera generalization,
+and agreement between predicted vehicle counts and reference ATR or manual counts. 
+Together, these experiments exhibit the practical suitability of the final system 
+for traffic-monitoring applications.
+
+% ==============================================================================
+
+\subsection{MOVES-based Taxonomy}
+
+For the experiments reported in this chapter, model training and evaluation were 
+conducted using a final 6-class taxonomy: 
+\verb|passenger_car|, \verb|passenger_truck|, \verb|light_commerical_vehicle|, 
+\verb|bus|, \verb|truck|, and \verb|motorcycle|. 
+This label set was selected to provide a practical balance between compatibility
+with downstream MOVES-based emissions analysis and what could be distinguished 
+reliably from low-resolution traffic-camera imagery. Rather than attempting to 
+reproduce the full MOVES source type framework directly at the detector level, 
+the taxonomy in this study was designed as a MOVES-aligned grouping that preserved 
+broad vehicle categories relevant to emissions modeling while reducing distinctions
+that were difficult to learn consistently from the available images.
