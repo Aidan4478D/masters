@@ -1,0 +1,2922 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <job>
+      <id>18</id>
+      <size>75</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2026-04-05 18:14:12.501096+00:00</created>
+      <updated>2026-04-05 19:12:35.449300+00:00</updated>
+      <subset>default</subset>
+      <start_frame>0</start_frame>
+      <stop_frame>74</stop_frame>
+      <frame_filter></frame_filter>
+      <segments>
+        <segment>
+          <id>18</id>
+          <start>0</start>
+          <stop>74</stop>
+          <url>http://localhost:8080/api/jobs/18</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>aidan</username>
+        <email>aidancusa@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+      <labels>
+        <label>
+          <name>sedan</name>
+          <color>#ffcc33</color>
+          <type>rectangle</type>
+          <attributes>
+            <attribute>
+              <name>is_taxi</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+            <attribute>
+              <name>is_police</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+          </attributes>
+        </label>
+        <label>
+          <name>suv</name>
+          <color>#32B7FA</color>
+          <type>rectangle</type>
+          <attributes>
+            <attribute>
+              <name>is_city_vehicle</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+            <attribute>
+              <name>is_taxi</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+            <attribute>
+              <name>is_police</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+          </attributes>
+        </label>
+        <label>
+          <name>pickup_truck</name>
+          <color>#f078f0</color>
+          <type>rectangle</type>
+          <attributes>
+            <attribute>
+              <name>is_city_vehicle</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+          </attributes>
+        </label>
+        <label>
+          <name>van</name>
+          <color>#ff355e</color>
+          <type>rectangle</type>
+          <attributes>
+            <attribute>
+              <name>is_ambulence</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+            <attribute>
+              <name>is_taxi</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+            <attribute>
+              <name>is_minivan</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+          </attributes>
+        </label>
+        <label>
+          <name>bus</name>
+          <color>#24b353</color>
+          <type>rectangle</type>
+          <attributes>
+            <attribute>
+              <name>is_school</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+          </attributes>
+        </label>
+        <label>
+          <name>truck</name>
+          <color>#8c78f0</color>
+          <type>rectangle</type>
+          <attributes>
+            <attribute>
+              <name>is_delivery</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+            <attribute>
+              <name>is_firetruck</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+            <attribute>
+              <name>is_ambulance</name>
+              <mutable>False</mutable>
+              <input_type>checkbox</input_type>
+              <default_value>false</default_value>
+              <values>false</values>
+            </attribute>
+          </attributes>
+        </label>
+        <label>
+          <name>two_wheeler</name>
+          <color>#ff6a4d</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+        <label>
+          <name>unknown_vehicle</name>
+          <color>#733380</color>
+          <type>rectangle</type>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+    </job>
+    <dumped>2026-04-05 19:50:14.109903+00:00</dumped>
+  </meta>
+  <image id="0" name="atlantic_ave_boerum_place__2026_03_12__18_38_29.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="253.43" ytl="108.12" xbr="310.79" ybr="142.76" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="239.96" ytl="88.10" xbr="288.08" ybr="111.58" z_order="0">
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="68.82" ytl="115.12" xbr="101.03" ybr="146.46" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="5.85" ytl="128.92" xbr="49.27" ybr="167.20" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="37.48" ytl="91.50" xbr="65.66" ybr="119.14" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="50.42" ytl="83.49" xbr="67.67" ybr="100.74" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="9.81" ytl="83.16" xbr="37.30" ybr="105.93" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="0.00" ytl="78.65" xbr="13.89" ybr="95.40" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="34.63" ytl="73.26" xbr="50.22" ybr="84.03" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="54.12" ytl="72.33" xbr="69.72" ybr="85.16" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="62.66" ytl="64.00" xbr="73.98" ybr="75.12" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="73.43" ytl="97.21" xbr="99.79" ybr="116.90" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="97.93" ytl="68.06" xbr="110.37" ybr="79.57" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="76.99" ytl="84.38" xbr="96.33" ybr="98.35" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="80.32" ytl="75.79" xbr="94.50" ybr="84.38" z_order="0">
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="46.59" ytl="52.57" xbr="58.67" ybr="65.23" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="79.73" ytl="69.60" xbr="91.72" ybr="75.94" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="94.11" ytl="63.51" xbr="104.60" ybr="72.65" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="149.39" ytl="51.98" xbr="156.28" ybr="57.52" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="78.41" ytl="63.53" xbr="87.84" ybr="69.55" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="90.57" ytl="57.37" xbr="97.07" ybr="63.27" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="66.07" ytl="57.48" xbr="73.04" ybr="62.74" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="62.05" ytl="61.35" xbr="69.94" ybr="66.00" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="39.74" ytl="57.17" xbr="46.56" ybr="64.14" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="59.10" ytl="54.69" xbr="65.61" ybr="60.73" z_order="0">
+    </box>
+  </image>
+  <image id="1" name="atlantic_ave_boerum_place__2026_03_12__21_18_24.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="72.69" ytl="110.12" xbr="100.03" ybr="138.18" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="19.26" ytl="119.29" xbr="59.77" ybr="158.31" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="33.92" ytl="97.67" xbr="61.51" ybr="123.02" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="72.20" ytl="93.45" xbr="94.32" ybr="111.12" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="0.00" ytl="79.53" xbr="13.79" ybr="96.68" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="206.19" ytl="82.39" xbr="236.05" ybr="101.93" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="73.17" ytl="84.90" xbr="93.79" ybr="95.33" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="95.58" ytl="65.79" xbr="106.05" ybr="75.45" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="40.45" ytl="57.58" xbr="47.89" ybr="61.61" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="38.59" ytl="61.46" xbr="44.33" ybr="64.86" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="46.80" ytl="54.80" xbr="52.22" ybr="59.29" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="51.14" ytl="53.56" xbr="56.87" ybr="57.74" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="73.90" ytl="64.53" xbr="89.87" ybr="76.97" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="74.52" ytl="76.97" xbr="90.28" ybr="85.47" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="146.87" ytl="61.62" xbr="158.07" ybr="68.88" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="149.15" ytl="52.30" xbr="156.20" ybr="58.10" z_order="0">
+    </box>
+  </image>
+  <image id="2" name="atlantic_ave_boerum_place__2026_03_12__23_58_24.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="81.80" ytl="146.56" xbr="152.95" ybr="207.29" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="pickup_truck" source="manual" occluded="0" xtl="16.47" ytl="85.89" xbr="47.88" ybr="110.32" z_order="0">
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="75.16" ytl="103.70" xbr="103.47" ybr="134.33" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="73.31" ytl="82.36" xbr="91.87" ybr="95.81" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="44.51" ytl="66.87" xbr="57.55" ybr="78.10" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="0.00" ytl="114.75" xbr="48.59" ybr="176.25" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="74.51" ytl="95.54" xbr="94.93" ybr="104.35" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="93.17" ytl="61.22" xbr="104.98" ybr="71.16" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="147.40" ytl="52.09" xbr="157.06" ybr="58.27" z_order="0">
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="53.40" ytl="73.66" xbr="67.26" ybr="84.40" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="20.53" ytl="75.58" xbr="39.12" ybr="85.81" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="37.26" ytl="60.40" xbr="44.70" ybr="66.13" z_order="0">
+    </box>
+  </image>
+  <image id="3" name="atlantic_ave_boerum_place__2026_03_13__00_00_24.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="0.00" ytl="94.78" xbr="21.09" ybr="127.26" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="66.73" ytl="103.37" xbr="96.26" ybr="133.44" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="75.32" ytl="90.70" xbr="96.79" ybr="108.74" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="93.01" ytl="61.38" xbr="104.84" ybr="71.82" z_order="0">
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="25.07" ytl="76.07" xbr="45.33" ybr="94.32" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="76.58" ytl="80.54" xbr="92.89" ybr="90.94" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="78.01" ytl="68.71" xbr="90.56" ybr="80.18" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="5.61" ytl="86.28" xbr="26.58" ybr="105.09" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="54.72" ytl="70.51" xbr="69.41" ybr="81.44" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="47.55" ytl="60.29" xbr="58.48" ybr="67.28" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="147.55" ytl="51.87" xbr="156.15" ybr="57.42" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="78.20" ytl="62.29" xbr="89.04" ybr="68.95" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="89.04" ytl="56.72" xbr="96.94" ybr="61.69" z_order="0">
+    </box>
+  </image>
+  <image id="4" name="atlantic_ave_boerum_place__2026_03_13__11_56_25.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="275.65" ytl="116.33" xbr="352.00" ybr="148.02" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="121.29" ytl="101.34" xbr="149.60" ybr="128.48" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="110.70" ytl="90.00" xbr="133.82" ybr="115.03" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="108.53" ytl="84.17" xbr="125.00" ybr="97.62" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="75.01" ytl="90.73" xbr="95.34" ybr="108.60" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="30.88" ytl="100.25" xbr="62.43" ybr="128.50" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="41.63" ytl="88.46" xbr="61.21" ybr="101.81" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="pickup_truck" source="manual" occluded="0" xtl="6.40" ytl="79.79" xbr="28.46" ybr="96.43" z_order="0">
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="44.58" ytl="79.10" xbr="62.08" ybr="88.98" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="74.78" ytl="83.19" xbr="91.00" ybr="91.28" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="77.62" ytl="76.75" xbr="91.25" ybr="86.49" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="75.07" ytl="67.91" xbr="89.01" ybr="79.60" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="60.39" ytl="59.08" xbr="71.48" ybr="67.61" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="48.71" ytl="50.69" xbr="61.29" ybr="64.02" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="bus" source="manual" occluded="0" xtl="63.69" ytl="44.70" xbr="71.18" ybr="52.78" z_order="0">
+      <attribute name="is_school">true</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="87.06" ytl="52.04" xbr="97.69" ybr="63.42" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="102.74" ytl="74.40" xbr="118.98" ybr="87.44" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="99.55" ytl="68.98" xbr="113.18" ybr="78.74" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="97.38" ytl="66.97" xbr="106.83" ybr="73.32" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="95.05" ytl="61.24" xbr="104.19" ybr="65.89" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="95.05" ytl="64.96" xbr="102.80" ybr="71.31" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="75.85" ytl="57.99" xbr="84.83" ybr="63.10" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="71.04" ytl="49.16" xbr="74.45" ybr="52.41" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="74.45" ytl="47.92" xbr="78.48" ybr="51.95" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="37.28" ytl="58.61" xbr="46.73" ybr="65.58" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="75.20" ytl="64.45" xbr="85.77" ybr="68.19" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="145.88" ytl="51.59" xbr="154.58" ybr="58.56" z_order="0">
+    </box>
+  </image>
+  <image id="5" name="atlantic_ave_boerum_place__2026_03_13__23_58_26.jpg" width="352" height="240">
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="146.91" ytl="50.40" xbr="157.30" ybr="58.82" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="37.24" ytl="57.39" xbr="48.17" ybr="65.63" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="89.39" ytl="55.77" xbr="98.34" ybr="62.58" z_order="0">
+    </box>
+  </image>
+  <image id="6" name="atlantic_ave_boerum_place__2026_03_14__00_00_26.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="65.64" ytl="102.82" xbr="97.12" ybr="137.71" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="103.76" ytl="97.81" xbr="136.23" ybr="128.29" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="77.70" ytl="86.17" xbr="94.52" ybr="102.02" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="37.24" ytl="58.18" xbr="47.46" ybr="65.52" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="67.80" ytl="52.98" xbr="75.42" ybr="58.40" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="147.28" ytl="50.47" xbr="157.32" ybr="58.35" z_order="0">
+    </box>
+  </image>
+  <image id="7" name="atlantic_ave_boerum_place__2026_03_14__12_00_27.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="75.47" ytl="109.04" xbr="101.94" ybr="136.91" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="30.15" ytl="110.84" xbr="60.03" ybr="138.91" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="pickup_truck" source="manual" occluded="0" xtl="6.28" ytl="79.76" xbr="28.74" ybr="97.40" z_order="0">
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="35.11" ytl="89.88" xbr="58.51" ybr="109.64" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="70.64" ytl="92.83" xbr="93.87" ybr="115.19" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="68.56" ytl="82.60" xbr="87.97" ybr="93.17" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="48.46" ytl="79.15" xbr="65.44" ybr="94.58" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="55.74" ytl="65.29" xbr="68.55" ybr="76.55" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="96.64" ytl="67.37" xbr="111.53" ybr="79.85" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="76.88" ytl="75.34" xbr="92.65" ybr="90.76" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="75.84" ytl="61.65" xbr="86.76" ybr="69.27" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="76.34" ytl="69.45" xbr="88.82" ybr="75.34" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="46.21" ytl="51.08" xbr="58.34" ybr="64.42" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="95.61" ytl="65.12" xbr="106.05" ybr="69.00" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="94.81" ytl="61.90" xbr="103.91" ybr="65.38" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="55.89" ytl="75.04" xbr="66.07" ybr="79.52" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="64.27" ytl="61.40" xbr="72.81" ybr="70.24" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="66.52" ytl="57.20" xbr="72.81" ybr="61.70" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="77.16" ytl="57.05" xbr="84.95" ybr="61.40" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="89.44" ytl="55.26" xbr="98.73" ybr="61.71" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="66.22" ytl="46.72" xbr="71.76" ybr="49.26" z_order="0">
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="87.54" ytl="210.29" xbr="208.68" ybr="240.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+  </image>
+  <image id="8" name="atlantic_ave_boerum_place__2026_03_14__23_58_29.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="68.07" ytl="102.62" xbr="99.21" ybr="138.05" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="108.87" ytl="102.35" xbr="140.28" ybr="131.88" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="257.06" ytl="94.30" xbr="318.00" ybr="121.68" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="101.23" ytl="87.04" xbr="124.43" ybr="105.61" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="99.15" ytl="80.00" xbr="114.06" ybr="89.19" z_order="0">
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="70.07" ytl="93.67" xbr="92.79" ybr="102.17" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="75.67" ytl="72.75" xbr="92.79" ybr="86.00" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="62.72" ytl="56.92" xbr="74.51" ybr="64.54" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="73.64" ytl="86.10" xbr="92.41" ybr="93.62" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="45.50" ytl="54.95" xbr="52.36" ybr="60.90" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="88.22" ytl="56.76" xbr="96.25" ybr="62.84" z_order="0">
+    </box>
+  </image>
+  <image id="9" name="atlantic_ave_boerum_place__2026_03_15__00_00_29.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="68.41" ytl="104.20" xbr="101.59" ybr="139.22" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="111.80" ytl="105.12" xbr="142.19" ybr="133.66" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="228.51" ytl="96.53" xbr="284.19" ybr="117.88" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="205.80" ytl="81.90" xbr="238.95" ybr="99.78" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="105.38" ytl="86.00" xbr="126.17" ybr="105.06" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="70.89" ytl="81.84" xbr="88.04" ybr="96.40" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="74.35" ytl="92.24" xbr="95.67" ybr="104.89" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="100.45" ytl="78.78" xbr="117.10" ybr="91.01" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="74.09" ytl="75.37" xbr="88.77" ybr="82.26" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="75.43" ytl="67.88" xbr="88.62" ybr="75.67" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="95.21" ytl="67.29" xbr="110.34" ybr="74.92" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="96.55" ytl="74.77" xbr="111.08" ybr="84.06" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="47.37" ytl="59.83" xbr="72.75" ybr="68.36" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="44.91" ytl="54.77" xbr="54.11" ybr="59.44" z_order="0">
+    </box>
+  </image>
+  <image id="10" name="atlantic_ave_boerum_place__2026_03_15__12_00_30.jpg" width="352" height="240">
+    <box label="two_wheeler" source="manual" occluded="0" xtl="238.48" ytl="106.43" xbr="258.62" ybr="132.74" z_order="0">
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="202.24" ytl="89.52" xbr="248.69" ybr="112.87" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">true</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="110.70" ytl="111.80" xbr="142.64" ybr="138.11" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="106.13" ytl="92.47" xbr="132.71" ybr="111.80" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="65.06" ytl="70.19" xbr="97.28" ybr="107.77" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="69.10" ytl="104.82" xbr="97.01" ybr="132.20" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="17.81" ytl="107.77" xbr="53.79" ybr="140.26" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">true</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="32.96" ytl="91.18" xbr="58.44" ybr="112.67" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="50.47" ytl="62.76" xbr="66.93" ybr="72.12" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="90.72" ytl="57.73" xbr="99.13" ybr="63.43" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="37.72" ytl="59.42" xbr="45.95" ybr="65.56" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="41.16" ytl="53.88" xbr="49.85" ybr="63.32" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="49.70" ytl="55.38" xbr="52.99" ybr="59.72" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="63.48" ytl="45.64" xbr="69.17" ybr="52.98" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="73.67" ytl="49.23" xbr="77.56" ybr="52.38" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="75.76" ytl="48.35" xbr="79.66" ybr="51.35" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="149.47" ytl="51.98" xbr="157.21" ybr="57.71" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="338.61" ytl="111.47" xbr="352.00" ybr="135.90" z_order="0">
+    </box>
+  </image>
+  <image id="11" name="atlantic_ave_boerum_place__2026_03_15__23_58_33.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="75.47" ytl="104.62" xbr="113.57" ybr="150.55" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="108.96" ytl="103.62" xbr="139.64" ybr="131.09" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="99.93" ytl="85.77" xbr="121.99" ybr="105.43" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="68.65" ytl="97.61" xbr="88.90" ybr="117.66" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="38.02" ytl="58.44" xbr="49.25" ybr="66.07" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="46.45" ytl="54.69" xbr="53.27" ybr="60.04" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="0.00" ytl="83.71" xbr="13.05" ybr="98.82" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="87.85" ytl="56.02" xbr="99.47" ybr="63.70" z_order="0">
+    </box>
+  </image>
+  <image id="12" name="atlantic_ave_boerum_place__2026_03_16__00_00_33.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="112.16" ytl="112.85" xbr="147.86" ybr="143.53" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="101.74" ytl="89.38" xbr="127.60" ybr="113.05" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="59.22" ytl="92.39" xbr="81.68" ybr="112.65" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="70.25" ytl="108.43" xbr="96.92" ybr="139.92" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="12.10" ytl="106.23" xbr="45.99" ybr="139.92" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="30.35" ytl="99.21" xbr="53.41" ybr="119.26" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="76.47" ytl="78.96" xbr="96.52" ybr="96.80" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="44.18" ytl="75.15" xbr="62.23" ybr="89.38" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="37.77" ytl="87.38" xbr="58.62" ybr="101.42" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="0.00" ytl="83.81" xbr="10.92" ybr="98.95" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="37.88" ytl="58.51" xbr="45.55" ybr="65.36" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="43.06" ytl="56.85" xbr="49.29" ybr="63.07" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="59.65" ytl="53.33" xbr="66.91" ybr="58.93" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="98.43" ytl="75.52" xbr="113.15" ybr="88.58" z_order="0">
+    </box>
+  </image>
+  <image id="13" name="atlantic_ave_boerum_place__2026_03_16__11_08_36.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="116.66" ytl="93.68" xbr="158.81" ybr="149.25" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="109.14" ytl="82.40" xbr="136.79" ybr="116.23" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="71.29" ytl="113.01" xbr="104.58" ybr="152.47" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="70.75" ytl="96.70" xbr="97.60" ybr="119.18" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="75.58" ytl="88.31" xbr="95.99" ybr="104.15" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="74.24" ytl="79.18" xbr="90.08" ybr="93.68" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="36.93" ytl="85.89" xbr="61.36" ybr="107.37" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">true</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="28.87" ytl="105.76" xbr="58.13" ybr="131.53" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="2.83" ytl="83.75" xbr="25.11" ybr="100.93" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="66.56" ytl="69.97" xbr="82.80" ybr="81.34" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="104.97" ytl="80.00" xbr="120.25" ybr="93.20" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="78.40" ytl="66.48" xbr="89.50" ybr="75.80" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="48.68" ytl="51.60" xbr="60.64" ybr="64.94" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="102.38" ytl="74.92" xbr="115.86" ybr="84.99" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="100.21" ytl="69.50" xbr="113.22" ybr="78.63" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="97.27" ytl="66.24" xbr="109.20" ybr="75.38" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="96.65" ytl="63.92" xbr="107.96" ybr="67.64" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="63.94" ytl="57.30" xbr="70.94" ybr="62.80" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="38.40" ytl="56.99" xbr="47.54" ybr="65.89" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="77.54" ytl="62.60" xbr="87.34" ybr="68.49" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="78.04" ytl="59.49" xbr="85.04" ybr="62.70" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="89.14" ytl="55.10" xbr="97.64" ybr="63.80" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="72.74" ytl="53.89" xbr="79.34" ybr="58.60" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="77.14" ytl="50.89" xbr="82.14" ybr="54.40" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="177.74" ytl="73.09" xbr="194.33" ybr="85.12" z_order="0">
+    </box>
+  </image>
+  <image id="14" name="atlantic_ave_boerum_place__2026_03_16__22_16_38.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="217.95" ytl="190.94" xbr="352.00" ybr="240.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="pickup_truck" source="manual" occluded="0" xtl="187.88" ytl="99.93" xbr="237.01" ybr="133.22" z_order="0">
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="80.77" ytl="147.99" xbr="138.48" ybr="203.56" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="108.69" ytl="95.91" xbr="135.53" ybr="117.11" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="16.87" ytl="82.20" xbr="41.57" ybr="103.16" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">true</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="94.91" ytl="67.25" xbr="107.21" ybr="78.62" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="203.24" ytl="78.19" xbr="219.34" ybr="92.95" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="38.26" ytl="57.73" xbr="48.30" ybr="66.83" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="46.10" ytl="55.05" xbr="53.73" ybr="60.40" z_order="0">
+    </box>
+  </image>
+  <image id="15" name="atlantic_ave_boerum_place__2026_03_17__01_50_02.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="63.70" ytl="118.67" xbr="95.88" ybr="150.50" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="36.40" ytl="60.20" xbr="43.75" ybr="66.47" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="41.60" ytl="58.23" xbr="47.87" ybr="64.68" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="46.44" ytl="54.47" xbr="54.50" ybr="60.02" z_order="0">
+    </box>
+  </image>
+  <image id="16" name="atlantic_ave_boerum_place__2026_03_17__12_54_05.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="108.42" ytl="84.05" xbr="129.99" ybr="104.42" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="100.03" ytl="65.17" xbr="116.22" ybr="83.45" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="106.98" ytl="78.04" xbr="121.87" ybr="89.44" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="59.23" ytl="46.71" xbr="67.90" ybr="56.16" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="76.42" ytl="53.53" xbr="84.94" ybr="61.89" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="91.60" ytl="54.92" xbr="98.86" ybr="61.27" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="96.85" ytl="62.51" xbr="104.59" ybr="70.10" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="6.25" ytl="61.74" xbr="21.28" ybr="70.87" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="0.00" ytl="81.56" xbr="7.65" ybr="96.74" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="38.32" ytl="58.79" xbr="46.82" ybr="66.23" z_order="0">
+    </box>
+  </image>
+  <image id="17" name="atlantic_ave_boerum_place__2026_03_17__23_58_07.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="93.29" ytl="150.50" xbr="202.31" ybr="236.23" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="43.59" ytl="120.37" xbr="86.14" ybr="164.48" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="69.25" ytl="100.83" xbr="92.68" ybr="124.26" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="47.60" ytl="90.37" xbr="68.01" ybr="108.40" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="73.39" ytl="77.87" xbr="91.05" ybr="95.28" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="77.81" ytl="73.59" xbr="91.86" ybr="81.35" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="95.88" ytl="64.22" xbr="107.26" ybr="73.86" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="53.16" ytl="66.76" xbr="69.63" ybr="77.34" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="47.54" ytl="78.14" xbr="67.35" ybr="90.20" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="74.31" ytl="62.21" xbr="89.31" ybr="71.18" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="36.16" ytl="58.73" xbr="46.20" ybr="65.16" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="42.72" ytl="57.66" xbr="49.28" ybr="63.95" z_order="0">
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="0.00" ytl="89.30" xbr="20.05" ybr="113.53" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="0.00" ytl="110.56" xbr="10.14" ybr="130.88" z_order="0">
+    </box>
+  </image>
+  <image id="18" name="atlantic_ave_boerum_place__2026_03_18__00_00_07.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="27.18" ytl="115.24" xbr="57.79" ybr="145.03" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="96.91" ytl="64.27" xbr="107.90" ybr="73.41" z_order="0">
+    </box>
+  </image>
+  <image id="19" name="atlantic_ave_boerum_place__2026_03_18__12_00_11.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="121.06" ytl="111.85" xbr="156.77" ybr="142.73" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="121.87" ytl="111.42" xbr="157.16" ybr="142.70" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="75.35" ytl="85.55" xbr="93.19" ybr="100.39" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="73.34" ytl="75.33" xbr="88.18" ybr="87.36" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="68.93" ytl="105.41" xbr="99.41" ybr="137.09" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="1.95" ytl="109.62" xbr="46.47" ybr="150.93" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="113.45" ytl="95.58" xbr="141.32" ybr="119.44" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="106.43" ytl="85.55" xbr="129.69" ybr="106.81" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="pickup_truck" source="manual" occluded="0" xtl="97.61" ytl="77.73" xbr="118.06" ybr="95.18" z_order="0">
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="54.90" ytl="67.84" xbr="69.73" ybr="81.32" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="59.54" ytl="62.90" xbr="69.58" ybr="70.84" z_order="0">
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="47.71" ytl="52.86" xbr="59.54" ybr="65.14" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="0.00" ytl="94.02" xbr="8.69" ybr="116.96" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="101.88" ytl="70.80" xbr="115.00" ybr="78.30" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="95.72" ytl="66.79" xbr="108.57" ybr="76.83" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="94.65" ytl="61.43" xbr="105.49" ybr="67.73" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="91.03" ytl="55.28" xbr="98.80" ybr="63.20" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="63.34" ytl="58.76" xbr="72.30" ybr="66.25" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="57.78" ytl="48.20" xbr="65.48" ybr="56.48" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="64.18" ytl="45.78" xbr="69.28" ybr="52.68" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="75.08" ytl="47.78" xbr="81.48" ybr="53.98" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="88.08" ytl="54.88" xbr="91.08" ybr="60.08" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="38.48" ytl="59.78" xbr="46.78" ybr="65.68" z_order="0">
+    </box>
+  </image>
+  <image id="20" name="atlantic_ave_boerum_place__2026_03_18__23_58_14.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="217.38" ytl="171.39" xbr="352.00" ybr="240.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="44.56" ytl="134.95" xbr="95.60" ybr="194.97" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="118.96" ytl="115.54" xbr="153.82" ybr="148.25" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="107.48" ytl="88.63" xbr="132.71" ybr="110.38" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="65.60" ytl="82.19" xbr="87.07" ybr="103.67" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="102.11" ytl="79.24" xbr="120.63" ybr="93.46" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="17.54" ytl="81.11" xbr="43.05" ybr="101.52" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="75.09" ytl="71.04" xbr="90.73" ybr="83.44" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="90.11" ytl="57.57" xbr="98.32" ybr="63.76" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="54.33" ytl="60.05" xbr="66.72" ybr="69.19" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="40.24" ytl="56.93" xbr="48.76" ybr="62.53" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="47.05" ytl="53.85" xbr="53.56" ybr="60.36" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="58.67" ytl="51.36" xbr="65.95" ybr="57.88" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="148.20" ytl="51.67" xbr="158.15" ybr="57.89" z_order="0">
+    </box>
+  </image>
+  <image id="21" name="atlantic_ave_boerum_place__2026_03_19__00_00_14.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="33.98" ytl="75.07" xbr="50.62" ybr="86.30" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="36.72" ytl="59.63" xbr="43.35" ybr="66.44" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="42.10" ytl="58.00" xbr="48.37" ybr="63.57" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="0.00" ytl="83.46" xbr="11.45" ybr="96.90" z_order="0">
+    </box>
+  </image>
+  <image id="22" name="atlantic_ave_boerum_place__2026_03_19__23_58_15.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="104.16" ytl="196.87" xbr="221.56" ybr="240.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="65.60" ytl="101.30" xbr="92.71" ybr="127.88" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="0.00" ytl="103.72" xbr="21.30" ybr="125.46" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="76.07" ytl="83.32" xbr="95.13" ybr="98.89" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="47.97" ytl="62.60" xbr="58.98" ybr="71.73" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="58.50" ytl="68.80" xbr="70.89" ybr="78.25" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="95.98" ytl="65.08" xbr="110.56" ybr="77.16" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="76.64" ytl="73.14" xbr="92.42" ybr="82.74" z_order="0">
+    </box>
+  </image>
+  <image id="23" name="atlantic_ave_boerum_place__2026_03_20__00_00_15.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="69.72" ytl="106.81" xbr="99.55" ybr="139.15" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="95.94" ytl="66.51" xbr="109.54" ybr="78.52" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="35.90" ytl="58.62" xbr="44.68" ybr="65.79" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="47.17" ytl="53.07" xbr="54.52" ybr="58.44" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="45.40" ytl="55.92" xbr="51.31" ybr="60.24" z_order="0">
+    </box>
+  </image>
+  <image id="24" name="atlantic_ave_boerum_place__2026_03_20__10_54_16.jpg" width="352" height="240">
+    <box label="pickup_truck" source="manual" occluded="0" xtl="112.23" ytl="93.69" xbr="144.85" ybr="122.58" z_order="0">
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="72.94" ytl="107.31" xbr="102.02" ybr="138.39" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="40.45" ytl="84.25" xbr="63.11" ybr="103.90" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="67.93" ytl="90.07" xbr="87.38" ybr="110.32" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="73.34" ytl="74.22" xbr="91.39" ybr="93.47" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="99.81" ytl="70.41" xbr="126.30" ybr="101.70" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="16.17" ytl="65.19" xbr="31.05" ybr="73.47" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="97.12" ytl="65.87" xbr="108.50" ybr="76.31" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="94.58" ytl="61.98" xbr="104.89" ybr="69.48" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="94.31" ytl="58.90" xbr="103.55" ybr="63.32" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="35.28" ytl="59.35" xbr="52.01" ybr="77.32" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="0.00" ytl="79.33" xbr="11.43" ybr="95.29" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="64.55" ytl="45.56" xbr="71.21" ybr="52.38" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="90.42" ytl="55.79" xbr="98.01" ybr="61.52" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="86.86" ytl="52.69" xbr="93.21" ybr="58.42" z_order="0">
+    </box>
+  </image>
+  <image id="25" name="broadway_houston__2026_03_12__18_34_54.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="269.51" ytl="87.46" xbr="301.76" ybr="116.46" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="301.99" ytl="83.75" xbr="334.47" ybr="108.81" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="291.26" ytl="75.44" xbr="312.05" ybr="91.56" z_order="0">
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="269.25" ytl="66.78" xbr="289.52" ybr="79.95" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="245.85" ytl="62.96" xbr="260.23" ybr="74.40" z_order="0">
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="336.67" ytl="110.87" xbr="352.00" ybr="134.74" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="251.22" ytl="51.03" xbr="260.36" ybr="57.38" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="249.20" ytl="57.54" xbr="260.05" ybr="66.21" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="226.85" ytl="47.70" xbr="233.98" ybr="53.43" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="245.59" ytl="45.53" xbr="255.35" ybr="54.98" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="239.09" ytl="44.60" xbr="243.12" ybr="50.03" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="243.12" ytl="45.84" xbr="245.90" ybr="51.88" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="202.76" ytl="51.35" xbr="213.06" ybr="60.86" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="204.08" ytl="34.66" xbr="210.53" ybr="40.22" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="214.88" ytl="44.54" xbr="220.90" ybr="48.89" z_order="0">
+    </box>
+  </image>
+  <image id="26" name="broadway_houston__2026_03_12__21_16_24.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="311.02" ytl="129.22" xbr="352.00" ybr="178.92" z_order="0">
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="311.11" ytl="96.76" xbr="346.61" ybr="120.20" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="271.20" ytl="83.08" xbr="303.45" ybr="111.15" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="287.44" ytl="70.78" xbr="320.62" ybr="99.32" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="252.17" ytl="69.39" xbr="271.66" ybr="84.24" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="275.14" ytl="69.62" xbr="288.14" ybr="82.38" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="337.59" ytl="117.68" xbr="352.00" ybr="139.75" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="248.28" ytl="49.31" xbr="258.50" ybr="56.70" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="237.28" ytl="58.61" xbr="251.22" ybr="69.91" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="221.01" ytl="55.51" xbr="232.63" ybr="65.73" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="217.76" ytl="48.54" xbr="227.98" ybr="55.82" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="232.79" ytl="51.64" xbr="245.18" ybr="59.23" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="229.15" ytl="44.57" xbr="240.08" ybr="52.10" z_order="0">
+    </box>
+  </image>
+  <image id="27" name="broadway_houston__2026_03_12__23_58_24.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="212.03" ytl="125.50" xbr="263.59" ybr="181.41" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="228.18" ytl="93.50" xbr="258.93" ybr="121.46" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="282.54" ytl="97.85" xbr="318.26" ybr="127.36" z_order="0">
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="305.84" ytl="88.84" xbr="339.38" ybr="109.97" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">true</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="261.31" ytl="75.05" xbr="283.59" ybr="95.70" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="276.19" ytl="69.48" xbr="297.97" ybr="83.40" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="bus" source="manual" occluded="0" xtl="219.57" ytl="53.70" xbr="252.27" ybr="91.06" z_order="0">
+      <attribute name="is_school">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="244.06" ytl="54.68" xbr="262.70" ybr="72.06" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="221.66" ytl="46.26" xbr="230.62" ybr="52.53" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="229.72" ytl="48.41" xbr="237.96" ybr="54.10" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="237.79" ytl="49.84" xbr="246.21" ybr="54.86" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="212.97" ytl="41.23" xbr="220.27" ybr="45.83" z_order="0">
+    </box>
+  </image>
+  <image id="28" name="broadway_houston__2026_03_13__00_00_24.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="294.75" ytl="81.17" xbr="326.74" ybr="105.09" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="312.44" ytl="116.97" xbr="352.00" ybr="170.11" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="220.80" ytl="49.80" xbr="231.74" ybr="57.87" z_order="0">
+    </box>
+  </image>
+  <image id="29" name="broadway_houston__2026_03_13__11_56_25.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="207.47" ytl="91.11" xbr="235.11" ybr="127.76" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="210.46" ytl="78.46" xbr="231.93" ybr="92.69" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="284.01" ytl="98.32" xbr="321.60" ybr="129.20" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="307.91" ytl="89.20" xbr="341.20" ybr="111.48" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="268.71" ytl="83.56" xbr="297.44" ybr="107.45" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="261.20" ytl="72.01" xbr="282.13" ybr="89.20" z_order="0">
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="246.70" ytl="63.51" xbr="264.15" ybr="78.55" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="296.03" ytl="80.16" xbr="319.90" ybr="96.60" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="282.58" ytl="72.54" xbr="299.44" ybr="83.97" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="325.27" ytl="107.92" xbr="352.00" ybr="135.03" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="236.44" ytl="53.67" xbr="245.89" ybr="61.10" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="243.41" ytl="57.54" xbr="252.08" ybr="64.35" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="250.85" ytl="60.17" xbr="259.67" ybr="64.20" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="269.65" ytl="64.46" xbr="283.43" ybr="71.96" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="246.76" ytl="46.22" xbr="256.82" ybr="54.58" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="240.10" ytl="44.05" xbr="247.22" ybr="51.02" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="202.61" ytl="47.30" xbr="210.98" ybr="54.89" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="203.54" ytl="40.02" xbr="211.75" ybr="47.14" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="205.55" ytl="35.84" xbr="210.98" ybr="39.86" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="214.23" ytl="37.70" xbr="225.07" ybr="43.58" z_order="0">
+    </box>
+  </image>
+  <image id="30" name="broadway_houston__2026_03_13__23_58_26.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="294.91" ytl="106.30" xbr="345.65" ybr="148.98" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="239.61" ytl="79.96" xbr="271.02" ybr="104.93" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="268.87" ytl="69.49" xbr="291.69" ybr="90.16" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="244.49" ytl="60.42" xbr="261.52" ybr="73.50" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="223.16" ytl="57.55" xbr="235.17" ybr="68.48" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="214.20" ytl="45.54" xbr="223.30" ybr="53.42" z_order="0">
+    </box>
+  </image>
+  <image id="31" name="broadway_houston__2026_03_14__00_00_26.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="230.83" ytl="97.62" xbr="263.05" ybr="130.38" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="292.85" ytl="99.77" xbr="329.89" ybr="129.84" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="271.10" ytl="89.03" xbr="298.75" ybr="110.78" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="258.75" ytl="73.17" xbr="282.13" ybr="92.79" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="228.15" ytl="70.48" xbr="246.13" ybr="86.05" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="244.70" ytl="57.21" xbr="260.03" ybr="67.78" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="222.10" ytl="61.15" xbr="237.63" ybr="72.97" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="221.06" ytl="50.16" xbr="229.77" ybr="58.24" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="237.63" ytl="50.99" xbr="249.10" ybr="59.00" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="229.28" ytl="44.03" xbr="238.12" ybr="50.86" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="216.43" ytl="48.18" xbr="224.73" ybr="54.87" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="204.52" ytl="46.26" xbr="212.05" ybr="52.35" z_order="0">
+    </box>
+  </image>
+  <image id="32" name="broadway_houston__2026_03_14__12_00_27.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="204.93" ytl="96.95" xbr="232.31" ybr="124.79" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="248.32" ytl="102.98" xbr="284.28" ybr="137.55" z_order="0">
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="228.12" ytl="43.73" xbr="238.17" ybr="53.61" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="256.32" ytl="70.56" xbr="274.78" ybr="82.75" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="240.01" ytl="52.46" xbr="251.30" ybr="63.75" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="203.63" ytl="51.56" xbr="217.79" ybr="67.15" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="205.96" ytl="31.85" xbr="212.23" ybr="37.58" z_order="0">
+    </box>
+  </image>
+  <image id="33" name="broadway_houston__2026_03_14__23_58_29.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="167.80" ytl="154.83" xbr="244.85" ybr="224.90" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="300.15" ytl="112.15" xbr="352.00" ybr="170.94" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="265.25" ytl="81.81" xbr="295.85" ybr="103.83" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="235.45" ytl="69.73" xbr="254.24" ybr="84.50" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="250.79" ytl="67.01" xbr="265.42" ybr="77.08" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="221.52" ytl="57.65" xbr="233.51" ybr="67.97" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="243.83" ytl="55.25" xbr="254.87" ybr="65.33" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="240.95" ytl="49.25" xbr="249.83" ybr="56.69" z_order="0">
+    </box>
+  </image>
+  <image id="34" name="broadway_houston__2026_03_15__00_00_29.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="279.90" ytl="98.16" xbr="321.90" ybr="136.67" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="268.30" ytl="91.89" xbr="288.25" ybr="111.61" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="264.59" ytl="72.63" xbr="290.34" ybr="93.98" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="232.34" ytl="78.67" xbr="255.07" ybr="99.09" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="249.50" ytl="67.53" xbr="265.51" ybr="79.36" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="226.84" ytl="58.43" xbr="242.15" ybr="70.27" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="242.38" ytl="60.52" xbr="256.54" ybr="73.28" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="237.97" ytl="53.79" xbr="248.18" ybr="60.52" z_order="0">
+    </box>
+  </image>
+  <image id="35" name="broadway_houston__2026_03_15__12_00_30.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="222.89" ytl="81.73" xbr="245.63" ybr="103.77" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="282.99" ytl="94.72" xbr="328.46" ybr="130.92" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="323.13" ytl="98.44" xbr="352.00" ybr="126.05" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="298.53" ytl="84.51" xbr="330.09" ybr="106.09" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="265.12" ytl="79.41" xbr="295.98" ybr="104.93" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="259.78" ytl="72.45" xbr="277.18" ybr="86.37" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="245.17" ytl="60.62" xbr="262.80" ybr="75.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="241.62" ytl="56.18" xbr="252.29" ybr="65.23" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="236.74" ytl="52.24" xbr="245.33" ybr="60.13" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="250.20" ytl="49.92" xbr="260.41" ybr="57.34" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="245.73" ytl="47.56" xbr="252.83" ybr="54.66" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="240.87" ytl="44.61" xbr="246.25" ybr="50.68" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="234.46" ytl="42.36" xbr="241.05" ybr="48.42" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="203.26" ytl="53.28" xbr="211.76" ybr="62.46" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="203.26" ytl="50.33" xbr="209.68" ybr="54.49" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="203.61" ytl="47.38" xbr="209.50" ybr="50.50" z_order="0">
+    </box>
+  </image>
+  <image id="36" name="broadway_houston__2026_03_15__23_58_33.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="238.32" ytl="52.65" xbr="252.16" ybr="64.28" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="213.12" ytl="42.30" xbr="221.36" ybr="47.84" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="224.21" ytl="42.75" xbr="233.35" ybr="49.49" z_order="0">
+    </box>
+  </image>
+  <image id="37" name="broadway_houston__2026_03_16__00_00_33.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="313.54" ytl="91.02" xbr="352.00" ybr="121.89" z_order="0">
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="265.49" ytl="81.62" xbr="291.53" ybr="104.44" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="220.31" ytl="40.02" xbr="229.00" ybr="45.85" z_order="0">
+    </box>
+  </image>
+  <image id="38" name="broadway_houston__2026_03_16__11_08_36.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="235.28" ytl="101.73" xbr="268.23" ybr="129.80" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="279.83" ytl="96.16" xbr="318.11" ybr="127.48" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="307.90" ytl="97.32" xbr="352.00" ybr="124.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="280.99" ytl="65.77" xbr="305.82" ybr="90.13" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="260.80" ytl="73.89" xbr="288.65" ybr="95.47" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="254.31" ytl="67.85" xbr="269.85" ybr="80.85" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="246.90" ytl="64.21" xbr="259.19" ybr="73.50" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="240.16" ytl="54.48" xbr="252.74" ybr="66.76" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="233.87" ytl="50.88" xbr="244.36" ybr="61.37" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="222.49" ytl="36.95" xbr="234.77" ybr="46.99" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="244.78" ytl="45.13" xbr="254.80" ybr="54.55" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="237.70" ytl="42.15" xbr="245.50" ybr="48.74" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="234.58" ytl="38.34" xbr="242.56" ybr="45.27" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="201.48" ytl="45.27" xbr="211.88" ybr="56.71" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="202.87" ytl="54.98" xbr="212.40" ybr="66.41" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="203.39" ytl="41.28" xbr="211.70" ybr="45.79" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="217.30" ytl="38.97" xbr="222.21" ybr="43.50" z_order="0">
+    </box>
+  </image>
+  <image id="39" name="broadway_houston__2026_03_16__22_16_38.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="220.32" ytl="70.55" xbr="236.79" ybr="84.47" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="247.93" ytl="56.39" xbr="264.63" ybr="68.23" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="233.89" ytl="48.85" xbr="245.72" ybr="58.83" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="217.65" ytl="49.32" xbr="226.93" ybr="57.21" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="248.51" ytl="49.55" xbr="258.02" ybr="56.28" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="207.44" ytl="53.26" xbr="220.20" ybr="72.05" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="209.99" ytl="47.46" xbr="218.11" ybr="52.80" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="323.30" ytl="155.58" xbr="352.00" ybr="222.42" z_order="0">
+    </box>
+  </image>
+  <image id="40" name="broadway_houston__2026_03_17__01_50_02.jpg" width="352" height="240">
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="247.93" ytl="50.36" xbr="257.44" ybr="57.32" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="239.57" ytl="45.26" xbr="250.25" ybr="52.45" z_order="0">
+    </box>
+  </image>
+  <image id="41" name="broadway_houston__2026_03_17__12_54_05.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="194.32" ytl="154.54" xbr="261.17" ybr="214.55" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="222.35" ytl="100.27" xbr="261.17" ybr="151.30" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="231.55" ytl="89.11" xbr="257.76" ybr="111.38" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="220.64" ytl="54.07" xbr="246.86" ybr="89.80" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="260.66" ytl="59.83" xbr="276.90" ybr="72.46" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="216.34" ytl="58.42" xbr="222.56" ybr="66.22" z_order="0">
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="199.12" ytl="49.55" xbr="209.69" ybr="58.91" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="201.20" ytl="57.70" xbr="210.56" ybr="66.02" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="201.00" ytl="45.85" xbr="208.76" ybr="50.12" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="202.42" ytl="36.40" xbr="208.25" ybr="42.61" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="185.40" ytl="210.95" xbr="273.91" ybr="240.00" z_order="0">
+    </box>
+  </image>
+  <image id="42" name="broadway_houston__2026_03_17__23_58_07.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="278.32" ytl="97.11" xbr="316.61" ybr="129.13" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="319.16" ytl="98.97" xbr="352.00" ybr="126.35" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="250.71" ytl="69.97" xbr="269.97" ybr="85.98" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="242.02" ytl="66.19" xbr="252.76" ybr="76.76" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="260.93" ytl="83.80" xbr="285.63" ybr="99.13" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="199.82" ytl="56.66" xbr="210.24" ybr="68.09" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="236.24" ytl="56.40" xbr="249.57" ybr="65.53" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="241.03" ytl="49.35" xbr="255.86" ybr="58.64" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="210.51" ytl="40.16" xbr="217.44" ybr="45.01" z_order="0">
+    </box>
+  </image>
+  <image id="43" name="broadway_houston__2026_03_18__00_00_07.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="295.05" ytl="114.40" xbr="341.46" ybr="144.33" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="220.23" ytl="69.60" xbr="237.39" ybr="86.24" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="239.37" ytl="59.46" xbr="253.06" ybr="71.08" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="243.01" ytl="49.76" xbr="256.70" ybr="58.42" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="228.30" ytl="49.24" xbr="239.37" ybr="57.38" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="200.89" ytl="57.73" xbr="210.94" ybr="68.13" z_order="0">
+    </box>
+  </image>
+  <image id="44" name="broadway_houston__2026_03_18__12_00_11.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="307.96" ytl="124.50" xbr="352.00" ybr="181.68" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">true</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="191.45" ytl="103.02" xbr="224.47" ybr="137.65" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="242.19" ytl="58.74" xbr="256.23" ybr="68.17" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="261.44" ytl="60.75" xbr="275.08" ybr="70.37" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="220.13" ytl="55.73" xbr="230.96" ybr="64.96" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="247.46" ytl="48.10" xbr="261.24" ybr="59.78" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="201.46" ytl="56.14" xbr="213.09" ybr="70.77" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="201.26" ytl="48.11" xbr="210.08" ybr="56.10" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="226.53" ytl="48.24" xbr="234.23" ybr="53.64" z_order="0">
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="235.23" ytl="41.04" xbr="245.13" ybr="50.64" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="213.54" ytl="45.34" xbr="220.44" ybr="49.84" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="210.54" ytl="41.74" xbr="216.74" ybr="45.84" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="223.54" ytl="45.34" xbr="229.74" ybr="49.74" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="221.34" ytl="43.34" xbr="226.63" ybr="46.94" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="217.74" ytl="39.74" xbr="223.13" ybr="43.74" z_order="0">
+    </box>
+  </image>
+  <image id="45" name="broadway_houston__2026_03_18__23_58_14.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="287.69" ytl="109.92" xbr="335.75" ybr="153.95" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="227.83" ytl="109.65" xbr="260.04" ybr="144.01" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="230.24" ytl="84.95" xbr="253.06" ybr="104.82" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="268.28" ytl="89.38" xbr="300.36" ybr="114.25" z_order="0">
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="315.40" ytl="87.98" xbr="352.00" ybr="127.89" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="258.45" ytl="80.16" xbr="278.71" ybr="95.60" z_order="0">
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="247.02" ytl="70.13" xbr="265.47" ybr="84.57" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="299.73" ytl="89.51" xbr="315.70" ybr="108.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="278.38" ytl="73.75" xbr="299.73" ybr="89.10" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="240.48" ytl="62.57" xbr="258.61" ybr="74.50" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="236.61" ytl="58.23" xbr="246.21" ybr="67.22" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="202.69" ytl="60.56" xbr="214.31" ybr="71.87" z_order="0">
+    </box>
+  </image>
+  <image id="46" name="broadway_houston__2026_03_19__00_00_14.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="281.08" ytl="100.80" xbr="319.91" ybr="133.42" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="253.20" ytl="69.21" xbr="269.64" ybr="84.25" z_order="0">
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="223.72" ytl="61.99" xbr="239.76" ybr="77.03" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="228.41" ytl="55.15" xbr="240.60" ybr="63.39" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="203.84" ytl="60.18" xbr="213.88" ybr="71.83" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="214.97" ytl="47.10" xbr="221.96" ybr="53.91" z_order="0">
+    </box>
+  </image>
+  <image id="47" name="broadway_houston__2026_03_19__23_58_15.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="271.27" ytl="92.70" xbr="303.26" ybr="120.03" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="305.24" ytl="94.90" xbr="336.52" ybr="113.15" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="305.44" ytl="123.57" xbr="352.00" ybr="164.68" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="230.04" ytl="104.32" xbr="262.92" ybr="137.21" z_order="0">
+      <attribute name="is_taxi">true</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="227.83" ytl="85.49" xbr="253.10" ybr="104.32" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="253.70" ytl="72.06" xbr="274.35" ybr="87.50" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="279.25" ytl="76.74" xbr="306.28" ybr="92.69" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="274.28" ytl="69.38" xbr="291.31" ybr="83.54" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="343.04" ytl="118.73" xbr="352.00" ybr="139.93" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="245.98" ytl="69.56" xbr="256.55" ybr="79.05" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="243.47" ytl="62.21" xbr="256.73" ybr="70.09" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="237.73" ytl="58.09" xbr="247.77" ybr="65.97" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="231.64" ytl="54.68" xbr="244.54" ybr="62.57" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="204.40" ytl="60.77" xbr="213.36" ybr="74.22" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="201.53" ytl="56.11" xbr="210.49" ybr="61.49" z_order="0">
+    </box>
+  </image>
+  <image id="48" name="broadway_houston__2026_03_20__00_00_15.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="211.63" ytl="127.51" xbr="273.75" ybr="199.89" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="242.70" ytl="92.72" xbr="273.75" ybr="124.10" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="297.40" ytl="89.42" xbr="328.26" ybr="109.05" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="220.77" ytl="66.46" xbr="236.41" ybr="80.30" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="337.47" ytl="118.39" xbr="352.00" ybr="138.94" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="219.23" ytl="57.85" xbr="230.38" ybr="66.52" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="230.69" ytl="51.96" xbr="243.09" ybr="60.33" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="218.30" ytl="51.65" xbr="228.99" ybr="58.00" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="214.58" ytl="49.33" xbr="222.48" ybr="55.99" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="199.25" ytl="56.14" xbr="211.33" ybr="71.01" z_order="0">
+    </box>
+  </image>
+  <image id="49" name="broadway_houston__2026_03_20__10_54_16.jpg" width="352" height="240">
+    <box label="bus" source="manual" occluded="0" xtl="264.06" ytl="71.45" xbr="342.33" ybr="153.45" z_order="0">
+      <attribute name="is_school">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="222.21" ytl="68.25" xbr="237.98" ybr="80.21" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="222.38" ytl="57.68" xbr="233.30" ybr="68.60" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="252.50" ytl="70.85" xbr="264.69" ybr="81.06" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="233.86" ytl="57.23" xbr="246.23" ybr="65.29" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="231.35" ytl="53.64" xbr="238.88" ybr="58.48" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="245.33" ytl="47.01" xbr="255.91" ybr="56.15" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="201.07" ytl="43.78" xbr="213.97" ybr="57.76" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="217.02" ytl="51.49" xbr="226.16" ybr="60.45" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="232.51" ytl="39.95" xbr="244.56" ybr="51.19" z_order="0">
+    </box>
+  </image>
+  <image id="50" name="pelham_pkwy_w_b_boston_rd__2026_03_12__18_34_54.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="294.81" ytl="111.34" xbr="352.00" ybr="146.75" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="168.63" ytl="100.60" xbr="215.61" ybr="127.69" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="112.82" ytl="112.93" xbr="168.93" ybr="173.87" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="130.00" ytl="82.05" xbr="150.40" ybr="100.58" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="149.30" ytl="71.05" xbr="164.60" ybr="82.05" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="60.00" ytl="98.61" xbr="79.54" ybr="116.53" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="202.98" ytl="61.87" xbr="218.63" ybr="67.92" z_order="0">
+    </box>
+  </image>
+  <image id="51" name="pelham_pkwy_w_b_boston_rd__2026_03_12__21_16_24.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="196.27" ytl="108.45" xbr="246.80" ybr="137.33" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="159.57" ytl="109.86" xbr="206.49" ybr="146.96" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="139.12" ytl="97.42" xbr="168.59" ybr="121.09" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="170.60" ytl="91.41" xbr="198.87" ybr="108.86" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="154.76" ytl="83.19" xbr="174.81" ybr="98.43" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="133.16" ytl="66.69" xbr="150.72" ybr="82.82" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="17.56" ytl="68.48" xbr="33.87" ybr="76.01" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="35.31" ytl="69.02" xbr="53.05" ybr="76.19" z_order="0">
+    </box>
+  </image>
+  <image id="52" name="pelham_pkwy_w_b_boston_rd__2026_03_12__23_58_24.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="183.96" ytl="96.64" xbr="225.21" ybr="123.50" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="135.77" ytl="94.99" xbr="163.53" ybr="116.09" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="157.15" ytl="118.03" xbr="189.90" ybr="137.74" z_order="0">
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="159.64" ytl="87.04" xbr="190.18" ybr="106.30" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="108.98" ytl="68.91" xbr="137.30" ybr="78.41" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="33.70" ytl="68.00" xbr="56.29" ybr="76.79" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="17.94" ytl="67.83" xbr="35.32" ybr="76.62" z_order="0">
+    </box>
+  </image>
+  <image id="53" name="pelham_pkwy_w_b_boston_rd__2026_03_13__00_00_24.jpg" width="352" height="240">
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="33.70" ytl="68.29" xbr="54.24" ybr="77.73" z_order="0">
+    </box>
+  </image>
+  <image id="54" name="pelham_pkwy_w_b_boston_rd__2026_03_13__11_56_25.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="185.22" ytl="118.83" xbr="270.32" ybr="182.46" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="225.33" ytl="88.53" xbr="257.81" ybr="103.84" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="171.73" ytl="90.15" xbr="205.37" ybr="111.50" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="132.98" ytl="104.31" xbr="184.72" ybr="139.57" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="135.07" ytl="89.22" xbr="161.99" ybr="105.70" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="150.85" ytl="81.10" xbr="173.59" ybr="97.34" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="162.68" ytl="74.84" xbr="179.62" ybr="86.21" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="115.72" ytl="80.63" xbr="131.15" ybr="92.41" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="140.33" ytl="59.48" xbr="160.09" ybr="71.27" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="128.89" ytl="82.36" xbr="147.27" ybr="97.09" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="144.67" ytl="76.47" xbr="159.57" ybr="87.04" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="136.17" ytl="71.96" xbr="150.21" ybr="81.67" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="99.49" ytl="68.09" xbr="111.62" ybr="77.08" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="33.90" ytl="70.31" xbr="52.93" ybr="76.52" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="17.46" ytl="68.50" xbr="35.74" ybr="75.54" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="117.60" ytl="73.89" xbr="131.53" ybr="81.83" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="127.42" ytl="70.79" xbr="138.41" ybr="78.67" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="116.64" ytl="65.81" xbr="127.63" ybr="73.69" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="107.72" ytl="63.53" xbr="115.39" ybr="70.58" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="105.02" ytl="62.08" xbr="109.17" ybr="66.23" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="83.25" ytl="59.80" xbr="90.09" ybr="66.02" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="115.28" ytl="59.23" xbr="120.55" ybr="62.94" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="188.86" ytl="61.08" xbr="208.84" ybr="69.45" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="226.81" ytl="54.73" xbr="251.12" ybr="65.73" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="149.98" ytl="69.11" xbr="164.70" ybr="76.57" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="43.77" ytl="65.74" xbr="59.36" ybr="72.37" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="0.00" ytl="75.95" xbr="9.54" ybr="82.94" z_order="0">
+    </box>
+  </image>
+  <image id="55" name="pelham_pkwy_w_b_boston_rd__2026_03_13__23_58_26.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="148.78" ytl="102.08" xbr="189.16" ybr="136.19" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="bus" source="manual" occluded="0" xtl="120.85" ytl="71.86" xbr="167.37" ybr="112.77" z_order="0">
+      <attribute name="is_school">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="191.89" ytl="105.20" xbr="233.33" ybr="131.54" z_order="0">
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="95.13" ytl="89.60" xbr="114.83" ybr="106.81" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="168.33" ytl="89.18" xbr="198.42" ybr="106.18" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="17.19" ytl="68.05" xbr="36.06" ybr="76.55" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="36.68" ytl="68.05" xbr="55.50" ybr="76.97" z_order="0">
+    </box>
+  </image>
+  <image id="56" name="pelham_pkwy_w_b_boston_rd__2026_03_14__00_00_26.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="154.78" ytl="108.58" xbr="203.91" ybr="151.53" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="186.79" ytl="93.18" xbr="233.25" ybr="122.21" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="33.87" ytl="67.85" xbr="53.41" ybr="75.92" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="18.46" ytl="67.85" xbr="34.05" ybr="75.20" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="128.14" ytl="62.30" xbr="139.25" ybr="72.87" z_order="0">
+    </box>
+  </image>
+  <image id="57" name="pelham_pkwy_w_b_boston_rd__2026_03_14__12_00_27.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="134.38" ytl="178.64" xbr="222.70" ybr="240.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="pickup_truck" source="manual" occluded="0" xtl="302.70" ytl="139.99" xbr="352.00" ybr="186.16" z_order="0">
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="173.30" ytl="125.49" xbr="244.18" ybr="164.69" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="211.16" ytl="98.64" xbr="275.58" ybr="124.42" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="204.18" ytl="74.48" xbr="224.31" ybr="85.76" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="162.58" ytl="89.26" xbr="192.66" ybr="108.31" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="124.88" ytl="88.26" xbr="149.34" ybr="106.11" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="145.93" ytl="80.44" xbr="165.39" ybr="94.08" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="155.36" ytl="73.82" xbr="174.21" ybr="85.05" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="136.51" ytl="75.03" xbr="150.95" ybr="86.26" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="116.25" ytl="78.23" xbr="133.10" ybr="90.87" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="113.75" ytl="72.79" xbr="126.76" ybr="82.55" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="127.84" ytl="71.40" xbr="139.62" ybr="80.69" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="146.74" ytl="70.78" xbr="160.53" ybr="79.61" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="153.09" ytl="61.33" xbr="167.50" ybr="67.99" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="203.59" ytl="61.80" xbr="218.15" ybr="68.15" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="193.52" ytl="61.18" xbr="207.77" ybr="67.68" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="185.00" ytl="60.71" xbr="197.08" ybr="67.99" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="96.71" ytl="64.59" xbr="106.78" ybr="74.19" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="108.95" ytl="67.99" xbr="117.16" ybr="73.41" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="30.73" ytl="70.78" xbr="50.09" ybr="77.44" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="15.39" ytl="69.39" xbr="33.20" ybr="76.51" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="223.10" ytl="61.73" xbr="234.21" ybr="66.95" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="107.30" ytl="65.08" xbr="112.52" ybr="68.56" z_order="0">
+    </box>
+  </image>
+  <image id="58" name="pelham_pkwy_w_b_boston_rd__2026_03_14__23_58_29.jpg" width="352" height="240">
+    <box label="bus" source="manual" occluded="0" xtl="185.37" ytl="90.17" xbr="325.89" ybr="158.45" z_order="0">
+      <attribute name="is_school">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="128.48" ytl="92.29" xbr="155.86" ybr="112.22" z_order="0">
+    </box>
+  </image>
+  <image id="59" name="pelham_pkwy_w_b_boston_rd__2026_03_15__00_00_29.jpg" width="352" height="240">
+    <box label="truck" source="manual" occluded="0" xtl="192.63" ytl="107.20" xbr="303.68" ybr="163.99" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">true</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="137.51" ytl="93.52" xbr="169.29" ybr="117.41" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="158.83" ytl="80.64" xbr="186.62" ybr="100.54" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="126.69" ytl="86.65" xbr="147.01" ybr="100.54" z_order="0">
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="282.98" ytl="100.61" xbr="347.54" ybr="120.53" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="31.56" ytl="68.78" xbr="51.05" ybr="76.03" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="16.83" ytl="68.20" xbr="31.97" ybr="76.70" z_order="0">
+    </box>
+  </image>
+  <image id="60" name="pelham_pkwy_w_b_boston_rd__2026_03_15__12_00_30.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="212.91" ytl="93.05" xbr="279.27" ybr="120.20" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">true</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="141.22" ytl="106.28" xbr="174.40" ybr="132.03" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="90.41" ytl="87.72" xbr="109.67" ybr="104.42" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="105.92" ytl="65.96" xbr="115.45" ybr="72.39" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="95.96" ytl="57.46" xbr="103.63" ybr="65.96" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="81.03" ytl="57.66" xbr="89.33" ybr="66.58" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="31.89" ytl="69.90" xbr="51.79" ybr="77.76" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="16.13" ytl="68.24" xbr="33.75" ybr="76.33" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="39.15" ytl="66.99" xbr="58.43" ybr="73.01" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="194.25" ytl="63.26" xbr="209.18" ybr="69.69" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="184.71" ytl="61.58" xbr="197.57" ybr="67.80" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="215.61" ytl="60.98" xbr="229.29" ybr="67.60" z_order="0">
+    </box>
+  </image>
+  <image id="61" name="pelham_pkwy_w_b_boston_rd__2026_03_15__23_58_33.jpg" width="352" height="240">
+    <box label="bus" source="manual" occluded="0" xtl="120.82" ytl="72.87" xbr="206.19" ybr="141.60" z_order="0">
+      <attribute name="is_school">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="202.97" ytl="104.55" xbr="241.62" ybr="137.30" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="31.43" ytl="69.38" xbr="53.26" ybr="78.02" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="17.03" ytl="68.90" xbr="30.95" ybr="76.10" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="190.50" ytl="61.95" xbr="208.97" ybr="68.42" z_order="0">
+    </box>
+  </image>
+  <image id="62" name="pelham_pkwy_w_b_boston_rd__2026_03_16__00_00_33.jpg" width="352" height="240">
+    <box label="van" source="manual" occluded="0" xtl="194.38" ytl="99.18" xbr="243.24" ybr="132.20" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">true</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="144.79" ytl="100.04" xbr="175.02" ybr="122.84" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="128.24" ytl="87.57" xbr="150.07" ybr="105.32" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="194.45" ytl="77.97" xbr="218.93" ybr="90.45" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="15.95" ytl="69.33" xbr="34.67" ybr="76.77" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="32.03" ytl="69.81" xbr="51.46" ybr="77.97" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="170.49" ytl="90.86" xbr="195.39" ybr="106.62" z_order="0">
+    </box>
+  </image>
+  <image id="63" name="pelham_pkwy_w_b_boston_rd__2026_03_16__11_08_36.jpg" width="352" height="240">
+    <box label="truck" source="manual" occluded="0" xtl="91.27" ytl="120.49" xbr="173.89" ybr="199.39" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="truck" source="manual" occluded="0" xtl="222.66" ytl="67.38" xbr="304.35" ybr="116.15" z_order="0">
+      <attribute name="is_delivery">false</attribute>
+      <attribute name="is_firetruck">false</attribute>
+      <attribute name="is_ambulance">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="158.29" ytl="114.73" xbr="206.41" ybr="149.24" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="177.94" ytl="92.49" xbr="211.23" ybr="115.53" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">true</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="133.82" ytl="91.69" xbr="161.90" ybr="110.94" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="154.50" ytl="79.06" xbr="178.14" ybr="95.50" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="144.25" ytl="73.44" xbr="159.69" ybr="87.08" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="118.80" ytl="74.42" xbr="134.64" ybr="86.48" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="214.16" ytl="75.74" xbr="231.16" ybr="86.13" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="121.67" ytl="66.43" xbr="133.29" ybr="75.14" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="37.07" ytl="69.13" xbr="57.81" ybr="77.42" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="21.52" ytl="68.09" xbr="37.28" ybr="75.97" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="3.06" ytl="74.31" xbr="24.42" ybr="82.61" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="199.23" ytl="61.25" xbr="213.95" ybr="66.85" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="192.40" ytl="61.46" xbr="199.23" ybr="67.26" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="116.26" ytl="57.58" xbr="123.11" ybr="63.59" z_order="0">
+    </box>
+  </image>
+  <image id="64" name="pelham_pkwy_w_b_boston_rd__2026_03_16__22_16_38.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="278.75" ytl="138.23" xbr="352.00" ybr="178.30" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="129.50" ytl="96.52" xbr="166.24" ybr="120.26" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="211.08" ytl="99.76" xbr="273.22" ybr="126.63" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="91.36" ytl="77.44" xbr="108.15" ybr="89.44" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="19.62" ytl="68.54" xbr="38.82" ybr="75.28" z_order="0">
+    </box>
+  </image>
+  <image id="65" name="pelham_pkwy_w_b_boston_rd__2026_03_17__01_50_02.jpg" width="352" height="240">
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="290.73" ytl="113.87" xbr="352.00" ybr="144.68" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="15.38" ytl="68.27" xbr="32.22" ybr="75.79" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="30.25" ytl="69.52" xbr="54.09" ybr="77.23" z_order="0">
+    </box>
+  </image>
+  <image id="66" name="pelham_pkwy_w_b_boston_rd__2026_03_17__12_54_05.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="168.89" ytl="170.85" xbr="245.92" ybr="240.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="259.20" ytl="84.75" xbr="290.29" ybr="100.76" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="145.98" ytl="86.83" xbr="171.96" ybr="109.80" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="bus" source="manual" occluded="0" xtl="107.00" ytl="70.82" xbr="130.43" ybr="98.23" z_order="0">
+      <attribute name="is_school">true</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="139.11" ytl="76.72" xbr="157.09" ybr="89.30" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="147.80" ytl="68.48" xbr="161.13" ybr="79.57" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="163.23" ytl="65.19" xbr="171.47" ybr="72.08" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="193.04" ytl="58.45" xbr="208.02" ybr="69.08" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="31.09" ytl="65.23" xbr="55.56" ybr="74.35" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="66.60" ytl="60.91" xbr="86.03" ybr="68.35" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="81.23" ytl="63.31" xbr="102.11" ybr="70.03" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="136.66" ytl="63.07" xbr="147.69" ybr="70.51" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="145.29" ytl="61.87" xbr="151.53" ybr="67.87" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="146.97" ytl="58.03" xbr="153.69" ybr="63.31" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="151.77" ytl="52.52" xbr="159.69" ybr="61.15" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="157.53" ytl="61.15" xbr="165.45" ybr="66.67" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="169.77" ytl="55.40" xbr="178.64" ybr="63.07" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="244.15" ytl="60.02" xbr="258.31" ybr="66.29" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="256.51" ytl="61.10" xbr="268.34" ybr="67.55" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="269.06" ytl="60.56" xbr="286.26" ybr="68.44" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="289.85" ytl="61.81" xbr="296.30" ybr="66.29" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="21.09" ytl="64.17" xbr="36.89" ybr="70.05" z_order="0">
+    </box>
+  </image>
+  <image id="67" name="pelham_pkwy_w_b_boston_rd__2026_03_17__23_58_07.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="201.34" ytl="107.60" xbr="241.24" ybr="138.23" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="bus" source="manual" occluded="0" xtl="96.00" ytl="90.66" xbr="144.03" ybr="143.80" z_order="0">
+      <attribute name="is_school">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="65.40" ytl="60.06" xbr="84.57" ybr="68.12" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="82.60" ytl="60.77" xbr="100.70" ybr="68.66" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="180.19" ytl="78.38" xbr="207.56" ybr="103.26" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="171.69" ytl="72.16" xbr="190.77" ybr="86.46" z_order="0">
+    </box>
+  </image>
+  <image id="68" name="pelham_pkwy_w_b_boston_rd__2026_03_18__00_00_07.jpg" width="352" height="240">
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="147.44" ytl="86.64" xbr="174.10" ybr="107.20" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="65.49" ytl="60.29" xbr="83.41" ybr="67.82" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="82.15" ytl="61.37" xbr="108.68" ybr="69.25" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="285.84" ytl="56.45" xbr="299.04" ybr="64.37" z_order="0">
+    </box>
+  </image>
+  <image id="69" name="pelham_pkwy_w_b_boston_rd__2026_03_18__12_00_11.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="140.13" ytl="121.09" xbr="186.72" ybr="170.16" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="200.38" ytl="109.28" xbr="246.67" ybr="147.49" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="230.20" ytl="86.92" xbr="269.96" ybr="114.90" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="208.15" ytl="80.71" xbr="232.07" ybr="98.10" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="179.88" ytl="88.16" xbr="206.60" ybr="106.80" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="138.58" ytl="79.08" xbr="155.05" ybr="93.24" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="173.15" ytl="73.75" xbr="189.85" ybr="88.60" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="194.49" ytl="74.21" xbr="211.89" ybr="87.67" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="186.37" ytl="69.80" xbr="197.28" ybr="79.08" z_order="0">
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="164.10" ytl="65.40" xbr="175.70" ybr="74.44" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="96.24" ytl="68.44" xbr="117.73" ybr="77.63" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="249.15" ytl="61.44" xbr="269.22" ybr="68.25" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="259.36" ytl="60.00" xbr="273.88" ybr="66.45" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="162.59" ytl="61.44" xbr="171.55" ybr="65.92" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="150.40" ytl="58.21" xbr="157.21" ybr="63.95" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="142.51" ytl="57.31" xbr="149.15" ybr="62.51" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="153.63" ytl="54.63" xbr="159.36" ybr="59.11" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="157.57" ytl="58.75" xbr="164.38" ybr="62.51" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="82.30" ytl="62.15" xbr="104.52" ybr="69.14" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="67.24" ytl="62.69" xbr="84.45" ybr="68.07" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="31.94" ytl="65.56" xbr="55.24" ybr="73.44" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="21.54" ytl="63.05" xbr="38.03" ybr="68.25" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="133.27" ytl="55.89" xbr="140.23" ybr="60.58" z_order="0">
+    </box>
+  </image>
+  <image id="70" name="pelham_pkwy_w_b_boston_rd__2026_03_18__23_58_14.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="157.73" ytl="115.75" xbr="199.88" ybr="161.65" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="195.85" ytl="83.53" xbr="226.99" ybr="102.05" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="168.98" ytl="74.11" xbr="188.04" ybr="87.12" z_order="0">
+    </box>
+  </image>
+  <image id="71" name="pelham_pkwy_w_b_boston_rd__2026_03_19__00_00_14.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="226.46" ytl="96.74" xbr="268.34" ybr="120.09" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="173.27" ytl="72.14" xbr="192.94" ybr="89.90" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="143.28" ytl="83.18" xbr="165.11" ybr="99.73" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="202.54" ytl="63.26" xbr="223.65" ybr="70.94" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="282.19" ytl="59.19" xbr="292.99" ybr="65.90" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="83.78" ytl="60.87" xbr="103.69" ybr="69.98" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="66.74" ytl="60.87" xbr="87.38" ybr="66.86" z_order="0">
+    </box>
+  </image>
+  <image id="72" name="pelham_pkwy_w_b_boston_rd__2026_03_19__23_58_15.jpg" width="352" height="240">
+    <box label="sedan" source="manual" occluded="0" xtl="202.03" ytl="114.73" xbr="250.62" ybr="151.24" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="two_wheeler" source="manual" occluded="0" xtl="284.47" ytl="116.65" xbr="309.76" ybr="146.81" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="83.06" ytl="61.59" xbr="101.77" ybr="69.50" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="60.27" ytl="60.63" xbr="79.46" ybr="68.06" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="220.77" ytl="83.18" xbr="255.32" ybr="105.49" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="250.76" ytl="58.71" xbr="264.44" ybr="65.18" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="286.27" ytl="57.75" xbr="295.87" ybr="63.30" z_order="0">
+    </box>
+  </image>
+  <image id="73" name="pelham_pkwy_w_b_boston_rd__2026_03_20__00_00_15.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="151.84" ytl="144.65" xbr="220.12" ybr="226.59" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="190.73" ytl="100.36" xbr="224.61" ybr="127.97" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="248.28" ytl="102.22" xbr="299.09" ybr="139.11" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="214.63" ytl="83.42" xbr="245.26" ybr="105.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="178.20" ytl="79.02" xbr="203.73" ybr="98.50" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="140.52" ytl="78.81" xbr="157.31" ybr="89.37" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="175.79" ytl="64.18" xbr="191.38" ybr="72.09" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="60.41" ytl="60.75" xbr="78.88" ybr="68.66" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="83.92" ytl="62.66" xbr="101.68" ybr="69.62" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="15.54" ytl="64.58" xbr="29.22" ybr="72.26" z_order="0">
+    </box>
+  </image>
+  <image id="74" name="pelham_pkwy_w_b_boston_rd__2026_03_20__10_54_16.jpg" width="352" height="240">
+    <box label="suv" source="manual" occluded="0" xtl="230.02" ytl="93.99" xbr="271.79" ybr="119.47" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="210.44" ytl="85.32" xbr="235.22" ybr="103.00" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="199.00" ytl="77.87" xbr="219.11" ybr="93.47" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="sedan" source="manual" occluded="0" xtl="185.83" ytl="72.32" xbr="200.56" ybr="83.42" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="165.55" ytl="69.90" xbr="182.88" ybr="82.38" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="van" source="manual" occluded="0" xtl="159.31" ytl="108.37" xbr="200.21" ybr="150.49" z_order="0">
+      <attribute name="is_ambulence">false</attribute>
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_minivan">true</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="140.54" ytl="67.91" xbr="155.42" ybr="78.52" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="320.06" ytl="74.89" xbr="352.00" ybr="94.34" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="207.91" ytl="70.27" xbr="223.64" ybr="80.15" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="221.24" ytl="67.42" xbr="236.67" ybr="75.96" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="suv" source="manual" occluded="0" xtl="16.63" ytl="72.17" xbr="45.63" ybr="81.49" z_order="0">
+      <attribute name="is_taxi">false</attribute>
+      <attribute name="is_police">false</attribute>
+      <attribute name="is_city_vehicle">false</attribute>
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="84.64" ytl="62.68" xbr="104.62" ybr="69.90" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="199.92" ytl="71.83" xbr="207.66" ybr="77.88" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="162.74" ytl="64.40" xbr="173.89" ybr="72.30" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="145.70" ytl="53.56" xbr="164.91" ybr="62.54" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="180.55" ytl="56.81" xbr="191.71" ybr="63.78" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="232.29" ytl="59.60" xbr="244.99" ybr="65.48" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="249.17" ytl="59.91" xbr="265.75" ybr="68.43" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="268.53" ytl="59.44" xbr="285.88" ybr="68.43" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="319.82" ytl="53.69" xbr="347.85" ybr="65.34" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="23.34" ytl="67.57" xbr="47.22" ybr="73.67" z_order="0">
+    </box>
+    <box label="unknown_vehicle" source="manual" occluded="0" xtl="180.59" ytl="204.10" xbr="256.39" ybr="240.00" z_order="0">
+    </box>
+  </image>
+</annotations>
