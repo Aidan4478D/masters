@@ -78,7 +78,7 @@ taxonomy is shown below in Figure~\ref{fig:moves-taxonomy}.
 This MOVES-based taxonomy was used for the remainder of the study as the common 
 label mapping for the dataset and for all subsequent training, testing, and evaluation.
 
-% ==============================================================================
+% ------------------------------------------------------------------------------
 
 \subsection{YOLO-Based Detector Development and Results}
 
@@ -457,7 +457,7 @@ gains were obtained from adding mined hard examples targeting the
 class-specific oversampling and additional hyperparameter changes did not yield 
 further improvement.
 
-% ==============================================================================
+% ------------------------------------------------------------------------------
 
 \subsubsection{Final YOLO Model Selection and Test-Set Evaluation}
 
@@ -482,7 +482,7 @@ summarized by class in Table~\ref{tab:yolo-final-test-results}.
     \label{tab:yolo-final-test-results}
     \begin{tabular}{l c c c c}
         \toprule
-        Class & Images & Instances & AP50 & mAP50--95 \\
+        Class & Images & Instances & AP50 & mAPj \\
         \midrule
         passenger\_car            & 114 & 363  & 0.779 & 0.620 \\
         passenger\_truck          & 117 & 643  & 0.868 & 0.705 \\
@@ -500,5 +500,81 @@ summarized by class in Table~\ref{tab:yolo-final-test-results}.
 With the final YOLOv11s model selected and evaluated on the held-out test set, 
 the next section compares these YOLO results with those obtained from alternative 
 detection architectures.
+
+% ==============================================================================
+
+\subsection{Comparison with Alternative Detection Architectures}
+
+\subsubsection{Faster R-CNN}
+
+Like the YOLO experiments, Faster R-CNN experiments were conducted under the 
+MOVES-based taxonomy. For implementation, torchvision Faster R-CNN models with 
+ResNet-50 feature pyramid backbones were used, including both the standard 
+\verb|fasterrcnn_resnet50_fpn| model and the newer \verb|fasterrcnn_resnet50_fpn_v2|
+variant provided in torchvision. The \verb|fasterrcnn_resnet50_fpn_v2| model is 
+described in the torchvision documentation as an improved Faster R-CNN model with 
+a ResNet-50-FPN backbone \cite{torchvision2016}.
+
+For the Faster R-CNN experiments, the detector head was adapted to the MOVES-based
+taxonomy by replacing the default box predictor with a new predictor for six 
+foreground classes plus background. The training pipeline used the same train/validation
+split as the other detectors. A small-object-oriented anchor generator was used 
+with anchor sizes of 8, 16, 32, 64, and 128 pixels across the feature pyramid, 
+and like the YOLO experiments, images were resized to $768 \times 1280$. Training used 
+AdamW with a learning rate of $2\times10^{-4}$, weight decay of $10^{-4}$, and 
+a cosine annealing learning-rate schedule over 50 epochs. Light augmentation was 
+applied during training, consisting of random horizontal flipping and modest 
+color jitter in the best runs. Batch size was set to 4 for training and 2 for 
+validation. As in the YOLO and transformer experiments, \verb|unknown_vehicle| 
+instances were masked during training and treated as ignore regions during evaluation, 
+following the same ignore-aware procedure outlined in Section~\ref{sec:unknown-vehicles}.
+
+A light targeted grid search was conducted for the Faster R-CNN experiments to 
+evaluate a small number of influential training choices without the cost of a 
+full exhaustive sweep. The search varied four factors: backbone variant 
+(\verb|fasterrcnn_resnet50_fpn_v2| versus \verb|fasterrcnn_resnet50_fpn|), \
+learning rate ($1\times10^{-4}$ and $2\times10^{-4}$), augmentation strategy 
+(random horizontal flipping only versus horizontal flipping with modest color 
+jitter), and the number of trainable backbone layers (3 versus 5). Weight decay
+was held fixed at $1\times10^{-4}$, and each run was trained for 50 epochs under
+the same general pipeline. Table~\ref{tab:faster-rcnn-results} summarizes the 
+strongest Faster R-CNN results discussed in this section, while Appendix~\ref{app:A} 
+reports the full set of grid-search results.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Validation performance of the Faster R-CNN experiments under the MOVES-based taxonomy.}
+    \label{tab:faster-rcnn-results}
+    \begin{tabular}{l c c c c c}
+        \toprule
+        Backbone & Learning Rate & Augmentation & \shortstack{Trainable Backbone\\Layers} & AP50 & \shortstack{mAP\\50--95} \\
+        \midrule
+        ResNet-50-FPN    & 1e-4 & Flip + Color Jitter & 5 & 0.658 & 0.440 \\
+        ResNet-50-FPN-v2 & 2e-4 & Flip + Color Jitter & 5 & 0.706 & 0.509 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\FloatBarrier
+
+Among the tested configurations, the best overall Faster R-CNN result was obtained
+with the \verb|fasterrcnn_resnet50_fpn_v2| backbone using a learning rate of $2\times10^{-4}$,
+flip-plus-color-jitter augmentation, and 5 trainable backbone layers. On the 
+validation set, this model achieved an AP50 of 0.706 and an mAP of 0.509. Other 
+strong \verb|fasterrcnn_resnet50_fpn_v2| runs achieved AP50/mAP values of 0.693/0.500 
+and 0.686/0.497, indicating that the v2 backbone was consistently the strongest 
+Faster R-CNN variant across the tested settings. By comparison, the best standard 
+\verb|fasterrcnn_resnet50_fpn| configuration achieved an AP50 of 0.658 and an mAP 
+of 0.440. 
+
+Although the \verb|fasterrcnn_resnet50_fpn_v2| experiments produced the strongest 
+Faster R-CNN results in this study, their validation performance remained below that 
+of the YOLO baselines reported in Table~\ref{tab:yolo-baseline-results}. In particular,
+the best Faster R-CNN configuration achieved an AP50 of 0.706 and an mAP of 0.509, 
+whereas the strongest baseline YOLO results were already higher before additional 
+refinement. Since the Faster R-CNN baselines did not approach the performance of the 
+leading YOLO configurations, further iteration on the Faster R-CNN models was not
+pursued.
+
+% ------------------------------------------------------------------------------
 
 
