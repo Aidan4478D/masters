@@ -185,7 +185,7 @@ refinement strategies.
 
 % ==============================================================================
 
-\section{Data-Centric Refinements}
+\subsubsection{Data-Centric Refinements}
 
 \textbf{Dataset Refinement}
 
@@ -316,5 +316,149 @@ truck, bus, and motorcycle, while light commercial truck decreased by one instan
 % ------------------------------------------------------------------------------
 
 \textbf{Hard Negative Mining}
+
+The primary refinement strategy that followed was hard negative mining. As indicated
+by the post-refinement validation confusion matrices in Figure~X, the dominant 
+remaining error for both baseline models was the confusion between passenger cars 
+and passenger trucks. To target this directly, the training set was scanned using
+the baseline YOLOv11s model for YOLOv11s refinement and the baseline YOLOv26s 
+model for YOLOv26s refinement to identify images in which a ground-truth passenger
+car was predicted as a passenger truck, or a ground-truth passenger truck was 
+predicted as a passenger car. In this mining step, each ground-truth passenger 
+car or passenger truck was matched to its highest-overlap prediction, and an 
+image was flagged when that match exceeded an IoU threshold of 0.50 but was 
+assigned to the opposite class. Figure~\ref{fig:hard-negative-example} shows an 
+example of a hard negative identified by this procedure, in which vehicles were 
+confused between the passenger car and passenger truck classes.
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5.5cm]{figures/results/5_2_2_hardneg_original.png}
+        \caption{Original training image before hard negative visualization.}
+        \label{fig:hardneg-original}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5.5cm]{figures/results/5_2_2_hardneg_boxes.png}
+        \caption{Same image with hard negative passenger car - passenger truck confusions identified by the mining procedure.}
+        \label{fig:hardneg-boxes}
+    \end{subfigure}
+    \caption{Example of a hard negative identified during passenger car - passenger 
+    truck mining with the YOLOv11s baseline. Subfigure (a) shows the original training image, while subfigure 
+    (b) shows the same image with class-swap detections highlighted. \textcolor{blue}{Blue} 
+    boxes denote passenger trucks predicted as passenger cars, and \textcolor{darkgreen}{green}
+    boxes denote passenger cars predicted as passenger trucks. The number next 
+    to the bounding boxes represents the prediction confidence score. These visually 
+    difficult boundary cases were duplicated back into the training set during 
+    retraining so that the detector would be exposed more frequently to the most 
+    informative class confusions.}
+    \label{fig:hard-negative-example}
+\end{figure}
+
+A sweep was performed over the mining confidence threshold and the number of difficult 
+images retained, and the strongest configuration used a confidence threshold of 
+0.05 with the top 100 difficult images added back into the training set. This 
+targeted refinement produced the best-performing detector in the study. Compared
+with the baseline YOLOv11s experiment, training a new YOLOv11s model on the 
+original training set augmented with the mined hard examples improved validation
+performance from AP50 = 0.804 to 0.857 and from mAP = 0.615 to 0.661. This was 
+the strongest overall result obtained among the YOLO experiments.
+
+Additional data-centric experiments were also explored through selective oversampling
+of weaker classes, including \verb|light_commercial_truck|, \verb|truck|, and \verb|motorcycle|. 
+However, these broader class-specific duplication strategies did not improve 
+upon the best hard-negative-mined configuration. A local grid search was also 
+performed around the baseline hyperparameter settings to determine whether 
+further gains could be obtained through optimization alone, but none of the 
+tested configurations improved upon the best hard-negative-mined YOLOv11s model 
+in either AP50 or mAP. Comparable hard-negative experiments were also conducted 
+using YOLOv26s, with additional variation in the mining confidence threshold 
+and the number of selected images. Although these runs produced small improvements,
+none exceeded the best refined YOLOv11s result. Further refinement runs were 
+also carried out by initializing training from previously trained baseline and 
+refined YOLOv11s and YOLOv26s checkpoints rather than from the standard pretrained 
+Ultralytics weights. In these cases, training generally plateaued at lower AP50 
+and mAP values, even when hyperparameters were varied, indicating that continued
+fine-tuning from existing checkpoints was less effective than retraining a new 
+model on the augmented dataset. Selected strong-performing YOLO results across 
+the YOLOv11s and YOLOv26s backbones, including baseline, mined, oversampled, 
+hyperparameter-search, and continued fine-tuning configurations, are summarized 
+in Table~\ref{tab:yolo-refinement-summary}.
+
+\begingroup
+\small
+\renewcommand{\arraystretch}{1.15}
+\arrayrulecolor{black!25}
+\setlength{\tabcolsep}{4pt}
+
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1.38cm} >{\centering\arraybackslash}p{1.85cm} >{\raggedright\arraybackslash}p{3.05cm} >{\centering\arraybackslash}p{1.0cm} >{\centering\arraybackslash}p{1.15cm} >{\raggedright\arraybackslash}X}
+\caption{Summary of the principal YOLO refinement experiments conducted under the MOVES-based taxonomy. AP50 and mAP are reported at the best validation checkpoint for each run. Extra images refers to the additional images added to the training set.}
+\label{tab:yolo-refinement-summary} \\
+\toprule
+Backbone & Extra Images & Hyperparameters & AP50 & mAP & \multicolumn{1}{c}{Notes} \\
+\midrule
+\endfirsthead
+
+\toprule
+Backbone & Extra Images & Hyperparameters & AP50 & mAP & \multicolumn{1}{c}{Notes} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{6}{r}{Continued on next page} \\
+\midrule
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+YOLOv11s & 0 & Default YOLO & 0.804 & 0.615 & Baseline YOLOv11s model. \\
+\hline
+YOLOv11s & 100 & Default YOLO & 0.857 & 0.661 & Added 100 mined \texttt{passenger\_car} $\leftrightarrow$ \texttt{passenger\_truck} hard negatives identified using the baseline YOLOv11s model. \\
+\hline
+YOLOv11s & 400 & Default YOLO & 0.776 & 0.597 & Added mined \texttt{passenger\_car} $\leftrightarrow$ \texttt{passenger\_truck} hard negatives identified using the baseline YOLOv11s model. Additionally oversampled 300 images containing \texttt{light\_commercial\_truck}, \texttt{truck}, and \texttt{motorcycle} instances. \\
+\hline
+YOLOv11s & 1000 &
+\begin{tabular}[t]{@{}l@{}}
+lr0 = 0.002; \\
+lrf = 0.01; \\
+close\_mosaic = 10; \\
+mixup = 0.0; \\
+copy\_paste = 0.0
+\end{tabular}
+& 0.831 & 0.648 & Fine-tuned from the best-performing YOLOv11s model after adding mined \texttt{passenger\_car} $\leftrightarrow$ \texttt{passenger\_truck} hard negatives, 830 oversampled \texttt{light\_commercial\_truck} and \texttt{truck} examples, and 70 additional images containing \texttt{motorcycle} instances. \\
+\hline
+YOLOv11s & 100 & Default YOLO with horizontal flipping disabled & 0.856 & 0.657 & Best non-default local hyperparameter-search run. \\
+\hline
+YOLOv26s & 0 & Default YOLO & 0.802 & 0.632 & Baseline YOLOv26s model. \\
+\hline
+YOLOv26s & 100 & Default YOLO & 0.818 & 0.637 & Added 100 mined \texttt{passenger\_car} $\leftrightarrow$ \texttt{passenger\_truck} hard negatives identified using the baseline YOLOv26s model. \\
+\hline
+YOLOv26s & 100 &
+\begin{tabular}[t]{@{}l@{}}
+lr0 = 0.001; \\
+cosine LR; \\
+close\_mosaic = 10; \\
+mixup disabled; \\
+freeze = 10
+\end{tabular}
+& 0.843 & 0.640 & Fine-tuned from the baseline YOLOv26s model after adding 100 mined \texttt{passenger\_car} $\leftrightarrow$ \texttt{passenger\_truck} hard negatives. \\
+\end{tabularx}
+
+\arrayrulecolor{black}
+\endgroup
+
+Overall, the data-centric refinement experiments showed that the largest performance 
+gains were obtained from adding mined hard examples targeting the 
+\verb|passenger_car|–\verb|passenger_truck| boundary, whereas broader
+class-specific oversampling and additional hyperparameter changes did not yield 
+further improvement.
+
+% ==============================================================================
+
+\subsubsection{Final YOLO Model Selection and Test-Set Evaluation}
 
 
