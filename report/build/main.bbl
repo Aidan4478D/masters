@@ -2329,6 +2329,7 @@
       \strng{authorbibnamehash}{7ffa0dad9709ac21fa40cfa507db39d1}
       \strng{authornamehash}{7ffa0dad9709ac21fa40cfa507db39d1}
       \strng{authorfullhash}{7ffa0dad9709ac21fa40cfa507db39d1}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -2434,6 +2435,408 @@
       \verb http://arxiv.org/abs/1405.0312
       \endverb
       \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{yolov8_ultralytics}{software}{}
+      \name{author}{3}{}{%
+        {{hash=c5c5e5cd7f4f477f617289b32613deb0}{%
+           family={Jocher},
+           familyi={J\bibinitperiod},
+           given={Glenn},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ec281637802454e8df4de72f3b1ee401}{%
+           family={Chaurasia},
+           familyi={C\bibinitperiod},
+           given={Ayush},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b8739ebbf3f871d471b6720a02ed541f}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{fullhash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{bibnamehash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{authorbibnamehash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{authornamehash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \strng{authorfullhash}{dde928f96d7839eed6effd0fbfbe5acc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ultralytics YOLOv8}
+      \field{version}{8.0.0}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://github.com/ultralytics/ultralytics
+      \endverb
+      \verb{url}
+      \verb https://github.com/ultralytics/ultralytics
+      \endverb
+    \endentry
+    \entry{ultralytics_yolov8_vs_yolov11}{online}{}
+      \name{author}{1}{}{%
+        {{hash=88f069848482a556e416f713d2819905}{%
+           family={{Ultralytics}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{88f069848482a556e416f713d2819905}
+      \strng{fullhash}{88f069848482a556e416f713d2819905}
+      \strng{bibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorbibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authornamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorfullhash}{88f069848482a556e416f713d2819905}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Compare {YOLOv}8 and {YOLO}11 for object detection. Explore their performance, architecture, and best-use cases to find the right model for your needs.}
+      \field{langid}{english}
+      \field{shorttitle}{{YOLOv}8 vs {YOLO}11}
+      \field{title}{{YOLOv}8 vs {YOLO}11: A Comprehensive Technical Comparison of Real-Time Vision Models}
+      \field{urlday}{6}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.ultralytics.com/compare/yolov8-vs-yolo11/
+      \endverb
+      \verb{url}
+      \verb https://docs.ultralytics.com/compare/yolov8-vs-yolo11/
+      \endverb
+    \endentry
+    \entry{yolo26_ultralytics}{software}{}
+      \name{author}{2}{}{%
+        {{hash=c5c5e5cd7f4f477f617289b32613deb0}{%
+           family={Jocher},
+           familyi={J\bibinitperiod},
+           given={Glenn},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b8739ebbf3f871d471b6720a02ed541f}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ffa0dad9709ac21fa40cfa507db39d1}
+      \strng{fullhash}{7ffa0dad9709ac21fa40cfa507db39d1}
+      \strng{bibnamehash}{7ffa0dad9709ac21fa40cfa507db39d1}
+      \strng{authorbibnamehash}{7ffa0dad9709ac21fa40cfa507db39d1}
+      \strng{authornamehash}{7ffa0dad9709ac21fa40cfa507db39d1}
+      \strng{authorfullhash}{7ffa0dad9709ac21fa40cfa507db39d1}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Ultralytics YOLO26}
+      \field{version}{26.0.0}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://github.com/ultralytics/ultralytics
+      \endverb
+      \verb{url}
+      \verb https://github.com/ultralytics/ultralytics
+      \endverb
+    \endentry
+    \entry{ultralytics_coco}{online}{}
+      \name{author}{1}{}{%
+        {{hash=88f069848482a556e416f713d2819905}{%
+           family={{Ultralytics}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{88f069848482a556e416f713d2819905}
+      \strng{fullhash}{88f069848482a556e416f713d2819905}
+      \strng{bibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorbibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authornamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorfullhash}{88f069848482a556e416f713d2819905}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Explore the {COCO} dataset for object detection and segmentation. Learn about its structure, usage, pretrained models, and key features.}
+      \field{langid}{english}
+      \field{title}{{COCO} Dataset}
+      \field{urlday}{6}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.ultralytics.com/datasets/detect/coco/
+      \endverb
+      \verb{url}
+      \verb https://docs.ultralytics.com/datasets/detect/coco/
+      \endverb
+    \endentry
+    \entry{torchvision2016}{software}{}
+      \name{author}{2}{}{%
+        {{hash=cdce0fa85733fcf328ae796ce7bf4381}{%
+           family={maintainers},
+           familyi={m\bibinitperiod},
+           given={TorchVision},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a8b2e39951bba535f313f563f6abaef6}{%
+           family={contributors},
+           familyi={c\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{f8ef4436bd7a4049e271dc9bd501a5af}
+      \strng{fullhash}{f8ef4436bd7a4049e271dc9bd501a5af}
+      \strng{bibnamehash}{f8ef4436bd7a4049e271dc9bd501a5af}
+      \strng{authorbibnamehash}{f8ef4436bd7a4049e271dc9bd501a5af}
+      \strng{authornamehash}{f8ef4436bd7a4049e271dc9bd501a5af}
+      \strng{authorfullhash}{f8ef4436bd7a4049e271dc9bd501a5af}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/pytorch/vision}}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{TorchVision: PyTorch's Computer Vision library}
+      \field{year}{2016}
+    \endentry
+    \entry{detr2020}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=0cb223da593b5653feac6f6eabcbe82d}{%
+           family={Carion},
+           familyi={C\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e5dfae4582081d649e3a0d5342050016}{%
+           family={Massa},
+           familyi={M\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a345e20a460089c920bb74098ed450db}{%
+           family={Synnaeve},
+           familyi={S\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=26e026be6d5366fce878100ba03d68c1}{%
+           family={Usunier},
+           familyi={U\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=28c5859f568975f174c8668976ed369d}{%
+           family={Kirillov},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=23bcbde34947ed4fd04cc55ff956c83e}{%
+           family={Zagoruyko},
+           familyi={Z\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{24ed5b818d7fb16505802281de3814d4}
+      \strng{fullhash}{53851df57e601a457251e3876b7dab6a}
+      \strng{bibnamehash}{53851df57e601a457251e3876b7dab6a}
+      \strng{authorbibnamehash}{53851df57e601a457251e3876b7dab6a}
+      \strng{authornamehash}{24ed5b818d7fb16505802281de3814d4}
+      \strng{authorfullhash}{53851df57e601a457251e3876b7dab6a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{End-to-End Object Detection with Transformers}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2005.12872
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2005.12872
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2005.12872
+      \endverb
+    \endentry
+    \entry{deformabledetr2020}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=19309053ea27cb5af23921c399ac27f8}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Xizhou},
+           giveni={X\bibinitperiod}}}%
+        {{hash=023e479291de1262454c46e62e12f856}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={Weijie},
+           giveni={W\bibinitperiod}}}%
+        {{hash=1d33474fafd3bc29d4e8af08cf36e8d4}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Lewei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=cd1e4e648b0074e1d1f4427d70297b0a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Bin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e88500bd6ca50746707a22554761b61a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiaogang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=c80dbb87ee6058c0b81ab8ee017f1170}{%
+           family={Dai},
+           familyi={D\bibinitperiod},
+           given={Jifeng},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{448dfd88f069b30cc5e359d838c6d5c2}
+      \strng{fullhash}{3774235f764c9664761df5c83da5c757}
+      \strng{bibnamehash}{3774235f764c9664761df5c83da5c757}
+      \strng{authorbibnamehash}{3774235f764c9664761df5c83da5c757}
+      \strng{authornamehash}{448dfd88f069b30cc5e359d838c6d5c2}
+      \strng{authorfullhash}{3774235f764c9664761df5c83da5c757}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Deformable DETR: Deformable Transformers for End-to-End Object Detection}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2010.04159
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2010.04159
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2010.04159
+      \endverb
+    \endentry
+    \entry{rtdetr2024}{misc}{}
+      \name{author}{8}{}{%
+        {{hash=dd449acf43b8e5198ca01b979b7d908c}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yian},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=a29eded43211e40a6d0b909e6032ffb7}{%
+           family={Lv},
+           familyi={L\bibinitperiod},
+           given={Wenyu},
+           giveni={W\bibinitperiod}}}%
+        {{hash=aa4f6ec48394a2ebef11335f9a55f6e7}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Shangliang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0822be5805029608cad03d5cb413a753}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Jinman},
+           giveni={J\bibinitperiod}}}%
+        {{hash=61c83935c5db8545f0d25d074f8e34d1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Guanzhong},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2ce95337f93907a139813f02c93ba30b}{%
+           family={Dang},
+           familyi={D\bibinitperiod},
+           given={Qingqing},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=c4d8c39e3a63acab6d94c490b6d45028}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f12458352bf48d8ebe2ba46b11310c19}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6641d7cadcf152eda77ae2bb481384d3}
+      \strng{fullhash}{ac48645592f0c750b0b1e681728883bc}
+      \strng{bibnamehash}{6641d7cadcf152eda77ae2bb481384d3}
+      \strng{authorbibnamehash}{6641d7cadcf152eda77ae2bb481384d3}
+      \strng{authornamehash}{6641d7cadcf152eda77ae2bb481384d3}
+      \strng{authorfullhash}{ac48645592f0c750b0b1e681728883bc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{DETRs Beat YOLOs on Real-time Object Detection}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2304.08069
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2304.08069
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2304.08069
+      \endverb
+    \endentry
+    \entry{rtdetrv22024}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=a29eded43211e40a6d0b909e6032ffb7}{%
+           family={Lv},
+           familyi={L\bibinitperiod},
+           given={Wenyu},
+           giveni={W\bibinitperiod}}}%
+        {{hash=dd449acf43b8e5198ca01b979b7d908c}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yian},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=72d85ef6854361c492604cab6c6ab683}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Qinyao},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=c9ffc23f3b57f588059c9f0173756b43}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Kui},
+           giveni={K\bibinitperiod}}}%
+        {{hash=61c83935c5db8545f0d25d074f8e34d1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Guanzhong},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c4d8c39e3a63acab6d94c490b6d45028}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e198efd745c5027ba42528deac601f2}
+      \strng{fullhash}{d33c24423bd41d493b02997926a676ac}
+      \strng{bibnamehash}{d33c24423bd41d493b02997926a676ac}
+      \strng{authorbibnamehash}{d33c24423bd41d493b02997926a676ac}
+      \strng{authornamehash}{9e198efd745c5027ba42528deac601f2}
+      \strng{authorfullhash}{d33c24423bd41d493b02997926a676ac}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{RT-DETRv2: Improved Baseline with Bag-of-Freebies for Real-Time Detection Transformer}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2407.17140
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2407.17140
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2407.17140
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

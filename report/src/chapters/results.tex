@@ -547,7 +547,7 @@ reports the full set of grid-search results.
     \label{tab:faster-rcnn-results}
     \begin{tabular}{l c c c c c}
         \toprule
-        Backbone & Learning Rate & Augmentation & \shortstack{Trainable Backbone\\Layers} & AP50 & \shortstack{mAP\\50--95} \\
+        Backbone & Learning Rate & Augmentation & \shortstack{Trainable\\Backbone\\Layers} & AP50 & \shortstack{mAP} \\
         \midrule
         ResNet-50-FPN    & 1e-4 & Flip + Color Jitter & 5 & 0.658 & 0.440 \\
         ResNet-50-FPN-v2 & 2e-4 & Flip + Color Jitter & 5 & 0.706 & 0.509 \\
@@ -577,4 +577,72 @@ pursued.
 
 % ------------------------------------------------------------------------------
 
+\subsubsection{Detection Transformer (DETR)}
 
+Three transformer-based detectors were evaluated under the MOVES-based taxonomy: 
+SenseTime Deformable DETR, Peking University RT-DETR, and Peking University RT-DETRv2. 
+These models were selected to provide a comparison across recent DETR-style detector 
+designs within a common implementation framework. Deformable DETR served as an 
+established multi-scale transformer baseline, while RT-DETR and RT-DETRv2 represented 
+more efficiency-oriented DETR variants intended to improve the speed-accuracy tradeoff 
+\cite{detr2020,deformabledetr2020,rtdetr2024,rtdetrv22024}.
+
+For these experiments, the detector backbone was kept frozen for the first 10 epochs 
+and then unfrozen for the remainder of training, with the full model trained for 50 
+epochs using AdamW and a weight decay of $10^{-4}$. A cosine learning-rate schedule
+was used, and learning rates were selected through iterative tuning rather than 
+exhaustive search, since a single training run required several hours. In practice, 
+parameter settings were chosen by monitoring whether validation performance remained 
+stable and continued improving over training, while avoiding configurations that caused
+the detector to stall or degrade early. The best learning rates for Deformable DETR 
+and RT-DETR are summarized in Table~X.
+
+Training augmentation was ultimately kept light, consisting primarily of horizontal
+flipping and modest brightness/contrast perturbations. This decision was motivated 
+by earlier experiments using a heavier Albumentations pipeline, which suggested
+that transformer-based detectors were sensitive to stronger image transformations
+in this low-resolution traffic-camera setting. In this section, heavier Albumentations 
+pipeline refers to the augmentation setup used in the first Deformable DETR 
+experiment, and lighter Albumentations pipeline refers to the simplified setup used
+in the subsequent experiments. The exact transform definitions are listed in Appendix~\ref{app:B}.
+As in the YOLO and R-CNN experiments, \verb|unknown_vehicle| instances were masked 
+during training, and treated as ignore regions during evaluation.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Validation performance of the transformer-based detector experiments under the final 6-class formulation. All runs were trained for 50 epochs with 10 warmup epochs.}
+    \label{tab:detr-results}
+    \small
+    \renewcommand{\arraystretch}{1.15}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l c c c c c c}
+        \toprule
+        Backbone & \shortstack{Head LR\\(Frozen)} & \shortstack{Backbone LR\\(Unfrozen)} & \shortstack{Head LR\\(Unfrozen)} & Augmentations & AP50 & mAP \\
+        \midrule
+        SenseTime/deformable-detr & $1\times10^{-4}$ & $1\times10^{-5}$ & $7\times10^{-5}$ & Heavy & 0.428 & 0.318 \\
+        SenseTime/deformable-detr & $1\times10^{-4}$ & $1\times10^{-5}$ & $7\times10^{-5}$ & Light & 0.564 & 0.421 \\
+        PekingU/rtdetr\_r50vd     & $1\times10^{-5}$ & $5\times10^{-6}$ & $7\times10^{-6}$ & Light & 0.596 & 0.437 \\
+        PekingU/rtdetr\_v2\_r50vd & $1\times10^{-5}$ & $5\times10^{-6}$ & $7\times10^{-6}$ & Light & 0.688 & 0.516 \\
+        \bottomrule
+    \end{tabular}%
+    }
+\end{table}
+\FloatBarrier
+
+The transformer experiments showed a clear progression across the tested DETR 
+variants. For SenseTime Deformable DETR, an initial 50-epoch run achieved an AP50 
+of 0.428 and an mAP of 0.318, while a second run with less aggressive image 
+transforms improved performance to 0.564 AP50 and 0.421 mAP. Additional 
+hyperparameter and augmentation adjustments were also tested, but none exceeded 
+this result. Under the same 50-epoch training schedule, RT-DETR achieved an AP50 
+of 0.596 and an mAP of 0.437, and RT-DETRv2 produced the strongest transformer-based
+result in this study, reaching an AP50 of 0.688 and an mAP of 0.516.
+
+Although RT-DETRv2 was the strongest transformer-based model evaluated, its 
+performance still remained below the baseline YOLO results reported in 
+Table~\ref{tab:yolo-baseline-results}. Accordingly, the DETR models were not 
+pursued further as candidates for the final detector.
+
+% ==============================================================================
+
+\subsection{}

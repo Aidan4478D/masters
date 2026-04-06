@@ -10,11 +10,11 @@
 \contentsline {subsection}{\numberline {3.2}Camera Hardware}{9}{}%
 \contentsline {subsection}{\numberline {3.3}Dataset Curation}{10}{}%
 \contentsline {subsubsection}{\numberline {3.3.1}Camera Selection}{10}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Image Collection}{13}{}%
-\contentsline {subsection}{\numberline {3.4}Data Labeling}{15}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Image Collection}{11}{}%
+\contentsline {subsection}{\numberline {3.4}Data Labeling}{14}{}%
 \contentsline {subsubsection}{\numberline {3.4.1}Labeling Class Structure}{16}{}%
-\contentsline {subsubsection}{\numberline {3.4.2}Attributes}{19}{}%
-\contentsline {subsubsection}{\numberline {3.4.3}Unknown Vehicle Class}{20}{}%
+\contentsline {subsubsection}{\numberline {3.4.2}Attributes}{20}{}%
+\contentsline {subsubsection}{\numberline {3.4.3}Unknown Vehicle Class}{21}{}%
 \contentsline {subsubsection}{\numberline {3.4.4}Annotation Procedure}{23}{}%
 \contentsline {subsection}{\numberline {3.5}Dataset Statistics}{23}{}%
 \contentsline {subsection}{\numberline {3.6}Dataset Splits}{25}{}%
@@ -31,4 +31,15 @@
 \contentsline {subsubsection}{\numberline {4.2.2}Confusion Matrix}{34}{}%
 \contentsline {subsubsection}{\numberline {4.2.3}Precision-Recall Curve}{37}{}%
 \contentsline {subsubsection}{\numberline {4.2.4}Average Precision and mAP}{37}{}%
-\contentsline {section}{References}{40}{}%
+\contentsline {subsection}{\numberline {4.3}Handling Unknown Vehicles}{40}{}%
+\contentsline {section}{\numberline {5}Experimentation and Results}{40}{}%
+\contentsline {subsection}{\numberline {5.1}MOVES-based Taxonomy}{41}{}%
+\contentsline {subsection}{\numberline {5.2}YOLO-Based Detector Development and Results}{42}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Baseline YOLO Experiments}{42}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Data-Centric Refinements}{44}{}%
+\contentsline {subsubsection}{\numberline {5.2.3}Final YOLO Model Selection and Test-Set Evaluation}{51}{}%
+\contentsline {subsection}{\numberline {5.3}Comparison with Alternative Detection Architectures}{51}{}%
+\contentsline {subsubsection}{\numberline {5.3.1}Faster R-CNN}{51}{}%
+\contentsline {subsubsection}{\numberline {5.3.2}Detection Transformer (DETR)}{53}{}%
+\contentsline {subsection}{\numberline {5.4}}{54}{}%
+\contentsline {section}{References}{54}{}%
