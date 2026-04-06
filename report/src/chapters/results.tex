@@ -461,4 +461,44 @@ further improvement.
 
 \subsubsection{Final YOLO Model Selection and Test-Set Evaluation}
 
+Based on the baseline comparisons and subsequent data-centric refinement experiments, 
+the final detector selected for this study was YOLOv11s, saved as checkpoint 
+\verb|vehicle_6c_v11s11|. For readability, this checkpoint is referred to 
+throughout the remainder of the thesis as the final YOLOv11s model. Among all 
+YOLO experiments, this configuration achieved the strongest validation performance,
+with an AP50 of 0.857 and an mAP of 0.661.
+
+Although additional refinement runs were explored after this stage, none improved 
+upon the validation performance of the final YOLOv11s model. It was therefore 
+selected for all remaining evaluations and was assessed once on the held-out test
+set, which had been reserved exclusively for final evaluation. The test set was 
+evaluated using the same ignore-aware procedure used for validation, as outlined 
+in Section~\ref{sec:unknown-vehicles}. The resulting test-set performance is 
+summarized by class in Table~\ref{tab:yolo-final-test-results}.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Held-out test-set performance of the final YOLOv11s model, reported by class.}
+    \label{tab:yolo-final-test-results}
+    \begin{tabular}{l c c c c}
+        \toprule
+        Class & Images & Instances & AP50 & mAP50--95 \\
+        \midrule
+        passenger\_car            & 114 & 363  & 0.779 & 0.620 \\
+        passenger\_truck          & 117 & 643  & 0.868 & 0.705 \\
+        light\_commercial\_truck  & 62  & 110  & 0.867 & 0.703 \\
+        truck                     & 42  & 65   & 0.926 & 0.701 \\
+        bus                       & 44  & 67   & 0.895 & 0.703 \\
+        motorcycle                & 5   & 5    & 0.298 & 0.209 \\
+        \midrule
+        all                       & 120 & 1253 & 0.772 & 0.607 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\FloatBarrier
+
+With the final YOLOv11s model selected and evaluated on the held-out test set, 
+the next section compares these YOLO results with those obtained from alternative 
+detection architectures.
+
 
