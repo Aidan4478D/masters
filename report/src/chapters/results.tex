@@ -184,3 +184,137 @@ whether these baseline results could be further improved through data-centric
 refinement strategies.
 
 % ==============================================================================
+
+\section{Data-Centric Refinements}
+
+\textbf{Dataset Refinement}
+
+After establishing the baseline YOLO results, the next stage of experimentation 
+focused on data-centric refinement guided by manual inspection of model errors. 
+Rather than changing the detector architecture, this stage used the baseline 
+confusion patterns to identify which types of examples required closer review. 
+Particular attention was given to the dominant confusion between passenger car 
+and passenger truck, as well as to vehicles that appeared visually ambiguous in 
+the original imagery. Model predictions that did not match the validation set 
+label were not used to relabel the dataset automatically, but instead served to 
+flag candidate examples for manual review. The validation confusion matrices 
+before dataset refinement for the baseline YOLOv11s and YOLOv26s models are 
+shown in Figure~\ref{fig:val-cm-pre}. These predictions followed the same ignore-aware
+evaluation outlined in Section~\ref{sec:unknown-vehicles}.
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=7.5cm]{figures/results/5_2_2_v11s_cm_pre.png}
+        \caption{Validation confusion matrix for the baseline YOLOv11s model before dataset refinement.}
+        \label{fig:val-cm-11s-pre}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=7.5cm]{figures/results/5_2_2_v26s_cm_pre.png}
+        \caption{Validation confusion matrix for the baseline YOLOv26s model before dataset refinement}
+        \label{fig:val-cm-26s-pre}
+    \end{subfigure}
+    \caption{Ignore-aware validation confusion matrices for the baseline YOLOv11s
+             and YOLOv26s models prior to dataset refinement. No annotations were 
+             modified directly from model predictions. Instead, questionable cases 
+             were reviewed individually and corrected only when a labeling 
+             issue was confirmed.}
+    \label{fig:val-cm-pre}
+\end{figure}
+\FloatBarrier
+
+After this review, the dataset was refined by reassessing flagged examples individually.
+Vehicles whose labels could be determined more confidently from the imagery were 
+reassigned to the appropriate class, while vehicles that remained too ambiguous 
+were labeled as \verb|unknown_vehicle| and excluded from the learnable class set. 
+The post-refinement validation confusion matrices for the YOLOv11s and YOLOv26s 
+models are shown in Figure~\ref{fig:val-cm-post}. Relative to the pre-refinement 
+results, these matrices show larger values along the main diagonal and smaller 
+values in many off-diagonal cells, suggesting improved class consistency after 
+dataset refinement. In particular, the number of cases in which passenger cars 
+were predicted for background regions was reduced.
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=7.5cm]{figures/results/5_2_2_v11s_cm_post.png}
+        \caption{Validation confusion matrix for the baseline YOLOv11s model after dataset refinement.}
+        \label{fig:val-cm-11s-post}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=7.5cm]{figures/results/5_2_2_v26s_cm_post.png}
+        \caption{Validation confusion matrix for the baseline YOLOv26s model after dataset refinement}
+        \label{fig:val-cm-26s-post}
+    \end{subfigure}
+    \caption{Ignore-aware validation confusion matrices for the baseline YOLOv11s
+             and YOLOv26s models prior to dataset refinement.}
+    \label{fig:val-cm-post}
+\end{figure}
+\FloatBarrier
+
+As shown in Table~\ref{tab:dataset-refinement-results}, the dataset refinement 
+step led to small but consistent improvements in validation performance for both 
+baseline models. YOLOv11s improved from an AP50 of 0.785 to 0.795 and from an 
+mAP of 0.606 to 0.613, while YOLOv26s improved from an AP50 of 0.774 to 0.781 
+and from an mAP of 0.622 to 0.627. These gains were modest, but they support 
+the conclusion that manually reassessing flagged examples and preserving genuinely 
+ambiguous vehicles as \verb|unknown_vehicle| improved dataset quality.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Validation performance before and after dataset refinement for the 
+             baseline YOLOv11s and YOLOv26s models. The best AP50 and mAP values 
+            for each model are displayed in bold.}
+    \label{tab:dataset-refinement-results}
+    \begin{tabular}{l l c c}
+        \toprule
+        Base Model & Dataset Version & AP50 & mAP \\
+        \midrule
+        YOLOv11s & Pre-refinement  & 0.785 & 0.606 \\
+                 & Post-refinement & \textbf{0.795} & \textbf{0.613} \\
+        \midrule
+        YOLOv26s & Pre-refinement  & 0.774 & 0.622 \\
+                 & Post-refinement & \textbf{0.781} & \textbf{0.627} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\FloatBarrier
+
+Table~\ref{tab:val-class-counts-refinement} summarizes the validation-set class 
+counts before and after dataset refinement. The number of labeled instances increased 
+slightly in most supervised classes, including passenger car, passenger truck, 
+truck, bus, and motorcycle, while light commercial truck decreased by one instance.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Validation-set class counts before and after dataset refinement.}
+    \label{tab:val-class-counts-refinement}
+    \begin{tabular}{l c c}
+        \toprule
+        Class & Pre-Refinement & Post-Refinement \\
+        \midrule
+        passenger\_car            & 304  & 311  \\
+        passenger\_truck          & 521  & 524  \\
+        light\_commercial\_truck  & 94   & 93   \\
+        truck                     & 119  & 120  \\
+        bus                       & 50   & 53   \\
+        motorcycle                & 4    & 6    \\
+        unknown\_vehicle          & 833  & 928  \\
+        \midrule
+        all                       & 1925 & 2035 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\FloatBarrier
+
+% ------------------------------------------------------------------------------
+
+\textbf{Hard Negative Mining}
+
+
