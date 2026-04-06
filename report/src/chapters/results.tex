@@ -79,3 +79,108 @@ This MOVES-based taxonomy was used for the remainder of the study as the common
 label mapping for the dataset and for all subsequent training, testing, and evaluation.
 
 % ==============================================================================
+
+\subsection{YOLO-Based Detector Development and Results}
+
+\subsubsection{Baseline YOLO Experiments}
+
+The first YOLO experiments under the MOVES-based taxonomy were conducted by 
+fine-tuning baseline YOLO models on the training split and validating them on 
+the validation split defined in Section \ref{sec:data-splits}. Each model was 
+trained to predict the six final vehicle classes --- passenger car, passenger truck, 
+light commercial truck, bus, truck, and motorcycle --- directly from traffic-camera 
+images. The purpose of this stage was to assess whether YOLO could learn the 
+6-class formulation effectively and provide a strong starting point for later 
+refinement.
+
+To evaluate CNN-based one-stage detectors in a controlled and comparable way, 
+this study focused on YOLOv8, YOLO11, and YOLO26, which represent three distinct 
+generations of the Ultralytics YOLO family. YOLOv8 (2023) was selected as a strong and 
+widely adopted baseline, since it introduced the anchor-free split head and was 
+designed as a general-purpose real-time detector with a favorable speed-accuracy 
+tradeoff \cite{yolov8_ultralytics} \cite{ultralytics_yolov8_vs_yolov11}. 
+YOLO11 (2024) was included because it is a newer Ultralytics detector that builds 
+on earlier YOLO models with improved feature extraction, training efficiency, and 
+parameter efficiency, making it a natural candidate for higher accuracy under 
+the same general framework \cite{yolo11_ultralytics} \cite{ultralytics_yolov8_vs_yolov11}. 
+As of April 2026, YOLO26 is Ultralytics' most recent YOLO model, tested as an 
+edge-oriented variant designed for simpler deployment, with end-to-end NMS-free 
+inference and targeted improvements for efficiency and small-object recognition 
+\cite{yolo26_ultralytics} \cite{ultralytics_yolov8_vs_yolov11}. 
+Evaluating these three models therefore allowed comparison across a 
+consistent detector family while covering a useful range of design priorities: 
+a mature baseline (YOLOv8), a newer accuracy-focused refinement (YOLO11), and a
+deployment-oriented architecture with simplified inference (YOLO26). This made 
+them well suited for the present task, which required not only accurate vehicle 
+detection but also practical applicability to traffic-monitoring and counting 
+workflows. To enable a more controlled comparison across YOLO generations, all 
+experiments in this subsection used the small (S) variant, which provided a 
+consistent mid-scale tradeoff between model capacity, compute, and efficiency 
+\cite{ultralytics_coco}.
+
+To establish baseline performance, each YOLO variant was fine-tuned under the 
+same general training configuration. All baseline models were trained for 50 
+epochs with a batch size of 8, since the validation mAP curves indicated that 
+performance had largely plateaued by that point. Unless otherwise noted, the 
+same default augmentation pipeline was used across all YOLO variants so that 
+observed differences would primarily reflect architectural differences rather 
+than changes in training conditions. During training and evaluation, images 
+were resized to $768 \times 1280$, and bounding-box annotations were converted from 
+the original CVAT XML format into normalized YOLO label files under the final 
+6-class mapping. Instances labeled \verb|unknown_vehicle| were not treated as 
+a supervised detector class and were instead handled according to the ignore-region
+procedure described in Section \ref{sec:unknown-vehicles}.
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=4.5cm]{figures/results/5_2_1_baseline_overlayed_ap50.png}
+        \caption{Validation AP50 versus training epoch for the baseline YOLOv8s, YOLOv11s, and YOLOv26s models.}
+        \label{fig:baseline-ap50s}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=4.5cm]{figures/results/5_2_1_baseline_overlayed_map.png}
+        \caption{Validation mAP versus training epoch for the baseline YOLOv8s, YOLOv11s, and YOLOv26s models.}
+        \label{fig:baseline-maps}
+    \end{subfigure}
+    \caption{Validation AP50 and mAP over 50 epochs for the baseline YOLOv8s, 
+             YOLOv11s, and YOLOv26s models. All three models showed rapid early 
+             improvement followed by a gradual plateau, with YOLOv26s achieving the 
+             strongest baseline mAP and YOLOv11s remaining competitive in AP50.}
+    \label{fig:baseline-yolo-charts}
+\end{figure}
+
+\FloatBarrier
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Baseline validation performance of the three YOLO model variants under 
+             the final 6-class formulationm reported at the checkpoint with the best 
+             validation mAP for each model}
+    \label{tab:yolo-baseline-results}
+    \begin{tabular}{l c c c}
+        \toprule
+        Model Checkpoint & Epochs & AP50 & mAP \\
+        \midrule
+        YOLOv8s  & 50 & 0.750 & 0.606 \\
+        YOLOv11s & 50 & 0.804 & 0.615 \\
+        YOLOv26s & 50 & 0.802 & 0.632 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+As shown in Table~\ref{tab:yolo-baseline-results} and Figure~\ref{fig:baseline-yolo-charts}, 
+all three baseline YOLO variants converged within 50 epochs on the validation set 
+under the MOVES-based taxonomy. YOLOv8s achieved an AP50 of 0.750 and a mAP of 0.606,
+while YOLOv11s improved this to an AP50 of 0.804 and a mAP of 0.615. YOLOv26s 
+produced the highest baseline mAP at 0.632, while remaining close to YOLOv11s 
+in AP50 with a value of 0.802. Since YOLOv11s and YOLOv26s represented the strongest 
+baseline models in terms of AP50 and mAP, respectively, both were carried forward 
+into the subsequent refinement experiments. The next stage of experiments investigated
+whether these baseline results could be further improved through data-centric 
+refinement strategies.
+
+% ==============================================================================
