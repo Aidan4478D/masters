@@ -645,4 +645,130 @@ pursued further as candidates for the final detector.
 
 % ==============================================================================
 
-\subsection{}
+\subsection{Model Robustness and Cross-Camera Generalization}
+
+After selecting the final detector, additional experiments were conducted to evaluate 
+its robustness and generalization beyond the original validation split. These 
+experiments focused on two questions. First, the sensitivity of the detector to
+confidence-threshold and non-maximum-suppression settings was examined to determine 
+how stable performance remained under different inference configurations. Second, 
+cross-camera generalization was assessed using a manually annotated benchmark of 
+75 images collected from three previously unseen inference cameras. These images 
+were sampled between March 12 and March 20, 2026, with 25 images per camera selected 
+at varying times of day in order to capture a range of traffic and viewing conditions.
+
+\subsubsection{Confidence Threshold and NMS Sensitivity Analysis}
+
+To evaluate how dependent the final detector was on inference-time settings, a 
+threshold and non-maximum suppression (NMS) sensitivity analysis was performed 
+using the final YOLOv11s model. In this context, the confidence threshold determines
+the minimum prediction confidence required for a detection to be kept, while 
+the NMS IoU threshold controls how aggressively overlapping detections are suppressed 
+during post-processing \cite{ultralytics_validation}. 
+Lower confidence thresholds retain more candidate detections,
+typically increasing recall at the expense of additional false positives, whereas 
+higher thresholds are more selective. Similarly, lower NMS IoU thresholds suppress
+overlapping boxes more aggressively, while higher values allow more overlapping 
+detections to remain.
+
+This tradeoff is illustrated qualitatively in Figure~\ref{fig:nms-threshold-example}.
+Each panel shows the same traffic scene under a different inference configuration, 
+with red boxes indicating detections and adjacent numbers indicating confidence scores.
+In Figure~\ref{fig:nms-threshold-example-a}, a very low confidence threshold 
+(\verb|conf| = 0.001) and a relatively permissive NMS IoU threshold 
+(\verb|det_iou| = 0.70) retain many detections, including several overlapping boxes 
+around the same vehicles. In Figure~\ref{fig:nms-threshold-example-b}, the confidence
+threshold remains at 0.001 but the NMS IoU threshold is reduced to 0.40, producing 
+fewer overlapping detections. In Figure~\ref{fig:nms-threshold-example-c}, the NMS
+IoU threshold remains at 0.40 while the confidence threshold is increased to 0.10, 
+removing many weaker detections and leaving a sparser set of predictions. Together,
+these examples show how stricter inference settings can reduce duplicate detections 
+and visual clutter, but may also suppress vehicles that would otherwise be counted.
+
+\begin{figure}[!htbp]
+    \centering
+
+    \begin{subfigure}{0.92\textwidth}
+        \centering
+        \includegraphics[height=5.5cm]{figures/results/5_4_1_nms_th_top.png}
+        \caption{Same scene evaluated with \protect\texttt{conf} = 0.001 and \protect\texttt{det\_iou} = 0.70.}
+        \label{fig:nms-threshold-example-a}
+    \end{subfigure}
+
+    \vspace{0.75em}
+
+    \begin{subfigure}{0.92\textwidth}
+        \centering
+        \includegraphics[height=5.5cm]{figures/results/5_4_1_nms_th_mid.png}
+        \caption{Same scene evaluated with \protect\texttt{conf} = 0.001 and \protect\texttt{det\_iou} = 0.40.}
+        \label{fig:nms-threshold-example-b}
+    \end{subfigure}
+
+    \vspace{0.75em}
+
+    \begin{subfigure}{0.92\textwidth}
+        \centering
+        \includegraphics[height=5.5cm]{figures/results/5_4_1_nms_th_bot.png}
+        \caption{Same scene evaluated with \protect\texttt{conf} = 0.10 and \protect\texttt{det\_iou} = 0.40.}
+        \label{fig:nms-threshold-example-c}
+    \end{subfigure}
+
+    \caption{Qualitative example of confidence-threshold and NMS sensitivity for the final YOLOv11s model. Each panel shows the same traffic scene under a different inference configuration, with red boxes indicating retained detections and adjacent numbers indicating confidence scores. Lowering the NMS IoU threshold reduces overlapping detections, while increasing the confidence threshold further suppresses weaker predictions.}
+    \label{fig:nms-threshold-example}
+\end{figure}
+
+To examine the stability of the detector across a reasonable operating range, the 
+confidence threshold was swept over
+\[
+\{0.001,\ 0.005,\ 0.01,\ 0.05,\ 0.10,\ 0.25,\ 0.35,\ 0.50,\ 0.75\}
+\]
+and the NMS IoU threshold was swept over
+\[
+\{0.40,\ 0.50,\ 0.60,\ 0.70\}.
+\]
+
+For each combination, predictions were evaluated on the validation set using the
+same ignore-aware evaluation procedure described in Section~\ref{sec:unknown-vehicles},
+in which detections overlapping \verb|unknown_vehicle| regions above the specified
+ignore IoU threshold were removed before scoring. This produced a grid of 36 inference
+configurations, allowing the sensitivity of both AP50 and mAP to be assessed without 
+using the held-out test set for tuning. Figure~\ref{fig:conf-nms-heatmaps} presents 
+heatmaps of validation AP50 and mAP across the evaluated confidence-threshold and 
+NMS IoU grid for the final YOLOv11s model.
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5.5cm]{figures/results/5_4_1_ap50_conf_nms.png}
+        \caption{Validation AP50 across confidence-threshold and NMS IoU settings for the final YOLOv11s model.}
+        \label{fig:conf-nms-ap50}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5.5cm]{figures/results/5_4_1_map_conf_nms.png}
+        \caption{Validation mAP across confidence-threshold and NMS IoU settings for the final YOLOv11s model.}
+        \label{fig:conf-nms-map}
+    \end{subfigure}
+    \caption{Heatmaps showing the sensitivity of validation performance to inference-time confidence and NMS IoU settings for the final YOLOv11s model. Subfigure (a) shows AP50 and subfigure (b) shows mAP50--95 over the evaluated confidence-threshold and NMS IoU grid.}
+    \label{fig:conf-nms-heatmaps}
+\end{figure}
+\FloatBarrier
+
+As shown in Figure~\ref{fig:conf-nms-heatmaps}, both AP50 and mAP were relatively 
+stable across the lower confidence-threshold range, with the strongest values 
+occurring near \verb|conf| = 0.001 and higher \verb|det_iou| settings. Performance
+then declined gradually as the confidence threshold increased to 0.25, followed 
+by a more noticeable drop beginning at \verb|conf| = 0.35 and a sharper decrease
+at \verb|conf| = 0.75. By contrast, variation across the NMS IoU threshold was 
+comparatively small throughout the sweep, with changes in \verb|det_iou| producing 
+only modest differences relative to the effect of the confidence threshold. These 
+results indicate that detector performance was much more sensitive to aggressive 
+confidence filtering than to the specific NMS IoU setting within the tested range.
+
+% ------------------------------------------------------------------------------
+
+\subsubsection{Cross-Camera Generalization}
+
+

@@ -445,9 +445,27 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Detection Transformer (DETR)}{53}{}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Validation performance of the transformer-based detector experiments under the final 6-class formulation. All runs were trained for 50 epochs with 10 warmup epochs.\relax }}{54}{}\protected@file@percent }
 \newlabel{tab:detr-results}{{15}{54}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}}{54}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{54}{}\protected@file@percent }
-\abx@aux@read@bbl@mdfivesum{5BBD085F508992A28B509486544C296F}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Model Robustness and Cross-Camera Generalization}{54}{}\protected@file@percent }
+\abx@aux@cite{0}{ultralytics_validation}
+\abx@aux@segm{0}{0}{ultralytics_validation}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.1}Confidence Threshold and NMS Sensitivity Analysis}{55}{}\protected@file@percent }
+\newlabel{fig:nms-threshold-example-a}{{29a}{56}}
+\newlabel{sub@fig:nms-threshold-example-a}{{a}{56}}
+\newlabel{fig:nms-threshold-example-b}{{29b}{56}}
+\newlabel{sub@fig:nms-threshold-example-b}{{b}{56}}
+\newlabel{fig:nms-threshold-example-c}{{29c}{56}}
+\newlabel{sub@fig:nms-threshold-example-c}{{c}{56}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Qualitative example of confidence-threshold and NMS sensitivity for the final YOLOv11s model. Each panel shows the same traffic scene under a different inference configuration, with red boxes indicating retained detections and adjacent numbers indicating confidence scores. Lowering the NMS IoU threshold reduces overlapping detections, while increasing the confidence threshold further suppresses weaker predictions.\relax }}{56}{}\protected@file@percent }
+\newlabel{fig:nms-threshold-example}{{29}{56}}
+\newlabel{fig:conf-nms-ap50}{{30a}{57}}
+\newlabel{sub@fig:conf-nms-ap50}{{a}{57}}
+\newlabel{fig:conf-nms-map}{{30b}{57}}
+\newlabel{sub@fig:conf-nms-map}{{b}{57}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Heatmaps showing the sensitivity of validation performance to inference-time confidence and NMS IoU settings for the final YOLOv11s model. Subfigure (a) shows AP50 and subfigure (b) shows mAP50--95 over the evaluated confidence-threshold and NMS IoU grid.\relax }}{57}{}\protected@file@percent }
+\newlabel{fig:conf-nms-heatmaps}{{30}{57}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Cross-Camera Generalization}{58}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{58}{}\protected@file@percent }
+\abx@aux@read@bbl@mdfivesum{B8D8DF390E01F62596F5E83BDB39D48F}
 \abx@aux@defaultrefcontext{0}{world_health_organization_air_nodate}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{health_effects_institute_state_2025}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{uherek_transport_2010}{none/global//global/global}
@@ -524,4 +542,5 @@
 \abx@aux@defaultrefcontext{0}{deformabledetr2020}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{rtdetr2024}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{rtdetrv22024}{none/global//global/global}
-\gdef \@abspage@last{69}
+\abx@aux@defaultrefcontext{0}{ultralytics_validation}{none/global//global/global}
+\gdef \@abspage@last{73}

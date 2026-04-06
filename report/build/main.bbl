@@ -2838,6 +2838,37 @@
       \verb https://arxiv.org/abs/2407.17140
       \endverb
     \endentry
+    \entry{ultralytics_validation}{online}{}
+      \name{author}{1}{}{%
+        {{hash=88f069848482a556e416f713d2819905}{%
+           family={{Ultralytics}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{88f069848482a556e416f713d2819905}
+      \strng{fullhash}{88f069848482a556e416f713d2819905}
+      \strng{bibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorbibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authornamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorfullhash}{88f069848482a556e416f713d2819905}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Learn how to validate your {YOLO}26 model with precise metrics, easy-to-use tools, and custom settings for optimal performance.}
+      \field{langid}{english}
+      \field{title}{Model Validation with Ultralytics {YOLO}}
+      \field{urlday}{6}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.ultralytics.com/modes/val/
+      \endverb
+      \verb{url}
+      \verb https://docs.ultralytics.com/modes/val/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
