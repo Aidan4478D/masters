@@ -44,4 +44,5 @@
 \contentsline {subsection}{\numberline {5.4}Model Robustness and Cross-Camera Generalization}{54}{}%
 \contentsline {subsubsection}{\numberline {5.4.1}Confidence Threshold and NMS Sensitivity Analysis}{55}{}%
 \contentsline {subsubsection}{\numberline {5.4.2}Cross-Camera Generalization}{58}{}%
-\contentsline {section}{References}{58}{}%
+\contentsline {subsection}{\numberline {5.5}Comparison with ATR Traffic Counts}{59}{}%
+\contentsline {section}{References}{59}{}%

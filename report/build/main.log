@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  6 APR 2026 18:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  7 APR 2026 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -736,11 +736,11 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ]
 (/home/aidan/repos/masters/report/build/main.toc [2
 
-])
+] [3])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [3] [4]
+ [4]
 (./chapters/introduction.tex [1
 
 ]
@@ -1253,8 +1253,8 @@ File: figures/results/5_4_1_map_conf_nms.png Graphic file (type png)
 Package pdftex.def Info: figures/results/5_4_1_map_conf_nms.png  used on input 
 line 750.
 (pdftex.def)             Requested size: 213.66417pt x 156.49014pt.
-) [57 <./figures/results/5_4_1_ap50_conf_nms.png> <./figures/results/5_4_1_map_
-conf_nms.png>] [58]
+[57 <./figures/results/5_4_1_ap50_conf_nms.png> <./figures/results/5_4_1_map_co
+nf_nms.png>] [58]) [59]
 LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 4
 8.
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
@@ -1262,8 +1262,13 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 48.
- [59] [60]
-[61] [62]
+ [60] [61]
+[62] [63]
+
+Package biblatex Warning: No driver for entry type 'artwork'.
+(biblatex)                Using fallback driver on input line 48.
+
+[64]
 
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 48.
@@ -1272,11 +1277,7 @@ Package biblatex Warning: No driver for entry type 'artwork'.
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 48.
 
-
-Package biblatex Warning: No driver for entry type 'artwork'.
-(biblatex)                Using fallback driver on input line 48.
-
-[63] [64] [65] [66] (/home/aidan/repos/masters/report/build/main.aux)
+[65] [66] [67] [68] (/home/aidan/repos/masters/report/build/main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1285,13 +1286,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14150 strings out of 480247
- 281766 string characters out of 5896151
- 977177 words of memory out of 5000000
- 31828 multiletter control sequences out of 15000+600000
+ 14154 strings out of 480247
+ 281878 string characters out of 5896151
+ 977221 words of memory out of 5000000
+ 31832 multiletter control sequences out of 15000+600000
  515753 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,17n,80p,2177b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 72i,17n,80p,2177b,1278s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
@@ -1306,11 +1307,11 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmtt12.pfb>
-Output written on /home/aidan/repos/masters/report/build/main.pdf (73 pages, 17
-209544 bytes).
+Output written on /home/aidan/repos/masters/report/build/main.pdf (75 pages, 17
+212678 bytes).
 PDF statistics:
- 425 PDF objects out of 1000 (max. 8388607)
- 216 compressed objects within 3 object streams
+ 431 PDF objects out of 1000 (max. 8388607)
+ 220 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  256 words of extra memory for PDF output out of 10000 (max. 10000000)
 

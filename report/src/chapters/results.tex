@@ -751,7 +751,7 @@ NMS IoU grid for the final YOLOv11s model.
         \caption{Validation mAP across confidence-threshold and NMS IoU settings for the final YOLOv11s model.}
         \label{fig:conf-nms-map}
     \end{subfigure}
-    \caption{Heatmaps showing the sensitivity of validation performance to inference-time confidence and NMS IoU settings for the final YOLOv11s model. Subfigure (a) shows AP50 and subfigure (b) shows mAP50--95 over the evaluated confidence-threshold and NMS IoU grid.}
+    \caption{Heatmaps showing the sensitivity of validation performance to inference-time confidence and NMS IoU settings for the final YOLOv11s model. Subfigure (a) shows AP50 and subfigure (b) shows mAP over the evaluated confidence-threshold and NMS IoU grid.}
     \label{fig:conf-nms-heatmaps}
 \end{figure}
 \FloatBarrier
@@ -770,5 +770,83 @@ confidence filtering than to the specific NMS IoU setting within the tested rang
 % ------------------------------------------------------------------------------
 
 \subsubsection{Cross-Camera Generalization}
+\label{sec:camera-generalization}
+
+To assess how well the final YOLO detector can predict vehicle classes beyond the 
+original train-validation-test split, a separate manually annotated benchmark was 
+constructed using images from three traffic cameras unseen by the model during 
+training. These cameras were located at Atlantic Avenue at Boerum Place, Broadway
+at Houston, and Pelham Parkway Westbound at Boston Road. These locations were 
+selected not only to provide unseen camera views for detector evaluation, but also
+because they were later used in the traffic-count comparison in Section~\ref{sec:atr-analysis}.
+
+The benchmark contained 75 images in total, with 25 images sampled from each camera. 
+These images were drawn from March 12 to March 20, 2026, and were selected across 
+different times of day in order to capture a broader range of traffic density, 
+lighting, and scene conditions. The resulting benchmark was intended to better 
+approximate deployment conditions than the original validation set, since none of
+these camera views were included during training. The full class distribution of 
+the benchmark is summarized in Table~\ref{tab:cross-camera-benchmark-class-counts}.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Class distribution of the 75-image cross-camera benchmark.}
+    \label{tab:cross-camera-benchmark-class-counts}
+    \begin{tabular}{l c}
+        \toprule
+        Class & Instances \\
+        \midrule
+        passenger\_car            & 107 \\
+        passenger\_truck          & 209 \\
+        light\_commercial\_truck  & 25  \\
+        truck                     & 13  \\
+        bus                       & 8   \\
+        motorcycle                & 2   \\
+        unknown\_vehicle          & 474 \\
+        \midrule
+        all                       & 838 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\FloatBarrier
+
+The cross-camera benchmark was evaluated using the same ignore-aware procedure as 
+described in Section~\ref{sec:unknown-vehicles}. Table~\ref{tab:cross-camera-results}
+summarizes the per-class results on this 75-image benchmark. Overall, the final 
+YOLOv11s model achieved an AP50 of 0.658 and an mAP of 0.488 across 364 annotated 
+vehicle instances.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Per-class detection performance of the final YOLOv11s model on the 75-image cross-camera benchmark.}
+    \label{tab:cross-camera-results}
+    \begin{tabular}{l c c}
+        \toprule
+        Class & AP50 & mAP \\
+        \midrule
+        passenger\_car            & 0.626 & 0.487 \\
+        passenger\_truck          & 0.761 & 0.592 \\
+        light\_commercial\_truck  & 0.685 & 0.488 \\
+        truck                     & 0.735 & 0.514 \\
+        bus                       & 0.635 & 0.490 \\
+        motorcycle                & 0.505 & 0.353 \\
+        \midrule
+        all                       & 0.658 & 0.488 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\FloatBarrier
 
 
+% ==============================================================================
+
+\subsection{Comparison with ATR Traffic Counts}
+\label{sec:atr-analysis}
+
+This experiment was conducted to assess how closely hourly vehicle counts produced
+by the final YOLOv11s model aligned with New York City Automated Traffic Recorder 
+(ATR) counts \cite{NYC_open_data_atr} at three unseen camera locations: Atlantic 
+Avenue at Boerum Place, Broadway at Houston, and Pelham Parkway Westbound at Boston 
+Road. These were the same three locations used in the cross-camera benchmark in 
+Section~\ref{sec:camera-generalization},allowing the detector’s performance on
+unseen views to be examined further through a traffic-count comparison.
