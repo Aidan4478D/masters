@@ -622,3 +622,14 @@ Utilizing the COCO mAP ensures that the detection architecture is not hallucinat
 large active regions, but is learning the boxes required to reliably isolate 
 vehicles in urban environments.
 
+% ==============================================================================
+
+\subsection{Experimental Environment}
+All detector training and evaluation experiments were conducted in Python using 
+Google Colab with an NVIDIA L4 GPU. YOLO models were implemented and trained using 
+the Ultralytics library, while alternative detector models were implemented in 
+PyTorch. Data augmentation was applied using the Albumentations library where 
+relevant. Experiments were run with a fixed seed of 42 to improve consistency 
+across runs.
+
+% ==============================================================================
