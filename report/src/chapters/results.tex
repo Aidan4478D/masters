@@ -20,66 +20,6 @@ for traffic-monitoring applications.
 
 % ==============================================================================
 
-\subsection{MOVES-based Taxonomy}
-
-For the experiments reported in this chapter, model training and evaluation were 
-conducted using a final 6-class taxonomy: 
-\verb|passenger_car|, \verb|passenger_truck|, \verb|light_commerical_vehicle|, 
-\verb|bus|, \verb|truck|, and \verb|motorcycle|. 
-This label set was selected to provide a practical balance between compatibility
-with downstream MOVES-based emissions analysis and what could be distinguished 
-reliably from low-resolution traffic-camera imagery. Rather than reproducing the
-full MOVES source-type framework, the taxonomy preserves broad categories relevant 
-to emissions modeling while reducing visual distinctions that are difficult to 
-learn consistently.
-
-To achieve this balance, fine-grained vehicle labels were grouped accordingly. 
-Sedan instances were mapped to \verb|passenger_car|, while \verb|SUV| instances, 
-\verb|pickup_truck| instances, and \verb|van| instances with the attribute \verb|is_minivan| 
-instances were grouped into \verb|passenger_truck|. The EPA notes that it is 
-difficult to visually determine whether a vehicle should be treated as a 
-passenger car or a light-duty truck, but classifies many SUVs and minivans as 
-light-duty trucks rather than passenger cars \cite{USEPA_def_truck_2019}. 
-
-The remaining van instances were mapped to \verb|light_commercial_vehicle|. 
-This separation is useful from a computer-vision standpoint, as commercial vans 
-tend to have more consistent shapes and usage patterns than SUVs and pickup trucks.
-It also aligns with MOVES technical guidance, which treats passenger trucks and 
-light commercial vehicles as separate source types \cite{USEPA_moves3_2020}. 
-Additionally, since the original \verb|two_wheeler| class only contained 
-motorcycles, it was remapped directly to \verb|motorcycle|.
-
-Finally, \verb|bus| and \verb|truck| were preserved as independent classes because they are 
-operationally different, visually distinct, and treated as separate categories 
-within MOVES. Within the bus category, however, school buses were not modeled 
-as a separate detector class, even though MOVES distinguishes other buses, 
-transit buses, and school buses as separate source types. Instead, school buses
-were retained as an annotation attribute and grouped into the broader bus class. 
-This is because the primary objective of this study is to identify the broad 
-vehicle categories most relevant to downstream emissions-oriented analysis rather
-than to infer every possible subtype within each category. As such, the bus 
-attribute, \verb|is_school|, was preserved as useful annotation metadata and a potential
-avenue for future refinement, but it was not treated as essential to the core 
-detector taxonomy. The final mapping between the dataset taxonomy and the MOVES 
-taxonomy is shown below in Figure~\ref{fig:moves-taxonomy}.
-
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[height=7cm]{figures/results/5_1_class_taxonomy.png}
-    \caption{Final MOVES-based class mapping used in this study. Dataset classes 
-         on the left were mapped to the MOVES-aligned detector classes on the 
-         right. Arrows of the same color indicate the corresponding class 
-         mapping, with van instances labeled \texttt{is\_minivan} grouped into 
-         \texttt{passenger\_truck} and the remaining van instances mapped to 
-         \texttt{light\_commercial\_truck}.}
-    \label{fig:moves-taxonomy}
-\end{figure}
-
-This MOVES-based taxonomy was used for the remainder of the study as the common 
-label mapping for the dataset and for all subsequent training, testing, and evaluation.
-
-% ------------------------------------------------------------------------------
-
 \subsection{YOLO-Based Detector Development and Results}
 
 \subsubsection{Baseline YOLO Experiments}
@@ -135,14 +75,14 @@ procedure described in Section \ref{sec:unknown-vehicles}.
     \centering
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
-        \includegraphics[height=4.5cm]{figures/results/5_2_1_baseline_overlayed_ap50.png}
+        \includegraphics[height=4.5cm]{figures/results/5_1_1_baseline_overlayed_ap50.png}
         \caption{Validation AP50 versus training epoch for the baseline YOLOv8s, YOLOv11s, and YOLOv26s models.}
         \label{fig:baseline-ap50s}
     \end{subfigure}
     \hfill
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
-        \includegraphics[height=4.5cm]{figures/results/5_2_1_baseline_overlayed_map.png}
+        \includegraphics[height=4.5cm]{figures/results/5_1_1_baseline_overlayed_map.png}
         \caption{Validation mAP versus training epoch for the baseline YOLOv8s, YOLOv11s, and YOLOv26s models.}
         \label{fig:baseline-maps}
     \end{subfigure}
@@ -206,14 +146,14 @@ evaluation outlined in Section~\ref{sec:unknown-vehicles}.
     \centering
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
-        \includegraphics[height=7.5cm]{figures/results/5_2_2_v11s_cm_pre.png}
+        \includegraphics[height=7.5cm]{figures/results/5_1_2_v11s_cm_pre.png}
         \caption{Validation confusion matrix for the baseline YOLOv11s model before dataset refinement.}
         \label{fig:val-cm-11s-pre}
     \end{subfigure}
     \hfill
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
-        \includegraphics[height=7.5cm]{figures/results/5_2_2_v26s_cm_pre.png}
+        \includegraphics[height=7.5cm]{figures/results/5_1_2_v26s_cm_pre.png}
         \caption{Validation confusion matrix for the baseline YOLOv26s model before dataset refinement}
         \label{fig:val-cm-26s-pre}
     \end{subfigure}
@@ -241,14 +181,14 @@ were predicted for background regions was reduced.
     \centering
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
-        \includegraphics[height=7.5cm]{figures/results/5_2_2_v11s_cm_post.png}
+        \includegraphics[height=7.5cm]{figures/results/5_1_2_v11s_cm_post.png}
         \caption{Validation confusion matrix for the baseline YOLOv11s model after dataset refinement.}
         \label{fig:val-cm-11s-post}
     \end{subfigure}
     \hfill
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
-        \includegraphics[height=7.5cm]{figures/results/5_2_2_v26s_cm_post.png}
+        \includegraphics[height=7.5cm]{figures/results/5_1_2_v26s_cm_post.png}
         \caption{Validation confusion matrix for the baseline YOLOv26s model after dataset refinement}
         \label{fig:val-cm-26s-post}
     \end{subfigure}
@@ -335,14 +275,14 @@ confused between the passenger car and passenger truck classes.
     \centering
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
-        \includegraphics[height=5.5cm]{figures/results/5_2_2_hardneg_original.png}
+        \includegraphics[height=5.5cm]{figures/results/5_1_2_hardneg_original.png}
         \caption{Original training image before hard negative visualization.}
         \label{fig:hardneg-original}
     \end{subfigure}
     \hfill
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
-        \includegraphics[height=5.5cm]{figures/results/5_2_2_hardneg_boxes.png}
+        \includegraphics[height=5.5cm]{figures/results/5_1_2_hardneg_boxes.png}
         \caption{Same image with hard negative passenger car - passenger truck confusions identified by the mining procedure.}
         \label{fig:hardneg-boxes}
     \end{subfigure}
@@ -690,7 +630,7 @@ and visual clutter, but may also suppress vehicles that would otherwise be count
 
     \begin{subfigure}{0.92\textwidth}
         \centering
-        \includegraphics[height=5.5cm]{figures/results/5_4_1_nms_th_top.png}
+        \includegraphics[height=5.5cm]{figures/results/5_3_1_nms_th_top.png}
         \caption{Same scene evaluated with \protect\texttt{conf} = 0.001 and \protect\texttt{det\_iou} = 0.70.}
         \label{fig:nms-threshold-example-a}
     \end{subfigure}
@@ -699,7 +639,7 @@ and visual clutter, but may also suppress vehicles that would otherwise be count
 
     \begin{subfigure}{0.92\textwidth}
         \centering
-        \includegraphics[height=5.5cm]{figures/results/5_4_1_nms_th_mid.png}
+        \includegraphics[height=5.5cm]{figures/results/5_3_1_nms_th_mid.png}
         \caption{Same scene evaluated with \protect\texttt{conf} = 0.001 and \protect\texttt{det\_iou} = 0.40.}
         \label{fig:nms-threshold-example-b}
     \end{subfigure}
@@ -708,7 +648,7 @@ and visual clutter, but may also suppress vehicles that would otherwise be count
 
     \begin{subfigure}{0.92\textwidth}
         \centering
-        \includegraphics[height=5.5cm]{figures/results/5_4_1_nms_th_bot.png}
+        \includegraphics[height=5.5cm]{figures/results/5_3_1_nms_th_bot.png}
         \caption{Same scene evaluated with \protect\texttt{conf} = 0.10 and \protect\texttt{det\_iou} = 0.40.}
         \label{fig:nms-threshold-example-c}
     \end{subfigure}
@@ -740,14 +680,14 @@ NMS IoU grid for the final YOLOv11s model.
     \centering
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
-        \includegraphics[height=5.5cm]{figures/results/5_4_1_ap50_conf_nms.png}
+        \includegraphics[height=5.5cm]{figures/results/5_3_1_ap50_conf_nms.png}
         \caption{Validation AP50 across confidence-threshold and NMS IoU settings for the final YOLOv11s model.}
         \label{fig:conf-nms-ap50}
     \end{subfigure}
     \hfill
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
-        \includegraphics[height=5.5cm]{figures/results/5_4_1_map_conf_nms.png}
+        \includegraphics[height=5.5cm]{figures/results/5_3_1_map_conf_nms.png}
         \caption{Validation mAP across confidence-threshold and NMS IoU settings for the final YOLOv11s model.}
         \label{fig:conf-nms-map}
     \end{subfigure}
@@ -848,5 +788,5 @@ by the final YOLOv11s model aligned with New York City Automated Traffic Recorde
 (ATR) counts \cite{NYC_open_data_atr} at three unseen camera locations: Atlantic 
 Avenue at Boerum Place, Broadway at Houston, and Pelham Parkway Westbound at Boston 
 Road. These were the same three locations used in the cross-camera benchmark in 
-Section~\ref{sec:camera-generalization},allowing the detector’s performance on
+Section~\ref{sec:camera-generalization}, allowing the detector’s performance on
 unseen views to be examined further through a traffic-count comparison.
