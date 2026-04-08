@@ -343,13 +343,56 @@ label mapping for the dataset and for all subsequent training, testing, and eval
 \subsection{Handling Unknown Vehicles}
 \label{sec:unknown-vehicles}
 
-As described in Section~\ref{sec:unknown-vehicles-class}, some vehicles were 
+As described in Section~\ref{sec:unk-vehicle-class}, some vehicles were 
 annotated as \verb|unknown_vehicle| when they could be recognized as vehicles but 
 could not be assigned confidently to one of the six supervised classes. In the 
 detector pipeline, these regions were not treated as a seventh learnable class. 
 Instead, they were handled as ignore regions during both dataset preparation and 
 evaluation.
 
+When making the dataloader for the model training splits, regions that were labeled
+\verb|unknown_vehicle| during dataset annotation were masked in the images using 
+a neutral fill value of \verb|RGB(114,114,114)|. This meant that the detector was trained 
+only on the MOVES-based target classes, while ambiguous vehicles were masked so 
+they would not be forced into an incorrect label or treated as background even 
+though they were clearly vehicles. Because this masking occurred during dataset 
+generation, it was applied before any augmentation pipeline. See Figure~\ref{fig:masking-vehicle-example} 
+for an example of a training image before and after masking.
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5.5cm]{figures/methodology/4_3_unmasked.png}
+        \caption{Training image with the \texttt{unknown\_vehicle} annotated regions outlined in purple.}
+        \label{fig:unmasked-unknown}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[c]{0.48\textwidth}
+        \centering
+        \includegraphics[height=5.5cm]{figures/methodology/4_3_masked.png}
+        \caption{Same training image after masking regions annotated as \texttt{unknown\_vehicle} with the neutral fill value.}
+        \label{fig:masked-unknown}
+    \end{subfigure}
+    \caption{Example of \texttt{unknown\_vehicle} masking during training set preparation.
+             Subfigure (a) shows the \texttt{unknown\_vehicle} regions outlined in purple 
+             for reference, while subfigure (b) shows the same image after the 
+             \texttt{unknown\_vehicle} regions were masked with the neutral fill value 
+             used for training.}
+    \label{fig:masking-vehicle-example}
+\end{figure}
+\FloatBarrier
+
+During validation and later test-time evaluation, the images were not modified. 
+Instead, a custom ignore-aware evaluation procedure was used. The \verb|unknown_vehicle| 
+boxes were reconstructed directly from the original CVAT XML annotations, and any
+prediction overlapping one of these regions above an IoU threshold of 0.40 was 
+removed before scoring. The remaining predictions were then matched against the 
+MOVES-based classes to compute AP50 and mAP. This ensured that detections falling
+on visually ambiguous vehicles were not counted as false positives, while preserving
+the standard inference settings for confidence threshold, NMS IoU threshold, and 
+maximum detections. This same ignore-region procedure was applied consistently 
+across model architectures during training, validation, and test evaluation.
 
 % ==============================================================================
 
