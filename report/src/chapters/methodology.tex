@@ -281,6 +281,7 @@ and paper by Khanam and Hussain \cite{YOLOv11paper}.
 % ==============================================================================
 
 \subsection{MOVES-based Taxonomy}
+\label{sec:moves-taxonomy}
 
 For the experiments reported in this chapter, model training and evaluation were 
 conducted using a final 6-class taxonomy: 
@@ -321,7 +322,7 @@ than to infer every possible subtype within each category. As such, the bus
 attribute, \verb|is_school|, was preserved as useful annotation metadata and a potential
 avenue for future refinement, but it was not treated as essential to the core 
 detector taxonomy. The final mapping between the dataset taxonomy and the MOVES 
-taxonomy is shown below in Figure~\ref{fig:moves-taxonomy}.
+taxonomy is shown below in Figure~\ref{fig:moves-mapping}.
 
 \begin{figure}[!htbp]
     \centering
@@ -332,7 +333,7 @@ taxonomy is shown below in Figure~\ref{fig:moves-taxonomy}.
          mapping, with van instances labeled \texttt{is\_minivan} grouped into 
          \texttt{passenger\_truck} and the remaining van instances mapped to 
          \texttt{light\_commercial\_truck}.}
-    \label{fig:moves-taxonomy}
+    \label{fig:moves-mapping}
 \end{figure}
 
 This MOVES-based taxonomy was used for the remainder of the study as the common 

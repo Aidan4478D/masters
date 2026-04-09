@@ -658,7 +658,7 @@ traffic-camera detection environment rather than a controlled benchmark setting.
 \subsection{Dataset Statistics}
 
 Across the full dataset, a total of 20,939 vehicle instances were labeled. 
-Table~\ref{tab:class_counts} summarizes the number of annotated instances in each
+Table~\ref{tab:class-counts} summarizes the number of annotated instances in each
 class. As expected for urban traffic-camera imagery, the largest category was 
 \verb|unknown_vehicle|, reflecting the frequency of distant, occluded, or visually
 ambiguous vehicles in low-resolution scenes. Among the labeled vehicle classes, 
@@ -668,7 +668,7 @@ ambiguous vehicles in low-resolution scenes. Among the labeled vehicle classes,
 \begin{table}[!htbp]
     \centering
     \caption{Total annotated vehicle instances by class}
-    \label{tab:class_counts}
+    \label{tab:class-counts}
     \begin{tabular}{lr}
         \toprule
         \textbf{Class} & \textbf{Count} \\
@@ -687,7 +687,7 @@ ambiguous vehicles in low-resolution scenes. Among the labeled vehicle classes,
     \end{tabular}
 \end{table}
 
-Table~\ref{tab:attribute_counts} summarizes the number of positively assigned 
+Table~\ref{tab:attribute-counts} summarizes the number of positively assigned 
 boolean attributes. These attributes were less frequent than the primary class 
 labels, but they preserve useful semantic detail for future analysis, such as 
 distinguishing taxis, police vehicles, school buses, delivery trucks, fire trucks,
@@ -698,7 +698,7 @@ substantially smaller than the corresponding parent-class totals.
 \begin{table}[!htbp]
     \centering
     \caption{Positive attribute counts by parent class}
-    \label{tab:attribute_counts}
+    \label{tab:attribute-counts}
     \begin{tabular}{llr}
         \toprule
         \textbf{Parent Class} & \textbf{Attribute} & \textbf{Count} \\

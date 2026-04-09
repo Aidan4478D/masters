@@ -126,6 +126,7 @@ refinement strategies.
 % ==============================================================================
 
 \subsubsection{Data-Centric Refinements}
+\label{sec:data-refinement}
 
 \textbf{Dataset Refinement}
 
@@ -788,5 +789,205 @@ by the final YOLOv11s model aligned with New York City Automated Traffic Recorde
 (ATR) counts \cite{NYC_open_data_atr} at three unseen camera locations: Atlantic 
 Avenue at Boerum Place, Broadway at Houston, and Pelham Parkway Westbound at Boston 
 Road. These were the same three locations used in the cross-camera benchmark in 
-Section~\ref{sec:camera-generalization}, allowing the detector’s performance on
+Section~\ref{sec:camera-generalization}, allowing the detector's performance on
 unseen views to be examined further through a traffic-count comparison.
+
+\begin{figure}[!htbp]
+    \centering
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[height=3.5cm]{figures/results/5_4_new_broadway_ex.jpg}
+        \caption{Broadway at Houston}
+        \label{fig:new-broad-ex}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[height=3.5cm]{figures/results/5_4_new_pelham_ex.jpg}
+        \caption{Pelham Parkway Westbound at Boston Road}
+        \label{fig:new-pel-ex}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[height=3.5cm]{figures/results/5_4_new_atl_ex.jpg}
+        \caption{Atlantic Avenue at Boerum Place}
+        \label{fig:new-atl-ex}
+    \end{subfigure}
+    \caption{New camera imagery used for inference.}
+    \label{fig:new-cameras}
+\end{figure}
+\FloatBarrier
+
+The three camera locations were selected because they were positioned on urban 
+streets rather than major highways, which were not the primary focus of this study. 
+Because March 2026 ATR data were not available at the time the camera imagery 
+was collected, the comparison instead used March 2025 ATR records from locations
+where an active traffic camera was available at the same street intersection. 
+March 2026 camera imagery was then matched to March 2025 ATR dates with broadly 
+similar weather conditions \cite{zippenfenig_open-meteocom_2024}.
+
+Images were collected from March 13, 2026 at 12:01 AM through March 20, 2026 at 
+12:00 PM. An image was sampled from each camera every two minutes, consistent with
+the sampling rate used during dataset creation, to reduce the risk of the same 
+scene being counted more than once, since the camera feeds updated slowly and 
+explicit image-to-image vehicle matching was not implemented.
+See Table X. for information regarding the
+dates in which the collected images are compared against the true ATR counts. 
+These comparison dates were chosen as they were when the 2025 ATR data was collected 
+for the specified street intersections.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Camera locations, comparison dates, and total number of collected images used in the ATR traffic-count analysis.}
+    \label{tab:atr-image-collection}
+    \begin{tabular}{p{7cm} c c c}
+        \toprule
+        \centering Camera Intersection &
+        \centering Borough &
+        \centering\shortstack{Vehicle Count\\Comparison Dates} &
+        \centering Total Images \tabularnewline
+        \midrule
+        Broadway @ Houston           & Manhattan & 3/14 -- 3/17 & 2,774 \\
+        Pelham Pkwy W/B @ Boston Rd  & Bronx     & 3/13 -- 3/17 & 3,488 \\
+        Atlantic Ave @ Boerum Place  & Brooklyn  & 3/18 -- 3/19 & 1,440 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\FloatBarrier
+
+After the images were collected, inference was run over all images using the final 
+YOLOv11s model. Based on the validation heatmaps in Figure~\ref{fig:conf-nms-heatmaps}, 
+performance remained relatively stable at lower confidence thresholds but declined more 
+noticeably beyond 0.25, so a confidence threshold of 0.25 and an NMS IoU threshold of 
+0.70 were used for inference. The resulting detections were aggregated into hourly 
+vehicle counts and matched to ATR hourly traffic volumes by camera-specific road 
+segment and hour of day. Because the ATR data were reported in 15-minute intervals, 
+those records were first summed to hourly totals before comparison. See Table~\ref{tab:atr-count-comparison} 
+for a per-day summary at each camera location, comparing the YOLO and ATR detections.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Per-day comparison of YOLO-derived and ATR vehicle counts across the selected camera locations, including hourly-profile Pearson correlation, mean absolute error, and mean absolute percentage error.}
+    \label{tab:atr-count-comparison}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l c c c c c c}
+        \toprule
+        \shortstack{Camera\\Intersection} &
+        Date &
+        \shortstack{YOLO Count\\(2026)} &
+        \shortstack{ATR Count\\(2025)} &
+        \shortstack{Pearson\\Correlation} &
+        MAE &
+        \shortstack{MAPE\\(\%)} \\
+        \midrule
+        Broadway @ Houston                  & 3/14/2026 & 4,752 & 16,252 & 0.608 & 479.17 & 68.29 \\
+        Broadway @ Houston                  & 3/15/2026 & 4,709 & 15,626 & 0.597 & 454.88 & 69.08 \\
+        Broadway @ Houston                  & 3/16/2026 & 3,431 & 12,382 & 0.234 & 393.17 & 67.22 \\
+        Broadway @ Houston                  & 3/17/2026 & 3,910 & 13,067 & 0.753 & 398.13 & 68.31 \\
+        Pelham Pkwy W/B @ Boston Rd         & 3/13/2026 & 5,793 & 20,043 & 0.892 & 593.75 & 70.66 \\
+        Pelham Pkwy W/B @ Boston Rd         & 3/14/2026 & 4,947 & 20,423 & 0.866 & 644.83 & 70.78 \\
+        Pelham Pkwy W/B @ Boston Rd         & 3/15/2026 & 4,181 & 17,742 & 0.897 & 565.04 & 76.15 \\
+        Pelham Pkwy W/B @ Boston Rd         & 3/16/2026 & 4,107 & 13,791 & 0.780 & 421.04 & 71.35 \\
+        Pelham Pkwy W/B @ Boston Rd         & 3/17/2026 & 4,376 & 18,096 & 0.906 & 596.52 & 78.47 \\
+        Atlantic Ave @ Boerum Place         & 3/18/2026 & 7,559 & 8,725  & 0.844 & 82.67  & 22.96 \\
+        Atlantic Ave @ Boerum Place         & 3/19/2026 & 7,060 & 9,188  & 0.803 & 104.17 & 27.28 \\
+        \bottomrule
+    \end{tabular}%
+    }
+\end{table}
+\FloatBarrier
+
+As shown in Table~X, agreement with ATR counts varied substantially across locations. 
+The closest match between counts was observed at Atlantic Avenue at Boerum Place,
+where detector totals of 7,060 to 7,559 were compared with ATR totals of 8,725 to 
+9,188, with mean absolute percentage error values of 22.96\% and 27.28\%. Broadway
+at Houston showed larger discrepancies, with detector totals of 3,431 to 4,752 
+versus ATR totals of 12,382 to 16,252 and mean absolute percentage error values 
+ranging from 67.22\% to 69.08\%. Pelham Parkway Westbound at Boston Road exhibited 
+the largest undercount overall, with detector totals of 4,107 to 5,793 compared
+with ATR totals of 13,791 to 20,423 and mean absolute percentage error values 
+ranging from 70.66\% to 78.47\%.
+
+In addition to total-count error, Pearson correlation was computed for each camera-day 
+pair using normalized hourly YOLO and ATR counts, where each hour was normalized 
+relative to the source’s total daily vehicle count. This was done to compare how 
+closely the two sources followed the same hourly traffic pattern, independent of 
+differences in overall count size. Under this measure, Atlantic Avenue at Boerum 
+Place showed consistently strong hourly agreement, with correlation values of 0.844
+and 0.803. Broadway at Houston showed weaker and less consistent agreement, with 
+values ranging from 0.234 to 0.753. Pelham Parkway Westbound at Boston Road generally 
+showed strong hourly-pattern agreement despite larger differences in total volume, 
+with correlations ranging from 0.780 to 0.906. See Figure X. for hourly count 
+comparisons for selected camera-day pairs, showing both the raw hourly counts and 
+the normalized horly counts for the YOLO and ATR detections.
+
+\begin{figure}[!htbp]
+    \centering
+
+    % Row 1: Pelham
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/results/5_4_pel_hourly.png}
+        % \includegraphics[height=3.5cm]{figures/results/5_4_new_broadway_ex.jpg}
+        \caption{Pelham Parkway Westbound at Boston Road. Raw hourly counts.}
+        \label{fig:atr-pelham-raw}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/results/5_4_pel_hourly_norm.png}
+        \caption{Pelham Parkway Westbound at Boston Road. Normalized hourly counts.}
+        \label{fig:atr-pelham-norm}
+    \end{subfigure}
+
+    \vspace{0.5em}
+
+    % Row 2: Atlantic
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/results/5_4_atl_hourly.png}
+        \caption{Atlantic Avenue at Boerum Place. Raw hourly counts.}
+        \label{fig:atr-atlantic-raw}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/results/5_4_atl_hourly_norm.png}
+        \caption{Atlantic Avenue at Boerum Place. Normalized hourly counts.}
+        \label{fig:atr-atlantic-norm}
+    \end{subfigure}
+
+    \vspace{0.5em}
+
+    % Row 3: Broadway
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/results/5_4_broad_hourly.png}
+        \caption{Broadway at Houston. Raw hourly counts.}
+        \label{fig:atr-broadway-raw}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/results/5_4_broad_hourly_norm.png}
+        \caption{Broadway at Houston. Normalized hourly counts.}
+        \label{fig:atr-broadway-norm}
+    \end{subfigure}
+
+    \caption{Hourly detector-derived and ATR traffic-count comparisons for the 
+             selected camera-day pairs. The plots compare YOLO-derived counts from 
+             March 2026 against matched ATR counts from March 2025. Subfigures 
+             (a) and (b) show Pelham Parkway Westbound at Boston Road, with a 
+             YOLO-derived daily total of 4,376 and an ATR total of 18,096, and a
+             Pearson correlation of 0.906. Subfigures (c) and (d) show Atlantic 
+             Avenue at Boerum Place, with a YOLO-derived daily total of 7,559 and
+             an ATR total of 8,725, and a Pearson correlation of 0.844. Subfigures
+             (e) and (f) show Broadway at Houston, with a YOLO-derived daily total
+             of 3,431 and an ATR total of 12,382, and a Pearson correlation of 0.234.
+             The left column shows raw hourly counts, while the right column shows 
+             normalized hourly profiles, with each hour expressed as a fraction of 
+             that source's daily total.}
+    \label{fig:atr-hourly-comparisons}
+\end{figure}
+
+Overall, these results showed that the final YOLOv11s model reproduced hourly 
+traffic patterns more consistently at some unseen camera locations than others, 
+while agreement with ATR count magnitude remained strongly location-dependent.
+
+\FloatBarrier
