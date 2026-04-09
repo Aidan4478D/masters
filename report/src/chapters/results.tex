@@ -203,7 +203,7 @@ As shown in Table~\ref{tab:dataset-refinement-results}, the dataset refinement
 step led to small but consistent improvements in validation performance for both 
 baseline models. YOLOv11s improved from an AP50 of 0.785 to 0.795 and from an 
 mAP of 0.606 to 0.613, while YOLOv26s improved from an AP50 of 0.774 to 0.781 
-and from an mAP of 0.622 to 0.627. These gains were modest, but they support 
+and from a mAP of 0.622 to 0.627. These gains were modest, but they support 
 the conclusion that manually reassessing flagged examples and preserving genuinely 
 ambiguous vehicles as \verb|unknown_vehicle| improved dataset quality.
 
@@ -407,7 +407,7 @@ the final detector selected for this study was YOLOv11s, saved as checkpoint
 \verb|vehicle_6c_v11s11|. For readability, this checkpoint is referred to 
 throughout the remainder of the thesis as the final YOLOv11s model. Among all 
 YOLO experiments, this configuration achieved the strongest validation performance,
-with an AP50 of 0.857 and an mAP of 0.661.
+with an AP50 of 0.857 and a mAP of 0.661.
 
 Although additional refinement runs were explored after this stage, none improved 
 upon the validation performance of the final YOLOv11s model. It was therefore 
@@ -500,17 +500,17 @@ reports the full set of grid-search results.
 Among the tested configurations, the best overall Faster R-CNN result was obtained
 with the \verb|fasterrcnn_resnet50_fpn_v2| backbone using a learning rate of $2\times10^{-4}$,
 flip-plus-color-jitter augmentation, and 5 trainable backbone layers. On the 
-validation set, this model achieved an AP50 of 0.706 and an mAP of 0.509. Other 
-strong \verb|fasterrcnn_resnet50_fpn_v2| runs achieved AP50/mAP values of 0.693/0.500 
-and 0.686/0.497, indicating that the v2 backbone was consistently the strongest 
+validation set, this model achieved an AP50 of 0.706 and a mAP of 0.509. Other 
+strong \verb|fasterrcnn_resnet50_fpn_v2| runs achieved AP50 and mAP values of 0.693/0.686 
+and 0.500/0.497, indicating that the v2 backbone was consistently the strongest 
 Faster R-CNN variant across the tested settings. By comparison, the best standard 
-\verb|fasterrcnn_resnet50_fpn| configuration achieved an AP50 of 0.658 and an mAP 
+\verb|fasterrcnn_resnet50_fpn| configuration achieved an AP50 of 0.658 and a mAP 
 of 0.440. 
 
 Although the \verb|fasterrcnn_resnet50_fpn_v2| experiments produced the strongest 
 Faster R-CNN results in this study, their validation performance remained below that 
 of the YOLO baselines reported in Table~\ref{tab:yolo-baseline-results}. In particular,
-the best Faster R-CNN configuration achieved an AP50 of 0.706 and an mAP of 0.509, 
+the best Faster R-CNN configuration achieved an AP50 of 0.706 and a mAP of 0.509, 
 whereas the strongest baseline YOLO results were already higher before additional 
 refinement. Since the Faster R-CNN baselines did not approach the performance of the 
 leading YOLO configurations, further iteration on the Faster R-CNN models was not
@@ -572,12 +572,12 @@ during training, and treated as ignore regions during evaluation.
 
 The transformer experiments showed a clear progression across the tested DETR 
 variants. For SenseTime Deformable DETR, an initial 50-epoch run achieved an AP50 
-of 0.428 and an mAP of 0.318, while a second run with less aggressive image 
+of 0.428 and a mAP of 0.318, while a second run with less aggressive image 
 transforms improved performance to 0.564 AP50 and 0.421 mAP. Additional 
 hyperparameter and augmentation adjustments were also tested, but none exceeded 
 this result. Under the same 50-epoch training schedule, RT-DETR achieved an AP50 
-of 0.596 and an mAP of 0.437, and RT-DETRv2 produced the strongest transformer-based
-result in this study, reaching an AP50 of 0.688 and an mAP of 0.516.
+of 0.596 and a mAP of 0.437, and RT-DETRv2 produced the strongest transformer-based
+result in this study, reaching an AP50 of 0.688 and a mAP of 0.516.
 
 Although RT-DETRv2 was the strongest transformer-based model evaluated, its 
 performance still remained below the baseline YOLO results reported in 
@@ -754,7 +754,7 @@ the benchmark is summarized in Table~\ref{tab:cross-camera-benchmark-class-count
 The cross-camera benchmark was evaluated using the same ignore-aware procedure as 
 described in Section~\ref{sec:unknown-vehicles}. Table~\ref{tab:cross-camera-results}
 summarizes the per-class results on this 75-image benchmark. Overall, the final 
-YOLOv11s model achieved an AP50 of 0.658 and an mAP of 0.488 across 364 annotated 
+YOLOv11s model achieved an AP50 of 0.658 and a mAP of 0.488 across 364 annotated 
 vehicle instances.
 
 \begin{table}[!htbp]

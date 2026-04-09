@@ -1,0 +1,38 @@
+\section{Discussion}
+
+\subsection{Overview of Main Findings}
+
+Vehicle detection experiments in this study indicate that the final YOLOv11s model
+provided the strongest performance for emissions-oriented vehicle counting from 
+low-resolution traffic-camera imagery. Among the detector families evaluated, 
+YOLO-based models consistently outperformed the Faster R-CNN and DETR alternatives.
+The final selected YOLOv11s configuration achieved the strongest overall validation 
+performance, reaching an AP50 of 0.857 and an mAP of 0.661, and it maintained strong
+performance on the held-out test set with an AP50 of 0.772 and a mAP 0.607.
+
+The most meaningful gains did not come from adopting a more complex architecture 
+or from broad hyperparameter variation, but from targeted data-centric refinement.
+In particular, revisiting failure cases through hard negative mining between 
+passenger cars and passenger trucks produced a larger improvement than broader
+oversampling strategies, local hyperparameter search, or continued fine-tuning 
+from prior checkpoints. This suggests that, for this task, performance was constrained
+less by a lack of architectural complexity than by ambiguity at specific class 
+boundaries in the training data.
+
+At the same time, the final detector generalized reasonably well beyond the validation 
+set. Its held-out test-set performance remained broadly consistent with its validation 
+results, indicating that the selected model generalized reasonably well to unseen 
+images from the original dataset distribution. When evaluated on the separate 
+cross-camera benchmark constructed from three unseen traffic cameras, performance
+declined relative to the test set, but remained useful enough to support the broader
+goal of deployment-oriented vehicle counting. Taken together, these results indicate
+that traffic-camera imagery can support emissions-oriented vehicle detection and 
+counting, despite the challenges introduced by low resolution, occlusion, and viewpoint 
+shift.
+
+% ==============================================================================
+
+\subsection{Why the Final YOLO Pipeline Performed Best}
+
+
+
