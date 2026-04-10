@@ -12,7 +12,7 @@ scalable environmental health monitoring in dense urban environments.
 
 % ==============================================================================
 
-\subsection{Evaluation of Detection Architectures in NYC}
+\subsection{Evaluation of Detection Architectures for NYC Imagery}
 
 The selection of a primary detection model for this study was driven by a rigorous 
 comparison across three distinct paradigms: one-stage convolutional neural networks,
@@ -67,3 +67,45 @@ capability is particularly critical for New York City’s traffic environment, w
 the high mounting of the cameras means a vehicle close to the lens appears massive, 
 while the exact same type of vehicle further down the street appears as just a few 
 pixels.
+
+% ==============================================================================
+
+\subsection{Rationale for the MOVES-Based Taxonomy}
+
+The performance of the final detector was contingent not only on the architecture,
+but on how the vehicle classes were defined. The MOVES-based taxonomy was created 
+to balance what is actually visible in low-resolution traffic cameras with the data
+required by the MOVES emissions software. Instead of forcing the model to distinguish
+between vehicle body styles that look nearly identical at 352x240 pixels, this
+approach grouped vehicles into broader categories based on their emissions profiles.
+
+This strategy was applied from the very beginning of the data annotation process. 
+Visually similar body styles like coupes and hatchbacks were labeled as \verb|sedan|,
+while crossovers were labeled as \verb|suv|, relying on dependable visual cues 
+like cabin height and rear profile sloping. In the final taxonomy, these labels were 
+mapped directly to MOVES categories: sedans became \verb|passenger_car|, while SUVs,
+pickup trucks, and minivans were grouped into \verb|passenger_truck|. This specific 
+separation is critical for downstream environmental analysis, because EPA's MOVES 
+framework treats passenger cars, passenger trucks, and light commercial trucks as 
+distinct on-road source types, and computes criteria-pollutant emissions such as $NO_{x}$
+and $PM_{2.5}$ through source-type-specific emission-rate tables 
+\cite{us_epa_moves3_2020, USEPA_overview_2025}.
+
+The dataset statistics in Table~\ref{tab:class-counts} highlight the dominance of 
+passenger car and passenger trucks, which make up over 77\% of all annotations. Under 
+these conditions, the most significant risk to model performance was not a failure 
+to detect vehicles, but a failure to distinguish between the two passenger vehicle 
+categories. This visual overlap motivated the handling of the \verb|unknown_vehicle|
+class, which was the single largest category in the dataset with 9,586 instances.
+
+Using \verb|unknown_vehicle| as an ignore region rather than a normal training class
+helped avoid forcing the model to learn from ambiguous examples. In supervised vision
+tasks, noisy or uncertain labels can hurt generalization, and object-detection 
+benchmarks commonly exclude regions that cannot be annotated reliably from scoring 
+rather than treating them as standard objects \cite{song2022learningnoisylabelsdeep}. 
+During training, these ambiguous regions were masked with a neutral fill value so
+the detector would not learn from pixels that human annotators could not label 
+confidently. As a result, the reported AP50 and mAP better reflected performance
+on clearly identifiable vehicles instead of penalizing the model for inherently
+uncertain regions.
+

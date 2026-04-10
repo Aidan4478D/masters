@@ -286,7 +286,7 @@ and paper by Khanam and Hussain \cite{YOLOv11paper}.
 
 For the experiments reported in this chapter, model training and evaluation were 
 conducted using a final 6-class taxonomy: 
-\verb|passenger_car|, \verb|passenger_truck|, \verb|light_commerical_vehicle|, 
+\verb|passenger_car|, \verb|passenger_truck|, \verb|light_commerical_truck|, 
 \verb|bus|, \verb|truck|, and \verb|motorcycle|. 
 This label set was selected to provide a practical balance between compatibility
 with downstream MOVES-based emissions analysis and what could be distinguished 
@@ -307,7 +307,7 @@ The remaining van instances were mapped to \verb|light_commercial_vehicle|.
 This separation is useful from a computer-vision standpoint, as commercial vans 
 tend to have more consistent shapes and usage patterns than SUVs and pickup trucks.
 It also aligns with MOVES technical guidance, which treats passenger trucks and 
-light commercial vehicles as separate source types \cite{USEPA_moves3_2020}. 
+light commercial trucks as separate source types \cite{USEPA_moves3_2020}. 
 Additionally, since the original \verb|two_wheeler| class only contained 
 motorcycles, it was remapped directly to \verb|motorcycle|.
 
