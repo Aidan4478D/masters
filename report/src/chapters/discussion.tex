@@ -92,8 +92,8 @@ and $PM_{2.5}$ through source-type-specific emission-rate tables
 \cite{us_epa_moves3_2020, USEPA_overview_2025}.
 
 The dataset statistics in Table~\ref{tab:class-counts} highlight the dominance of 
-passenger car and passenger trucks, which make up over 77\% of all annotations. Under 
-these conditions, the most significant risk to model performance was not a failure 
+passenger car and passenger trucks, which make up over 77\% of all identified-vehicle annotations. 
+Under these conditions, the most significant risk to model performance was not a failure 
 to detect vehicles, but a failure to distinguish between the two passenger vehicle 
 categories. This visual overlap motivated the handling of the \verb|unknown_vehicle|
 class, which was the single largest category in the dataset with 9,586 instances.
@@ -108,4 +108,24 @@ the detector would not learn from pixels that human annotators could not label
 confidently. As a result, the reported AP50 and mAP better reflected performance
 on clearly identifiable vehicles instead of penalizing the model for inherently
 uncertain regions.
+
+% ==============================================================================
+
+\subsection{Data-Centric Refinement vs. Model Complexity}
+
+The improvement from the baseline YOLOv11s model (AP50 of 0.804) to the final selected 
+version (AP50 of 0.857) is consistent with recent work emphasizing that model performance
+can often be improved substantially through better data curation and refinement, even 
+without changing the underlying architecture \cite{feuer2024selectlargescalebenchmarkdata, goyal2024scalinglawsdatafiltering}. 
+The experiments in Section~\ref{sec:data-refinement}
+suggest that the main limitation was not model capacity alone, but a concentrated 
+weakness between predicting \verb|passenger_car| and \verb|passenger_truck|.
+
+Manual inspection of the Figure~X. confusion matrices revealed that while the model 
+had learned to localize vehicles with high precision, it frequently swapped labels 
+between sedans and SUVs. The hard negative mining strategy in Section~\ref{sec:data-refinement}
+addressed this by identifying
+100 images where these swaps occurred and duplicating them back into the training set.
+This targeted intervention proved significantly more effective than broad hyperparameter
+variation or general oversampling of rare classes like motorcycles.
 
