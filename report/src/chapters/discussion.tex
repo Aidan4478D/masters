@@ -1,38 +1,69 @@
 \section{Discussion}
 
-\subsection{Overview of Main Findings}
-
-Vehicle detection experiments in this study indicate that the final YOLOv11s model
-provided the strongest performance for emissions-oriented vehicle counting from 
-low-resolution traffic-camera imagery. Among the detector families evaluated, 
-YOLO-based models consistently outperformed the Faster R-CNN and DETR alternatives.
-The final selected YOLOv11s configuration achieved the strongest overall validation 
-performance, reaching an AP50 of 0.857 and an mAP of 0.661, and it maintained strong
-performance on the held-out test set with an AP50 of 0.772 and a mAP 0.607.
-
-The most meaningful gains did not come from adopting a more complex architecture 
-or from broad hyperparameter variation, but from targeted data-centric refinement.
-In particular, revisiting failure cases through hard negative mining between 
-passenger cars and passenger trucks produced a larger improvement than broader
-oversampling strategies, local hyperparameter search, or continued fine-tuning 
-from prior checkpoints. This suggests that, for this task, performance was constrained
-less by a lack of architectural complexity than by ambiguity at specific class 
-boundaries in the training data.
-
-At the same time, the final detector generalized reasonably well beyond the validation 
-set. Its held-out test-set performance remained broadly consistent with its validation 
-results, indicating that the selected model generalized reasonably well to unseen 
-images from the original dataset distribution. When evaluated on the separate 
-cross-camera benchmark constructed from three unseen traffic cameras, performance
-declined relative to the test set, but remained useful enough to support the broader
-goal of deployment-oriented vehicle counting. Taken together, these results indicate
-that traffic-camera imagery can support emissions-oriented vehicle detection and 
-counting, despite the challenges introduced by low resolution, occlusion, and viewpoint 
-shift.
+The experimental framework established in this research serves to validate the 
+feasibility of utilizing New York City’s existing traffic surveillance infrastructure
+for high-resolution vehicle classification and emissions estimation. The results 
+demonstrate that anoptimized vehicle detection pipeline, specifically one centered
+on the YOLOv11s architecture, can successfully overcome the visual challenges 
+inherent in low-resolution, 352$\times$240 traffic imagery. This discussion 
+synthesizes the technical performance of the evaluated models, the importance of 
+the MOVES-based taxonomy, and the broader implications of these findings for 
+scalable environmental health monitoring in dense urban environments.
 
 % ==============================================================================
 
-\subsection{Why the Final YOLO Pipeline Performed Best}
+\subsection{Evaluation of Detection Architectures in NYC}
 
+The selection of a primary detection model for this study was driven by a rigorous 
+comparison across three distinct paradigms: one-stage convolutional neural networks,
+two-stage networks, and transformer-based architectures. As the data in Table~\ref{tab:architecture-comparison-summary} 
+indicates, the YOLO models performed consistently better than Faster R-CNN and the 
+DETR models in terms of AP50 and mAP on the validation set.
 
+\begin{table}[!htbp]
+    \centering
+    \caption{Baseline validation performance of the principal detector architectures evaluated in this study}
+    \label{tab:architecture-comparison-summary}
+    \begin{tabular}{lccc}
+        \toprule
+        \textbf{Model Architecture} & \textbf{AP50} & \textbf{mAP} & \textbf{Source} \\
+        \midrule
+        YOLOv11s         & 0.804 & 0.615 & Table~\ref{tab:yolo-baseline-results} \\
+        YOLOv26s         & 0.802 & 0.632 & Table~\ref{tab:yolo-baseline-results} \\
+        YOLOv8s          & 0.750 & 0.606 & Table~\ref{tab:yolo-baseline-results} \\
+        Faster R-CNN     & 0.706 & 0.509 & Table~\ref{tab:faster-rcnn-results} \\
+        RT-DETRv2        & 0.688 & 0.516 & Table~\ref{tab:detr-results} \\
+        Deformable DETR  & 0.564 & 0.421 & Table~\ref{tab:detr-results} \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
+The performance difference in architectures suggests that when dealing with low-quality, 
+352$\times$240 traffic camera images, having a highly efficient model design (like YOLO)
+is actually more important than using a massive, complex architecture. Traditional 
+two-stage detectors like Faster R-CNN try to locate candidate objects first and classify 
+them second. However, across the 1,200-image dataset, this two-stage approach struggled 
+to reliably detect the vehicles. Even when the Faster R-CNN model was tuned 
+(the \verb|fasterrcnn_resnet50_fpn_v2| version) with 8 to 128-pixel anchors, it 
+still couldn't beat the baseline performance scores (AP50) of the YOLO models.
+
+Furthermore, the transformer-based models (the DETR family) demonstrated a clear 
+sensitivity to data volume and augmentation strategy. As noted in Section~\ref{sec:detr},
+Deformable DETR's performance improved significantly (from 0.428 to 0.564 AP50) when
+the image augmentation pipeline was lightened. This suggests that these types of 
+models struggle to learn from a small dataset if the training images are too heavily
+modified or distorted. While newer variants like RT-DETRv2 showed promise, reaching 
+an AP50 of 0.688, they still remained less accurate than the YOLOv11s model. 
+Ultimately, YOLO's architecture proved more effective at extracting the necessary 
+visual features from these low-resolution traffic scenes 
+\cite{yolo11_ultralytics, ultralytics_rtdetrv2_yolo11}.
+
+The performance advantage of YOLOv11s observed in this study likely stems from its 
+ability to efficiently process objects at multiple scales. As outlined in 
+Section~\ref{sec:yolov11}, its architecture combines visual features from different resolutions, 
+which appears to help the model preserve semantic information for vehicles ranging 
+from large buses in the foreground to small sedans in the distance. This multi-scale
+capability is particularly critical for New York City’s traffic environment, where 
+the high mounting of the cameras means a vehicle close to the lens appears massive, 
+while the exact same type of vehicle further down the street appears as just a few 
+pixels.
