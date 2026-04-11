@@ -172,4 +172,195 @@ that gives the cleanest and most reliable vehicle counts.
 
 % ==============================================================================
 
+\subsection{Generalization Stability and Domain Sensitivity}
+
+A key question for practical deployment is how well the final detector generalizes 
+beyond the data used for model selection. To examine this, the final YOLOv11s model 
+was evaluated at two levels: first on the held-out test set drawn from the same 
+12-camera pool as training and validation, and then on a separate cross-camera 
+benchmark built from three entirely unseen cameras.
+
+On the held-out test set, the model achieved an overall AP50 of 0.772 and an overall
+mAP of 0.607. These results remained reasonably close to the validation performance, 
+although both were lower than the validation values of AP50 of 0.857 and mAP of 0.661.
+The drop of 0.085 in AP50 and 0.054 in mAP suggests that the validation improvements
+were real, but that performance still decreased when the model was applied to a fully
+separate split. In other words, the detector generalized well within the original 
+dataset, but not without some loss.
+
+The larger drop appeared on the cross-camera benchmark, where overall AP50 fell to 
+0.658 and overall mAP fell to 0.488 (Table~\ref{tab:cross-camera-results}). 
+Relative to the held-out test set, this corresponds to an additional decrease of
+0.114 in AP50 and 0.119 in mAP. This result shows that the model transferred less 
+effectively to unseen camera views than to new images from the original camera set
+\cite{hsu2019progressivedomainadaptationobject, vis_domain_adapt_paper}. 
+That benchmark also appeared harder visually than the training set. The unseen 
+cameras showed broader urban scenes, more background content, and many vehicles 
+that appeared smaller because they were farther from the camera. Broadway and 
+Houston seemed especially difficult, since it captured a wider street view with 
+more surrounding buildings and more distant vehicles.
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Comparison of held-out test-set and cross-camera benchmark performance for the final YOLOv11s model. The change column reports the difference between the cross-camera benchmark and the held-out test set ($\Delta = \text{cross-camera} - \text{held-out test}$).}
+    \label{tab:cross-test-comparison}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l c c c}
+        \toprule
+        Metric &
+        \shortstack{Test Set} &
+        \shortstack{Cross-Camera Benchmark} &
+        \shortstack{Change ($\Delta$)} \\
+        \midrule
+        Overall AP50                         & 0.772 & 0.658 & -0.114 \\
+        Overall mAP                          & 0.607 & 0.488 & -0.119 \\
+        Passenger Car AP50                   & 0.779 & 0.626 & -0.153 \\
+        Passenger Truck AP50                 & 0.868 & 0.761 & -0.107 \\
+        Light Commercial Truck AP50          & 0.867 & 0.685 & -0.182 \\
+        Truck AP50                           & 0.926 & 0.735 & -0.191 \\
+        Bus AP50                             & 0.895 & 0.635 & -0.260 \\
+        Motorcycle AP50                      & 0.298 & 0.505 & \phantom{-}0.207 \\
+        \bottomrule
+    \end{tabular}%
+    }
+\end{table}
+\FloatBarrier
+
+The Table~\ref{tab:cross-test-comparison}. class-level AP50 differences from test
+set to the cross-camera benchmark show that the performance decline was not uniform. 
+Passenger trucks were the most stable major class, while passenger cars, light 
+commercial trucks, trucks, and especially buses were more sensitive to the unseen 
+views. This pattern suggests that cross-camera generalization depended not just 
+on object size, but on how consistently each class appeared across camera perspectives.
+Passenger trucks seem to have retained enough distinctive visual structure to 
+transfer relatively well, whereas buses and light-duty classes were more disrupted 
+by the new viewpoints and scene composition. The bus decline was especially notable,
+indicating that strong performance on the original camera set did not automatically 
+carry over to substantially different views. Motorcycle AP50 increased on the 
+cross-camera benchmark, but that result should be interpreted cautiously because 
+it was based on only two labeled motorcycles, making it too small a sample to 
+support a broader conclusion.
+
+Taken together, these results show two levels of generalization. The model remained 
+strong on the held-out test set, which indicates that the selected improvements were 
+not limited to the validation split alone. However, performance dropped more noticeably
+on the unseen-camera benchmark, showing that transfer to new camera views was still 
+a harder problem. For deployment, this suggests that the detector can still be used 
+out of the box for broad traffic monitoring, but more accurate class-specific 
+estimation would likely require adding labeled example images from each new location 
+to the training set. In particular, brief site-specific fine-tuning would likely 
+help the detector adapt to new scene layouts, viewing distances, and vehicle appearance 
+at that camera.
+
+% ==============================================================================
+
+\subsection{Analysis of Traffic Count Agreement}
+
+The Section~\ref{sec:atr-analysis} ATR comparison was used to test whether the 
+detection pipeline could recover not only the daily pattern of traffic, but also 
+the overall scale of vehicle activity. To evaluate this, three metrics were used: 
+Pearson correlation, mean absolute error (MAE), and mean absolute percentage error 
+(MAPE). In the context of this study, Pearson correlation measures how well the 
+detector matched the shape of the hourly traffic pattern, regardless of total 
+count magnitude. MAE measures the average hourly difference in raw vehicle counts. 
+MAPE measures the average hourly error as a percentage of the ATR count, which 
+makes it easier to compare error across locations with different traffic volumes.
+
+As observed from Table~\ref{tab:atr-count-comparison}, the closest agreement was 
+at Atlantic Avenue at Boerum Place. On March 18, the detector produced a daily 
+total of 7,559 vehicles compared with an ATR total of 8,725, with a Pearson 
+correlation of 0.844, an MAE of 82.67 vehicles per hour, and a MAPE of 22.96\%. 
+On March 19, agreement remained fairly strong, with 7,060 YOLO-derived vehicles 
+versus 9,188 ATR vehicles, a Pearson correlation of 0.803, an MAE of 104.17, and 
+a MAPE of 27.28\%. These were the best results in the comparison, suggesting that
+at this location the detector captured both the hourly trend and the total volume
+reasonably well.
+
+The other two locations showed a different pattern. At Pelham Parkway Westbound 
+at Boston Road, Pearson correlation was consistently strong, ranging from 0.780 to
+0.906, which indicates that the detector generally tracked the timing of higher-
+and lower-volume hours well. However MAE ranged from 421.04 to 644.83 vehicles 
+per hour, and MAPE ranged from 70.66\% to 78.47\%. This means that the model
+captured the daily traffic shape but substantially undercounted the true number 
+of vehicles. Broadway at Houston showed the weakest and least consistent agreement 
+overall. Pearson correlation ranged from 0.234 to 0.753, while MAPE remained high 
+on all four days, from 67.22\% to 69.08\%. The worst single-day result occurred 
+on March 16, when the detector counted 3,431 vehicles compared with 12,382 from
+the ATR, with a Pearson correlation of only 0.234. This indicates that at Broadway 
+and Houston, the method sometimes failed to recover even the basic hourly pattern 
+reliably.
+
+These results show a clear difference between pattern agreement and count agreement.
+High Pearson correlation, as seen especially at Pelham Parkway, means the detector 
+was often able to identify when traffic was relatively busy or quiet over the course 
+of the day. High MAPE and MAE, however, show that the absolute count scale could 
+still be far off. For this project, that distinction matters. If the goal is to 
+estimate temporal traffic dynamics, such as peak hours or relative changes in flow,
+then strong correlation is useful. But if the goal is to estimate total vehicle 
+activity for emissions modeling, then large magnitude errors remain a serious limitation.
+
+Several factors likely contributed to this undercounting. First, the camera-based 
+method only sampled one image every two minutes, so vehicles passing between snapshots 
+were never observed. Second, the detector could only count vehicles that were visible 
+within the camera's field of view, unlike ATR sensors that record traffic continuously
+across the roadway. Occlusion likely also played a role, especially when larger vehicles
+blocked smaller ones. More generally, this comparison was necessarily approximate 
+because the ATR counts came from 2025 while the camera images came from 2026. The 
+matched dates were therefore the best available comparison, but they were not exact
+same-day ground truth. In addition, several of the matched days fell during the week
+of Saint Patrick's Day, so location-specific events, celebrations, or traffic 
+disruptions may have caused year-to-year differences that were unrelated to detector 
+performance.
+
+Overall, the ATR comparison suggests that the pipeline was more successful at recovering 
+the relative hourly structure of traffic than at recovering exact vehicle totals. 
+Atlantic Avenue showed that closer agreement was possible in a favorable view, while 
+Pelham Parkway showed that strong temporal tracking could coexist with severe 
+undercounting. Broadway and Houston demonstrated that in more difficult scenes,
+even the hourly pattern could break down. For practical use, this means the detector
+can provide useful traffic-pattern information, but absolute count estimates should
+be interpreted cautiously unless additional calibration is performed.
+
+% ==============================================================================
+
+\subsection{Implications for Public Health and Environmental Policy}
+
+The results of this study suggest that existing traffic-camera networks could 
+support a more spatially detailed approach to traffic-related air-quality analysis.
+In New York City, traffic contributes about 14\% of citywide $PM_{2.5}$, and prior
+work has shown that trucks and buses account for a particularly large share of 
+traffic-attributable ambient $PM_{2.5}$ in the city. Within that context, the main
+contribution of this pipeline is not direct pollution measurement, but the ability
+to estimate vehicle composition at specific intersections using a MOVES-aligned taxonomy.
+That is potentially useful because fixed air-quality monitors provide only limited 
+spatial coverage, whereas camera-based classification could help identify locations 
+with persistently high proportions of buses, trucks, or other higher-emitting vehicle
+groups that are especially relevant for street-level exposure.
+
+At the same time, the results also show that this approach should be treated as a 
+screening and prioritization tool rather than a full replacement for conventional 
+monitoring. The detector performed strongly on the held-out test set, but cross-camera 
+performance declined on unseen views, and the ATR comparison showed that hourly 
+traffic patterns were recovered more reliably than exact count magnitude. In practical
+terms, this means the pipeline is better suited to highlighting relative differences
+across locations, time periods, or vehicle mixes than to producing perfectly calibrated
+traffic totals without local adjustment. Even so, that kind of intersection-level 
+screening could still be useful for public-health and planning decisions, such as
+identifying corridors where freight or bus activity is concentrated and where 
+follow-up interventions or measurements may be warranted. More broadly, the benefit
+of this approach is that it can build on infrastructure already being expanded by 
+NYC DOT, which has described plans to scale connected-vehicle and smart-intersection
+deployments from about 150 to as many as 600 intersections. If paired with limited 
+site-specific calibration, the pipeline could offer a relatively low-cost and 
+privacy-preserving way to add transportation exposure intelligence to existing 
+urban traffic systems.
+
+% ==============================================================================
+
+
+
+
+
+
+
 
