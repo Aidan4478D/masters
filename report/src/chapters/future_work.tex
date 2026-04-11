@@ -1,0 +1,33 @@
+\newpage
+\section{Future Work}
+
+A clear next step is improving dataset coverage and cross-camera generalization. 
+The current detector was trained on imagery from only 12 intersections, and the 
+cross-camera benchmark showed that performance dropped on unseen views. Expanding 
+the dataset to include a wider range of camera locations, boroughs, lighting 
+conditions, seasons, and viewing angles would make the system more robust for 
+citywide deployment. Additional targeted annotation would also be especially 
+valuable for underrepresented classes such as \verb|motorcycle|, which had very 
+few training examples and remained the least reliable class.
+
+A second priority is improving how frame-level detections are converted into traffic 
+counts. The ATR comparison showed that the current snapshot-based approach was better
+at recovering broad hourly traffic patterns than exact count magnitude. Future 
+systems should therefore move beyond independent still-frame detection and incorporate 
+temporal modeling. In particular, adding a lightweight multi-object tracking method 
+would help prevent repeated counting of persistent vehicles and reduce missed counts 
+from vehicles that pass through the scene between snapshots. A statistical calibration
+step that maps image-derived counts to ATR-style flow measurements would also help 
+bridge the gap between detector output and true traffic volume.
+
+A final direction is strengthening the connection between vehicle detection and 
+emissions estimation. Although the current 6-class taxonomy was designed to align 
+with MOVES, full MOVES-based emissions modeling also depends on operational variables
+such as vehicle speed and vehicle miles traveled. Integrating camera-based detections
+with external traffic data, roadway geometry, or speed estimates would make the 
+pipeline more useful for downstream environmental analysis. Additional extensions 
+could also explore predicting semantic attributes such as taxi or delivery status 
+while preserving the core MOVES-aligned vehicle classes. Together, these improvements
+would move the pipeline from snapshot-based fleet characterization toward a more 
+complete system for intersection-level traffic and emissions monitoring.
+
