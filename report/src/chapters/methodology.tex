@@ -307,7 +307,7 @@ The remaining van instances were mapped to \verb|light_commercial_vehicle|.
 This separation is useful from a computer-vision standpoint, as commercial vans 
 tend to have more consistent shapes and usage patterns than SUVs and pickup trucks.
 It also aligns with MOVES technical guidance, which treats passenger trucks and 
-light commercial trucks as separate source types \cite{USEPA_moves3_2020}. 
+light commercial trucks as separate source types \cite{us_epa_moves3_2020}. 
 Additionally, since the original \verb|two_wheeler| class only contained 
 motorcycles, it was remapped directly to \verb|motorcycle|.
 
@@ -363,14 +363,14 @@ for an example of a training image before and after masking.
 
 \begin{figure}[!htbp]
     \centering
-    \begin{subfigure}[c]{0.48\textwidth}
+    \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[height=5.5cm]{figures/methodology/4_3_unmasked.png}
         \caption{Training image with the \texttt{unknown\_vehicle} annotated regions outlined in purple.}
         \label{fig:unmasked-unknown}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[c]{0.48\textwidth}
+    \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[height=5.5cm]{figures/methodology/4_3_masked.png}
         \caption{Same training image after masking regions annotated as \texttt{unknown\_vehicle} with the neutral fill value.}

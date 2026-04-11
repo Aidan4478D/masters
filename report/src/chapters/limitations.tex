@@ -62,4 +62,66 @@ bicycles or other small two-wheeled objects.
 
 % ------------------------------------------------------------------------------
 
+\textbf{Modeling and Taxonomy}
+
+The 6-class taxonomy was designed to support MOVES-based emissions analysis, but
+it is still a simplified representation of the full vehicle categories used in MOVES. 
+The pipeline cannot recover the entire MOVES source-type hierarchy from imagery alone.
+More detailed distinctions, such as separating a transit bus from a private coach bus
+or distinguishing different truck types by use or weight class, depend on information 
+that is not visible in a single low-resolution frame \cite{USEPA_road_pop_2020}.
+
+Additionally, the current pipeline does not capture the dynamic vehicle activity 
+needed for full emissions modeling. Accurate MOVES-based emissions estimates depend
+not only on vehicle type, but also on operational variables such as speed and vehicle 
+miles traveled (VMT) \cite{us_epa_moves3_2020}. 
+Because this system processes isolated still frames, it 
+cannot directly observe vehicle kinematics, stop-and-go behavior, or acceleration 
+patterns. Although some of these quantities could be approximated using roadway 
+speed limits or segment lengths, true operating conditions cannot be recovered from
+static snapshots alone.
+
+In addition, the detector was evaluated only with spatial bounding-box metrics such
+as AP50 and mAP on still images. These metrics measure detection and classification 
+quality within individual frames, but they do not capture temporal consistency or 
+full video-level understanding. More advanced models, like foundation large 
+vision-language models, may be able to reason about some ambiguous cases more 
+flexibly, but they are not practical for this deployment setting. Running a large 
+commercial model across hundreds of traffic cameras at frequent intervals would 
+introduce substantial cost and latency. For that reason, efficient detectors such
+as YOLO remain the more realistic choice for scalable municipal monitoring, even 
+if that comes with some loss of classification detail.
+
+% ------------------------------------------------------------------------------
+
+\textbf{Downstream Counting and Deployment}
+
+A major limitation of the proposed system is that it operates on isolated still 
+frames rather than continuous video. The current pipeline does not track vehicles
+across frames or assign persistent IDs over time, so it cannot determine whether 
+a vehicle seen in one image is the same vehicle seen again later. It also cannot 
+recover trajectories for vehicles that are briefly hidden by larger vehicles, 
+surrounding infrastructure, or other occlusions. This limits the system’s ability 
+to measure true vehicle flow in the same way as a continuous traffic sensor such 
+as an Automated Traffic Recorder (ATR).
+
+The two-minute sampling interval also creates an additional mismatch between 
+detections and real traffic counts. Vehicles that pass through the scene between 
+snapshots are missed entirely, which helps explain the strong undercounting observed
+at faster-moving corridors such as Pelham Parkway. At the same time, vehicles that 
+remain visible across multiple frames, such as parked cars, queued vehicles, or 
+idling delivery trucks, may be counted more than once. As a result, the current 
+approach is better suited to capturing broad traffic patterns than to recovering 
+exact continuous vehicle volumes.
+
+% ------------------------------------------------------------------------------
+
+Overall, these limitations show that the current system is better suited to estimating 
+vehicle composition in individual snapshots than to directly producing exact traffic 
+volumes or full MOVES-ready emissions inputs. While the detector performs well as a 
+frame-level classification tool, extending it to continuous counting and end-to-end 
+emissions estimation would require temporal tracking, count calibration, and additional 
+operational data such as vehicle speed. The present pipeline should therefore be viewed
+as a practical first step toward camera-based traffic emissions monitoring, rather than 
+a complete replacement for ATR infrastructure or full emissions modeling by itself.
 
