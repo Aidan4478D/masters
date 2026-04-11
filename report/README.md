@@ -1,3 +1,2 @@
-## Senior Project Reports
+# Master's Thesis Report
 
-Imma slam maballs into yo face

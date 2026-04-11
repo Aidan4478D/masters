@@ -1999,43 +1999,6 @@
       \verb https://www.epa.gov/sites/default/files/2020-11/documents/420r20023.pdf
       \endverb
     \endentry
-    \entry{USEPA_moves3_2020}{report}{}
-      \name{author}{1}{}{%
-        {{hash=8233d83a5e663161d707a62961f8f66f}{%
-           family={{U.S. Environmental Protection Agency}},
-           familyi={U\bibinitperiod}}}%
-      }
-      \list{institution}{2}{%
-        {Office of Transportation}%
-        {Air Quality, U.S. Environmental Protection Agency}%
-      }
-      \strng{namehash}{8233d83a5e663161d707a62961f8f66f}
-      \strng{fullhash}{8233d83a5e663161d707a62961f8f66f}
-      \strng{bibnamehash}{8233d83a5e663161d707a62961f8f66f}
-      \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
-      \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
-      \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
-      \field{extraname}{6}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{number}{{EPA}-420-B-20-052}
-      \field{title}{{MOVES}3 Technical Guidance: Using {MOVES} to Prepare Emission Inventories for State Implementation Plans and Transportation Conformity}
-      \field{urlday}{11}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420b20052.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420b20052.pdf
-      \endverb
-    \endentry
     \entry{CVAT_label_guide}{online}{}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
@@ -2868,6 +2831,347 @@
       \verb{url}
       \verb https://docs.ultralytics.com/modes/val/
       \endverb
+    \endentry
+    \entry{zippenfenig_open-meteocom_2024}{software}{}
+      \name{author}{1}{}{%
+        {{hash=a21855b37b026bdb2b21690260a55e71}{%
+           family={Zippenfenig},
+           familyi={Z\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{a21855b37b026bdb2b21690260a55e71}
+      \strng{fullhash}{a21855b37b026bdb2b21690260a55e71}
+      \strng{bibnamehash}{a21855b37b026bdb2b21690260a55e71}
+      \strng{authorbibnamehash}{a21855b37b026bdb2b21690260a55e71}
+      \strng{authornamehash}{a21855b37b026bdb2b21690260a55e71}
+      \strng{authorfullhash}{a21855b37b026bdb2b21690260a55e71}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{31}
+      \field{month}{12}
+      \field{title}{Open-Meteo.com Weather {API}}
+      \field{urlday}{9}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.5281/ZENODO.7970649
+      \endverb
+      \verb{urlraw}
+      \verb https://zenodo.org/doi/10.5281/zenodo.7970649
+      \endverb
+      \verb{url}
+      \verb https://zenodo.org/doi/10.5281/zenodo.7970649
+      \endverb
+      \keyw{{IPCC} climate models,Marine forecast,air quality,ensemble prediction,historical weather data,open-data,weather api,weather forecast}
+    \endentry
+    \entry{ultralytics_rtdetrv2_yolo11}{online}{}
+      \name{author}{1}{}{%
+        {{hash=88f069848482a556e416f713d2819905}{%
+           family={{Ultralytics}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{88f069848482a556e416f713d2819905}
+      \strng{fullhash}{88f069848482a556e416f713d2819905}
+      \strng{bibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorbibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authornamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorfullhash}{88f069848482a556e416f713d2819905}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Explore the technical comparison of {RTDETRv}2 and {YOLO}11. Discover strengths, weaknesses, and ideal use cases to choose the best detection model.}
+      \field{langid}{english}
+      \field{shorttitle}{{RTDETRv}2 vs. {YOLO}11}
+      \field{title}{{RTDETRv}2 vs. {YOLO}11: A Deep Dive into Real-Time Object Detection Architectures}
+      \field{urlday}{10}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.ultralytics.com/compare/rtdetr-vs-yolo11/
+      \endverb
+      \verb{url}
+      \verb https://docs.ultralytics.com/compare/rtdetr-vs-yolo11/
+      \endverb
+    \endentry
+    \entry{song2022learningnoisylabelsdeep}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=d3c9d92281fa5496ef1bf22058d8a54a}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Hwanjun},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3edfa9a336a41750233bcb475f13c701}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Minseok},
+           giveni={M\bibinitperiod}}}%
+        {{hash=032fa5479feaa926e16e534ac668743c}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Dongmin},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ee0b670ae2fa23dd8f4d633f8e313f5c}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Yooju},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=711b2b2036dca62e14a5d95d1640ce84}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Jae-Gil},
+           giveni={J\bibinithyphendelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c770bd41476179d7f98674c86179b40}
+      \strng{fullhash}{873a0c53d31eecbdcf9358a7d0241fcd}
+      \strng{bibnamehash}{873a0c53d31eecbdcf9358a7d0241fcd}
+      \strng{authorbibnamehash}{873a0c53d31eecbdcf9358a7d0241fcd}
+      \strng{authornamehash}{6c770bd41476179d7f98674c86179b40}
+      \strng{authorfullhash}{873a0c53d31eecbdcf9358a7d0241fcd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Learning from Noisy Labels with Deep Neural Networks: A Survey}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2007.08199
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2007.08199
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2007.08199
+      \endverb
+    \endentry
+    \entry{feuer2024selectlargescalebenchmarkdata}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=420a618ecc626f3c19a1a8d6e9566a9c}{%
+           family={Feuer},
+           familyi={F\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=200fc57a11eee07e89779b8575fba40f}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Jiawei},
+           giveni={J\bibinitperiod}}}%
+        {{hash=33bda052430c2793b46feeb64bbf2218}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Niv},
+           giveni={N\bibinitperiod}}}%
+        {{hash=0cc1b7d96047dd39b7bce20b91c30a27}{%
+           family={Yubeaton},
+           familyi={Y\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2ff3a4de7ee3c9a0e836572900594618}{%
+           family={Mittal},
+           familyi={M\bibinitperiod},
+           given={Govind},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2edc4108b4aef67fe73f9c0369572451}{%
+           family={Hegde},
+           familyi={H\bibinitperiod},
+           given={Chinmay},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{09b675e186ea6c453899e14913210ef6}
+      \strng{fullhash}{135e7fb7f0ce6e135aa311455c28a58c}
+      \strng{bibnamehash}{135e7fb7f0ce6e135aa311455c28a58c}
+      \strng{authorbibnamehash}{135e7fb7f0ce6e135aa311455c28a58c}
+      \strng{authornamehash}{09b675e186ea6c453899e14913210ef6}
+      \strng{authorfullhash}{135e7fb7f0ce6e135aa311455c28a58c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{SELECT: A Large-Scale Benchmark of Data Curation Strategies for Image Classification}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2410.05057
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2410.05057
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2410.05057
+      \endverb
+    \endentry
+    \entry{goyal2024scalinglawsdatafiltering}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=d92b37f86e1ba1fd7696c92b9995e5e5}{%
+           family={Goyal},
+           familyi={G\bibinitperiod},
+           given={Sachin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c7d4f9e397f3cd3590f31a0cce274066}{%
+           family={Maini},
+           familyi={M\bibinitperiod},
+           given={Pratyush},
+           giveni={P\bibinitperiod}}}%
+        {{hash=599ae457cf41d4ce64e09433edbc964b}{%
+           family={Lipton},
+           familyi={L\bibinitperiod},
+           given={Zachary\bibnamedelima C.},
+           giveni={Z\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=7bb584b014f043d94e43a8395735799e}{%
+           family={Raghunathan},
+           familyi={R\bibinitperiod},
+           given={Aditi},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0288715a83a3349e44f9292c5c2149f7}{%
+           family={Kolter},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi Zico},
+           giveni={J\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{92dfef7612d91adb047cac44b6a97021}
+      \strng{fullhash}{6f2af3559893f902110db48255267c6a}
+      \strng{bibnamehash}{6f2af3559893f902110db48255267c6a}
+      \strng{authorbibnamehash}{6f2af3559893f902110db48255267c6a}
+      \strng{authornamehash}{92dfef7612d91adb047cac44b6a97021}
+      \strng{authorfullhash}{6f2af3559893f902110db48255267c6a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Scaling Laws for Data Filtering -- Data Curation cannot be Compute Agnostic}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2404.07177
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2404.07177
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2404.07177
+      \endverb
+    \endentry
+    \entry{hsu2019progressivedomainadaptationobject}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=3a94176150b6cb6aade9ab65a67573eb}{%
+           family={Hsu},
+           familyi={H\bibinitperiod},
+           given={Han-Kai},
+           giveni={H\bibinithyphendelim K\bibinitperiod}}}%
+        {{hash=be777e58c13f1e622709f5f7f0def9aa}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Chun-Han},
+           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=2402ea0cd420ded5cee2ce647f8d2668}{%
+           family={Tsai},
+           familyi={T\bibinitperiod},
+           given={Yi-Hsuan},
+           giveni={Y\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=9a7122f3b3bddb9851989ac18b58efcf}{%
+           family={Hung},
+           familyi={H\bibinitperiod},
+           given={Wei-Chih},
+           giveni={W\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=a84ee5a0517794531ce2128fa5ddf508}{%
+           family={Tseng},
+           familyi={T\bibinitperiod},
+           given={Hung-Yu},
+           giveni={H\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=200299465db546ef0329bd986b03eb9f}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Maneesh},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bf7958a615b2cc8e72ff1d44e7c216cd}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Ming-Hsuan},
+           giveni={M\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b6cee05616e13cd7e4053c0092db2d8}
+      \strng{fullhash}{08032319753702bdbe1bd434f391bf79}
+      \strng{bibnamehash}{7b6cee05616e13cd7e4053c0092db2d8}
+      \strng{authorbibnamehash}{7b6cee05616e13cd7e4053c0092db2d8}
+      \strng{authornamehash}{7b6cee05616e13cd7e4053c0092db2d8}
+      \strng{authorfullhash}{08032319753702bdbe1bd434f391bf79}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Progressive Domain Adaptation for Object Detection}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1910.11319
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1910.11319
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1910.11319
+      \endverb
+    \endentry
+    \entry{vis_domain_adapt_paper}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9b411d947790c75f89cd7caeb475de1c}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Vishal\bibnamedelima M},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=e19fe09412d27a1e8ccdef89537069f1}{%
+           family={Gopalan},
+           familyi={G\bibinitperiod},
+           given={Raghuraman},
+           giveni={R\bibinitperiod}}}%
+        {{hash=007c49c3745fb6226af7910c39240f57}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ruonan},
+           giveni={R\bibinitperiod}}}%
+        {{hash=58e34e482e0dd6e755329ae57da3b293}{%
+           family={Chellappa},
+           familyi={C\bibinitperiod},
+           given={Rama},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a289f51c23686fbe658ac60316134391}
+      \strng{fullhash}{f47f4f1b06b44f7faa965b0fd3374b4c}
+      \strng{bibnamehash}{f47f4f1b06b44f7faa965b0fd3374b4c}
+      \strng{authorbibnamehash}{f47f4f1b06b44f7faa965b0fd3374b4c}
+      \strng{authornamehash}{a289f51c23686fbe658ac60316134391}
+      \strng{authorfullhash}{f47f4f1b06b44f7faa965b0fd3374b4c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Signal Processing Magazine}
+      \field{number}{3}
+      \field{title}{Visual Domain Adaptation: A survey of recent advances}
+      \field{volume}{32}
+      \field{year}{2015}
+      \field{pages}{53\bibrangedash 69}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/MSP.2014.2347059
+      \endverb
+      \keyw{Semisupervised learning;Classification algorithms;Pattern recognition;Visualization;Signal processing algorithms;Computer vision;Training data}
     \endentry
   \enddatalist
 \endrefsection

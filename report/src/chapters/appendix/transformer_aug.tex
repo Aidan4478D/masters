@@ -1,0 +1,83 @@
+\section{Transformer Training Augmentation Pipeline}
+
+The training augmentations used in the transformer-based detector experiments 
+were implemented with the Albumentations Python library. Because these transformations 
+directly modify both the input image and its associated bounding boxes, Albumentations
+was used to ensure that geometric and photometric augmentations remained consistent 
+with the object detection annotations.
+
+The heavier augmentation pipeline consisted of:
+\begin{itemize}
+    \item Horizontal flipping with probability 0.5.
+    \item Random safe cropping and resizing to \(460 \times 768\) with probability 0.25.
+    \item Perspective transformation with probability 0.1.
+    \item One of two color perturbations with overall probability 0.9:
+    \begin{itemize}
+        \item Hue, saturation, and value shifting.
+        \item Random brightness and contrast adjustment.
+    \end{itemize}
+    \item Gaussian blur with probability 0.1.
+\end{itemize}
+
+In Python, this was implemented as:
+
+\begin{verbatim}
+import albumentations as A
+
+# Heavier augmentation pipeline
+def get_train_transforms():
+    return A.Compose([
+        A.HorizontalFlip(p=0.5),
+        A.RandomSizedBBoxSafeCrop(height=460, width=768, p=0.25),
+        A.Perspective(p=0.1),
+        A.OneOf([
+            A.HueSaturationValue(
+                hue_shift_limit=20,
+                sat_shift_limit=30,
+                val_shift_limit=20,
+                p=0.9
+            ),
+            A.RandomBrightnessContrast(
+                brightness_limit=0.2,
+                contrast_limit=0.2,
+                p=0.9
+            ),
+        ], p=0.9),
+        A.Blur(blur_limit=3, p=0.1),
+    ], bbox_params=A.BboxParams(
+        format="pascal_voc",
+        label_fields=["labels"],
+        min_visibility=0.1
+    ))
+\end{verbatim}
+
+The lighter augmentation pipeline consisted of:
+\begin{itemize}
+    \item Horizontal flipping with probability 0.5,
+    \item Random brightness and contrast adjustment with brightness limit 0.12, contrast limit 0.12, and probability 0.3.
+\end{itemize}
+
+In Python, this was implemented as:
+
+\begin{verbatim}
+import albumentations as A
+
+# Lighter augmentation pipeline
+def get_train_transforms():
+    return A.Compose([
+        A.HorizontalFlip(p=0.5),
+        A.RandomBrightnessContrast(
+            brightness_limit=0.12,
+            contrast_limit=0.12,
+            p=0.3
+        ),
+    ], bbox_params=A.BboxParams(
+        format="pascal_voc",
+        label_fields=["labels"],
+        min_visibility=0.1
+    ))
+\end{verbatim}
+
+In both cases, bounding boxes were processed using Albumentations with Pascal VOC 
+box format. The associated class labels were tracked through the \texttt{label\_fields} 
+argument, and boxes with visibility below 0.1 after transformation were discarded.

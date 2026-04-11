@@ -1,4 +1,28 @@
 \begin{abstract}
-Hello
+    Traffic-related air pollution remains an important public health concern in 
+    dense urban environments, but traditional monitoring infrastructure cannot 
+    easily provide continuous, street-level measurements by vehicle type. This 
+    thesis investigates whether existing New York City traffic-camera feeds can 
+    be used to estimate traffic flow and vehicle composition for downstream emissions
+    analysis. To address this problem, a 1,200-image low-resolution vehicle detection 
+    dataset was constructed from 511NY and NYSDOT imagery and annotated using a 
+    6-class taxonomy aligned with broad EPA MOVES vehicle categories. Several 
+    object-detection architectures were evaluated, including YOLO, Faster R-CNN, 
+    RT-DETR, and Deformable DETR, with YOLOv11s providing the strongest overall 
+    performance. The baseline YOLOv11s model achieved an AP50 of 0.804 and an mAP 
+    of 0.615 on the validation set, while the final refined model improved to an 
+    AP50 of 0.857 and an mAP of 0.661 through targeted data refinement. On a 
+    held-out test set, the final model reached an AP50 of 0.772 and an mAP of
+    0.607, while performance on a cross-camera benchmark of unseen locations dropped
+    to an AP50 of 0.658 and an mAP of 0.488, showing that generalization to new 
+    camera views remained a challenge. Comparison against New York City Automated 
+    Traffic Recorder (ATR) data showed that the pipeline was better at recovering 
+    the temporal pattern of traffic flow than exact count magnitude, with the 
+    strongest agreement at Atlantic Avenue at Boerum Place, where Pearson correlation
+    reached 0.844 and MAPE was 22.96\%. Overall, the results show that public 
+    traffic-camera imagery can support practical traffic-pattern and fleet-composition
+    analysis, while also highlighting the need for broader training data, temporal 
+    tracking, and additional operational inputs before such a system can support 
+    fully calibrated traffic counting and emissions modeling.
 \end{abstract}
 

@@ -1,5 +1,4 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{}%
-\contentsline {subsection}{\numberline {1.1}Motivation}{1}{}%
 \contentsline {section}{\numberline {2}Background and Related Work}{3}{}%
 \contentsline {subsection}{\numberline {2.1}MOtor Vehicle Emission Simulator (MOVES)}{3}{}%
 \contentsline {subsection}{\numberline {2.2}NYC Traffic Monitoring}{4}{}%
@@ -26,23 +25,36 @@
 \contentsline {subsubsection}{\numberline {4.1.4}Class Probability Prediction}{31}{}%
 \contentsline {subsubsection}{\numberline {4.1.5}Post-Processing and Final Detections}{31}{}%
 \contentsline {subsubsection}{\numberline {4.1.6}YOLOv11 Architecture}{33}{}%
-\contentsline {subsection}{\numberline {4.2}Performance Metrics}{34}{}%
-\contentsline {subsubsection}{\numberline {4.2.1}Intersection over Union}{34}{}%
-\contentsline {subsubsection}{\numberline {4.2.2}Confusion Matrix}{34}{}%
-\contentsline {subsubsection}{\numberline {4.2.3}Precision-Recall Curve}{37}{}%
-\contentsline {subsubsection}{\numberline {4.2.4}Average Precision and mAP}{37}{}%
-\contentsline {subsection}{\numberline {4.3}Handling Unknown Vehicles}{40}{}%
-\contentsline {section}{\numberline {5}Experimentation and Results}{40}{}%
-\contentsline {subsection}{\numberline {5.1}MOVES-based Taxonomy}{41}{}%
-\contentsline {subsection}{\numberline {5.2}YOLO-Based Detector Development and Results}{42}{}%
-\contentsline {subsubsection}{\numberline {5.2.1}Baseline YOLO Experiments}{42}{}%
-\contentsline {subsubsection}{\numberline {5.2.2}Data-Centric Refinements}{44}{}%
-\contentsline {subsubsection}{\numberline {5.2.3}Final YOLO Model Selection and Test-Set Evaluation}{51}{}%
-\contentsline {subsection}{\numberline {5.3}Comparison with Alternative Detection Architectures}{51}{}%
-\contentsline {subsubsection}{\numberline {5.3.1}Faster R-CNN}{51}{}%
-\contentsline {subsubsection}{\numberline {5.3.2}Detection Transformer (DETR)}{53}{}%
-\contentsline {subsection}{\numberline {5.4}Model Robustness and Cross-Camera Generalization}{54}{}%
-\contentsline {subsubsection}{\numberline {5.4.1}Confidence Threshold and NMS Sensitivity Analysis}{55}{}%
-\contentsline {subsubsection}{\numberline {5.4.2}Cross-Camera Generalization}{58}{}%
-\contentsline {subsection}{\numberline {5.5}Comparison with ATR Traffic Counts}{59}{}%
-\contentsline {section}{References}{59}{}%
+\contentsline {subsection}{\numberline {4.2}MOVES-based Taxonomy}{34}{}%
+\contentsline {subsection}{\numberline {4.3}Handling Unknown Vehicles}{35}{}%
+\contentsline {subsection}{\numberline {4.4}Performance Metrics}{36}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Intersection over Union}{37}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Confusion Matrix}{38}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}Precision-Recall Curve}{39}{}%
+\contentsline {subsubsection}{\numberline {4.4.4}Average Precision and mAP}{40}{}%
+\contentsline {subsection}{\numberline {4.5}Experimental Environment}{42}{}%
+\contentsline {section}{\numberline {5}Experimentation and Results}{42}{}%
+\contentsline {subsection}{\numberline {5.1}YOLO-Based Detector Development and Results}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}Baseline YOLO Experiments}{43}{}%
+\contentsline {subsubsection}{\numberline {5.1.2}Data-Centric Refinements}{45}{}%
+\contentsline {subsubsection}{\numberline {5.1.3}Final YOLO Model Selection and Test-Set Evaluation}{51}{}%
+\contentsline {subsection}{\numberline {5.2}Comparison with Alternative Detection Architectures}{52}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}Faster R-CNN}{52}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}Detection Transformer (DETR)}{54}{}%
+\contentsline {subsection}{\numberline {5.3}Model Robustness and Cross-Camera Generalization}{55}{}%
+\contentsline {subsubsection}{\numberline {5.3.1}Confidence Threshold and NMS Sensitivity Analysis}{56}{}%
+\contentsline {subsubsection}{\numberline {5.3.2}Cross-Camera Generalization}{58}{}%
+\contentsline {subsection}{\numberline {5.4}Comparison with ATR Traffic Counts}{60}{}%
+\contentsline {section}{\numberline {6}Discussion}{64}{}%
+\contentsline {subsection}{\numberline {6.1}Evaluation of Detection Architectures for NYC Imagery}{64}{}%
+\contentsline {subsection}{\numberline {6.2}Rationale for the MOVES-Based Taxonomy}{65}{}%
+\contentsline {subsection}{\numberline {6.3}Data-Centric Refinement vs. Model Complexity}{66}{}%
+\contentsline {subsection}{\numberline {6.4}Evaluation and Inference Results}{67}{}%
+\contentsline {subsection}{\numberline {6.5}Generalization Stability and Domain Sensitivity}{68}{}%
+\contentsline {subsection}{\numberline {6.6}Analysis of Traffic Count Agreement}{69}{}%
+\contentsline {subsection}{\numberline {6.7}Implications for Public Health and Environmental Policy}{71}{}%
+\contentsline {section}{\numberline {7}Limitations}{72}{}%
+\contentsline {section}{\numberline {8}Future Work}{75}{}%
+\contentsline {section}{\numberline {9}Conclusion}{76}{}%
+\contentsline {section}{\numberline {A}Transformer Training Augmentation Pipeline}{78}{}%
+\contentsline {section}{References}{80}{}%
