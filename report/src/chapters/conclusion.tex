@@ -1,0 +1,56 @@
+\section{Conclusion}
+
+This thesis investigated whether existing New York City traffic-camera infrastructure 
+could be used as a practical source of vehicle composition data for traffic and 
+emissions analysis. To address this question, a low-resolution urban traffic dataset 
+was constructed from 511NY and NYSDOT camera imagery, annotated using a MOVES-aligned 
+6-class vehicle taxonomy, and used to evaluate several modern object-detection 
+architectures. Across the models tested, the YOLO family performed best for this 
+setting, with the baseline YOLOv11s model achieving an AP50 of 0.804 and an mAP of 
+0.615 on the validation set. After targeted refinement, the final selected YOLOv11s 
+configuration reached an AP50 of 0.857 and an mAP of 0.661, showing that careful 
+data curation and hard negative mining were more effective in this case than simply 
+changing to a more complex architecture or adding more untargeted data.
+
+The results also showed that the design of the taxonomy and the treatment of ambiguous 
+annotations were central to the success of the pipeline. By grouping visually similar 
+vehicle body styles into broader MOVES-relevant classes and treating 
+\verb|unknown_vehicle| regions as ignore areas rather than a learnable class, the 
+detector was able to focus on vehicle distinctions that were both visually reliable 
+and meaningful for downstream environmental analysis. This made the final system a 
+better match for the limits of 352$\times$240 traffic imagery, where many vehicles 
+are too distant, too small, or too occluded to support fine-grained labeling. In 
+that sense, the strongest gains in this study came not only from model selection, 
+but from aligning the dataset and class structure with the actual information present 
+in the images.
+
+Beyond validation performance, the experiments provided a clearer picture of where 
+the detector generalized well and where important limitations remained. On the 
+held-out test set, the final model achieved an overall AP50 of 0.772 and an mAP of 
+0.607, indicating that the selected improvements transferred beyond the validation 
+split. On the separate cross-camera benchmark of unseen locations, performance fell 
+to an AP50 of 0.658 and an mAP of 0.488, showing that transfer to new camera views 
+was still more difficult. The comparison between real 2025 NYC ATR counts further 
+showed that the pipeline was 
+better at recovering the hourly pattern of traffic than exact count magnitude. For 
+example, Atlantic Avenue at Boerum Place produced the closest count agreement, with 
+Pearson correlations of 0.844 and 0.803 and MAPE values of 22.96\% and 27.28\%, 
+while Pelham Parkway maintained strong hourly-profile agreement, with correlations 
+up to 0.906, but still severely undercounted total vehicles. These findings suggest 
+that the current system is already useful for broad fleet characterization and traffic 
+pattern analysis, but that exact count recovery and camera-to-camera transfer remain 
+open challenges.
+
+The results support the overall feasibility of using public traffic 
+camera imagery for intersection-level vehicle classification in support of transportation 
+and environmental analysis. At the same time, the work also shows that this approach 
+is best understood as a first stage rather than a complete end-to-end emissions-monitoring 
+solution. The current pipeline can estimate vehicle composition within snapshots and 
+capture broad temporal traffic structure, but extending it to fully calibrated traffic 
+volumes and MOVES-ready emissions inputs will require broader training data, stronger 
+cross-camera adaptation, temporal tracking, and additional operational information such 
+as vehicle speed. Even with these limitations, the study demonstrates that existing 
+traffic-camera networks can provide useful transportation intelligence without requiring 
+new physical sensing infrastructure. In that sense, this work establishes a practical 
+foundation for future camera-based traffic and emissions monitoring in urban environments.
+
