@@ -1,0 +1,74 @@
+\section{Introduction}
+
+Urban air pollution remains one of the most critical public health and environmental challenges of the twenty-first century.
+The World Health Organization estimates that approximately 99\% of the global population
+breathes air containing pollutant concentrations above guideline limits, and the
+\textit{State of Global Air 2025} report attributes 7.9 million deaths in 2023 to air pollution
+worldwide \cite{world_health_organization_air_nodate,health_effects_institute_state_2025}.
+Transportation is an important contributor to this burden. The IPCC Sixth Assessment Report
+states that the transport sector accounted for 23\% of global energy-related
+$\mathrm{CO_2}$ emissions in 2019, with road vehicles responsible for the majority of that total
+\cite{ipcc_climate_2022,creutzig_transport_2015}. In urban environments, these emissions are
+especially consequential because they are released close to where people live, work, and travel
+\cite{uherek_transport_2010}.
+
+New York City illustrates this problem clearly. It combines a dense population, heavy roadway
+activity, and substantial exposure to traffic-related air pollution
+\cite{nyc_department_of_city_planning_population_2024,
+nyc_department_of_health_and_mental_hygiene_traffic_nodate}.
+According to the NYC Department of Health and Mental Hygiene, fine particulate matter 
+(PM2.5) is the most harmful air pollutant for humans to breathe, and everyday car, bus, 
+and truck traffic accounts for 14\% of PM2.5 emitted from NYC activities
+\cite{nyc_department_of_health_and_mental_hygiene_traffic_nodate}. At the same time,
+vehicle emissions are not distributed uniformly across the urban environment. They vary by
+location, time of day, congestion, and, importantly, by vehicle type. Heavy vehicles, for example,
+contribute disproportionately to pollutants such as nitrogen oxides and particulate matter relative
+to light-duty passenger vehicles \cite{wang_high-resolution_2025}. As a result, estimating
+localized transportation emissions not only requires the total traffic volume, but also 
+information about the composition of traffic flow.
+
+Obtaining this type of information continuously and at fine spatial scales remains difficult.
+Traditional traffic-monitoring methods, such as manual counts and Automated Traffic Recorders
+(ATRs), remain essential for transportation planning, but they are often collected over limited
+durations and at limited locations \cite{FHWA_traffic_2010,
+NYC_open_data_atr}. Likewise, fixed air-quality monitoring stations measure
+pollutant concentrations in the air, but they do not directly identify which vehicle classes are present
+at a given place and time. These limitations matter because localized emissions burdens are shaped
+not only by how many vehicles are present, but by what kinds of vehicles are moving through a
+corridor and under what traffic conditions.
+
+Existing traffic-camera infrastructure offers one possible way to address this gap. New York City
+and New York State maintain large networks of public traffic cameras, and the 511NY system
+provides access to many live roadway images without requiring new sensing hardware
+\cite{NYSDOT_c038145_2025, NYCDOT_realtime, 511ny_api_docs}.
+These cameras were originally deployed for traffic operations and incident monitoring,
+and the imagery they provide is challenging for computer vision. The images from the NYC CCTV traffic cameras
+used in this study have a resolution of 352$\times$240 pixels and often contain distant vehicles, motion blur,
+occlusion, glare, rain, and non-ideal viewing angles. Even with the low-image quality, 
+this infrastructure offers an appealing foundation for scalable observation if 
+vehicles can be detected and categorized reliably enough for downstream analysis.
+
+To examine this problem, a vehicle-detection pipeline was developed using publicly available
+New York City traffic-camera imagery and evaluated for emissions-oriented traffic measurement.
+The approach is built around a YOLOv11-based detector trained on a custom annotated dataset of
+low-resolution urban traffic scenes. Rather than using a generic vehicle taxonomy, the detector is
+trained and evaluated with an EPA MOtor Vehicle Emission Simulator (MOVES) based class 
+structure designed to balance what can be distinguished reliably in low-resolution imagery
+with what remains useful for downstream emissions analysis 
+\cite{us_epa_moves3_2020}. Ambiguous vehicles are handled explicitly
+through an \verb|unknown_vehicle| label during annotation and through ignore-aware training 
+and evaluation procedures, rather than being forced into potentially incorrect supervised classes.
+
+The experimental results show that the final YOLOv11s detector outperformed the Faster R-CNN
+and DETR-style alternatives evaluated in this study, and that the most meaningful gains came from
+targeted data-centric refinement rather than broader tuning alone. The final model was then assessed
+not only on a held-out test set, but also on unseen traffic cameras and through comparison with ATR
+hourly traffic counts. These evaluations were included because the goal of the work was not simply
+to maximize object-detection benchmark performance, but to determine whether traffic-camera
+imagery can support practical count-based workflows relevant to emissions estimation.
+The results suggest that low-resolution public traffic-camera imagery, despite its
+visual limitations, can still support useful vehicle counting and categorization when the detection
+task is formulated around the realities of the imagery and the needs of the downstream application.
+In this sense, the proposed pipeline is positioned not as a replacement for existing traffic or
+air-quality monitoring systems, but as a complementary framework for producing more spatially
+and temporally resolved information about traffic composition from infrastructure that already exists.

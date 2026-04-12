@@ -71,8 +71,8 @@
       \strng{authorbibnamehash}{8abf8bf9227c65c33a0c9adaccfd8b50}
       \strng{authornamehash}{8abf8bf9227c65c33a0c9adaccfd8b50}
       \strng{authorfullhash}{8abf8bf9227c65c33a0c9adaccfd8b50}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{State of Global Air 2025: A Report on Air Pollution and Its Role in the World's Leading Causes of Death}
@@ -83,6 +83,119 @@
       \endverb
       \verb{url}
       \verb www.stateofglobalair.org
+      \endverb
+    \endentry
+    \entry{ipcc_climate_2022}{report}{}
+      \name{author}{1}{}{%
+        {{hash=676f7b9b8e5bb30500c01e2385e59174}{%
+           family={{IPCC}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Intergovernmental Panel on Climate Change}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \strng{namehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{fullhash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{bibnamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authorbibnamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authornamehash}{676f7b9b8e5bb30500c01e2385e59174}
+      \strng{authorfullhash}{676f7b9b8e5bb30500c01e2385e59174}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781009157926}
+      \field{title}{Climate Change 2022: Mitigation of Climate Change. Contribution of Working Group {III} to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1017/9781009157926
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ipcc.ch/report/ar6/wg3/
+      \endverb
+      \verb{url}
+      \verb https://www.ipcc.ch/report/ar6/wg3/
+      \endverb
+    \endentry
+    \entry{creutzig_transport_2015}{article}{}
+      \name{author}{7}{}{%
+        {{hash=71af6b4cd2af12ffee537a278c26fe9c}{%
+           family={Creutzig},
+           familyi={C\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=84c9a874c2f1c54379704080868075b5}{%
+           family={Jochem},
+           familyi={J\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a5a2e2ae12c21c83294d5c0677bf4ec7}{%
+           family={Edelenbosch},
+           familyi={E\bibinitperiod},
+           given={Oreane\bibnamedelima Y.},
+           giveni={O\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=e6d73e1d73f2e3b79a34ee470a590f17}{%
+           family={Mattauch},
+           familyi={M\bibinitperiod},
+           given={Linus},
+           giveni={L\bibinitperiod}}}%
+        {{hash=cfbc88a280bb5b59201a7cb37319b6ca}{%
+           family={Vuuren},
+           familyi={V\bibinitperiod},
+           given={Detlef\bibnamedelimb P.\bibnamedelimi Van},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=ec069eee7f42c0f947f425289d3bfc9f}{%
+           family={{McCollum}},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=02499e75884bc660ae4615aa9b7aad3f}{%
+           family={Minx},
+           familyi={M\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{239ae77705ee39eef6222a95235f8cc0}
+      \strng{fullhash}{316d1c415175782e30947aaa58c53f1b}
+      \strng{bibnamehash}{239ae77705ee39eef6222a95235f8cc0}
+      \strng{authorbibnamehash}{239ae77705ee39eef6222a95235f8cc0}
+      \strng{authornamehash}{239ae77705ee39eef6222a95235f8cc0}
+      \strng{authorfullhash}{316d1c415175782e30947aaa58c53f1b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Urban mobility solutions foster climate mitigation , Global emissions scenarios studies, such as those informing the Intergovernmental Panel on Climate Change ({IPCC}) 5th Assessment Report ({AR}5), highlight the importance of the transport sector for climate change mitigation—along with the difficulties of achieving deep reductions therein ( 1 ) [supplementary materials ({SM})]. Transport is responsible for about 23\% of total energy-related {CO} 2 emissions worldwide ( 2 ). The sector is growing more rapidly than most others, with emissions projected to double by 2050. Global scenario studies, specifically those produced by integrated assessment models ({IAMs}), communicate aggregate mitigation potentials by sectors in {IPCC} reports. Yet recent evidence indicates that emissions may be reduced further than these global scenario studies suggest—if policy-makers use the full suite of policies at their disposal.}
+      \field{day}{20}
+      \field{issn}{0036-8075, 1095-9203}
+      \field{journaltitle}{Science}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{6263}
+      \field{shortjournal}{Science}
+      \field{shorttitle}{Transport}
+      \field{title}{Transport: A roadblock to climate change mitigation?}
+      \field{urlday}{13}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{350}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{911\bibrangedash 912}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1126/science.aac8033
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/10.1126/science.aac8033
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/10.1126/science.aac8033
       \endverb
     \endentry
     \entry{uherek_transport_2010}{article}{}
@@ -159,8 +272,8 @@
       \strng{authorbibnamehash}{099ff0e8550ccf0238831f66876e50f8}
       \strng{authornamehash}{099ff0e8550ccf0238831f66876e50f8}
       \strng{authorfullhash}{00fa43482e64f04c94a11574b018bb86}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Emissions from land transport, and from road transport in particular, have significant impacts on the atmosphere and on climate change. This assessment gives an overview of past, present and future emissions from land transport, of their impacts on the atmospheric composition and air quality, on human health and climate change and on options for mitigation. In the past vehicle exhaust emission control has successfully reduced emissions of nitrogen oxides, carbon monoxide, volatile organic compounds and particulate matter. This contributed to improved air quality and reduced health impacts in industrialised countries. In developing countries however, pollutant emissions have been growing strongly, adversely affecting many populations. In addition, ozone and particulate matter change the radiative balance and hence contribute to global warming on shorter time scales. Latest knowledge on the magnitude of land transport's impact on global warming is reviewed here. In the future, road transport's emissions of these pollutants are expected to stagnate and then decrease globally. This will then help to improve the air quality notably in developing countries. On the contrary, emissions of carbon dioxide and of halocarbons from mobile air conditioners have been globally increasing and are further expected to grow. Consequently, road transport's impact on climate is gaining in importance. The expected efficiency improvements of vehicles and the introduction of biofuels will not be sufficient to offset the expected strong growth in both, passenger and freight transportation. Technical measures could offer a significant reduction potential, but strong interventions would be needed as markets do not initiate the necessary changes. Further reductions would need a resolute expansion of low-carbon fuels, a tripling of vehicle fuel efficiency and a stagnation in absolute transport volumes. Land transport will remain a key sector in climate change mitigation during the next decades.}
@@ -193,185 +306,6 @@
       \endverb
       \keyw{Air pollution,Climate impacts,Emission scenarios,Emissions,Health impacts,Mitigation scenarios,Mobile air conditioners,Radiative forcing,Transport: road,rail,inland shipping,Vehicle technologies}
     \endentry
-    \entry{irankunda_systematic_2025}{article}{}
-      \name{author}{5}{}{%
-        {{hash=4708246a1d39375b49ef3a9ad98ac099}{%
-           family={Irankunda},
-           familyi={I\bibinitperiod},
-           given={Elisephane},
-           giveni={E\bibinitperiod}}}%
-        {{hash=9703027342238581f41b1d94e2c87649}{%
-           family={Menendez},
-           familyi={M\bibinitperiod},
-           given={Monica},
-           giveni={M\bibinitperiod}}}%
-        {{hash=54406da169df8afd97d20a6ed8e56b47}{%
-           family={Khan},
-           familyi={K\bibinitperiod},
-           given={Basit},
-           giveni={B\bibinitperiod}}}%
-        {{hash=168c8b8e48cb39e4d22fde136146c16d}{%
-           family={Paparella},
-           familyi={P\bibinitperiod},
-           given={Francesco},
-           giveni={F\bibinitperiod}}}%
-        {{hash=0acdc6674c344860a1f2220b6fbcb12f}{%
-           family={Pauluis},
-           familyi={P\bibinitperiod},
-           given={Olivier},
-           giveni={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{0dd40128c544be1bc04f86cf7711d336}
-      \strng{fullhash}{3e6bfbdb2d85abf849860ef28b552dad}
-      \strng{bibnamehash}{3e6bfbdb2d85abf849860ef28b552dad}
-      \strng{authorbibnamehash}{3e6bfbdb2d85abf849860ef28b552dad}
-      \strng{authornamehash}{0dd40128c544be1bc04f86cf7711d336}
-      \strng{authorfullhash}{3e6bfbdb2d85abf849860ef28b552dad}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Air pollution is causing a global health, climate, and environmental crisis. Air quality ({AQ}) in hyper-arid regions, such as the Arabian Peninsula, remains under-explored, posing significant concerns for public health and the scientific community. Both long-term and short-term exposure to high pollutant levels, whether from anthropogenic or natural sources, can pose serious health risks. This paper offers a comprehensive review and meta-analysis of urban {AQ} literature published in the region over the past decade (2013–June 2025). We aim to provide guidance and highlight key directions for future research in the field. This paper examines key pollutants, emission sources, implications of urban sources, and the most studied countries, methodologies, limitations, and recommendations from different case studies. Our analysis reveals a significant research gap highlighting insufficient recent literature. Saudi Arabia was the most studied country with 20 papers, followed by the broader Arabian Peninsula (sixteen), Qatar (twelve), the United Arab Emirates and Iraq (seven each), Kuwait (four), Oman (three), Jordan, and Bahrain (one each). The primary methods employed included measurements and sampling (28\%) and remote sensing (24\%), with a focus on pollutants such as dust (23.1\%), {NOx}/{NO}2/{NO} (17.2\%), {PM}2.5 (17.6\%), and {PM}10 (12\%). Industrial emissions (27\%) and natural dust (24\%) were identified as significant emission sources. Monitoring methods included grab sampling (19\%), integrated sampling (34\%), and continuous monitoring (47\%). Notably, 13.3\% of {AQ} sensors were linked to a station, 27.6\% were self-referenced, and 59.1\% did not specify calibration methods. The findings highlight the need for further research, regular calibration of air quality monitors, and the integration of advanced modeling approaches. Moreover, we recommend exploring the links between air pollution and urban development to ensure cleaner air and contribute to the global dialogue on sustainable and cross-border {AQ} solutions.}
-      \field{day}{20}
-      \field{issn}{2073-4433}
-      \field{journaltitle}{Atmosphere}
-      \field{langid}{english}
-      \field{month}{8}
-      \field{number}{8}
-      \field{shortjournal}{Atmosphere}
-      \field{title}{Systematic Review and Meta-Analysis of Urban Air Quality in the Arabian Peninsula}
-      \field{urlday}{13}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{volume}{16}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{990}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.3390/atmos16080990
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mdpi.com/2073-4433/16/8/990
-      \endverb
-      \verb{url}
-      \verb https://www.mdpi.com/2073-4433/16/8/990
-      \endverb
-    \endentry
-    \entry{ipcc_climate_2022}{report}{}
-      \name{author}{1}{}{%
-        {{hash=676f7b9b8e5bb30500c01e2385e59174}{%
-           family={{IPCC}},
-           familyi={I\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Intergovernmental Panel on Climate Change}%
-      }
-      \list{location}{1}{%
-        {Geneva, Switzerland}%
-      }
-      \strng{namehash}{676f7b9b8e5bb30500c01e2385e59174}
-      \strng{fullhash}{676f7b9b8e5bb30500c01e2385e59174}
-      \strng{bibnamehash}{676f7b9b8e5bb30500c01e2385e59174}
-      \strng{authorbibnamehash}{676f7b9b8e5bb30500c01e2385e59174}
-      \strng{authornamehash}{676f7b9b8e5bb30500c01e2385e59174}
-      \strng{authorfullhash}{676f7b9b8e5bb30500c01e2385e59174}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9781009157926}
-      \field{title}{Climate Change 2022: Mitigation of Climate Change. Contribution of Working Group {III} to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change}
-      \field{year}{2022}
-      \field{dateera}{ce}
-      \verb{doi}
-      \verb 10.1017/9781009157926
-      \endverb
-      \verb{urlraw}
-      \verb https://www.ipcc.ch/report/ar6/wg3/
-      \endverb
-      \verb{url}
-      \verb https://www.ipcc.ch/report/ar6/wg3/
-      \endverb
-    \endentry
-    \entry{creutzig_transport_2015}{article}{}
-      \name{author}{7}{}{%
-        {{hash=71af6b4cd2af12ffee537a278c26fe9c}{%
-           family={Creutzig},
-           familyi={C\bibinitperiod},
-           given={Felix},
-           giveni={F\bibinitperiod}}}%
-        {{hash=84c9a874c2f1c54379704080868075b5}{%
-           family={Jochem},
-           familyi={J\bibinitperiod},
-           given={Patrick},
-           giveni={P\bibinitperiod}}}%
-        {{hash=a5a2e2ae12c21c83294d5c0677bf4ec7}{%
-           family={Edelenbosch},
-           familyi={E\bibinitperiod},
-           given={Oreane\bibnamedelima Y.},
-           giveni={O\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
-        {{hash=e6d73e1d73f2e3b79a34ee470a590f17}{%
-           family={Mattauch},
-           familyi={M\bibinitperiod},
-           given={Linus},
-           giveni={L\bibinitperiod}}}%
-        {{hash=cfbc88a280bb5b59201a7cb37319b6ca}{%
-           family={Vuuren},
-           familyi={V\bibinitperiod},
-           given={Detlef\bibnamedelimb P.\bibnamedelimi Van},
-           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-        {{hash=ec069eee7f42c0f947f425289d3bfc9f}{%
-           family={{McCollum}},
-           familyi={M\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=02499e75884bc660ae4615aa9b7aad3f}{%
-           family={Minx},
-           familyi={M\bibinitperiod},
-           given={Jan},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{239ae77705ee39eef6222a95235f8cc0}
-      \strng{fullhash}{316d1c415175782e30947aaa58c53f1b}
-      \strng{bibnamehash}{239ae77705ee39eef6222a95235f8cc0}
-      \strng{authorbibnamehash}{239ae77705ee39eef6222a95235f8cc0}
-      \strng{authornamehash}{239ae77705ee39eef6222a95235f8cc0}
-      \strng{authorfullhash}{316d1c415175782e30947aaa58c53f1b}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Urban mobility solutions foster climate mitigation , Global emissions scenarios studies, such as those informing the Intergovernmental Panel on Climate Change ({IPCC}) 5th Assessment Report ({AR}5), highlight the importance of the transport sector for climate change mitigation—along with the difficulties of achieving deep reductions therein ( 1 ) [supplementary materials ({SM})]. Transport is responsible for about 23\% of total energy-related {CO} 2 emissions worldwide ( 2 ). The sector is growing more rapidly than most others, with emissions projected to double by 2050. Global scenario studies, specifically those produced by integrated assessment models ({IAMs}), communicate aggregate mitigation potentials by sectors in {IPCC} reports. Yet recent evidence indicates that emissions may be reduced further than these global scenario studies suggest—if policy-makers use the full suite of policies at their disposal.}
-      \field{day}{20}
-      \field{issn}{0036-8075, 1095-9203}
-      \field{journaltitle}{Science}
-      \field{langid}{english}
-      \field{month}{11}
-      \field{number}{6263}
-      \field{shortjournal}{Science}
-      \field{shorttitle}{Transport}
-      \field{title}{Transport: A roadblock to climate change mitigation?}
-      \field{urlday}{13}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{volume}{350}
-      \field{year}{2015}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{911\bibrangedash 912}
-      \range{pages}{2}
-      \verb{doi}
-      \verb 10.1126/science.aac8033
-      \endverb
-      \verb{urlraw}
-      \verb https://www.science.org/doi/10.1126/science.aac8033
-      \endverb
-      \verb{url}
-      \verb https://www.science.org/doi/10.1126/science.aac8033
-      \endverb
-    \endentry
     \entry{nyc_department_of_city_planning_population_2024}{online}{}
       \name{author}{1}{}{%
         {{hash=0c5f59eddb4e30c6016af4e7dbf9b2a8}{%
@@ -388,8 +322,8 @@
       \strng{authorbibnamehash}{0c5f59eddb4e30c6016af4e7dbf9b2a8}
       \strng{authornamehash}{0c5f59eddb4e30c6016af4e7dbf9b2a8}
       \strng{authorfullhash}{0c5f59eddb4e30c6016af4e7dbf9b2a8}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{7}
@@ -408,43 +342,6 @@
       \verb https://www.nyc.gov/content/planning/pages/planning/population
       \endverb
     \endentry
-    \entry{us_epa_greenhouse_2016}{online}{}
-      \name{author}{1}{}{%
-        {{hash=ef2c31aa495858b401d55ff79521c33f}{%
-           family={{US}~{EPA}},
-           familyi={U\bibinitperiod\bibinitdelim E\bibinitperiod},
-           given={{OAR}},
-           giveni={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{ef2c31aa495858b401d55ff79521c33f}
-      \strng{fullhash}{ef2c31aa495858b401d55ff79521c33f}
-      \strng{bibnamehash}{ef2c31aa495858b401d55ff79521c33f}
-      \strng{authorbibnamehash}{ef2c31aa495858b401d55ff79521c33f}
-      \strng{authornamehash}{ef2c31aa495858b401d55ff79521c33f}
-      \strng{authorfullhash}{ef2c31aa495858b401d55ff79521c33f}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This page answers questions about {GHG} emissions from passenger vehicles and how these emissions are measured and calculated.}
-      \field{day}{12}
-      \field{langid}{english}
-      \field{month}{1}
-      \field{title}{Greenhouse Gas Emissions from a Typical Passenger Vehicle}
-      \field{type}{Overviews and Factsheets}
-      \field{urlday}{13}
-      \field{urlmonth}{2}
-      \field{urlyear}{2026}
-      \field{year}{2016}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle
-      \endverb
-      \verb{url}
-      \verb https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle
-      \endverb
-    \endentry
     \entry{nyc_department_of_health_and_mental_hygiene_traffic_nodate}{online}{}
       \name{author}{1}{}{%
         {{hash=6f323c3137f97c77ddb26a60771af29d}{%
@@ -461,8 +358,8 @@
       \strng{authorbibnamehash}{6f323c3137f97c77ddb26a60771af29d}
       \strng{authornamehash}{6f323c3137f97c77ddb26a60771af29d}
       \strng{authorfullhash}{6f323c3137f97c77ddb26a60771af29d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The public health impacts of {PM}2.5 from traffic air pollution in New York City affect neighborhoods differently.}
@@ -478,46 +375,6 @@
       \endverb
       \verb{url}
       \verb https://a816-dohbesp.nyc.gov/IndicatorPublic/data-stories/traffic-and-air-pollution/
-      \endverb
-    \endentry
-    \entry{pinto_de_moura_inequitable_2019}{report}{}
-      \name{author}{2}{}{%
-        {{hash=5af0b2d72940d7c89da31ade1a615afd}{%
-           family={Pinto\bibnamedelimb de\bibnamedelima Moura},
-           familyi={P\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={Maria\bibnamedelima Cecilia},
-           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=ce9cb25d148cf8f2932d0537cc1477d4}{%
-           family={Reichmuth},
-           familyi={R\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {Union of Concerned Scientists}%
-      }
-      \list{location}{1}{%
-        {Cambridge, {MA}}%
-      }
-      \strng{namehash}{e367ee92feabe105cdb270780fb66e18}
-      \strng{fullhash}{e367ee92feabe105cdb270780fb66e18}
-      \strng{bibnamehash}{e367ee92feabe105cdb270780fb66e18}
-      \strng{authorbibnamehash}{e367ee92feabe105cdb270780fb66e18}
-      \strng{authornamehash}{e367ee92feabe105cdb270780fb66e18}
-      \strng{authorfullhash}{e367ee92feabe105cdb270780fb66e18}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{number}{1}
-      \field{title}{Inequitable Exposure to Air Pollution from Vehicles in the Northeast and Mid-Atlantic}
-      \field{year}{2019}
-      \field{dateera}{ce}
-      \verb{urlraw}
-      \verb https://www.ucsusa.org/resources/inequitable-exposure-air-pollution-vehicles
-      \endverb
-      \verb{url}
-      \verb https://www.ucsusa.org/resources/inequitable-exposure-air-pollution-vehicles
       \endverb
     \endentry
     \entry{wang_high-resolution_2025}{article}{}
@@ -574,8 +431,8 @@
       \strng{authorbibnamehash}{d839ae27760644215f3d1ca017db97cb}
       \strng{authornamehash}{d839ae27760644215f3d1ca017db97cb}
       \strng{authorfullhash}{ce615192f70a1d22c8703f691a787a28}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{On-road vehicle emissions play a crucial role in affecting fine-scale air quality and exposure equity in traffic-dense urban areas. They vary largely on both spatial and temporal scales due to the complex distribution patterns of vehicle types and traffic conditions. With the deployment of traffic cameras and big data approaches, we established a bottom-up model that employed interpolation to obtain a spatially continuous on-road vehicle emission mapping for the main urban area of Jinan, revealing fine-scale gradients and emission hotspots intuitively. The results show that the hourly average emissions of nitrogen oxides, carbon monoxide, hydrocarbons, and fine particulate matters from on-road vehicles in urban Jinan were 345.2, 789.7, 69.5, and 5.4 kg, respectively. The emission intensity varied largely with a factor of up to 3 within 1 km on the same road segment. The unique patterns of road vehicle emissions within the urban area were further examined through time series clustering and hotspot analysis. When spatial hotspots coincided with peak hours, emissions were significantly enhanced, making them key targets for traffic pollution control. Based on the established emission model, we predicted that the benefits of vehicle electrification in reducing vehicle emissions could reach 40 \%–80 \%. Overall, this work provides new methods for developing a high-resolution vehicle emission inventory in urban areas and offers detailed and accurate emission data and fine spatiotemporal variation patterns in urban Jinan, which are of great importance for air pollution control, traffic management, policy-making, and public awareness enhancement.}
@@ -604,40 +461,169 @@
       \verb https://acp.copernicus.org/articles/25/5537/2025/
       \endverb
     \endentry
-    \entry{carvalho_air_2016}{article}{}
+    \entry{FHWA_traffic_2010}{online}{}
       \name{author}{1}{}{%
-        {{hash=c22d36e93b99aa0aff58843ab96df70b}{%
-           family={Carvalho},
-           familyi={C\bibinitperiod},
-           given={Helotonio},
-           giveni={H\bibinitperiod}}}%
+        {{hash=b3514fa8307aa3a8a763bab4787e7ac8}{%
+           family={{Federal Highway Administration}},
+           familyi={F\bibinitperiod}}}%
       }
-      \strng{namehash}{c22d36e93b99aa0aff58843ab96df70b}
-      \strng{fullhash}{c22d36e93b99aa0aff58843ab96df70b}
-      \strng{bibnamehash}{c22d36e93b99aa0aff58843ab96df70b}
-      \strng{authorbibnamehash}{c22d36e93b99aa0aff58843ab96df70b}
-      \strng{authornamehash}{c22d36e93b99aa0aff58843ab96df70b}
-      \strng{authorfullhash}{c22d36e93b99aa0aff58843ab96df70b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \strng{namehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{fullhash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{bibnamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authorbibnamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authornamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \strng{authorfullhash}{b3514fa8307aa3a8a763bab4787e7ac8}
+      \field{extraname}{1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{issn}{2213-2619}
-      \field{journaltitle}{The Lancet. Respiratory Medicine}
-      \field{month}{8}
-      \field{number}{8}
-      \field{shortjournal}{Lancet Respir Med}
-      \field{shorttitle}{The air we breathe}
-      \field{title}{The air we breathe: differentials in global air quality monitoring}
-      \field{volume}{4}
-      \field{year}{2016}
+      \field{labeltitlesource}{title}
+      \field{title}{Traffic Monitoring: A Guidebook — 4. Traffic Monitoring Equipment Capabilities \& Limitations}
+      \field{titleaddon}{Center for Local Aid Support ({CTIP} Publications) — Federal Highway Administration}
+      \field{urlday}{6}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2010}
       \field{dateera}{ce}
-      \field{pages}{603\bibrangedash 605}
-      \range{pages}{3}
-      \verb{doi}
-      \verb 10.1016/S2213-2600(16)30180-1
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.fhwa.dot.gov/clas/ctip/traffic_monitoring_guidebook/ch_4.aspx
       \endverb
-      \keyw{Air Pollutants,Air Pollution,Environmental Exposure,Environmental Monitoring,Female,Global Health,Humans,Internationality,Male,Public Health,Respiration,World Health Organization}
+      \verb{url}
+      \verb https://www.fhwa.dot.gov/clas/ctip/traffic_monitoring_guidebook/ch_4.aspx
+      \endverb
+    \endentry
+    \entry{NYC_open_data_atr}{online}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{title}{Automated Traffic Volume Counts {|} {NYC} Open Data}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://data.cityofnewyork.us/Transportation/Automated-Traffic-Volume-Counts/7ym2-wayt/about_data
+      \endverb
+      \verb{url}
+      \verb https://data.cityofnewyork.us/Transportation/Automated-Traffic-Volume-Counts/7ym2-wayt/about_data
+      \endverb
+    \endentry
+    \entry{NYSDOT_c038145_2025}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=35839065c019664d2760546540a2dc59}{%
+           family={{New York State Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Albany, {NY}}%
+      }
+      \strng{namehash}{35839065c019664d2760546540a2dc59}
+      \strng{fullhash}{35839065c019664d2760546540a2dc59}
+      \strng{bibnamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authorbibnamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authornamehash}{35839065c019664d2760546540a2dc59}
+      \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{13}
+      \field{month}{3}
+      \field{title}{C038145, Transportation Management System and Operations ({TMSO}) Support Software \& C038150 {TSMO} Control Software Project Management Support and {QA}/{QC}}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.dot.ny.gov/portal/pls/portal/MEXIS_APP.BC_CONSULTING_NONAE_ADMIN.VIEWFILE?p_file_id=47766
+      \endverb
+      \verb{url}
+      \verb https://www.dot.ny.gov/portal/pls/portal/MEXIS_APP.BC_CONSULTING_NONAE_ADMIN.VIEWFILE?p_file_id=47766
+      \endverb
+    \endentry
+    \entry{NYCDOT_realtime}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8299303a9bcf7ede71d0757177da08ce}{%
+           family={{NYC Department of Transportation}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{8299303a9bcf7ede71d0757177da08ce}
+      \strng{fullhash}{8299303a9bcf7ede71d0757177da08ce}
+      \strng{bibnamehash}{8299303a9bcf7ede71d0757177da08ce}
+      \strng{authorbibnamehash}{8299303a9bcf7ede71d0757177da08ce}
+      \strng{authornamehash}{8299303a9bcf7ede71d0757177da08ce}
+      \strng{authorfullhash}{8299303a9bcf7ede71d0757177da08ce}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Real Time Traffic Information}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://webcams.nyctmc.org/cameras-list
+      \endverb
+      \verb{url}
+      \verb https://webcams.nyctmc.org/cameras-list
+      \endverb
+    \endentry
+    \entry{511ny_api_docs}{online}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Provides 511 {API} documentation for developers use.}
+      \field{langid}{english}
+      \field{title}{511NY - {API} Documentation}
+      \field{titleaddon}{{API} Documentation}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://511ny.org/developers/511ny.org
+      \endverb
+      \verb{url}
+      \verb https://511ny.org/developers/511ny.org
+      \endverb
+    \endentry
+    \entry{us_epa_moves3_2020}{report}{}
+      \name{author}{1}{}{%
+        {{hash=8233d83a5e663161d707a62961f8f66f}{%
+           family={{U.S. Environmental Protection Agency}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Office of Transportation}%
+        {Air Quality, U.S. Environmental Protection Agency}%
+      }
+      \strng{namehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{fullhash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{bibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
+      \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{number}{{EPA}-420-B-20-052}
+      \field{title}{{MOVES}3 Technical Guidance: Using {MOVES} to Prepare Emission Inventories for State Implementation Plans and Transportation Conformity}
+      \field{urlday}{2}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420b20052.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420b20052.pdf
+      \endverb
     \endentry
     \entry{USEPA_tech_2024}{report}{}
       \name{author}{1}{}{%
@@ -658,7 +644,7 @@
       \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
       \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
       \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -695,7 +681,7 @@
       \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
       \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
       \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -730,8 +716,8 @@
       \strng{authorbibnamehash}{d46e9ffc3e534255160299d171e1928e}
       \strng{authornamehash}{d46e9ffc3e534255160299d171e1928e}
       \strng{authorfullhash}{d46e9ffc3e534255160299d171e1928e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{September 11th Memorial Program for Transportation Planning}
@@ -759,8 +745,8 @@
       \strng{authorbibnamehash}{0c1ac4ccdff9816f13f3769edce9ccbd}
       \strng{authornamehash}{0c1ac4ccdff9816f13f3769edce9ccbd}
       \strng{authorfullhash}{0c1ac4ccdff9816f13f3769edce9ccbd}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Brake \& Tire Wear Emissions}
@@ -794,8 +780,8 @@
       \strng{authorbibnamehash}{c0027c8a9b5860865331e83250ff4551}
       \strng{authornamehash}{c0027c8a9b5860865331e83250ff4551}
       \strng{authorfullhash}{c0027c8a9b5860865331e83250ff4551}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{2}
@@ -843,8 +829,8 @@
       \strng{authorbibnamehash}{90f78e6d4537b467678281d1d3b142aa}
       \strng{authornamehash}{fb74c00924b1d0ef2205ba50bcfa9852}
       \strng{authorfullhash}{90f78e6d4537b467678281d1d3b142aa}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1361-9209}
@@ -884,8 +870,8 @@
       \strng{authorbibnamehash}{95b75ab647d7deb6e6c1a79175e7b565}
       \strng{authornamehash}{95b75ab647d7deb6e6c1a79175e7b565}
       \strng{authorfullhash}{95b75ab647d7deb6e6c1a79175e7b565}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0048-9697}
@@ -906,38 +892,6 @@
       \endverb
       \keyw{Congestion,Morbidity,Mortality,NO,Risk assessment,Traffic-related air pollution}
     \endentry
-    \entry{FHWA_traffic_2010}{online}{}
-      \name{author}{1}{}{%
-        {{hash=b3514fa8307aa3a8a763bab4787e7ac8}{%
-           family={{Federal Highway Administration}},
-           familyi={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{b3514fa8307aa3a8a763bab4787e7ac8}
-      \strng{fullhash}{b3514fa8307aa3a8a763bab4787e7ac8}
-      \strng{bibnamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
-      \strng{authorbibnamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
-      \strng{authornamehash}{b3514fa8307aa3a8a763bab4787e7ac8}
-      \strng{authorfullhash}{b3514fa8307aa3a8a763bab4787e7ac8}
-      \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Traffic Monitoring: A Guidebook — 4. Traffic Monitoring Equipment Capabilities \& Limitations}
-      \field{titleaddon}{Center for Local Aid Support ({CTIP} Publications) — Federal Highway Administration}
-      \field{urlday}{6}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2010}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.fhwa.dot.gov/clas/ctip/traffic_monitoring_guidebook/ch_4.aspx
-      \endverb
-      \verb{url}
-      \verb https://www.fhwa.dot.gov/clas/ctip/traffic_monitoring_guidebook/ch_4.aspx
-      \endverb
-    \endentry
     \entry{NYCDOT_traffic_signals}{online}{}
       \name{author}{1}{}{%
         {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
@@ -951,8 +905,8 @@
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{NYC} {DOT} - Infrastructure - Traffic Signals}
@@ -968,8 +922,8 @@
       \endverb
     \endentry
     \entry{wikipedia_induction_2025}{inreference}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{abstract}{An induction or inductive loop is an electromagnetic communication or detection system which uses a moving magnet or an alternating current to induce an electric current in a nearby wire. Induction loops are used for transmission and reception of communication signals, or for detection of metal objects in metal detectors or vehicle presence indicators. A common modern use for induction loops is to provide hearing assistance to hearing-aid users.}
       \field{booktitle}{Wikipedia}
@@ -1003,8 +957,8 @@
       \strng{authorbibnamehash}{23ddc21404aabc2eb85a18a1d5b89fe3}
       \strng{authornamehash}{23ddc21404aabc2eb85a18a1d5b89fe3}
       \strng{authorfullhash}{23ddc21404aabc2eb85a18a1d5b89fe3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Vehicle Detection Loops: How They Work and Why They Fail}
@@ -1054,8 +1008,8 @@
       \endverb
     \endentry
     \entry{pneumatic_tubes}{online}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{abstract}{Using four pneumatic tubes, this vehicle counter can collect data from two neighbouring traffic lanes simultaneously.}
       \field{title}{{RoadPod} {VT}4 {|} 4-Tube Vehicle Counter}
@@ -1068,22 +1022,6 @@
       \endverb
       \verb{url}
       \verb https://www.metrocount.com/traffic-counters-classifiers/roadpod-vt4
-      \endverb
-    \endentry
-    \entry{NYC_open_data_atr}{online}{}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labeltitlesource}{title}
-      \field{title}{Automated Traffic Volume Counts {|} {NYC} Open Data}
-      \field{urlday}{7}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://data.cityofnewyork.us/Transportation/Automated-Traffic-Volume-Counts/7ym2-wayt/about_data
-      \endverb
-      \verb{url}
-      \verb https://data.cityofnewyork.us/Transportation/Automated-Traffic-Volume-Counts/7ym2-wayt/about_data
       \endverb
     \endentry
     \entry{NYC_mayor_ceqr_2025}{report}{}
@@ -1104,8 +1042,8 @@
       \strng{authorbibnamehash}{119f7819d9664d4fb9cf8dba1a03c6d4}
       \strng{authornamehash}{119f7819d9664d4fb9cf8dba1a03c6d4}
       \strng{authorfullhash}{119f7819d9664d4fb9cf8dba1a03c6d4}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{12}
@@ -1141,8 +1079,8 @@
       \strng{authorbibnamehash}{cc68ec2db40021e05720add2d2041c6e}
       \strng{authornamehash}{cc68ec2db40021e05720add2d2041c6e}
       \strng{authorfullhash}{cc68ec2db40021e05720add2d2041c6e}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Hub Bound Travel Data Report 2024}
@@ -1195,8 +1133,8 @@
       \endverb
     \endentry
     \entry{NYU_tracker_2025}{online}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{abstract}{{MANHATTAN} {CONGESTION} {TRACKER} {DATA} {DASHBOARD}: C2SMART Multimodal Density Tracker This visualization draws from approximately 400 of New York City’s 900+ public traffic cameras located within and around the congestion pricing zone. Using vast snapshots captured every 30 minutes, we apply advanced computer vision techniques to estimate multimodal traffic density—including passenger vehicles, trucks, pedestrians, and bicycles. Average}
       \field{day}{1}
@@ -1255,8 +1193,8 @@
       \strng{authorbibnamehash}{6d1b1c8426633d4c03fbce4da97a8ddb}
       \strng{authornamehash}{541384ec801b4638bde41c34d2fe8f35}
       \strng{authorfullhash}{6d1b1c8426633d4c03fbce4da97a8ddb}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -1302,8 +1240,8 @@
       \strng{authorbibnamehash}{4468e53902c3a1792424835d9b7fd93d}
       \strng{authornamehash}{49c82b04c74cd06261401faddca9d940}
       \strng{authorfullhash}{4468e53902c3a1792424835d9b7fd93d}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Collecting a Large-scale Dataset of Fine-grained Cars}
@@ -1344,8 +1282,8 @@
       \strng{authorbibnamehash}{f47753ae2840d569035f2a78b86fbd81}
       \strng{authornamehash}{8836f1fc556d99f0b40cfccd95d05940}
       \strng{authorfullhash}{f47753ae2840d569035f2a78b86fbd81}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In this paper, we propose a vehicle type classification method using a semisupervised convolutional neural network from vehicle frontal-view images. In order to capture rich and discriminative information of vehicles, we introduce sparse Laplacian filter learning to obtain the filters of the network with large amounts of unlabeled data. Serving as the output layer of the network, the softmax classifier is trained by multitask learning with small amounts of labeled data. For a given vehicle image, the network can provide the probability of each type to which the vehicle belongs. Unlike traditional methods by using handcrafted visual features, our method is able to automatically learn good features for the classification task. The learned features are discriminative enough to work well in complex scenes. We build the challenging {BIT}-Vehicle dataset, including 9850 high-resolution vehicle frontal-view images. Experimental results on our own dataset and a public dataset demonstrate the effectiveness of the proposed method.}
@@ -1386,8 +1324,8 @@
       \strng{authorbibnamehash}{687ddf9110b9a9a49014c165b90e153e}
       \strng{authornamehash}{687ddf9110b9a9a49014c165b90e153e}
       \strng{authorfullhash}{687ddf9110b9a9a49014c165b90e153e}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{23}
@@ -1408,8 +1346,8 @@
       \endverb
     \endentry
     \entry{NYCDOT_data_feeds}{online}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labeltitlesource}{title}
       \field{title}{{NYC} {DOT} - Data Feeds}
       \field{urlday}{2}
@@ -1421,38 +1359,6 @@
       \endverb
       \verb{url}
       \verb https://www.nyc.gov/html/dot/html/about/datafeeds.shtml
-      \endverb
-    \endentry
-    \entry{NYSDOT_c038145_2025}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=35839065c019664d2760546540a2dc59}{%
-           family={{New York State Department of Transportation}},
-           familyi={N\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Albany, {NY}}%
-      }
-      \strng{namehash}{35839065c019664d2760546540a2dc59}
-      \strng{fullhash}{35839065c019664d2760546540a2dc59}
-      \strng{bibnamehash}{35839065c019664d2760546540a2dc59}
-      \strng{authorbibnamehash}{35839065c019664d2760546540a2dc59}
-      \strng{authornamehash}{35839065c019664d2760546540a2dc59}
-      \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
-      \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{13}
-      \field{month}{3}
-      \field{title}{C038145, Transportation Management System and Operations ({TMSO}) Support Software \& C038150 {TSMO} Control Software Project Management Support and {QA}/{QC}}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \verb{urlraw}
-      \verb https://www.dot.ny.gov/portal/pls/portal/MEXIS_APP.BC_CONSULTING_NONAE_ADMIN.VIEWFILE?p_file_id=47766
-      \endverb
-      \verb{url}
-      \verb https://www.dot.ny.gov/portal/pls/portal/MEXIS_APP.BC_CONSULTING_NONAE_ADMIN.VIEWFILE?p_file_id=47766
       \endverb
     \endentry
     \entry{511ny_about_rideshare}{online}{}
@@ -1471,34 +1377,6 @@
       \endverb
       \verb{url}
       \verb https://511nyrideshare.org/about-us
-      \endverb
-    \endentry
-    \entry{NYCDOT_realtime}{online}{}
-      \name{author}{1}{}{%
-        {{hash=8299303a9bcf7ede71d0757177da08ce}{%
-           family={{NYC Department of Transportation}},
-           familyi={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{8299303a9bcf7ede71d0757177da08ce}
-      \strng{fullhash}{8299303a9bcf7ede71d0757177da08ce}
-      \strng{bibnamehash}{8299303a9bcf7ede71d0757177da08ce}
-      \strng{authorbibnamehash}{8299303a9bcf7ede71d0757177da08ce}
-      \strng{authornamehash}{8299303a9bcf7ede71d0757177da08ce}
-      \strng{authorfullhash}{8299303a9bcf7ede71d0757177da08ce}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Real Time Traffic Information}
-      \field{urlday}{2}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://webcams.nyctmc.org/cameras-list
-      \endverb
-      \verb{url}
-      \verb https://webcams.nyctmc.org/cameras-list
       \endverb
     \endentry
     \entry{NYCDOT_item_2024}{report}{}
@@ -1533,25 +1411,6 @@
       \verb https://www.dot.ny.gov/spec-repository-us/683.03010005.pdf
       \endverb
     \endentry
-    \entry{511ny_api_docs}{online}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Provides 511 {API} documentation for developers use.}
-      \field{langid}{english}
-      \field{title}{511NY - {API} Documentation}
-      \field{titleaddon}{{API} Documentation}
-      \field{urlday}{2}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://511ny.org/developers/511ny.org
-      \endverb
-      \verb{url}
-      \verb https://511ny.org/developers/511ny.org
-      \endverb
-    \endentry
     \entry{NYCDOT_realtime_metadata_2010}{misc}{}
       \name{author}{1}{}{%
         {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
@@ -1565,8 +1424,8 @@
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{20}
@@ -1601,8 +1460,8 @@
       \strng{authornamehash}{35839065c019664d2760546540a2dc59}
       \strng{authorfullhash}{35839065c019664d2760546540a2dc59}
       \field{extraname}{3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{10}
@@ -1629,8 +1488,8 @@
       \strng{authorbibnamehash}{8f6ab22973bc9e2a1a255d8b886ac239}
       \strng{authornamehash}{8f6ab22973bc9e2a1a255d8b886ac239}
       \strng{authorfullhash}{8f6ab22973bc9e2a1a255d8b886ac239}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Pelco {ES}31C22-2W Esprit Positioning System (24 {VAC}) Product Image}
@@ -1707,43 +1566,6 @@
       \verb https://www.axis.com/products/axis-q1614-e/support
       \endverb
     \endentry
-    \entry{us_epa_moves3_2020}{report}{}
-      \name{author}{1}{}{%
-        {{hash=8233d83a5e663161d707a62961f8f66f}{%
-           family={{U.S. Environmental Protection Agency}},
-           familyi={U\bibinitperiod}}}%
-      }
-      \list{institution}{2}{%
-        {Office of Transportation}%
-        {Air Quality, U.S. Environmental Protection Agency}%
-      }
-      \strng{namehash}{8233d83a5e663161d707a62961f8f66f}
-      \strng{fullhash}{8233d83a5e663161d707a62961f8f66f}
-      \strng{bibnamehash}{8233d83a5e663161d707a62961f8f66f}
-      \strng{authorbibnamehash}{8233d83a5e663161d707a62961f8f66f}
-      \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
-      \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
-      \field{extraname}{3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{number}{{EPA}-420-B-20-052}
-      \field{title}{{MOVES}3 Technical Guidance: Using {MOVES} to Prepare Emission Inventories for State Implementation Plans and Transportation Conformity}
-      \field{urlday}{2}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420b20052.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.epa.gov/sites/default/files/2020-11/documents/420b20052.pdf
-      \endverb
-    \endentry
     \entry{NYCDOT_truck_routing}{online}{}
       \name{author}{1}{}{%
         {{hash=73c7a58bbf6246e91c0b16e2f7deda13}{%
@@ -1757,8 +1579,8 @@
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \field{extraname}{3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{NYC} {DOT} - Truck Routing}
@@ -1793,8 +1615,8 @@
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \field{extraname}{4}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{13}
@@ -1826,8 +1648,8 @@
       \strng{authornamehash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \strng{authorfullhash}{73c7a58bbf6246e91c0b16e2f7deda13}
       \field{extraname}{5}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Real Time Traffic Information - Subscribers}
@@ -1944,8 +1766,8 @@
       \strng{authorbibnamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
       \strng{authornamehash}{7f6cd5b5b184ad5dcf66198edda1fe77}
       \strng{authorfullhash}{7f6cd5b5b184ad5dcf66198edda1fe77}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{langid}{american}
@@ -1979,8 +1801,8 @@
       \strng{authornamehash}{8233d83a5e663161d707a62961f8f66f}
       \strng{authorfullhash}{8233d83a5e663161d707a62961f8f66f}
       \field{extraname}{5}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{11}
@@ -2000,8 +1822,8 @@
       \endverb
     \endentry
     \entry{CVAT_label_guide}{online}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Why labeling guidelines matter: reduce ambiguity, align annotators, and improve consistency and quality across projects.}
       \field{langid}{english}
@@ -2020,8 +1842,8 @@
       \endverb
     \endentry
     \entry{CVAT_attributes}{online}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Use attributes to enrich labels with properties like color, type, condition, or action—so models learn more than classes.}
       \field{langid}{english}
@@ -2040,8 +1862,8 @@
       \endverb
     \endentry
     \entry{CVAT_annotation_quality}{online}{}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{Why annotation quality impacts model accuracy, and how to avoid errors that distort results in real-world {ML} datasets.}
       \field{langid}{english}
@@ -2088,8 +1910,8 @@
       \strng{authorbibnamehash}{b5530443e433a4da53dbe3cf155225b4}
       \strng{authornamehash}{fceadd5e0c88bc623c502d7999f124d7}
       \strng{authorfullhash}{b5530443e433a4da53dbe3cf155225b4}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -2191,8 +2013,8 @@
       \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
       \strng{authornamehash}{3ae53fe582e8a815b118d26947eaa326}
       \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{\url{http://www.deeplearningbook.org}}
@@ -2218,8 +2040,8 @@
       \strng{authorbibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
       \strng{authornamehash}{1e0b31097f3d41e61dd78e46b147642a}
       \strng{authorfullhash}{1e0b31097f3d41e61dd78e46b147642a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.NE}

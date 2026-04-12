@@ -9,11 +9,11 @@
 \contentsline {subsection}{\numberline {3.2}Camera Hardware}{9}{}%
 \contentsline {subsection}{\numberline {3.3}Dataset Curation}{10}{}%
 \contentsline {subsubsection}{\numberline {3.3.1}Camera Selection}{10}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Image Collection}{11}{}%
-\contentsline {subsection}{\numberline {3.4}Data Labeling}{14}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Image Collection}{13}{}%
+\contentsline {subsection}{\numberline {3.4}Data Labeling}{15}{}%
 \contentsline {subsubsection}{\numberline {3.4.1}Labeling Class Structure}{16}{}%
-\contentsline {subsubsection}{\numberline {3.4.2}Attributes}{20}{}%
-\contentsline {subsubsection}{\numberline {3.4.3}Unknown Vehicle Class}{21}{}%
+\contentsline {subsubsection}{\numberline {3.4.2}Attributes}{19}{}%
+\contentsline {subsubsection}{\numberline {3.4.3}Unknown Vehicle Class}{20}{}%
 \contentsline {subsubsection}{\numberline {3.4.4}Annotation Procedure}{23}{}%
 \contentsline {subsection}{\numberline {3.5}Dataset Statistics}{23}{}%
 \contentsline {subsection}{\numberline {3.6}Dataset Splits}{25}{}%
