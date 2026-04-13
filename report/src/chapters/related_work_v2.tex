@@ -3,14 +3,14 @@
 \subsection{MOtor Vehicle Emission Simulator (MOVES)}
 
 Accurately estimating the environmental impacts of transportation requires 
-quantifying vehicle activity into pollutant emissions. In the United States, 
+converting vehicle activity to pollutant emissions. In the United States, 
 the primary tool for this purpose is the MOtor Vehicle Emission Simulator (MOVES),
 developed and maintained by the U.S. Environmental Protection Agency (EPA). MOVES
 is a comprehensive emissions modeling framework used by government agencies and 
 researchers to estimate emissions from mobile sources at local, state, and regional
-scales \cite{USEPA_tech_2024} \cite{USEPA_overview_2025}. 
+scales \cite{USEPA_tech_2024, USEPA_overview_2025}. 
 According to the MOVES Technical Guidance, the program is used by state governments
-to: ``develop emission inventories for the development of state implementation 
+to ``develop emission inventories for the development of state implementation 
 plans (SIPs), transportation conformity determinations, and analyses required 
 under the National Environmental Policy Act (NEPA)'' \cite{USEPA_tech_2024}.
 
@@ -20,18 +20,17 @@ the model requires detailed inputs, including vehicle fleet composition, age
 distributions, fuel properties, weather conditions, and roadway activity data \cite{USEPA_tech_2024}.
 By scaling these calculated emission coefficients with localized traffic data 
 such as vehicle miles traveled (VMT) and traffic speeds, planners can conduct 
-air quality assessments \cite{NY911_hill_ghg} \cite{california_air_resources_board_brake} \cite{octc_final_2021}, 
+air quality assessments \cite{NY911_hill_ghg, california_air_resources_board_brake, octc_final_2021}, 
 evaluate congestion mitigation strategies \cite{TAYARANI2020102620}, 
-and model the environmental impact
-of infrastructure changes \cite{ZHANG2013307}.
+and model the environmental impact of infrastructure changes \cite{ZHANG2013307}.
 
 A critical requirement for emissions modeling within MOVES is accurate data on 
 vehicle class distributions. The model relies on distinguishing between multiple 
 vehicle types, as each has vastly different emission characteristics 
 \cite{USEPA_tech_2024}. 
-See Table~\ref{tab:moves-hpms} for the vehicle types trakced by MOVES. 
+See Table~\ref{tab:moves-hpms} for the vehicle types tracked by MOVES. 
 Currently, transportation agencies rely on traditional traffic monitoring methods 
-to provide these class counts (See Section~\ref{subsec:traditional-vehicle-monitoring}. 
+to provide these class counts (see Section~\ref{subsec:traditional-vehicle-monitoring}). 
 However, these methods typically produce sparse or 
 short-duration measurements \cite{FHWA_traffic_2010}. 
 This spatial and temporal limitation prevents the ability to capture the complete 
@@ -85,12 +84,12 @@ Historically, traffic monitoring in New York City has relied on a combination of
 manual observation and automated counts. For intersection and signal studies, 
 NYC DOT states that inspectors conduct manual counts of vehicles and pedestrians, 
 typically during morning and evening rush hours, and that these counts may include 
-turning movements, school-hour activity, and off-peak periods
+the number of turning vehicles, school-hour activity, and off-peak period activity
 \cite{NYCDOT_traffic_signals}.
 
 The NYC DOT also collects roadway traffic volume data using Automatic Traffic 
 Recorders (ATRs), which measure hourly vehicle counts over several weekdays or 
-weekend periods \cite{NYCDOT_traffic_signals} 
+weekend periods \cite{NYCDOT_traffic_signals}.
 These devices are typically deployed during short-duration 
 monitoring campaigns and are used to estimate traffic conditions such as peak-hour 
 volumes and average daily traffic. Although NYC DOT does not publicly specify 
@@ -100,18 +99,19 @@ in ATR systems depending on the duration of monitoring and installation constrai
 \cite{FHWA_traffic_2010}.
 
 Long-term ATR sensors are primarily inductive-loop detectors embedded in the 
-roadway surface. Inductive loops consist of wire coils installed beneath the 
+roadway surface. As shown in Figure~\ref{fig:inductive-loops},
+inductive loops consist of wire coils installed beneath the 
 pavement that generate a magnetic field. When a metal vehicle passes over the 
 loop, the vehicle alters the inductance of the loop, allowing the system to 
 detect and count vehicles. Because these sensors are permanently installed and 
 relatively durable, they are commonly used for long-term monitoring stations on 
 highways and major arterial roads
-\cite{FHWA_traffic_2010} \cite{wikipedia_induction_2025}.
+\cite{FHWA_traffic_2010, wikipedia_induction_2025}.
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=6.5cm]{figures/related_work/2_2_1_induction_loops.png}
-    \caption{Inductive loop detectors circled in yellow. Image adapted from \cite{midatlanticentry_induction}}
+    \caption{Inductive loop detectors circled in yellow. Image adapted from \cite{midatlanticentry_induction}.}
     \label{fig:inductive-loops}
 \end{figure}
 
@@ -122,8 +122,9 @@ these sensors include pneumatic road tubes, piezoelectric strips, tape switches,
 and temporary inductive loop detectors placed on or within the roadway
 \cite{FHWA_traffic_2010}.
 
-The most widely used temporary ATR sensor is the pneumatic road tube. Pneumatic 
-tubes are flexible rubber hoses stretched across the roadway and connected to a 
+The most widely used temporary ATR sensor is the pneumatic road tube. 
+Figure~\ref{fig:pneumatic-tubes} shows pneumatic 
+tubes stretched across the roadway and connected to a 
 roadside data recorder. When a vehicle axle passes over the tube, it compresses 
 the tube and generates a pulse of air that travels through the hose to the
 recorder, which logs the event as a vehicle detection. Using the timing and 
@@ -133,7 +134,7 @@ they are inexpensive, portable, and easy to deploy for short-term traffic studie
 However, the tubes degrade over time due to repeated vehicle loading, their speed
 measurements become less reliable at very low speeds (typically below 10 miles 
 per hour), and their accuracy decreases when monitoring multiple lanes 
-simultaneously \cite{FHWA_traffic_2010} \cite{FHWA_chapter_2014}.
+simultaneously \cite{FHWA_traffic_2010, FHWA_chapter_2014}.
 
 \begin{figure}[!htbp]
     \centering
@@ -154,7 +155,7 @@ are widely used for transportation planning and infrastructure analysis
 However, these measurements represent sample counts rather than continuous monitoring.
 The dataset documentation notes that the number of days recorded varies by location
 and year, and many locations are only measured during short-duration campaigns 
-\cite{NYC_open_data_atr} \cite{NYCMTC_hub_2026}.
+\cite{NYC_open_data_atr, NYCMTC_hub_2026}.
 In a city as spatially and temporally dynamic as New York, where traffic conditions
 vary significantly by location, season, and time of day, these sampling approaches 
 limit the temporal resolution of available traffic data.
@@ -168,7 +169,7 @@ including NYCDOT tube counts at locations such as 60th Street and the East River
 bridges, as well as toll transaction data from MTA Bridges and Tunnels and the 
 Port Authority. The data they use is collected on a single weekday in the fall 
 (2024 analysis used observations from October 16, 2024) to estimate travel 
-patterns entering the CBD \cite{NYCMTC_hub_2026}. 
+patterns entering the Central Business District \cite{NYCMTC_hub_2026}. 
 While these datasets provide insights into 
 regional travel behavior, they still depend on periodic counts and aggregated 
 agency data rather than continuous direct observation of traffic flows.
@@ -181,7 +182,7 @@ In recent years, New York City has begun exploring camera based approaches to
 street monitoring that can capture traffic activity continuously and across more 
 locations. In 2023, NYC DOT launched a pilot program with the analytics company 
 Viva to use ``street activity sensors'' developed by Viva to analyze street activity
-\cite{NYCDOT_viva_colab} \cite{viva_street_monitor}. 
+\cite{NYCDOT_viva_colab, viva_street_monitor}. 
 The goal of the program was to analyze the effectiveness and safety of 
 programs and street designs, prioritize projects for areas most in need of safety
 and other street improvements, and better understand how people are using the 
