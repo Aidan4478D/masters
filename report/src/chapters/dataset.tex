@@ -2,7 +2,7 @@
 
 To train and evaluate the vehicle detection pipeline, a custom dataset of real-world 
 NYC traffic  was required. Rather than relying on pre-existing generic vehicle 
-datasets (ex. Stanford Cars \cite{Krause2013CollectingAL} or BIT-Vehicle\cite{dong_vehicle_2015}), 
+datasets (e.g., Stanford Cars \cite{Krause2013CollectingAL} or BIT-Vehicle \cite{dong_vehicle_2015}), 
 this study utilized publicly available traffic camera closed-circuit television 
 (CCTV) feeds. This is because the physical camera infrastructure is already installed  
 on hundreds of streets across the five boroughs, eliminating the need for new 
@@ -12,9 +12,9 @@ to generalize vehicles from other datasets to vehicles from NYC CCTV images.
 Furthermore, recent state legislation authorized the New York City Department 
 of Transportation (NYC DOT) to quadruple its automated camera network, expanding 
 to 600 equipped intersections by the end of 2026 \cite{office_of_the_governor_2024}. 
-By tapping into this existing and continually expanding network, 
+By building off of this existing and continually expanding network, 
 this methodology ensures that the proposed vehicle detection pipeline can be 
-deployed and scaled citywide with zero additional physical infrastructure work.
+deployed and scaled citywide with zero additional physical infrastructural work.
 
 % ------------------------------------------------------------------------------%
 
@@ -24,7 +24,7 @@ The primary source of images was the 511NY portal, an official service operated
 in conjunction with the New York State Department of Transportation (NYSDOT), 
 the New York City Department of Transportation (NYC DOT), and private video 
 distribution networks such as Skyline
-\cite{NYCDOT_data_feeds} \cite{NYSDOT_c038145_2025} \cite{511ny_about_rideshare}.
+\cite{NYCDOT_data_feeds, NYSDOT_c038145_2025, 511ny_about_rideshare}.
 The 511NY system provides real-time traffic and transit information, including 
 access to hundreds of live traffic cameras deployed across the five boroughs
 \cite{NYCDOT_realtime}.
@@ -42,13 +42,13 @@ The \verb|GetCameras| endpoint was primarily queried as it returned metadata for
 camera's unique ID, exact coordinates (latitude and longitude), the roadway name,
 and a URL to fetch the current camera image.
 
-However, querying this endpoint only returned cameras operated by NYSDOT and 
+However, querying this endpoint only returns cameras operated by NYSDOT and 
 Skyline rather than the complete city network. This limitation exists because 
 state and city agencies share data differently. While NYSDOT camera feeds are 
 freely accessible through the 511NY API, the New York City Department of 
 Transportation (NYC DOT) requires developers to sign a formal data-sharing 
 agreement to access its network of over 900 municipal cameras
-\cite{NYCDOT_data_feeds} \cite{NYCDOT_realtime_metadata_2010}.
+\cite{NYCDOT_data_feeds, NYCDOT_realtime_metadata_2010}.
 To ensure this research remains easily reproducible without legal barriers, 
 the dataset was built exclusively using the unrestricted NYSDOT and Skyline feeds.
 
@@ -60,27 +60,27 @@ The physical infrastructure powering these feeds are industrial-grade pan-tilt-z
 (PTZ) cameras. According to NYSDOT engineering specifications, the standard hardware 
 deployed for these remote traffic monitoring tasks includes the Pelco Esprit Model 
 ES31PC22-2N, legacy Pelco 9760 units, and Axis Communications Q1614-E models
-\cite{NYCDOT_item_2014} \cite{NYCDOT_item_2024}. These cameras can be seen 
-below in Figure~\ref{fig:ptz-cameras}. 
+\cite{NYCDOT_item_2014, NYCDOT_item_2024}. These camera models can be seen 
+in Figure~\ref{fig:ptz-cameras}. 
 
 \begin{figure}[!htbp]
     \centering
 
-    \begin{subfigure}[c]{0.32\textwidth}
+    \begin{subfigure}[t]{0.32\textwidth}
         \centering
-        \includegraphics[height=4cm]{figures/dataset/3_2_pelco_esprit_camera.png}
+        \includegraphics[height=3.5cm]{figures/dataset/3_2_pelco_esprit_camera.png}
         \caption{Pelco Esprit ES31PC22-2N \cite{bh_photo_video_pelco_2026}.}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[c]{0.32\textwidth}
+    \begin{subfigure}[t]{0.32\textwidth}
         \centering
-        \includegraphics[height=4cm]{figures/dataset/3_2_pelco_9760_camera.png}
+        \includegraphics[height=3.5cm]{figures/dataset/3_2_pelco_9760_camera.png}
         \caption{Pelco 9760 \cite{froehlich5220_pelco_2026}.}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[c]{0.32\textwidth}
+    \begin{subfigure}[t]{0.32\textwidth}
         \centering
-        \includegraphics[height=4cm]{figures/dataset/3_2_axis_camera.png}
+        \includegraphics[height=3.5cm]{figures/dataset/3_2_axis_camera.png}
         \caption{Axis Q1614-E \cite{axis_communications_axis_2026}.}
     \end{subfigure}
 
@@ -91,18 +91,18 @@ below in Figure~\ref{fig:ptz-cameras}.
 \FloatBarrier
 
 While these cameras are capable of high-resolution video, the images returned 
-by the 511NY API \verb|GetCamera| endpoint have a resolution of 352x240, and are 
-generally low-quality. Examples of such images can be seen in Figure~\ref{fig:image-weather-conditions}
-I assume the images returned from the \verb|GetCamera| endpoint are intentionally 
+by the 511NY API \verb|GetCamera| endpoint have a resolution of $352 \times 240$, and are 
+generally low-quality. Examples of such images can be seen in Figure~\ref{fig:image-weather-conditions}.
+It is possible that the images returned from the \verb|GetCamera| endpoint are intentionally 
 downsampled and compressed, as this reduces server bandwidth and inherently 
 enforces privacy by making it impossible to read license plates or use facial 
-recognition. Thus the images used in this dataset all have the dimensions 352x240.
+recognition. Thus the images used in this dataset all have the dimensions $352 \times 240$.
 
 % ==============================================================================
 
 \subsection{Dataset Curation}
 
-To ensure the model learned a robust representation of New York City traffic,
+To ensure the dataset contains a robust representation of New York City traffic,
 the data collection targeted a diverse set of intersections from different boroughs 
 and types of roadways (narrow commercial streets, major expressways, and neighborhood
 intersections). 
@@ -147,7 +147,7 @@ which produce higher emissions than steady highway cruising
 studies further demonstrate that emissions vary sharply across short distances, 
 with hotspots frequently forming at congested intersections which is often missed
 by imprecise emission estimates \cite{wang_high-resolution_2025}. 
-Also, NYC’s truck route regulations concentrate
+Also, NYC's truck route regulations concentrate
 large through-trucks on designated expressways \cite{NYCDOT_truck_routing}, 
 while local street networks
 are characterized by last-mile delivery vehicles, city transit buses, and other
@@ -161,13 +161,13 @@ Figure~\ref{fig:camera-down} or they were feeds of highways.
 
 
 Twelve cameras that fit these criteria were then chosen based on the viewing 
-angle of the vehicle (ex. Front view, rear view, side view, and any
+angle of the vehicle (e.g. front view, rear view, side view, and any
 combination of each). This is because when developing a model to be deployed 
 on any NYC traffic camera, it is necessary to make sure all views of different 
 vehicle orientations are captured so the model is robust to any view of the vehicle.
 Figure~\ref{fig:vehicle-views} shows four different views of vehicle orientations the cameras can 
-record. The images are colored such that vehicles highlighted in yellow show 
-its front, vehicles highlighted in red show its rear, and vehicles highlighted
+record. The images are colored such that vehicle regions highlighted in yellow show 
+its front, vehicles regions highlighted in red show its rear, and vehicles regions highlighted
 in blue show its side. There are some cameras which only see one orientation 
 of vehicles (Figure~\ref{fig:front-side-view}), but there are also cameras which see two 
 (Figures~\ref{fig:side-rear-view} and \ref{fig:rear-front-view}) or three 
@@ -212,8 +212,8 @@ locations within NYC are depicted in Figure~\ref{fig:camera-map}.
 
     \caption{
         Different views of vehicles through different traffic cameras.
-        The images are colored such that vehicles highlighted in \textcolor{myyellow}{yellow} show its 
-        front, vehicles highlighted in \textcolor{red}{red} show its rear, and vehicles highlighted 
+        The images are colored such that vehicles regions highlighted in \textcolor{myyellow}{yellow} show its 
+        front, vehicles regions highlighted in \textcolor{red}{red} show its rear, and vehicles regions highlighted 
         in \textcolor{blue}{blue} show its side.
     }
     \label{fig:vehicle-views}
@@ -256,11 +256,10 @@ locations within NYC are depicted in Figure~\ref{fig:camera-map}.
 \subsubsection{Image Collection}
 
 To automate the collection of the camera images, a Python script was developed to
-save the 12 selected camera images from the 511NY API directly. Although the API 
-allows up to 10 requests per minute (once every six seconds) \cite{511ny_api_docs},
-and the physical 
-cameras refresh their static feeds approximately every 15 seconds 
-\cite{NYCDOT_realtime_subscribers}, a sampling rate
+save images from the 12 selected cameras from the 511NY API directly. Although
+the API allows up to 10 requests per minute (once every six seconds) 
+\cite{511ny_api_docs}, and the physical cameras refresh their static feeds approximately
+every 15 seconds \cite{NYCDOT_realtime_subscribers}, a sampling rate
 of two minutes was chosen. This was selected to align with New York City's traffic
 signal cycles, which typically range from 45 to 120 seconds depending on local 
 traffic volumes and intersection patterns. By capturing frames every two minutes,
@@ -268,11 +267,11 @@ the collection protocol inherently acts as a temporal filter, increasing the
 likelihood that consecutive images capture distinct vehicles rather than oversampling
 the same traffic scene.
 
-Data was collected on October 1st (Wednesday), 16th (Thursday), 20th (Monday), and 
-November 3rd (Monday). Figure~\ref{fig:vehicles-hour-chart} shows the distribution
-of the counts of images in the dataset by hour of the day. It shows that all images 
-were taken from 9 AM to 12 AM, with the majority of images in the early afternoon, 
-and during the afternoon peak traffic window (3 PM to 6 PM).
+Data was collected on October 1 (Wednesday), October 16 (Thursday), October 20 (Monday), 
+and November 3 (Monday), 2025. Figure~\ref{fig:vehicles-hour-chart} shows the 
+distribution of images in the dataset by hour of day. All images were captured 
+between 9 AM and midnight, with most taken in the early afternoon and during the 
+afternoon peak traffic period (3 PM to 6 PM).
 
 \begin{figure}[!htbp]
     \centering
@@ -283,7 +282,7 @@ and during the afternoon peak traffic window (3 PM to 6 PM).
 
 Images were collected during various weather and lighting patterns so that the 
 model learns a robust representation of vehicles under different conditions. 
-Examples of different conditions are shown below:
+Examples of different conditions are shown in Figure~\ref{fig:image-weather-conditions}.
 
 \begin{figure}[!htbp]
     \centering
@@ -336,6 +335,7 @@ from low-resolution traffic CCTV feeds with varying viewpoints, weather conditio
 and scene complexity, the labeling process required a tool that allowed precise 
 bounding-box annotation and consistent class management across a large image set. 
 For this purpose, the Computer Vision Annotation Tool (CVAT) was used.
+The annotation environment is shown in Figure~\ref{fig:cvat-labeing}.
 
 \begin{figure}[!htbp]
     \centering
@@ -355,50 +355,41 @@ and assign it a class label. Additional boolean attributes were attached when a
 vehicle belonged to a more specific subtype of interest, such as a taxi, police
 vehicle, minivan, or ambulance. This workflow allowed the dataset to preserve both
 a core detection taxonomy and more detailed contextual information without splitting 
-up the main class structure.
+up the main class structure. 
 
-\subsubsection{Labeling Class Structure}
+\subsubsection{Annotation Class Design}
 \label{sec:label-classes}
 
-The vehicle classes designed to balance two needs: visual distinguishability in 
+The vehicle classes were designed to balance two needs: visual distinguishability in 
 low-resolution CCTV imagery and relevance to downstream emissions estimation. 
-Thus, in total, eight classes were used:
-
-\begin{itemize}
-    \item \verb|sedan|
-    \item \verb|suv|
-    \item \verb|pickup_truck|
-    \item \verb|van|
-    \item \verb|bus|
-    \item \verb|truck|
-    \item \verb|two_wheeler|
-    \item \verb|unknown_vehicle|
-\end{itemize}
+Thus, in total, eight classes were used: \verb|sedan|, \verb|suv|, \verb|pickup_truck|,
+\verb|van|, \verb|bus|, \verb|truck|, \verb|two_wheeler|, and \verb|unknown_vehicle|.
 
 These labels were chosen because they represent vehicle groupings that are reasonably 
 aligned with broader transportation and emissions categories while still remaining 
-visually identifiable in 352×240 traffic-camera images. In particular, sedans, coupes,
-and hatchbacks were all labeled as \verb|Sedan|, while sport utility vehicles and crossovers 
-were both labeled as \verb|SUV|. This consolidation was intentional. Federal transportation 
+visually identifiable in $352 \times 240$ traffic-camera images. In particular, 
+vehicle types like sedans, coupes,
+and hatchbacks were all labeled as \verb|sedan|, while sport utility vehicles and crossovers 
+were both labeled as \verb|suv|. This consolidation was intentional. Federal transportation 
 and emissions frameworks generally operate on broader vehicle classes rather than 
 highly specific consumer body styles. For example, the FHWA Traffic Monitoring 
 Guide groups sedans and coupes within the passenger-car category, while EPA and 
 DOE materials similarly distinguish broad classes such as passenger cars, passenger 
 trucks, buses, trucks, and motorcycles for transportation and emissions analysis 
-\cite{FHWA_traffic_2014} \cite{USEPA_def_truck_2019} \cite{USDOE_AFDC}.
+\cite{FHWA_traffic_2014, USEPA_def_truck_2019, USDOE_AFDC}.
 
-This simplification was also necessary because the dataset consists of low-resolution 
-CCTV images, where fine-grained distinctions between similar passenger body styles 
-are often visually unreliable. In many views, a coupe, sedan, and hatchback differ 
-primarily in roofline or rear profile, while a crossover and SUV may differ only subtly 
-in ride height or body proportions. With the low-resolution images, these features are 
-often obscured by distance, motion blur, occlusion, and unfavorable camera angle. To 
-improve consistency when distinguishing visually similar passenger vehicles, labeling 
-decisions were guided by a small set of practical visual heuristics. In side or angled 
-views, SUVs were generally identified by their taller cabin profile, greater apparent 
-ride height, and larger overall body proportions relative to nearby sedans. Sedans were 
-typically lower to the ground, with a thinner body profile and a more downward-sloping 
-rear. 
+This simplification was also necessary because the dataset consists of low-resolution
+CCTV images, in which fine-grained distinctions between similar passenger body styles 
+are often visually unreliable. In many views, differences in roofline, rear profile, 
+ride height, and body proportions are subtle and can be obscured by distance, motion 
+blur, occlusion, and unfavorable camera angles. As a result, labeling decisions were 
+guided by a small set of practical visual heuristics to distinguish broader 
+passenger-vehicle categories as consistently as possible.
+For example, as illustrated in Figure~\ref{fig:sedan-suv-heuristics},
+SUVs in side or angled views were typically identified by a taller cabin profile, 
+greater apparent ride height, and larger overall body proportions relative to nearby 
+sedans. Sedans, by contrast, were generally lower to the ground, with a slimmer body 
+profile and a more downward-sloping rear.
 
 \begin{figure}[!htbp]
     \centering
@@ -413,23 +404,23 @@ rear.
         \includegraphics[height=3.5cm]{figures/dataset/3_4_1_sedan_suv_label.png}
         \caption{Sedan (yellow) and SUV (blue) labels used.}
     \end{subfigure}
-    \label{fig:sedan-suv-heuristics}
     \caption{In this example, the two vehicles in the front of the image are being
-             compared against each other. Using the vertical arrows as a comparison,
+             compared against each other. Using the colored arrows as a comparison,
              the white vehicle has a shorter cabin profile and a more-downward sloping
              rear compared to the red vehicle. Thus, the white vehicle was labeled as
              \texttt{sedan} and the red vehicle was labeled as \texttt{suv}. The grey
              vehicle in the back has a thin body profile when compared to the road (grey arrows)
              and a relatively short cabin profile. These are common features 
              associated with hatchbacks, thus the vehicle was labeled as \texttt{sedan}.}
+    \label{fig:sedan-suv-heuristics}
 \end{figure}
 
 \FloatBarrier
 
-
-Minivans, when visible with sufficient clarity, were usually distinguished from 
-SUVs by their lower stance and by the alignment of the rear sliding-door handle near 
-the front-door handle. 
+Minivans, which were labeled under the \verb|van| class and marked with a separate 
+attribute, were usually distinguished from SUVs, when visible with sufficient clarity, 
+by their lower stance and by the alignment of the rear sliding-door handle near the 
+front-door handle. This distinction is shown in Figure~\ref{fig:minivan-suv-heuristics}.
 
 \begin{figure}[!htbp]
     \centering
@@ -446,13 +437,13 @@ the front-door handle.
         \caption{SUV handles and vehicle height.}
         \label{fig:suv-heuristics}
     \end{subfigure}
-    \label{fig:minivan-suv-heuristics}
     \caption{In this example, a vehicle with the attribute \texttt{is\_minivan} 
              (a) and a vehicle with the label \texttt{suv} (b) are compared in 
              the same camera position. The handles (boxed in red) on the minivan 
              are closer together, while the handles on the SUV are farther apart. 
              Additionally, the body of the minivan is closer to the road compared
              to the body of the SUV as shown with the yellow arrows.}
+    \label{fig:minivan-suv-heuristics}
 \end{figure}
 
 \FloatBarrier
@@ -463,7 +454,6 @@ Grouping visually similar body styles into broader categories therefore reduced
 annotation ambiguity and helped limit label noise, which is especially important 
 in a manually labeled dataset where forcing uncertain distinctions can degrade 
 downstream model performance.
-
 
 At the same time, the annotation classes were intentionally made somewhat more 
 descriptive than the final class structure used in the present training pipeline. 
@@ -479,14 +469,14 @@ allows it to be reused for future machine-learning tasks that may require a more
 detailed passenger-vehicle taxonomy. This later aggregation is still consistent 
 with EPA guidance, which places many SUVs and similar vehicles within broader 
 light-duty truck or passenger-truck categories for emissions analysis 
-\cite{USEPA_def_truck_2019}, \cite{USEPA_road_pop_2020}.
+\cite{USEPA_def_truck_2019, USEPA_road_pop_2020}.
 
 A similar logic applies to \verb|bus| and \verb|truck|, but in the opposite direction. 
 In MOVES, buses are divided into categories such as other bus, transit bus, and 
 school bus, while trucks are separated into source types such as light commercial 
 truck, refuse truck, single-unit short-haul truck, single-unit long-haul truck, 
 combination short-haul truck, and combination long-haul truck 
-\cite{USDOE_AFDC}, \cite{USEPA_road_pop_2020}. However, these distinctions are not 
+\cite{USDOE_AFDC, USEPA_road_pop_2020}. However, these distinctions are not 
 based on vehicle appearance alone. EPA documentation defines bus categories partly 
 by ownership and service type. For example, transit buses are associated with 
 public transit operations, school buses with K--12 student transport, and other 
@@ -495,14 +485,14 @@ source types are differentiated partly by vehicle configuration, axle arrangemen
 haul type, and primary distance of operation rather than only visual silhouette 
 \cite{us_epa_moves3_2020}.
 
-In low-resolution 352$\times$240 CCTV imagery, many of these distinctions are 
+In low-resolution $352 \times 240$ CCTV imagery, many of these distinctions are 
 either not visible or not reliably inferable from a single frame. A shuttle bus 
 operated by a private company and a visually similar shuttle operated by a public 
 transit agency may appear nearly identical in the image while belonging to different 
 MOVES source types. Similarly, distinguishing a single-unit short-haul truck from 
 a single-unit long-haul truck, or a refuse truck from another heavy truck under 
 occlusion, blur, or poor viewing angle, may not be consistently possible from image 
-evidence alone \cite{USEPA_road_pop_2020}, \cite{us_epa_moves3_2020}. For this reason, 
+evidence alone \cite{USEPA_road_pop_2020, us_epa_moves3_2020}. For this reason, 
 all buses were labeled under a single \verb|bus| class and all heavier non-pickup 
 trucks under a single \verb|truck| class.
 
@@ -525,7 +515,7 @@ reliably inferred from low-resolution imagery, as in the case of most MOVES bus 
 truck subcategories. The result is an annotation scheme that is intentionally 
 image-driven for model development, even though the later emissions analysis uses a 
 more analytically driven mapping to MOVES source types 
-\cite{USEPA_def_truck_2019}, \cite{USEPA_road_pop_2020}, \cite{us_epa_moves3_2020}.
+\cite{USEPA_def_truck_2019, USEPA_road_pop_2020, us_epa_moves3_2020}.
 
 \subsubsection{Attributes}
 
@@ -549,7 +539,9 @@ attributes function as additional object properties that can enrich labels
 without introducing a separate object category, making them well suited for 
 subtypes that may be analytically meaningful but are not always reliable as 
 standalone detection classes in low-resolution imagery 
-\cite{CVAT_label_guide} \cite{CVAT_attributes}.
+\cite{CVAT_label_guide, CVAT_attributes}. See how this was performed in 
+Figure~\ref{fig:minivan-attribute}.
+
 
 \begin{figure}[!htbp]
     \centering
@@ -566,7 +558,7 @@ For this reason, the primary classes were reserved for visually robust vehicle
 groups, while attributes were used to preserve finer-grained semantic information 
 when it could be identified with reasonable confidence. For example, a minivan 
 may appear too visually similar to other vans or SUVs to justify a separate top-level 
-class in 352×240 traffic-camera images, yet it may still be useful to record 
+class in $352 \times 240$ traffic-camera images, yet it may still be useful to record 
 through an attribute. Similarly, taxis, police vehicles, ambulances, fire trucks, 
 delivery trucks, and city vehicles may be relevant for downstream policy, 
 fleet-composition, or municipal-operations analyses, even if they are not modeled
@@ -597,67 +589,88 @@ remain consistent as vehicles were still marked as present in the scene, but wit
 overstating certainty about their exact type. This is especially important in 
 low-resolution urban traffic imagery, where fine-grained body-style distinctions 
 are not always visually reliable. 
+Because the goal of the dataset was not simply to maximize the number of labeled 
+vehicles, but to create a high-quality training set for downstream emissions-oriented
+classification, preserving uncertainty explicitly rather than introducing mislabeled
+images was preferred.
 
 \begin{figure}[!htbp]
     \centering
     \begin{subfigure}[c]{0.8\textwidth}
         \centering
-        \includegraphics[height=8cm]{figures/dataset/3_4_3_unknown_example.png}
-        \caption{Image with vehicles that are difficult to distinguish in the background.}
+        \includegraphics[height=6cm]{figures/dataset/3_4_3_unknown_example.png}
+        \caption{Image with vehicles that are difficult to distinguish in the background 
+                 (vehicles without a colorful box around them).}
     \end{subfigure}
 
     % new row -----------------------
     \vspace{1.5em}
 
-    \begin{subfigure}[t]{0.48\textwidth}
+    \begin{subfigure}[t]{0.42\textwidth}
         \centering
-        \includegraphics[height=5cm]{figures/dataset/3_4_3_unknown_zoomed.png}
+        \includegraphics[height=3.5cm]{figures/dataset/3_4_3_unknown_zoomed.png}
         \caption{Close-up of the background in (a) with unknown vehicles.}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.48\textwidth}
+    \hspace{2em}
+    \begin{subfigure}[t]{0.42\textwidth}
         \centering
-        \includegraphics[height=5cm]{figures/dataset/3_4_3_unknown_labeled.png}
-        \caption{Vehicles given the unknown vehicle class.}
+        \includegraphics[height=3.5cm]{figures/dataset/3_4_3_unknown_labeled.png}
+        \caption{Ambiguous vehicles from (b) are given the \texttt{unknown\_vehicle} class.}
     \end{subfigure}
 
     \caption{
-        Figure (a) shows an example frame with the confident vehicles labeled. 
-        It is unclear though, the classes of the vehicles coming towards the camera
-        behind the crosswalk (b). This is because the side features are not visible
-        to use the heuristics described in Section~\ref{sec:label-classes}. Therefore,
-        these vehicles were assigned the \texttt{unknown\_vehicle} class (c).
+        Figure (a) shows an example frame with confidently labeled vehicles.
+        The classes of the vehicles approaching the camera behind the crosswalk,
+        shown in (b), are unclear because side-view features are not visible and
+        the heuristics described in Section~\ref{sec:label-classes} cannot be
+        applied reliably. These vehicles were therefore assigned the
+        \texttt{unknown\_vehicle} class, as shown in (c).
     }
     \label{fig:unknown-vehicles}
 \end{figure}
 
 \FloatBarrier
 
-Because the goal of the dataset was not simply to maximize the number of labeled 
-vehicles, but to create a high-quality training set for downstream emissions-oriented
-classification, preserving uncertainty explicitly rather than introducing mislabeled
-images was preferred.
 
 \subsubsection{Annotation Procedure}
 
-Each image was manually reviewed in CVAT and every visible vehicle of interest was 
-annotated with a rectangular bounding box. The assigned box was drawn tightly 
-around the visible extent of the vehicle body. After drawing the bounding box, the
-most appropriate class label was selected. When applicable, additional attributes 
-were checked to indicate more specific vehicle roles or subtypes.
+Each image was manually reviewed in CVAT, and every visible vehicle of interest was
+annotated with a rectangular bounding box. Each box was drawn tightly around the
+visible extent of the vehicle body, after which the most appropriate class label was
+assigned. When applicable, additional attributes were recorded to indicate more
+specific vehicle roles or subtypes. All annotations were completed by the author,
+Aidan Cusa.
 
-This annotation procedure was repeated across all 1,200 images in the dataset. 
-Since the images were drawn from multiple camera locations and viewing angles, the
-labeling process captured vehicles under a wide range of perspectives, including 
+To maintain consistency, each frame was treated as an independent labeling instance.
+In other words, class assignments were based only on the visual evidence available in
+the current frame rather than on how the same vehicle may have appeared in a previous
+or subsequent frame. This was especially important under changing lighting,
+occlusion, or motion conditions, where a vehicle that was clearly identifiable in one
+frame might be less distinguishable in another. Both moving and parked vehicles were
+annotated, since both constitute vehicle presence within the scene. The
+\verb|two_wheeler| class was used only for motorcycles and other motorized two-wheel
+vehicles, and did not include bicycles or electric bicycles.
+
+The annotation process was carried out in multiple passes. In the initial pass,
+clearly identifiable vehicles were labeled with bounding boxes and class assignments.
+A later review pass was then used to add \verb|unknown_vehicle| instances and to
+correct earlier labeling issues, including missed vehicles, misclassifications, and
+bounding boxes that were too loose or otherwise imprecise.
+See Section~\ref{sec:data-refinement} for more information regarding annotation revision.
+
+This annotation procedure was repeated across all 1,200 images in the dataset.
+Because the images were collected from multiple camera locations and viewing angles,
+the labeling process captured vehicles under a wide range of perspectives, including
 front-facing, rear-facing, side-facing, and mixed-angle views. Vehicles also appeared
-under different traffic densities, illumination conditions, and levels of partial
-occlusion. As a result, the final annotated dataset reflects a realistic urban 
-traffic-camera detection environment rather than a controlled benchmark setting.
+under varying traffic densities, illumination conditions, and levels of partial
+occlusion. As a result, the final annotated dataset reflects a realistic and
+challenging urban traffic-camera detection environment rather than a controlled
+benchmark setting.
 
-
+\newpage
 \subsection{Dataset Statistics}
 
-Across the full dataset, a total of 20,939 vehicle instances were labeled. 
+Across the full dataset, a total of 20,975 vehicle instances were labeled. 
 Table~\ref{tab:class-counts} summarizes the number of annotated instances in each
 class. As expected for urban traffic-camera imagery, the largest category was 
 \verb|unknown_vehicle|, reflecting the frequency of distant, occluded, or visually
@@ -673,16 +686,16 @@ ambiguous vehicles in low-resolution scenes. Among the labeled vehicle classes,
         \toprule
         \textbf{Class} & \textbf{Count} \\
         \midrule
-        sedan            & 3,354 \\
-        suv              & 5,017 \\
+        sedan            & 3,357 \\
+        suv              & 5,010 \\
         pickup\_truck    & 184 \\
-        van              & 1,324 \\
+        van              & 1,326 \\
         bus              & 596 \\
         truck            & 829 \\
-        two\_wheeler     & 49 \\
-        unknown\_vehicle & 9,586 \\
+        two\_wheeler     & 48 \\
+        unknown\_vehicle & 9,625 \\
         \midrule
-        \textbf{Total}   & \textbf{20,939} \\
+        \textbf{Total}   & \textbf{20,975} \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -703,7 +716,7 @@ substantially smaller than the corresponding parent-class totals.
         \toprule
         \textbf{Parent Class} & \textbf{Attribute} & \textbf{Count} \\
         \midrule
-        bus    & is\_school     & 172 \\
+        bus    & is\_school     & 174 \\
         \midrule
         sedan  & is\_taxi       & 17 \\
         sedan  & is\_police     & 19 \\
@@ -716,7 +729,7 @@ substantially smaller than the corresponding parent-class totals.
         truck  & is\_ambulance  & 13 \\
         \midrule
         van    & is\_taxi       & 161 \\
-        van    & is\_minivan    & 298 \\
+        van    & is\_minivan    & 301 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -779,14 +792,14 @@ evaluation.
         \midrule
         bus              & 476   & 53  & 67  \\
         pickup\_truck    & 142   & 25  & 17  \\
-        sedan            & 2,683 & 311 & 360 \\
-        suv              & 3,955 & 467 & 595 \\
+        sedan            & 2,683 & 311 & 363 \\
+        suv              & 3,955 & 467 & 588 \\
         truck            & 644   & 120 & 65  \\
-        two\_wheeler     & 37    & 6   & 6   \\
-        unknown\_vehicle & 7,712 & 928 & 946 \\
-        van              & 1,053 & 125 & 146 \\
+        two\_wheeler     & 37    & 6   & 5   \\
+        unknown\_vehicle & 7,712 & 928 & 985 \\
+        van              & 1,053 & 125 & 148 \\
         \midrule
-        \textbf{Total}   & \textbf{16,702} & \textbf{2,035} & \textbf{2,202} \\
+        \textbf{Total}   & \textbf{16,702} & \textbf{2,035} & \textbf{2,238} \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -805,7 +818,7 @@ roughly proportional to the 80/10/10 dataset split.
         \toprule
         \textbf{Parent Class} & \textbf{Attribute} & \textbf{Train} & \textbf{Validation} & \textbf{Test} \\
         \midrule
-        bus   & is\_school       & 132 & 15 & 25 \\
+        bus   & is\_school       & 132 & 15 & 27 \\
         \midrule
         sedan & is\_taxi         & 15  & 0  & 2  \\
         sedan & is\_police       & 16  & 2  & 1  \\
@@ -818,7 +831,7 @@ roughly proportional to the 80/10/10 dataset split.
         truck & is\_ambulance    & 11  & 2  & 0  \\
         \midrule
         van   & is\_taxi         & 135 & 15 & 11 \\
-        van   & is\_minivan      & 231 & 32 & 35 \\
+        van   & is\_minivan      & 231 & 32 & 38 \\
         \bottomrule
     \end{tabular}
 \end{table}

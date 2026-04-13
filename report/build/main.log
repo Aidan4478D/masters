@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  13 APR 2026 10:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  13 APR 2026 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -772,26 +772,21 @@ File: figures/dataset/3_2_pelco_esprit_camera.png Graphic file (type png)
 <use figures/dataset/3_2_pelco_esprit_camera.png>
 Package pdftex.def Info: figures/dataset/3_2_pelco_esprit_camera.png  used on i
 nput line 71.
-(pdftex.def)             Requested size: 111.15433pt x 113.81102pt.
+(pdftex.def)             Requested size: 97.26004pt x 99.58464pt.
 <figures/dataset/3_2_pelco_9760_camera.png, id=64, 164.11313pt x 126.4725pt>
 File: figures/dataset/3_2_pelco_9760_camera.png Graphic file (type png)
 <use figures/dataset/3_2_pelco_9760_camera.png>
 Package pdftex.def Info: figures/dataset/3_2_pelco_9760_camera.png  used on inp
 ut line 77.
-(pdftex.def)             Requested size: 147.68541pt x 113.81102pt.
+(pdftex.def)             Requested size: 129.22473pt x 99.58464pt.
 <figures/dataset/3_2_axis_camera.png, id=65, 158.84344pt x 119.69719pt>
 File: figures/dataset/3_2_axis_camera.png Graphic file (type png)
 <use figures/dataset/3_2_axis_camera.png>
 Package pdftex.def Info: figures/dataset/3_2_axis_camera.png  used on input lin
 e 83.
-(pdftex.def)             Requested size: 151.0337pt x 113.81102pt.
-
-Overfull \hbox (0.70866pt too wide) in paragraph at lines 83--84
- [][] 
- []
-
-[9 <./figures/dataset/3_2_pelco_esprit_camera.png> <./figures/dataset/3_2_pelco
-_9760_camera.png> <./figures/dataset/3_2_axis_camera.png>]
+(pdftex.def)             Requested size: 132.15268pt x 99.58464pt.
+ [9 <./figures/dataset/3_2_pelco_esprit_camera.png> <./figures/dataset/3_2_pelc
+o_9760_camera.png> <./figures/dataset/3_2_axis_camera.png>]
 <figures/dataset/3_3_1_camera_serviced.png, id=72, 366.61969pt x 250.68657pt>
 File: figures/dataset/3_3_1_camera_serviced.png Graphic file (type png)
 <use figures/dataset/3_3_1_camera_serviced.png>
@@ -851,33 +846,33 @@ pt>
 File: figures/dataset/3_3_2_vehicles_hour_chart.png Graphic file (type png)
 <use figures/dataset/3_3_2_vehicles_hour_chart.png>
 Package pdftex.def Info: figures/dataset/3_3_2_vehicles_hour_chart.png  used on
- input line 279.
+ input line 278.
 (pdftex.def)             Requested size: 351.67615pt x 128.0374pt.
  [13 <./figures/dataset/3_3_1_dataset_cameras_map.png>]
 <figures/dataset/3_3_2_condition_sunny.png, id=100, 517.18219pt x 353.06906pt>
 File: figures/dataset/3_3_2_condition_sunny.png Graphic file (type png)
 <use figures/dataset/3_3_2_condition_sunny.png>
 Package pdftex.def Info: figures/dataset/3_3_2_condition_sunny.png  used on inp
-ut line 292.
+ut line 291.
 (pdftex.def)             Requested size: 208.39227pt x 142.26378pt.
 <figures/dataset/3_3_2_condition_rainy.png, id=101, 516.42938pt x 352.31625pt>
 File: figures/dataset/3_3_2_condition_rainy.png Graphic file (type png)
 <use figures/dataset/3_3_2_condition_rainy.png>
 Package pdftex.def Info: figures/dataset/3_3_2_condition_rainy.png  used on inp
-ut line 298.
+ut line 297.
 (pdftex.def)             Requested size: 208.53023pt x 142.26378pt.
 <figures/dataset/3_3_2_condition_night.png, id=102, 516.42938pt x 352.31625pt>
 File: figures/dataset/3_3_2_condition_night.png Graphic file (type png)
 <use figures/dataset/3_3_2_condition_night.png>
 Package pdftex.def Info: figures/dataset/3_3_2_condition_night.png  used on inp
-ut line 307.
+ut line 306.
 (pdftex.def)             Requested size: 208.53023pt x 142.26378pt.
 <figures/dataset/3_3_2_condition_normal.png, id=103, 516.42938pt x 351.56343pt>
 
 File: figures/dataset/3_3_2_condition_normal.png Graphic file (type png)
 <use figures/dataset/3_3_2_condition_normal.png>
 Package pdftex.def Info: figures/dataset/3_3_2_condition_normal.png  used on in
-put line 313.
+put line 312.
 (pdftex.def)             Requested size: 208.97151pt x 142.26378pt.
  [14 <./figures/dataset/3_3_2_vehicles_hour_chart.png> <./figures/dataset/3_3_2
 _condition_sunny.png> <./figures/dataset/3_3_2_condition_rainy.png> <./figures/
@@ -890,124 +885,125 @@ Package pdftex.def Info: figures/dataset/3_4_cvat_intro.png  used on input line
  342.
 (pdftex.def)             Requested size: 396.51282pt x 199.16928pt.
  [15 <./figures/dataset/3_4_cvat_intro.png>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-68.
-
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [16]
-<figures/dataset/3_4_1_sedan_suv_heuristics.png, id=121, 435.87843pt x 238.6415
+<figures/dataset/3_4_1_sedan_suv_heuristics.png, id=117, 435.87843pt x 238.6415
 6pt>
 File: figures/dataset/3_4_1_sedan_suv_heuristics.png Graphic file (type png)
 <use figures/dataset/3_4_1_sedan_suv_heuristics.png>
 Package pdftex.def Info: figures/dataset/3_4_1_sedan_suv_heuristics.png  used o
-n input line 407.
+n input line 398.
 (pdftex.def)             Requested size: 181.89047pt x 99.58464pt.
-<figures/dataset/3_4_1_sedan_suv_label.png, id=122, 437.38406pt x 257.46187pt>
+<figures/dataset/3_4_1_sedan_suv_label.png, id=118, 437.38406pt x 257.46187pt>
 File: figures/dataset/3_4_1_sedan_suv_label.png Graphic file (type png)
 <use figures/dataset/3_4_1_sedan_suv_label.png>
 Package pdftex.def Info: figures/dataset/3_4_1_sedan_suv_label.png  used on inp
-ut line 413.
+ut line 404.
 (pdftex.def)             Requested size: 169.17757pt x 99.58464pt.
-<figures/dataset/3_4_1_minivan_heuristics.png, id=123, 332.74312pt x 151.3153pt
+ [16]
+<figures/dataset/3_4_1_minivan_heuristics.png, id=122, 332.74312pt x 151.3153pt
 >
 File: figures/dataset/3_4_1_minivan_heuristics.png Graphic file (type png)
 <use figures/dataset/3_4_1_minivan_heuristics.png>
 Package pdftex.def Info: figures/dataset/3_4_1_minivan_heuristics.png  used on 
-input line 438.
+input line 429.
 (pdftex.def)             Requested size: 218.98662pt x 99.58464pt.
-<figures/dataset/3_4_1_suv_heuristics.png, id=124, 316.93407pt x 167.87718pt>
+<figures/dataset/3_4_1_suv_heuristics.png, id=123, 316.93407pt x 167.87718pt>
 File: figures/dataset/3_4_1_suv_heuristics.png Graphic file (type png)
 <use figures/dataset/3_4_1_suv_heuristics.png>
 Package pdftex.def Info: figures/dataset/3_4_1_suv_heuristics.png  used on inpu
-t line 445.
+t line 436.
 (pdftex.def)             Requested size: 188.00504pt x 99.58464pt.
  [17 <./figures/dataset/3_4_1_sedan_suv_heuristics.png> <./figures/dataset/3_4_
 1_sedan_suv_label.png> <./figures/dataset/3_4_1_minivan_heuristics.png> <./figu
-res/dataset/3_4_1_suv_heuristics.png>] [18] [19]
-<figures/dataset/3_4_2_minivan_attribute.png, id=139, 451.6875pt x 252.945pt>
+res/dataset/3_4_1_suv_heuristics.png>] [18]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
+26.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<figures/dataset/3_4_2_minivan_attribute.png, id=135, 451.6875pt x 252.945pt>
 File: figures/dataset/3_4_2_minivan_attribute.png Graphic file (type png)
 <use figures/dataset/3_4_2_minivan_attribute.png>
 Package pdftex.def Info: figures/dataset/3_4_2_minivan_attribute.png  used on i
-nput line 556.
+nput line 548.
 (pdftex.def)             Requested size: 254.04602pt x 142.26378pt.
- [20 <./figures/dataset/3_4_2_minivan_attribute.png>]
+
+[19] [20 <./figures/dataset/3_4_2_minivan_attribute.png>]
 <figures/dataset/3_4_3_unknown_example.png, id=144, 676.02562pt x 457.71pt>
 File: figures/dataset/3_4_3_unknown_example.png Graphic file (type png)
 <use figures/dataset/3_4_3_unknown_example.png>
 Package pdftex.def Info: figures/dataset/3_4_3_unknown_example.png  used on inp
-ut line 605.
-(pdftex.def)             Requested size: 336.18616pt x 227.62204pt.
+ut line 601.
+(pdftex.def)             Requested size: 252.13704pt x 170.71652pt.
 <figures/dataset/3_4_3_unknown_zoomed.png, id=145, 481.04718pt x 390.70969pt>
 File: figures/dataset/3_4_3_unknown_zoomed.png Graphic file (type png)
 <use figures/dataset/3_4_3_unknown_zoomed.png>
 Package pdftex.def Info: figures/dataset/3_4_3_unknown_zoomed.png  used on inpu
-t line 614.
-(pdftex.def)             Requested size: 175.15869pt x 142.26378pt.
+t line 611.
+(pdftex.def)             Requested size: 122.61035pt x 99.58464pt.
 <figures/dataset/3_4_3_unknown_labeled.png, id=146, 480.29437pt x 395.97937pt>
 File: figures/dataset/3_4_3_unknown_labeled.png Graphic file (type png)
 <use figures/dataset/3_4_3_unknown_labeled.png>
 Package pdftex.def Info: figures/dataset/3_4_3_unknown_labeled.png  used on inp
-ut line 620.
-(pdftex.def)             Requested size: 172.55405pt x 142.26378pt.
- [21]
-[22 <./figures/dataset/3_4_3_unknown_example.png> <./figures/dataset/3_4_3_unkn
-own_zoomed.png> <./figures/dataset/3_4_3_unknown_labeled.png>] [23] [24]
-[25]) (./chapters/methodology.tex [26]
-<figures/methodology/4_1_yolo_diagram.png, id=169, 1236.11812pt x 542.025pt>
+ut line 617.
+(pdftex.def)             Requested size: 120.78416pt x 99.58464pt.
+ [21 <./figures/dataset/3_4_3_unknown_example.png> <./figures/dataset/3_4_3_unk
+nown_zoomed.png> <./figures/dataset/3_4_3_unknown_labeled.png>] [22] [23] [24])
+
+(./chapters/methodology.tex [25]
+<figures/methodology/4_1_yolo_diagram.png, id=167, 1236.11812pt x 542.025pt>
 File: figures/methodology/4_1_yolo_diagram.png Graphic file (type png)
 <use figures/methodology/4_1_yolo_diagram.png>
 Package pdftex.def Info: figures/methodology/4_1_yolo_diagram.png  used on inpu
 t line 19.
 (pdftex.def)             Requested size: 454.20667pt x 199.16928pt.
-<figures/methodology/4_1_1_cnn_diagram.png, id=170, 409.53pt x 225.09094pt>
+<figures/methodology/4_1_1_cnn_diagram.png, id=168, 409.53pt x 225.09094pt>
 File: figures/methodology/4_1_1_cnn_diagram.png Graphic file (type png)
 <use figures/methodology/4_1_1_cnn_diagram.png>
 Package pdftex.def Info: figures/methodology/4_1_1_cnn_diagram.png  used on inp
 ut line 37.
 (pdftex.def)             Requested size: 336.4979pt x 184.9429pt.
- [27 <./figures/methodology/4_1_yolo_diagram.png>] [28 <./figures/methodology/4
+ [26 <./figures/methodology/4_1_yolo_diagram.png>] [27 <./figures/methodology/4
 _1_1_cnn_diagram.png>]
-<figures/methodology/4_1_2_grid.png, id=179, 585.68813pt x 412.54124pt>
+<figures/methodology/4_1_2_grid.png, id=177, 585.68813pt x 412.54124pt>
 File: figures/methodology/4_1_2_grid.png Graphic file (type png)
 <use figures/methodology/4_1_2_grid.png>
 Package pdftex.def Info: figures/methodology/4_1_2_grid.png  used on input line
  95.
 (pdftex.def)             Requested size: 242.3679pt x 170.71652pt.
- [29 <./figures/methodology/4_1_2_grid.png>]
-<figures/methodology/4_1_3_bounding_box.png, id=186, 583.42969pt x 411.03563pt>
+ [28 <./figures/methodology/4_1_2_grid.png>]
+<figures/methodology/4_1_3_bounding_box.png, id=184, 583.42969pt x 411.03563pt>
 
 File: figures/methodology/4_1_3_bounding_box.png Graphic file (type png)
 <use figures/methodology/4_1_3_bounding_box.png>
 Package pdftex.def Info: figures/methodology/4_1_3_bounding_box.png  used on in
 put line 146.
 (pdftex.def)             Requested size: 242.31465pt x 170.71652pt.
- [30 <./figures/methodology/4_1_3_bounding_box.png>]
-<figures/methodology/4_1_4_class_prob.png, id=192, 537.50812pt x 203.25937pt>
+ [29 <./figures/methodology/4_1_3_bounding_box.png>]
+<figures/methodology/4_1_4_class_prob.png, id=189, 537.50812pt x 203.25937pt>
 File: figures/methodology/4_1_4_class_prob.png Graphic file (type png)
 <use figures/methodology/4_1_4_class_prob.png>
 Package pdftex.def Info: figures/methodology/4_1_4_class_prob.png  used on inpu
 t line 200.
 (pdftex.def)             Requested size: 451.46274pt x 170.71652pt.
 
-[31]
-<figures/methodology/4_1_5_predictions.png, id=196, 583.42969pt x 410.2828pt>
+[30]
+<figures/methodology/4_1_5_predictions.png, id=194, 583.42969pt x 410.2828pt>
 File: figures/methodology/4_1_5_predictions.png Graphic file (type png)
 <use figures/methodology/4_1_5_predictions.png>
 Package pdftex.def Info: figures/methodology/4_1_5_predictions.png  used on inp
 ut line 231.
 (pdftex.def)             Requested size: 242.75978pt x 170.71652pt.
- [32 <./figures/methodology/4_1_4_class_prob.png> <./figures/methodology/4_1_5_
-predictions.png>] [33]
-<figures/methodology/4_2_class_taxonomy.png, id=205, 462.97969pt x 388.45125pt>
+ [31 <./figures/methodology/4_1_4_class_prob.png> <./figures/methodology/4_1_5_
+predictions.png>] [32]
+<figures/methodology/4_2_class_taxonomy.png, id=203, 462.97969pt x 388.45125pt>
 
 File: figures/methodology/4_2_class_taxonomy.png Graphic file (type png)
 <use figures/methodology/4_2_class_taxonomy.png>
 Package pdftex.def Info: figures/methodology/4_2_class_taxonomy.png  used on in
 put line 330.
 (pdftex.def)             Requested size: 237.38812pt x 199.16928pt.
- [34]
-<figures/methodology/4_3_unmasked.png, id=209, 441.90094pt x 300.3722pt>
+ [33]
+<figures/methodology/4_3_unmasked.png, id=207, 441.90094pt x 300.3722pt>
 File: figures/methodology/4_3_unmasked.png Graphic file (type png)
 <use figures/methodology/4_3_unmasked.png>
 Package pdftex.def Info: figures/methodology/4_3_unmasked.png  used on input li
@@ -1018,7 +1014,7 @@ Overfull \hbox (4.7477pt too wide) in paragraph at lines 368--369
  [][] 
  []
 
-<figures/methodology/4_3_masked.png, id=210, 442.65375pt x 301.8778pt>
+<figures/methodology/4_3_masked.png, id=208, 442.65375pt x 301.8778pt>
 File: figures/methodology/4_3_masked.png Graphic file (type png)
 <use figures/methodology/4_3_masked.png>
 Package pdftex.def Info: figures/methodology/4_3_masked.png  used on input line
@@ -1029,49 +1025,49 @@ Overfull \hbox (3.98491pt too wide) in paragraph at lines 375--376
  [][] 
  []
 
-[35 <./figures/methodology/4_2_class_taxonomy.png>] [36 <./figures/methodology/
+[34 <./figures/methodology/4_2_class_taxonomy.png>] [35 <./figures/methodology/
 4_3_unmasked.png> <./figures/methodology/4_3_masked.png>]
-<figures/methodology/4_4_intersection_union.png, id=222, 640.64343pt x 162.6075
+<figures/methodology/4_4_intersection_union.png, id=218, 640.64343pt x 162.6075
 pt>
 File: figures/methodology/4_4_intersection_union.png Graphic file (type png)
 <use figures/methodology/4_4_intersection_union.png>
 Package pdftex.def Info: figures/methodology/4_4_intersection_union.png  used o
 n input line 426.
 (pdftex.def)             Requested size: 392.35599pt x 99.58464pt.
-<figures/methodology/4_4_iou_calculation.png, id=223, 455.45157pt x 256.70906pt
+<figures/methodology/4_4_iou_calculation.png, id=219, 455.45157pt x 256.70906pt
 >
 File: figures/methodology/4_4_iou_calculation.png Graphic file (type png)
 <use figures/methodology/4_4_iou_calculation.png>
 Package pdftex.def Info: figures/methodology/4_4_iou_calculation.png  used on i
 nput line 433.
 (pdftex.def)             Requested size: 281.85587pt x 158.8681pt.
-<figures/methodology/4_4_confusion_matrix.png, id=224, 313.9228pt x 304.88907pt
+<figures/methodology/4_4_confusion_matrix.png, id=220, 313.9228pt x 304.88907pt
 >
 File: figures/methodology/4_4_confusion_matrix.png Graphic file (type png)
 <use figures/methodology/4_4_confusion_matrix.png>
 Package pdftex.def Info: figures/methodology/4_4_confusion_matrix.png  used on 
 input line 446.
 (pdftex.def)             Requested size: 190.42923pt x 184.9429pt.
- [37 <./figures/methodology/4_4_intersection_union.png> <./figures/methodology/
-4_4_iou_calculation.png>] [38 <./figures/methodology/4_4_confusion_matrix.png>]
- [39]
-<figures/methodology/4_4_example_pr_curve.png, id=237, 514.0806pt x 409.2891pt>
+ [36 <./figures/methodology/4_4_intersection_union.png> <./figures/methodology/
+4_4_iou_calculation.png>] [37 <./figures/methodology/4_4_confusion_matrix.png>]
+ [38]
+<figures/methodology/4_4_example_pr_curve.png, id=234, 514.0806pt x 409.2891pt>
 
 File: figures/methodology/4_4_example_pr_curve.png Graphic file (type png)
 <use figures/methodology/4_4_example_pr_curve.png>
 Package pdftex.def Info: figures/methodology/4_4_example_pr_curve.png  used on 
 input line 540.
 (pdftex.def)             Requested size: 232.29112pt x 184.9429pt.
-<figures/methodology/4_4_example_pr_curve_ap.png, id=238, 514.0806pt x 409.2891
+<figures/methodology/4_4_example_pr_curve_ap.png, id=235, 514.0806pt x 409.2891
 pt>
 File: figures/methodology/4_4_example_pr_curve_ap.png Graphic file (type png)
 <use figures/methodology/4_4_example_pr_curve_ap.png>
 Package pdftex.def Info: figures/methodology/4_4_example_pr_curve_ap.png  used 
 on input line 557.
 (pdftex.def)             Requested size: 232.29112pt x 184.9429pt.
- [40 <./figures/methodology/4_4_example_pr_curve.png>] [41 <./figures/methodolo
-gy/4_4_example_pr_curve_ap.png>]) (./chapters/results.tex [42] [43]
-<figures/results/5_1_1_baseline_overlayed_ap50.png, id=257, 642.4803pt x 390.25
+ [39 <./figures/methodology/4_4_example_pr_curve.png>] [40 <./figures/methodolo
+gy/4_4_example_pr_curve_ap.png>]) (./chapters/results.tex [41] [42]
+<figures/results/5_1_1_baseline_overlayed_ap50.png, id=253, 642.4803pt x 390.25
 8pt>
 File: figures/results/5_1_1_baseline_overlayed_ap50.png Graphic file (type png)
 
@@ -1084,7 +1080,7 @@ Underfull \hbox (badness 1509) in paragraph at lines 79--79
 []\OT1/lmr/m/n/10.95 (a) |Val-i-da-tion AP50 ver-sus train-ing epoch
  []
 
-<figures/results/5_1_1_baseline_overlayed_map.png, id=258, 642.4803pt x 390.258
+<figures/results/5_1_1_baseline_overlayed_map.png, id=254, 642.4803pt x 390.258
 pt>
 File: figures/results/5_1_1_baseline_overlayed_map.png Graphic file (type png)
 <use figures/results/5_1_1_baseline_overlayed_map.png>
@@ -1096,9 +1092,9 @@ Underfull \hbox (badness 1769) in paragraph at lines 86--86
 []\OT1/lmr/m/n/10.95 (b) |Val-i-da-tion mAP ver-sus train-ing epoch
  []
 
-[44 <./figures/results/5_1_1_baseline_overlayed_ap50.png> <./figures/results/5_
+[43 <./figures/results/5_1_1_baseline_overlayed_ap50.png> <./figures/results/5_
 1_1_baseline_overlayed_mAP.png>]
-<figures/results/5_1_2_v11s_cm_pre.png, id=264, 754.4988pt x 701.7417pt>
+<figures/results/5_1_2_v11s_cm_pre.png, id=261, 754.4988pt x 701.7417pt>
 File: figures/results/5_1_2_v11s_cm_pre.png Graphic file (type png)
 <use figures/results/5_1_2_v11s_cm_pre.png>
 Package pdftex.def Info: figures/results/5_1_2_v11s_cm_pre.png  used on input l
@@ -1109,7 +1105,7 @@ Overfull \hbox (3.95639pt too wide) in paragraph at lines 150--151
  [][] 
  []
 
-<figures/results/5_1_2_v26s_cm_pre.png, id=265, 754.4988pt x 701.7417pt>
+<figures/results/5_1_2_v26s_cm_pre.png, id=262, 754.4988pt x 701.7417pt>
 File: figures/results/5_1_2_v26s_cm_pre.png Graphic file (type png)
 <use figures/results/5_1_2_v26s_cm_pre.png>
 Package pdftex.def Info: figures/results/5_1_2_v26s_cm_pre.png  used on input l
@@ -1120,8 +1116,8 @@ Overfull \hbox (3.95639pt too wide) in paragraph at lines 157--158
  [][] 
  []
 
-[45]
-<figures/results/5_1_2_v11s_cm_post.png, id=269, 754.4988pt x 701.7417pt>
+[44]
+<figures/results/5_1_2_v11s_cm_post.png, id=266, 754.4988pt x 701.7417pt>
 File: figures/results/5_1_2_v11s_cm_post.png Graphic file (type png)
 <use figures/results/5_1_2_v11s_cm_post.png>
 Package pdftex.def Info: figures/results/5_1_2_v11s_cm_post.png  used on input 
@@ -1132,7 +1128,7 @@ Overfull \hbox (3.95639pt too wide) in paragraph at lines 185--186
  [][] 
  []
 
-<figures/results/5_1_2_v26s_cm_post.png, id=270, 754.4988pt x 701.7417pt>
+<figures/results/5_1_2_v26s_cm_post.png, id=267, 754.4988pt x 701.7417pt>
 File: figures/results/5_1_2_v26s_cm_post.png Graphic file (type png)
 <use figures/results/5_1_2_v26s_cm_post.png>
 Package pdftex.def Info: figures/results/5_1_2_v26s_cm_post.png  used on input 
@@ -1143,10 +1139,10 @@ Overfull \hbox (3.95639pt too wide) in paragraph at lines 192--193
  [][] 
  []
 
-[46 <./figures/results/5_1_2_v11s_cm_pre.png> <./figures/results/5_1_2_v26s_cm_
-pre.png>] [47 <./figures/results/5_1_2_v11s_cm_post.png> <./figures/results/5_1
+[45 <./figures/results/5_1_2_v11s_cm_pre.png> <./figures/results/5_1_2_v26s_cm_
+pre.png>] [46 <./figures/results/5_1_2_v11s_cm_post.png> <./figures/results/5_1
 _2_v26s_cm_post.png>]
-<figures/results/5_1_2_hardneg_original.png, id=281, 311.66437pt x 211.54031pt>
+<figures/results/5_1_2_hardneg_original.png, id=278, 311.66437pt x 211.54031pt>
 
 File: figures/results/5_1_2_hardneg_original.png Graphic file (type png)
 <use figures/results/5_1_2_hardneg_original.png>
@@ -1158,7 +1154,7 @@ Overfull \hbox (5.0858pt too wide) in paragraph at lines 279--280
  [][] 
  []
 
-<figures/results/5_1_2_hardneg_boxes.png, id=282, 313.17pt x 213.04594pt>
+<figures/results/5_1_2_hardneg_boxes.png, id=279, 313.17pt x 213.04594pt>
 File: figures/results/5_1_2_hardneg_boxes.png Graphic file (type png)
 <use figures/results/5_1_2_hardneg_boxes.png>
 Package pdftex.def Info: figures/results/5_1_2_hardneg_boxes.png  used on input
@@ -1169,7 +1165,7 @@ Overfull \hbox (4.56537pt too wide) in paragraph at lines 286--287
  [][] 
  []
 
-[48] [49 <./figures/results/5_1_2_hardneg_original.png> <./figures/results/5_1_
+[47] [48 <./figures/results/5_1_2_hardneg_original.png> <./figures/results/5_1_
 2_hardneg_boxes.png>]
 Overfull \hbox (7.12027pt too wide) in paragraph at lines 390--390
 []|\OT1/lmr/m/n/10.95 Backbone|  
@@ -1230,32 +1226,32 @@ Overfull \hbox (1.84099pt too wide) in paragraph at lines 390--390
 []|[]|  
  []
 
-[50] [51] [52] [53]
+[49] [50] [51] [52]
 
-LaTeX Warning: Reference `app:B' on page 54 undefined on input line 548.
+LaTeX Warning: Reference `app:B' on page 53 undefined on input line 548.
 
-[54] [55]
-<figures/results/5_3_1_nms_th_top.png, id=311, 543.53062pt x 368.1253pt>
+[53] [54]
+<figures/results/5_3_1_nms_th_top.png, id=308, 543.53062pt x 368.1253pt>
 File: figures/results/5_3_1_nms_th_top.png Graphic file (type png)
 <use figures/results/5_3_1_nms_th_top.png>
 Package pdftex.def Info: figures/results/5_3_1_nms_th_top.png  used on input li
 ne 635.
 (pdftex.def)             Requested size: 231.05965pt x 156.49014pt.
-<figures/results/5_3_1_nms_th_mid.png, id=312, 544.28343pt x 368.1253pt>
+<figures/results/5_3_1_nms_th_mid.png, id=309, 544.28343pt x 368.1253pt>
 File: figures/results/5_3_1_nms_th_mid.png Graphic file (type png)
 <use figures/results/5_3_1_nms_th_mid.png>
 Package pdftex.def Info: figures/results/5_3_1_nms_th_mid.png  used on input li
 ne 644.
 (pdftex.def)             Requested size: 231.37968pt x 156.49014pt.
-<figures/results/5_3_1_nms_th_bot.png, id=313, 545.78906pt x 368.87813pt>
+<figures/results/5_3_1_nms_th_bot.png, id=310, 545.78906pt x 368.87813pt>
 File: figures/results/5_3_1_nms_th_bot.png Graphic file (type png)
 <use figures/results/5_3_1_nms_th_bot.png>
 Package pdftex.def Info: figures/results/5_3_1_nms_th_bot.png  used on input li
 ne 653.
 (pdftex.def)             Requested size: 231.53671pt x 156.49014pt.
- [56] [57 <./figures/results/5_3_1_nms_th_top.png> <./figures/results/5_3_1_nms
+ [55] [56 <./figures/results/5_3_1_nms_th_top.png> <./figures/results/5_3_1_nms
 _th_mid.png> <./figures/results/5_3_1_nms_th_bot.png>]
-<figures/results/5_3_1_ap50_conf_nms.png, id=323, 476.982pt x 354.123pt>
+<figures/results/5_3_1_ap50_conf_nms.png, id=320, 476.982pt x 354.123pt>
 File: figures/results/5_3_1_ap50_conf_nms.png Graphic file (type png)
 <use figures/results/5_3_1_ap50_conf_nms.png>
 Package pdftex.def Info: figures/results/5_3_1_ap50_conf_nms.png  used on input
@@ -1266,21 +1262,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 686--686
 []\OT1/lmr/m/n/10.95 (a) |Val-i-da-tion AP50 across confidence-
  []
 
-<figures/results/5_3_1_map_conf_nms.png, id=324, 483.4863pt x 354.123pt>
+<figures/results/5_3_1_map_conf_nms.png, id=321, 483.4863pt x 354.123pt>
 File: figures/results/5_3_1_map_conf_nms.png Graphic file (type png)
 <use figures/results/5_3_1_map_conf_nms.png>
 Package pdftex.def Info: figures/results/5_3_1_map_conf_nms.png  used on input 
 line 692.
 (pdftex.def)             Requested size: 213.66417pt x 156.49014pt.
-[58 <./figures/results/5_3_1_ap50_conf_nms.png> <./figures/results/5_3_1_map_co
-nf_nms.png>] [59]
-<figures/results/5_4_new_broadway_ex.jpg, id=333, 353.32pt x 240.9pt>
+[57 <./figures/results/5_3_1_ap50_conf_nms.png> <./figures/results/5_3_1_map_co
+nf_nms.png>] [58]
+<figures/results/5_4_new_broadway_ex.jpg, id=330, 353.32pt x 240.9pt>
 File: figures/results/5_4_new_broadway_ex.jpg Graphic file (type jpg)
 <use figures/results/5_4_new_broadway_ex.jpg>
 Package pdftex.def Info: figures/results/5_4_new_broadway_ex.jpg  used on input
  line 800.
 (pdftex.def)             Requested size: 146.05359pt x 99.58464pt.
-<figures/results/5_4_new_pelham_ex.jpg, id=334, 353.32pt x 240.9pt>
+<figures/results/5_4_new_pelham_ex.jpg, id=331, 353.32pt x 240.9pt>
 File: figures/results/5_4_new_pelham_ex.jpg Graphic file (type jpg)
 <use figures/results/5_4_new_pelham_ex.jpg>
 Package pdftex.def Info: figures/results/5_4_new_pelham_ex.jpg  used on input l
@@ -1291,78 +1287,78 @@ Underfull \hbox (badness 5133) in paragraph at lines 807--807
 []\OT1/lmr/m/n/10.95 (b) |Pel-ham Park-way West-
  []
 
-<figures/results/5_4_new_atl_ex.jpg, id=335, 353.32pt x 240.9pt>
+<figures/results/5_4_new_atl_ex.jpg, id=332, 353.32pt x 240.9pt>
 File: figures/results/5_4_new_atl_ex.jpg Graphic file (type jpg)
 <use figures/results/5_4_new_atl_ex.jpg>
 Package pdftex.def Info: figures/results/5_4_new_atl_ex.jpg  used on input line
  812.
 (pdftex.def)             Requested size: 146.05359pt x 99.58464pt.
-[60 <./figures/results/5_4_new_broadway_ex.jpg> <./figures/results/5_4_new_pelh
-am_ex.jpg> <./figures/results/5_4_new_atl_ex.jpg>] [61]
-<figures/results/5_4_pel_hourly.png, id=343, 474.27188pt x 262.73157pt>
+[59 <./figures/results/5_4_new_broadway_ex.jpg> <./figures/results/5_4_new_pelh
+am_ex.jpg> <./figures/results/5_4_new_atl_ex.jpg>] [60]
+<figures/results/5_4_pel_hourly.png, id=340, 474.27188pt x 262.73157pt>
 File: figures/results/5_4_pel_hourly.png Graphic file (type png)
 <use figures/results/5_4_pel_hourly.png>
 Package pdftex.def Info: figures/results/5_4_pel_hourly.png  used on input line
  930.
 (pdftex.def)             Requested size: 225.4804pt x 124.90703pt.
-<figures/results/5_4_pel_hourly_norm.png, id=344, 469.755pt x 262.73157pt>
+<figures/results/5_4_pel_hourly_norm.png, id=341, 469.755pt x 262.73157pt>
 File: figures/results/5_4_pel_hourly_norm.png Graphic file (type png)
 <use figures/results/5_4_pel_hourly_norm.png>
 Package pdftex.def Info: figures/results/5_4_pel_hourly_norm.png  used on input
  line 937.
 (pdftex.def)             Requested size: 225.4804pt x 126.10971pt.
-<figures/results/5_4_atl_hourly.png, id=345, 465.99094pt x 263.48438pt>
+<figures/results/5_4_atl_hourly.png, id=342, 465.99094pt x 263.48438pt>
 File: figures/results/5_4_atl_hourly.png Graphic file (type png)
 <use figures/results/5_4_atl_hourly.png>
 Package pdftex.def Info: figures/results/5_4_atl_hourly.png  used on input line
  947.
 (pdftex.def)             Requested size: 225.4804pt x 127.49225pt.
-<figures/results/5_4_atl_hourly_norm.png, id=346, 473.51906pt x 261.97874pt>
+<figures/results/5_4_atl_hourly_norm.png, id=343, 473.51906pt x 261.97874pt>
 File: figures/results/5_4_atl_hourly_norm.png Graphic file (type png)
 <use figures/results/5_4_atl_hourly_norm.png>
 Package pdftex.def Info: figures/results/5_4_atl_hourly_norm.png  used on input
  line 953.
 (pdftex.def)             Requested size: 225.4804pt x 124.749pt.
-<figures/results/5_4_broad_hourly.png, id=347, 466.74374pt x 261.97874pt>
+<figures/results/5_4_broad_hourly.png, id=344, 466.74374pt x 261.97874pt>
 File: figures/results/5_4_broad_hourly.png Graphic file (type png)
 <use figures/results/5_4_broad_hourly.png>
 Package pdftex.def Info: figures/results/5_4_broad_hourly.png  used on input li
 ne 963.
 (pdftex.def)             Requested size: 225.4804pt x 126.55984pt.
-<figures/results/5_4_broad_hourly_norm.png, id=348, 473.51906pt x 264.99pt>
+<figures/results/5_4_broad_hourly_norm.png, id=345, 473.51906pt x 264.99pt>
 File: figures/results/5_4_broad_hourly_norm.png Graphic file (type png)
 <use figures/results/5_4_broad_hourly_norm.png>
 Package pdftex.def Info: figures/results/5_4_broad_hourly_norm.png  used on inp
 ut line 969.
 (pdftex.def)             Requested size: 225.4804pt x 126.18289pt.
- [62] [63 <./figures/results/5_4_pel_hourly.png> <./figures/results/5_4_pel_hou
+ [61] [62 <./figures/results/5_4_pel_hourly.png> <./figures/results/5_4_pel_hou
 rly_norm.png> <./figures/results/5_4_atl_hourly.png> <./figures/results/5_4_atl
 _hourly_norm.png> <./figures/results/5_4_broad_hourly.png> <./figures/results/5
-_4_broad_hourly_norm.png>]) (./chapters/discussion.tex [64] [65] [66] [67] [68]
- [69] [70] [71])
+_4_broad_hourly_norm.png>]) (./chapters/discussion.tex [63] [64] [65] [66] [67]
+ [68] [69] [70])
 (./chapters/limitations.tex
-<figures/limitations/7_night_glare.png, id=386, 400.49625pt x 240.9pt>
+<figures/limitations/7_night_glare.png, id=383, 400.49625pt x 240.9pt>
 File: figures/limitations/7_night_glare.png Graphic file (type png)
 <use figures/limitations/7_night_glare.png>
 Package pdftex.def Info: figures/limitations/7_night_glare.png  used on input l
 ine 29.
 (pdftex.def)             Requested size: 150.32504pt x 90.42181pt.
-<figures/limitations/7_sun_glare.png, id=387, 399.74344pt x 238.64156pt>
+<figures/limitations/7_sun_glare.png, id=384, 399.74344pt x 238.64156pt>
 File: figures/limitations/7_sun_glare.png Graphic file (type png)
 <use figures/limitations/7_sun_glare.png>
 Package pdftex.def Info: figures/limitations/7_sun_glare.png  used on input lin
 e 36.
 (pdftex.def)             Requested size: 150.32504pt x 89.74161pt.
-<figures/limitations/7_glitched_frame.png, id=388, 399.74344pt x 240.14719pt>
+<figures/limitations/7_glitched_frame.png, id=385, 399.74344pt x 240.14719pt>
 File: figures/limitations/7_glitched_frame.png Graphic file (type png)
 <use figures/limitations/7_glitched_frame.png>
 Package pdftex.def Info: figures/limitations/7_glitched_frame.png  used on inpu
 t line 43.
 (pdftex.def)             Requested size: 150.32504pt x 90.3078pt.
- [72] [73 <./figures/limitations/7_night_glare.png> <./figures/limitations/7_su
+ [71] [72 <./figures/limitations/7_night_glare.png> <./figures/limitations/7_su
 n_glare.png> <./figures/limitations/7_glitched_frame.png>]) (./chapters/future_
-work.tex [74]) (./chapters/conclusion.tex [75]
-[76]) [77] (./chapters/appendix/transformer_aug.tex [78] [79]) [80]
+work.tex [73]) (./chapters/conclusion.tex [74]
+[75]) [76] (./chapters/appendix/transformer_aug.tex [77] [78]) [79]
 LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 5
 1.
 
@@ -1371,7 +1367,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 51.
- [81] [82] [83] [84]
+ [80] [81] [82] [83]
 
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 51.
@@ -1384,7 +1380,7 @@ Package biblatex Warning: No driver for entry type 'artwork'.
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 51.
 
-[85] [86] [87] [88] [89] (/home/aidan/repos/masters/report/build/main.aux)
+[84] [85] [86] [87] [88] (/home/aidan/repos/masters/report/build/main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1393,17 +1389,17 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14328 strings out of 480247
- 288076 string characters out of 5896151
- 977934 words of memory out of 5000000
- 31974 multiletter control sequences out of 15000+600000
+ 14327 strings out of 480247
+ 288063 string characters out of 5896151
+ 977842 words of memory out of 5000000
+ 31973 multiletter control sequences out of 15000+600000
  515753 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  72i,17n,80p,2111b,1280s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr
-/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/tex
+/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips
+/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/tex
 mf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.
 pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/
 type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb>
@@ -1414,11 +1410,11 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmtt12.pfb>
-Output written on /home/aidan/repos/masters/report/build/main.pdf (96 pages, 19
-070554 bytes).
+Output written on /home/aidan/repos/masters/report/build/main.pdf (95 pages, 19
+071171 bytes).
 PDF statistics:
- 522 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
+ 519 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  326 words of extra memory for PDF output out of 10000 (max. 10000000)
 

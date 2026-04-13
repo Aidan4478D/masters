@@ -192,7 +192,7 @@
 \newlabel{sub@fig:rear-front-view}{{c}{12}}
 \newlabel{fig:side-front-rear-view}{{5d}{12}}
 \newlabel{sub@fig:side-front-rear-view}{{d}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  Different views of vehicles through different traffic cameras. The images are colored such that vehicles highlighted in \leavevmode {\color  {myyellow}yellow} show its front, vehicles highlighted in \leavevmode {\color  {red}red} show its rear, and vehicles highlighted in \leavevmode {\color  {blue}blue} show its side. \relax }}{12}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces  Different views of vehicles through different traffic cameras. The images are colored such that vehicles regions highlighted in \leavevmode {\color  {myyellow}yellow} show its front, vehicles regions highlighted in \leavevmode {\color  {red}red} show its rear, and vehicles regions highlighted in \leavevmode {\color  {blue}blue} show its side. \relax }}{12}{}\protected@file@percent }
 \newlabel{fig:vehicle-views}{{5}{12}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Map of selected CCTV cameras in NYC.\relax }}{13}{}\protected@file@percent }
 \newlabel{fig:camera-map}{{6}{13}}
@@ -212,20 +212,20 @@
 \abx@aux@segm{0}{0}{USEPA_def_truck_2019}
 \abx@aux@cite{0}{USDOE_AFDC}
 \abx@aux@segm{0}{0}{USDOE_AFDC}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Labeling Class Structure}{16}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.1}Annotation Class Design}{16}{}\protected@file@percent }
 \newlabel{sec:label-classes}{{3.4.1}{16}}
-\newlabel{fig:sedan-suv-heuristics}{{\caption@xref {fig:sedan-suv-heuristics}{ on input line 416}}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces In this example, the two vehicles in the front of the image are being compared against each other. Using the vertical arrows as a comparison, the white vehicle has a shorter cabin profile and a more-downward sloping rear compared to the red vehicle. Thus, the white vehicle was labeled as \texttt  {sedan} and the red vehicle was labeled as \texttt  {suv}. The grey vehicle in the back has a thin body profile when compared to the road (grey arrows) and a relatively short cabin profile. These are common features associated with hatchbacks, thus the vehicle was labeled as \texttt  {sedan}.\relax }}{17}{}\protected@file@percent }
-\newlabel{fig:minivan-heuristics}{{11a}{17}}
-\newlabel{sub@fig:minivan-heuristics}{{a}{17}}
-\newlabel{fig:suv-heuristics}{{11b}{17}}
-\newlabel{sub@fig:suv-heuristics}{{b}{17}}
-\newlabel{fig:minivan-suv-heuristics}{{\caption@xref {fig:minivan-suv-heuristics}{ on input line 449}}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces In this example, a vehicle with the attribute \texttt  {is\_minivan} (a) and a vehicle with the label \texttt  {suv} (b) are compared in the same camera position. The handles (boxed in red) on the minivan are closer together, while the handles on the SUV are farther apart. Additionally, the body of the minivan is closer to the road compared to the body of the SUV as shown with the yellow arrows.\relax }}{17}{}\protected@file@percent }
 \abx@aux@cite{0}{USEPA_def_truck_2019}
 \abx@aux@segm{0}{0}{USEPA_def_truck_2019}
 \abx@aux@cite{0}{USEPA_road_pop_2020}
 \abx@aux@segm{0}{0}{USEPA_road_pop_2020}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces In this example, the two vehicles in the front of the image are being compared against each other. Using the colored arrows as a comparison, the white vehicle has a shorter cabin profile and a more-downward sloping rear compared to the red vehicle. Thus, the white vehicle was labeled as \texttt  {sedan} and the red vehicle was labeled as \texttt  {suv}. The grey vehicle in the back has a thin body profile when compared to the road (grey arrows) and a relatively short cabin profile. These are common features associated with hatchbacks, thus the vehicle was labeled as \texttt  {sedan}.\relax }}{17}{}\protected@file@percent }
+\newlabel{fig:sedan-suv-heuristics}{{10}{17}}
+\newlabel{fig:minivan-heuristics}{{11a}{17}}
+\newlabel{sub@fig:minivan-heuristics}{{a}{17}}
+\newlabel{fig:suv-heuristics}{{11b}{17}}
+\newlabel{sub@fig:suv-heuristics}{{b}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces In this example, a vehicle with the attribute \texttt  {is\_minivan} (a) and a vehicle with the label \texttt  {suv} (b) are compared in the same camera position. The handles (boxed in red) on the minivan are closer together, while the handles on the SUV are farther apart. Additionally, the body of the minivan is closer to the road compared to the body of the SUV as shown with the yellow arrows.\relax }}{17}{}\protected@file@percent }
+\newlabel{fig:minivan-suv-heuristics}{{11}{17}}
 \abx@aux@cite{0}{USDOE_AFDC}
 \abx@aux@segm{0}{0}{USDOE_AFDC}
 \abx@aux@cite{0}{USEPA_road_pop_2020}
@@ -255,24 +255,24 @@
 \newlabel{fig:minivan-attribute}{{12}{20}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.3}Unknown Vehicle Class}{20}{}\protected@file@percent }
 \newlabel{sec:unk-vehicle-class}{{3.4.3}{20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces  Figure (a) shows an example frame with the confident vehicles labeled. It is unclear though, the classes of the vehicles coming towards the camera behind the crosswalk (b). This is because the side features are not visible to use the heuristics described in Section\nobreakspace  {}3.4.1\hbox {}. Therefore, these vehicles were assigned the \texttt  {unknown\_vehicle} class (c). \relax }}{22}{}\protected@file@percent }
-\newlabel{fig:unknown-vehicles}{{13}{22}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}Annotation Procedure}{23}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces  Figure (a) shows an example frame with confidently labeled vehicles. The classes of the vehicles approaching the camera behind the crosswalk, shown in (b), are unclear because side-view features are not visible and the heuristics described in Section\nobreakspace  {}3.4.1\hbox {} cannot be applied reliably. These vehicles were therefore assigned the \texttt  {unknown\_vehicle} class, as shown in (c). \relax }}{21}{}\protected@file@percent }
+\newlabel{fig:unknown-vehicles}{{13}{21}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.4}Annotation Procedure}{22}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Dataset Statistics}{23}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Total annotated vehicle instances by class\relax }}{24}{}\protected@file@percent }
-\newlabel{tab:class-counts}{{4}{24}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Total annotated vehicle instances by class\relax }}{23}{}\protected@file@percent }
+\newlabel{tab:class-counts}{{4}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Dataset Splits}{23}{}\protected@file@percent }
+\newlabel{sec:data-splits}{{3.6}{23}}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Positive attribute counts by parent class\relax }}{24}{}\protected@file@percent }
 \newlabel{tab:attribute-counts}{{5}{24}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Dataset Splits}{25}{}\protected@file@percent }
-\newlabel{sec:data-splits}{{3.6}{25}}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Number of images in each dataset split\relax }}{25}{}\protected@file@percent }
-\newlabel{tab:split_image_counts}{{6}{25}}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Annotated vehicle instances by class across dataset splits\relax }}{26}{}\protected@file@percent }
-\newlabel{tab:split-class-counts}{{7}{26}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Positive attribute counts across dataset splits\relax }}{26}{}\protected@file@percent }
-\newlabel{tab:split_attribute_counts}{{8}{26}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{26}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}YOLO-Based Object Detection}{26}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Number of images in each dataset split\relax }}{24}{}\protected@file@percent }
+\newlabel{tab:split_image_counts}{{6}{24}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Annotated vehicle instances by class across dataset splits\relax }}{25}{}\protected@file@percent }
+\newlabel{tab:split-class-counts}{{7}{25}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Positive attribute counts across dataset splits\relax }}{25}{}\protected@file@percent }
+\newlabel{tab:split_attribute_counts}{{8}{25}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{25}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}YOLO-Based Object Detection}{25}{}\protected@file@percent }
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
@@ -291,47 +291,47 @@
 \abx@aux@segm{0}{0}{oshea2015introCNN}
 \abx@aux@cite{0}{oshea2015introCNN}
 \abx@aux@segm{0}{0}{oshea2015introCNN}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Example of the YOLO pipeline. Figure adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{27}{}\protected@file@percent }
-\newlabel{fig:yolo-pipeline}{{14}{27}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Convolutional Neural Networks (CNNs)}{27}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Example of convolutional neural network operations. A convolutional kernel slides across the input image and performs a dot product with local pixel values to produce a feature map highlighting the presence of specific patterns. In typical CNN architectures, a nonlinear activation function such as ReLU is applied after convolution. A pooling layer may then downsample the feature map while preserving the strongest activations. Figure adapted from \blx@tocontentsinit {0}\cite {islam_pooling_2025}.\relax }}{28}{}\protected@file@percent }
-\newlabel{fig:cnn-diagram}{{15}{28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Example of the YOLO pipeline. Figure adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{26}{}\protected@file@percent }
+\newlabel{fig:yolo-pipeline}{{14}{26}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Convolutional Neural Networks (CNNs)}{26}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Example of convolutional neural network operations. A convolutional kernel slides across the input image and performs a dot product with local pixel values to produce a feature map highlighting the presence of specific patterns. In typical CNN architectures, a nonlinear activation function such as ReLU is applied after convolution. A pooling layer may then downsample the feature map while preserving the strongest activations. Figure adapted from \blx@tocontentsinit {0}\cite {islam_pooling_2025}.\relax }}{27}{}\protected@file@percent }
+\newlabel{fig:cnn-diagram}{{15}{27}}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Grid-Based Prediction}{29}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Conceptual grid created by the YOLO architecture. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{29}{}\protected@file@percent }
-\newlabel{fig:yolo-grid}{{16}{29}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Grid-Based Prediction}{28}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Conceptual grid created by the YOLO architecture. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{28}{}\protected@file@percent }
+\newlabel{fig:yolo-grid}{{16}{28}}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Bounding Box Prediction}{30}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Bounding boxes created by the YOLO architecture. The thickness of each box corresponds to the models confidence score. The higher the confidence, the thicker the box. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{30}{}\protected@file@percent }
-\newlabel{fig:yolo-bbox}{{17}{30}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Bounding Box Prediction}{29}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Bounding boxes created by the YOLO architecture. The thickness of each box corresponds to the models confidence score. The higher the confidence, the thicker the box. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{29}{}\protected@file@percent }
+\newlabel{fig:yolo-bbox}{{17}{29}}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Class Probability Prediction}{31}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.5}Post-Processing and Final Detections}{31}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Class Probability Prediction}{30}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.5}Post-Processing and Final Detections}{30}{}\protected@file@percent }
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Example class predictions within each grid cell. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{32}{}\protected@file@percent }
-\newlabel{fig:yolo-class-prob}{{18}{32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Example final class-predictions and bounding boxes. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{32}{}\protected@file@percent }
-\newlabel{fig:yolo-predictions}{{19}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Example class predictions within each grid cell. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{31}{}\protected@file@percent }
+\newlabel{fig:yolo-class-prob}{{18}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Example final class-predictions and bounding boxes. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{31}{}\protected@file@percent }
+\newlabel{fig:yolo-predictions}{{19}{31}}
 \abx@aux@cite{0}{YOLOv11paper}
 \abx@aux@segm{0}{0}{YOLOv11paper}
 \abx@aux@cite{0}{YOLOv11paper}
@@ -340,42 +340,42 @@
 \abx@aux@segm{0}{0}{yolo11_ultralytics}
 \abx@aux@cite{0}{YOLOv11paper}
 \abx@aux@segm{0}{0}{YOLOv11paper}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.6}YOLOv11 Architecture}{33}{}\protected@file@percent }
-\newlabel{sec:yolov11}{{4.1.6}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.6}YOLOv11 Architecture}{32}{}\protected@file@percent }
+\newlabel{sec:yolov11}{{4.1.6}{32}}
 \abx@aux@cite{0}{USEPA_def_truck_2019}
 \abx@aux@segm{0}{0}{USEPA_def_truck_2019}
 \abx@aux@cite{0}{us_epa_moves3_2020}
 \abx@aux@segm{0}{0}{us_epa_moves3_2020}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}MOVES-based Taxonomy}{34}{}\protected@file@percent }
-\newlabel{sec:moves-taxonomy}{{4.2}{34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Final MOVES-based class mapping used in this study. Dataset classes on the left were mapped to the MOVES-aligned detector classes on the right. Arrows of the same color indicate the corresponding class mapping, with van instances labeled \texttt  {is\_minivan} grouped into \texttt  {passenger\_truck} and the remaining van instances mapped to \texttt  {light\_commercial\_truck}.\relax }}{35}{}\protected@file@percent }
-\newlabel{fig:moves-mapping}{{20}{35}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Handling Unknown Vehicles}{35}{}\protected@file@percent }
-\newlabel{sec:unknown-vehicles}{{4.3}{35}}
-\newlabel{fig:unmasked-unknown}{{21a}{36}}
-\newlabel{sub@fig:unmasked-unknown}{{a}{36}}
-\newlabel{fig:masked-unknown}{{21b}{36}}
-\newlabel{sub@fig:masked-unknown}{{b}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Example of \texttt  {unknown\_vehicle} masking during training set preparation. Subfigure (a) shows the \texttt  {unknown\_vehicle} regions outlined in purple for reference, while subfigure (b) shows the same image after the \texttt  {unknown\_vehicle} regions were masked with the neutral fill value used for training.\relax }}{36}{}\protected@file@percent }
-\newlabel{fig:masking-vehicle-example}{{21}{36}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Performance Metrics}{36}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Intersection over Union}{37}{}\protected@file@percent }
-\newlabel{sec:iou}{{4.4.1}{37}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces IoU Calculation\relax }}{37}{}\protected@file@percent }
-\newlabel{fig:iou_calc}{{22}{37}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Confusion Matrix\relax }}{38}{}\protected@file@percent }
-\newlabel{fig:conf_matrix}{{23}{38}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Confusion Matrix}{38}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Precision-Recall Curve}{39}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Example Precision-Recall Curve\relax }}{40}{}\protected@file@percent }
-\newlabel{fig:ex_pr_curve}{{24}{40}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4}Average Precision and mAP}{40}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}MOVES-based Taxonomy}{33}{}\protected@file@percent }
+\newlabel{sec:moves-taxonomy}{{4.2}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Final MOVES-based class mapping used in this study. Dataset classes on the left were mapped to the MOVES-aligned detector classes on the right. Arrows of the same color indicate the corresponding class mapping, with van instances labeled \texttt  {is\_minivan} grouped into \texttt  {passenger\_truck} and the remaining van instances mapped to \texttt  {light\_commercial\_truck}.\relax }}{34}{}\protected@file@percent }
+\newlabel{fig:moves-mapping}{{20}{34}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Handling Unknown Vehicles}{34}{}\protected@file@percent }
+\newlabel{sec:unknown-vehicles}{{4.3}{34}}
+\newlabel{fig:unmasked-unknown}{{21a}{35}}
+\newlabel{sub@fig:unmasked-unknown}{{a}{35}}
+\newlabel{fig:masked-unknown}{{21b}{35}}
+\newlabel{sub@fig:masked-unknown}{{b}{35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Example of \texttt  {unknown\_vehicle} masking during training set preparation. Subfigure (a) shows the \texttt  {unknown\_vehicle} regions outlined in purple for reference, while subfigure (b) shows the same image after the \texttt  {unknown\_vehicle} regions were masked with the neutral fill value used for training.\relax }}{35}{}\protected@file@percent }
+\newlabel{fig:masking-vehicle-example}{{21}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Performance Metrics}{35}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Intersection over Union}{36}{}\protected@file@percent }
+\newlabel{sec:iou}{{4.4.1}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces IoU Calculation\relax }}{36}{}\protected@file@percent }
+\newlabel{fig:iou_calc}{{22}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Confusion Matrix\relax }}{37}{}\protected@file@percent }
+\newlabel{fig:conf_matrix}{{23}{37}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Confusion Matrix}{37}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Precision-Recall Curve}{38}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Example Precision-Recall Curve\relax }}{39}{}\protected@file@percent }
+\newlabel{fig:ex_pr_curve}{{24}{39}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4}Average Precision and mAP}{39}{}\protected@file@percent }
 \abx@aux@cite{0}{lin_microsoft_2015}
 \abx@aux@segm{0}{0}{lin_microsoft_2015}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Average Precision within a Precision-Recall Curve\relax }}{41}{}\protected@file@percent }
-\newlabel{fig:ex_pr_curve_ap}{{25}{41}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Experimental Environment}{42}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Experimentation and Results}{42}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Average Precision within a Precision-Recall Curve\relax }}{40}{}\protected@file@percent }
+\newlabel{fig:ex_pr_curve_ap}{{25}{40}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Experimental Environment}{41}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimentation and Results}{41}{}\protected@file@percent }
 \abx@aux@cite{0}{yolov8_ultralytics}
 \abx@aux@segm{0}{0}{yolov8_ultralytics}
 \abx@aux@cite{0}{ultralytics_yolov8_vs_yolov11}
@@ -390,40 +390,40 @@
 \abx@aux@segm{0}{0}{ultralytics_yolov8_vs_yolov11}
 \abx@aux@cite{0}{ultralytics_coco}
 \abx@aux@segm{0}{0}{ultralytics_coco}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}YOLO-Based Detector Development and Results}{43}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Baseline YOLO Experiments}{43}{}\protected@file@percent }
-\newlabel{fig:baseline-ap50s}{{26a}{44}}
-\newlabel{sub@fig:baseline-ap50s}{{a}{44}}
-\newlabel{fig:baseline-maps}{{26b}{44}}
-\newlabel{sub@fig:baseline-maps}{{b}{44}}
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Validation AP50 and mAP over 50 epochs for the baseline YOLOv8s, YOLOv11s, and YOLOv26s models. All three models showed rapid early improvement followed by a gradual plateau, with YOLOv26s achieving the strongest baseline mAP and YOLOv11s remaining competitive in AP50.\relax }}{44}{}\protected@file@percent }
-\newlabel{fig:baseline-yolo-charts}{{26}{44}}
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Baseline validation performance of the three YOLO model variants under the final 6-class formulationm reported at the checkpoint with the best validation mAP for each model\relax }}{45}{}\protected@file@percent }
-\newlabel{tab:yolo-baseline-results}{{9}{45}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Data-Centric Refinements}{45}{}\protected@file@percent }
-\newlabel{sec:data-refinement}{{5.1.2}{45}}
-\newlabel{fig:val-cm-11s-pre}{{27a}{46}}
-\newlabel{sub@fig:val-cm-11s-pre}{{a}{46}}
-\newlabel{fig:val-cm-26s-pre}{{27b}{46}}
-\newlabel{sub@fig:val-cm-26s-pre}{{b}{46}}
-\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Ignore-aware validation confusion matrices for the baseline YOLOv11s and YOLOv26s models prior to dataset refinement. No annotations were modified directly from model predictions. Instead, questionable cases were reviewed individually and corrected only when a labeling issue was confirmed.\relax }}{46}{}\protected@file@percent }
-\newlabel{fig:val-cm-pre}{{27}{46}}
-\newlabel{fig:val-cm-11s-post}{{28a}{47}}
-\newlabel{sub@fig:val-cm-11s-post}{{a}{47}}
-\newlabel{fig:val-cm-26s-post}{{28b}{47}}
-\newlabel{sub@fig:val-cm-26s-post}{{b}{47}}
-\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Ignore-aware validation confusion matrices for the baseline YOLOv11s and YOLOv26s models prior to dataset refinement.\relax }}{47}{}\protected@file@percent }
-\newlabel{fig:val-cm-post}{{28}{47}}
-\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Validation performance before and after dataset refinement for the baseline YOLOv11s and YOLOv26s models. The best AP50 and mAP values for each model are displayed in bold.\relax }}{47}{}\protected@file@percent }
-\newlabel{tab:dataset-refinement-results}{{10}{47}}
-\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Validation-set class counts before and after dataset refinement.\relax }}{48}{}\protected@file@percent }
-\newlabel{tab:val-class-counts-refinement}{{11}{48}}
-\newlabel{fig:hardneg-original}{{29a}{49}}
-\newlabel{sub@fig:hardneg-original}{{a}{49}}
-\newlabel{fig:hardneg-boxes}{{29b}{49}}
-\newlabel{sub@fig:hardneg-boxes}{{b}{49}}
-\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Example of a hard negative identified during passenger car - passenger truck mining with the YOLOv11s baseline. Subfigure (a) shows the original training image, while subfigure (b) shows the same image with class-swap detections highlighted. \leavevmode {\color  {blue}Blue} boxes denote passenger trucks predicted as passenger cars, and \leavevmode {\color  {darkgreen}green} boxes denote passenger cars predicted as passenger trucks. The number next to the bounding boxes represents the prediction confidence score. These visually difficult boundary cases were duplicated back into the training set during retraining so that the detector would be exposed more frequently to the most informative class confusions.\relax }}{49}{}\protected@file@percent }
-\newlabel{fig:hard-negative-example}{{29}{49}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}YOLO-Based Detector Development and Results}{42}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Baseline YOLO Experiments}{42}{}\protected@file@percent }
+\newlabel{fig:baseline-ap50s}{{26a}{43}}
+\newlabel{sub@fig:baseline-ap50s}{{a}{43}}
+\newlabel{fig:baseline-maps}{{26b}{43}}
+\newlabel{sub@fig:baseline-maps}{{b}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Validation AP50 and mAP over 50 epochs for the baseline YOLOv8s, YOLOv11s, and YOLOv26s models. All three models showed rapid early improvement followed by a gradual plateau, with YOLOv26s achieving the strongest baseline mAP and YOLOv11s remaining competitive in AP50.\relax }}{43}{}\protected@file@percent }
+\newlabel{fig:baseline-yolo-charts}{{26}{43}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Baseline validation performance of the three YOLO model variants under the final 6-class formulationm reported at the checkpoint with the best validation mAP for each model\relax }}{44}{}\protected@file@percent }
+\newlabel{tab:yolo-baseline-results}{{9}{44}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Data-Centric Refinements}{44}{}\protected@file@percent }
+\newlabel{sec:data-refinement}{{5.1.2}{44}}
+\newlabel{fig:val-cm-11s-pre}{{27a}{45}}
+\newlabel{sub@fig:val-cm-11s-pre}{{a}{45}}
+\newlabel{fig:val-cm-26s-pre}{{27b}{45}}
+\newlabel{sub@fig:val-cm-26s-pre}{{b}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Ignore-aware validation confusion matrices for the baseline YOLOv11s and YOLOv26s models prior to dataset refinement. No annotations were modified directly from model predictions. Instead, questionable cases were reviewed individually and corrected only when a labeling issue was confirmed.\relax }}{45}{}\protected@file@percent }
+\newlabel{fig:val-cm-pre}{{27}{45}}
+\newlabel{fig:val-cm-11s-post}{{28a}{46}}
+\newlabel{sub@fig:val-cm-11s-post}{{a}{46}}
+\newlabel{fig:val-cm-26s-post}{{28b}{46}}
+\newlabel{sub@fig:val-cm-26s-post}{{b}{46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Ignore-aware validation confusion matrices for the baseline YOLOv11s and YOLOv26s models prior to dataset refinement.\relax }}{46}{}\protected@file@percent }
+\newlabel{fig:val-cm-post}{{28}{46}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Validation performance before and after dataset refinement for the baseline YOLOv11s and YOLOv26s models. The best AP50 and mAP values for each model are displayed in bold.\relax }}{46}{}\protected@file@percent }
+\newlabel{tab:dataset-refinement-results}{{10}{46}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Validation-set class counts before and after dataset refinement.\relax }}{47}{}\protected@file@percent }
+\newlabel{tab:val-class-counts-refinement}{{11}{47}}
+\newlabel{fig:hardneg-original}{{29a}{48}}
+\newlabel{sub@fig:hardneg-original}{{a}{48}}
+\newlabel{fig:hardneg-boxes}{{29b}{48}}
+\newlabel{sub@fig:hardneg-boxes}{{b}{48}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Example of a hard negative identified during passenger car - passenger truck mining with the YOLOv11s baseline. Subfigure (a) shows the original training image, while subfigure (b) shows the same image with class-swap detections highlighted. \leavevmode {\color  {blue}Blue} boxes denote passenger trucks predicted as passenger cars, and \leavevmode {\color  {darkgreen}green} boxes denote passenger cars predicted as passenger trucks. The number next to the bounding boxes represents the prediction confidence score. These visually difficult boundary cases were duplicated back into the training set during retraining so that the detector would be exposed more frequently to the most informative class confusions.\relax }}{48}{}\protected@file@percent }
+\newlabel{fig:hard-negative-example}{{29}{48}}
 \gdef \LT@ii {\LT@entry 
     {1}{47.26494pt}\LT@entry 
     {1}{60.63777pt}\LT@entry 
@@ -431,17 +431,17 @@
     {1}{36.45274pt}\LT@entry 
     {1}{40.72049pt}\LT@entry 
     {5}{189.89809pt}}
-\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Summary of the principal YOLO refinement experiments conducted under the MOVES-based taxonomy. AP50 and mAP are reported at the best validation checkpoint for each run. Extra images refers to the additional images added to the training set.\relax }}{50}{}\protected@file@percent }
-\newlabel{tab:yolo-refinement-summary}{{12}{50}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Final YOLO Model Selection and Test-Set Evaluation}{51}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Summary of the principal YOLO refinement experiments conducted under the MOVES-based taxonomy. AP50 and mAP are reported at the best validation checkpoint for each run. Extra images refers to the additional images added to the training set.\relax }}{49}{}\protected@file@percent }
+\newlabel{tab:yolo-refinement-summary}{{12}{49}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Final YOLO Model Selection and Test-Set Evaluation}{50}{}\protected@file@percent }
 \abx@aux@cite{0}{torchvision2016}
 \abx@aux@segm{0}{0}{torchvision2016}
-\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Held-out test-set performance of the final YOLOv11s model, reported by class.\relax }}{52}{}\protected@file@percent }
-\newlabel{tab:yolo-final-test-results}{{13}{52}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Comparison with Alternative Detection Architectures}{52}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Faster R-CNN}{52}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Validation performance of the Faster R-CNN experiments under the MOVES-based taxonomy.\relax }}{53}{}\protected@file@percent }
-\newlabel{tab:faster-rcnn-results}{{14}{53}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Held-out test-set performance of the final YOLOv11s model, reported by class.\relax }}{51}{}\protected@file@percent }
+\newlabel{tab:yolo-final-test-results}{{13}{51}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Comparison with Alternative Detection Architectures}{51}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}Faster R-CNN}{51}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Validation performance of the Faster R-CNN experiments under the MOVES-based taxonomy.\relax }}{52}{}\protected@file@percent }
+\newlabel{tab:faster-rcnn-results}{{14}{52}}
 \abx@aux@cite{0}{detr2020}
 \abx@aux@segm{0}{0}{detr2020}
 \abx@aux@cite{0}{deformabledetr2020}
@@ -450,117 +450,117 @@
 \abx@aux@segm{0}{0}{rtdetr2024}
 \abx@aux@cite{0}{rtdetrv22024}
 \abx@aux@segm{0}{0}{rtdetrv22024}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Detection Transformer (DETR)}{54}{}\protected@file@percent }
-\newlabel{sec:detr}{{5.2.2}{54}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}Detection Transformer (DETR)}{53}{}\protected@file@percent }
+\newlabel{sec:detr}{{5.2.2}{53}}
 \abx@aux@cite{0}{ultralytics_validation}
 \abx@aux@segm{0}{0}{ultralytics_validation}
-\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Validation performance of the transformer-based detector experiments under the final 6-class formulation. All runs were trained for 50 epochs with 10 warmup epochs.\relax }}{55}{}\protected@file@percent }
-\newlabel{tab:detr-results}{{15}{55}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Model Robustness and Cross-Camera Generalization}{55}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Confidence Threshold and NMS Sensitivity Analysis}{56}{}\protected@file@percent }
-\newlabel{sec:conf-nms-analysis}{{5.3.1}{56}}
-\newlabel{fig:nms-threshold-example-a}{{30a}{57}}
-\newlabel{sub@fig:nms-threshold-example-a}{{a}{57}}
-\newlabel{fig:nms-threshold-example-b}{{30b}{57}}
-\newlabel{sub@fig:nms-threshold-example-b}{{b}{57}}
-\newlabel{fig:nms-threshold-example-c}{{30c}{57}}
-\newlabel{sub@fig:nms-threshold-example-c}{{c}{57}}
-\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Qualitative example of confidence-threshold and NMS sensitivity for the final YOLOv11s model. Each panel shows the same traffic scene under a different inference configuration, with red boxes indicating retained detections and adjacent numbers indicating confidence scores. Lowering the NMS IoU threshold reduces overlapping detections, while increasing the confidence threshold further suppresses weaker predictions.\relax }}{57}{}\protected@file@percent }
-\newlabel{fig:nms-threshold-example}{{30}{57}}
-\newlabel{fig:conf-nms-ap50}{{31a}{58}}
-\newlabel{sub@fig:conf-nms-ap50}{{a}{58}}
-\newlabel{fig:conf-nms-map}{{31b}{58}}
-\newlabel{sub@fig:conf-nms-map}{{b}{58}}
-\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Heatmaps showing the sensitivity of validation performance to inference-time confidence and NMS IoU settings for the final YOLOv11s model. Subfigure (a) shows AP50 and subfigure (b) shows mAP over the evaluated confidence-threshold and NMS IoU grid.\relax }}{58}{}\protected@file@percent }
-\newlabel{fig:conf-nms-heatmaps}{{31}{58}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Cross-Camera Generalization}{58}{}\protected@file@percent }
-\newlabel{sec:camera-generalization}{{5.3.2}{58}}
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Validation performance of the transformer-based detector experiments under the final 6-class formulation. All runs were trained for 50 epochs with 10 warmup epochs.\relax }}{54}{}\protected@file@percent }
+\newlabel{tab:detr-results}{{15}{54}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Model Robustness and Cross-Camera Generalization}{54}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Confidence Threshold and NMS Sensitivity Analysis}{55}{}\protected@file@percent }
+\newlabel{sec:conf-nms-analysis}{{5.3.1}{55}}
+\newlabel{fig:nms-threshold-example-a}{{30a}{56}}
+\newlabel{sub@fig:nms-threshold-example-a}{{a}{56}}
+\newlabel{fig:nms-threshold-example-b}{{30b}{56}}
+\newlabel{sub@fig:nms-threshold-example-b}{{b}{56}}
+\newlabel{fig:nms-threshold-example-c}{{30c}{56}}
+\newlabel{sub@fig:nms-threshold-example-c}{{c}{56}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Qualitative example of confidence-threshold and NMS sensitivity for the final YOLOv11s model. Each panel shows the same traffic scene under a different inference configuration, with red boxes indicating retained detections and adjacent numbers indicating confidence scores. Lowering the NMS IoU threshold reduces overlapping detections, while increasing the confidence threshold further suppresses weaker predictions.\relax }}{56}{}\protected@file@percent }
+\newlabel{fig:nms-threshold-example}{{30}{56}}
+\newlabel{fig:conf-nms-ap50}{{31a}{57}}
+\newlabel{sub@fig:conf-nms-ap50}{{a}{57}}
+\newlabel{fig:conf-nms-map}{{31b}{57}}
+\newlabel{sub@fig:conf-nms-map}{{b}{57}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Heatmaps showing the sensitivity of validation performance to inference-time confidence and NMS IoU settings for the final YOLOv11s model. Subfigure (a) shows AP50 and subfigure (b) shows mAP over the evaluated confidence-threshold and NMS IoU grid.\relax }}{57}{}\protected@file@percent }
+\newlabel{fig:conf-nms-heatmaps}{{31}{57}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Cross-Camera Generalization}{57}{}\protected@file@percent }
+\newlabel{sec:camera-generalization}{{5.3.2}{57}}
 \abx@aux@cite{0}{NYC_open_data_atr}
 \abx@aux@segm{0}{0}{NYC_open_data_atr}
-\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Class distribution of the 75-image cross-camera benchmark.\relax }}{59}{}\protected@file@percent }
-\newlabel{tab:cross-camera-benchmark-class-counts}{{16}{59}}
-\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Per-class detection performance of the final YOLOv11s model on the 75-image cross-camera benchmark.\relax }}{59}{}\protected@file@percent }
-\newlabel{tab:cross-camera-results}{{17}{59}}
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Class distribution of the 75-image cross-camera benchmark.\relax }}{58}{}\protected@file@percent }
+\newlabel{tab:cross-camera-benchmark-class-counts}{{16}{58}}
+\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Per-class detection performance of the final YOLOv11s model on the 75-image cross-camera benchmark.\relax }}{58}{}\protected@file@percent }
+\newlabel{tab:cross-camera-results}{{17}{58}}
 \abx@aux@cite{0}{zippenfenig_open-meteocom_2024}
 \abx@aux@segm{0}{0}{zippenfenig_open-meteocom_2024}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Comparison with ATR Traffic Counts}{60}{}\protected@file@percent }
-\newlabel{sec:atr-analysis}{{5.4}{60}}
-\newlabel{fig:new-broad-ex}{{32a}{60}}
-\newlabel{sub@fig:new-broad-ex}{{a}{60}}
-\newlabel{fig:new-pel-ex}{{32b}{60}}
-\newlabel{sub@fig:new-pel-ex}{{b}{60}}
-\newlabel{fig:new-atl-ex}{{32c}{60}}
-\newlabel{sub@fig:new-atl-ex}{{c}{60}}
-\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces New camera imagery used for inference.\relax }}{60}{}\protected@file@percent }
-\newlabel{fig:new-cameras}{{32}{60}}
-\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces Camera locations, comparison dates, and total number of collected images used in the ATR traffic-count analysis.\relax }}{61}{}\protected@file@percent }
-\newlabel{tab:atr-image-collection}{{18}{61}}
-\@writefile{lot}{\contentsline {table}{\numberline {19}{\ignorespaces Per-day comparison of YOLO-derived and ATR vehicle counts across the selected camera locations, including hourly-profile Pearson correlation, mean absolute error, and mean absolute percentage error.\relax }}{61}{}\protected@file@percent }
-\newlabel{tab:atr-count-comparison}{{19}{61}}
-\newlabel{fig:atr-pelham-raw}{{33a}{63}}
-\newlabel{sub@fig:atr-pelham-raw}{{a}{63}}
-\newlabel{fig:atr-pelham-norm}{{33b}{63}}
-\newlabel{sub@fig:atr-pelham-norm}{{b}{63}}
-\newlabel{fig:atr-atlantic-raw}{{33c}{63}}
-\newlabel{sub@fig:atr-atlantic-raw}{{c}{63}}
-\newlabel{fig:atr-atlantic-norm}{{33d}{63}}
-\newlabel{sub@fig:atr-atlantic-norm}{{d}{63}}
-\newlabel{fig:atr-broadway-raw}{{33e}{63}}
-\newlabel{sub@fig:atr-broadway-raw}{{e}{63}}
-\newlabel{fig:atr-broadway-norm}{{33f}{63}}
-\newlabel{sub@fig:atr-broadway-norm}{{f}{63}}
-\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Hourly detector-derived and ATR traffic-count comparisons for the selected camera-day pairs. The plots compare YOLO-derived counts from March 2026 against matched ATR counts from March 2025. Subfigures (a) and (b) show Pelham Parkway Westbound at Boston Road, with a YOLO-derived daily total of 4,376 and an ATR total of 18,096, and a Pearson correlation of 0.906. Subfigures (c) and (d) show Atlantic Avenue at Boerum Place, with a YOLO-derived daily total of 7,559 and an ATR total of 8,725, and a Pearson correlation of 0.844. Subfigures (e) and (f) show Broadway at Houston, with a YOLO-derived daily total of 3,431 and an ATR total of 12,382, and a Pearson correlation of 0.234. The left column shows raw hourly counts, while the right column shows normalized hourly profiles, with each hour expressed as a fraction of that source's daily total.\relax }}{63}{}\protected@file@percent }
-\newlabel{fig:atr-hourly-comparisons}{{33}{63}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Comparison with ATR Traffic Counts}{59}{}\protected@file@percent }
+\newlabel{sec:atr-analysis}{{5.4}{59}}
+\newlabel{fig:new-broad-ex}{{32a}{59}}
+\newlabel{sub@fig:new-broad-ex}{{a}{59}}
+\newlabel{fig:new-pel-ex}{{32b}{59}}
+\newlabel{sub@fig:new-pel-ex}{{b}{59}}
+\newlabel{fig:new-atl-ex}{{32c}{59}}
+\newlabel{sub@fig:new-atl-ex}{{c}{59}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces New camera imagery used for inference.\relax }}{59}{}\protected@file@percent }
+\newlabel{fig:new-cameras}{{32}{59}}
+\@writefile{lot}{\contentsline {table}{\numberline {18}{\ignorespaces Camera locations, comparison dates, and total number of collected images used in the ATR traffic-count analysis.\relax }}{60}{}\protected@file@percent }
+\newlabel{tab:atr-image-collection}{{18}{60}}
+\@writefile{lot}{\contentsline {table}{\numberline {19}{\ignorespaces Per-day comparison of YOLO-derived and ATR vehicle counts across the selected camera locations, including hourly-profile Pearson correlation, mean absolute error, and mean absolute percentage error.\relax }}{60}{}\protected@file@percent }
+\newlabel{tab:atr-count-comparison}{{19}{60}}
+\newlabel{fig:atr-pelham-raw}{{33a}{62}}
+\newlabel{sub@fig:atr-pelham-raw}{{a}{62}}
+\newlabel{fig:atr-pelham-norm}{{33b}{62}}
+\newlabel{sub@fig:atr-pelham-norm}{{b}{62}}
+\newlabel{fig:atr-atlantic-raw}{{33c}{62}}
+\newlabel{sub@fig:atr-atlantic-raw}{{c}{62}}
+\newlabel{fig:atr-atlantic-norm}{{33d}{62}}
+\newlabel{sub@fig:atr-atlantic-norm}{{d}{62}}
+\newlabel{fig:atr-broadway-raw}{{33e}{62}}
+\newlabel{sub@fig:atr-broadway-raw}{{e}{62}}
+\newlabel{fig:atr-broadway-norm}{{33f}{62}}
+\newlabel{sub@fig:atr-broadway-norm}{{f}{62}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Hourly detector-derived and ATR traffic-count comparisons for the selected camera-day pairs. The plots compare YOLO-derived counts from March 2026 against matched ATR counts from March 2025. Subfigures (a) and (b) show Pelham Parkway Westbound at Boston Road, with a YOLO-derived daily total of 4,376 and an ATR total of 18,096, and a Pearson correlation of 0.906. Subfigures (c) and (d) show Atlantic Avenue at Boerum Place, with a YOLO-derived daily total of 7,559 and an ATR total of 8,725, and a Pearson correlation of 0.844. Subfigures (e) and (f) show Broadway at Houston, with a YOLO-derived daily total of 3,431 and an ATR total of 12,382, and a Pearson correlation of 0.234. The left column shows raw hourly counts, while the right column shows normalized hourly profiles, with each hour expressed as a fraction of that source's daily total.\relax }}{62}{}\protected@file@percent }
+\newlabel{fig:atr-hourly-comparisons}{{33}{62}}
 \abx@aux@cite{0}{yolo11_ultralytics}
 \abx@aux@segm{0}{0}{yolo11_ultralytics}
 \abx@aux@cite{0}{ultralytics_rtdetrv2_yolo11}
 \abx@aux@segm{0}{0}{ultralytics_rtdetrv2_yolo11}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{64}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Evaluation of Detection Architectures for NYC Imagery}{64}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces Baseline validation performance of the principal detector architectures evaluated in this study\relax }}{64}{}\protected@file@percent }
-\newlabel{tab:architecture-comparison-summary}{{20}{64}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Evaluation of Detection Architectures for NYC Imagery}{63}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces Baseline validation performance of the principal detector architectures evaluated in this study\relax }}{63}{}\protected@file@percent }
+\newlabel{tab:architecture-comparison-summary}{{20}{63}}
 \abx@aux@cite{0}{us_epa_moves3_2020}
 \abx@aux@segm{0}{0}{us_epa_moves3_2020}
 \abx@aux@cite{0}{USEPA_overview_2025}
 \abx@aux@segm{0}{0}{USEPA_overview_2025}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Rationale for the MOVES-Based Taxonomy}{65}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Rationale for the MOVES-Based Taxonomy}{64}{}\protected@file@percent }
 \abx@aux@cite{0}{song2022learningnoisylabelsdeep}
 \abx@aux@segm{0}{0}{song2022learningnoisylabelsdeep}
 \abx@aux@cite{0}{feuer2024selectlargescalebenchmarkdata}
 \abx@aux@segm{0}{0}{feuer2024selectlargescalebenchmarkdata}
 \abx@aux@cite{0}{goyal2024scalinglawsdatafiltering}
 \abx@aux@segm{0}{0}{goyal2024scalinglawsdatafiltering}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Data-Centric Refinement vs. Model Complexity}{66}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Data-Centric Refinement vs. Model Complexity}{65}{}\protected@file@percent }
 \abx@aux@cite{0}{ultralytics_validation}
 \abx@aux@segm{0}{0}{ultralytics_validation}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Evaluation and Inference Results}{67}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Evaluation and Inference Results}{66}{}\protected@file@percent }
 \abx@aux@cite{0}{hsu2019progressivedomainadaptationobject}
 \abx@aux@segm{0}{0}{hsu2019progressivedomainadaptationobject}
 \abx@aux@cite{0}{vis_domain_adapt_paper}
 \abx@aux@segm{0}{0}{vis_domain_adapt_paper}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Generalization Stability and Domain Sensitivity}{68}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {21}{\ignorespaces Comparison of held-out test-set and cross-camera benchmark performance for the final YOLOv11s model. The change column reports the difference between the cross-camera benchmark and the held-out test set ($\Delta = \text  {cross-camera} - \text  {held-out test}$).\relax }}{68}{}\protected@file@percent }
-\newlabel{tab:cross-test-comparison}{{21}{68}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Analysis of Traffic Count Agreement}{69}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Implications for Public Health and Environmental Policy}{71}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{72}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.5}Generalization Stability and Domain Sensitivity}{67}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {21}{\ignorespaces Comparison of held-out test-set and cross-camera benchmark performance for the final YOLOv11s model. The change column reports the difference between the cross-camera benchmark and the held-out test set ($\Delta = \text  {cross-camera} - \text  {held-out test}$).\relax }}{67}{}\protected@file@percent }
+\newlabel{tab:cross-test-comparison}{{21}{67}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.6}Analysis of Traffic Count Agreement}{68}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7}Implications for Public Health and Environmental Policy}{70}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Limitations}{71}{}\protected@file@percent }
 \abx@aux@cite{0}{USEPA_road_pop_2020}
 \abx@aux@segm{0}{0}{USEPA_road_pop_2020}
 \abx@aux@cite{0}{us_epa_moves3_2020}
 \abx@aux@segm{0}{0}{us_epa_moves3_2020}
-\newlabel{fig:camera-artifact-a}{{34a}{73}}
-\newlabel{sub@fig:camera-artifact-a}{{a}{73}}
-\newlabel{fig:camera-artifact-b}{{34b}{73}}
-\newlabel{sub@fig:camera-artifact-b}{{b}{73}}
-\newlabel{fig:camera-artifact-c}{{34c}{73}}
-\newlabel{sub@fig:camera-artifact-c}{{c}{73}}
-\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Examples of image-quality issues observed in the 511NY and NYSDOT traffic-camera feeds. These artifacts reduce visibility and make vehicle boundaries harder to distinguish during annotation and detection.\relax }}{73}{}\protected@file@percent }
-\newlabel{fig:camera-artifacts}{{34}{73}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Future Work}{75}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{76}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Transformer Training Augmentation Pipeline}{78}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{80}{}\protected@file@percent }
-\abx@aux@read@bbl@mdfivesum{26881E45125B1475102790D46C4746BA}
+\newlabel{fig:camera-artifact-a}{{34a}{72}}
+\newlabel{sub@fig:camera-artifact-a}{{a}{72}}
+\newlabel{fig:camera-artifact-b}{{34b}{72}}
+\newlabel{sub@fig:camera-artifact-b}{{b}{72}}
+\newlabel{fig:camera-artifact-c}{{34c}{72}}
+\newlabel{sub@fig:camera-artifact-c}{{c}{72}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Examples of image-quality issues observed in the 511NY and NYSDOT traffic-camera feeds. These artifacts reduce visibility and make vehicle boundaries harder to distinguish during annotation and detection.\relax }}{72}{}\protected@file@percent }
+\newlabel{fig:camera-artifacts}{{34}{72}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Future Work}{74}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{75}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Transformer Training Augmentation Pipeline}{77}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{79}{}\protected@file@percent }
+\abx@aux@read@bbl@mdfivesum{0DBBA2ACEF1D6AAEB00DBED2FA119C87}
 \abx@aux@defaultrefcontext{0}{world_health_organization_air_nodate}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{health_effects_institute_state_2025}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{ipcc_climate_2022}{none/global//global/global}
@@ -640,4 +640,4 @@
 \abx@aux@defaultrefcontext{0}{goyal2024scalinglawsdatafiltering}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{hsu2019progressivedomainadaptationobject}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{vis_domain_adapt_paper}{none/global//global/global}
-\gdef \@abspage@last{96}
+\gdef \@abspage@last{95}

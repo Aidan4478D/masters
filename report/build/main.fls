@@ -788,11 +788,6 @@ INPUT ./figures/dataset/3_4_cvat_intro.png
 INPUT figures/dataset/3_4_cvat_intro.png
 INPUT ./figures/dataset/3_4_cvat_intro.png
 INPUT ./figures/dataset/3_4_cvat_intro.png
-INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
-INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
-INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
-INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ts1-lmr12.tfm
 INPUT ./figures/dataset/3_4_1_sedan_suv_heuristics.png
 INPUT ./figures/dataset/3_4_1_sedan_suv_heuristics.png
 INPUT figures/dataset/3_4_1_sedan_suv_heuristics.png
@@ -813,6 +808,11 @@ INPUT ./figures/dataset/3_4_1_suv_heuristics.png
 INPUT figures/dataset/3_4_1_suv_heuristics.png
 INPUT ./figures/dataset/3_4_1_suv_heuristics.png
 INPUT ./figures/dataset/3_4_1_suv_heuristics.png
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ts1-lmr12.tfm
 INPUT ./figures/dataset/3_4_2_minivan_attribute.png
 INPUT ./figures/dataset/3_4_2_minivan_attribute.png
 INPUT figures/dataset/3_4_2_minivan_attribute.png
@@ -833,6 +833,7 @@ INPUT ./figures/dataset/3_4_3_unknown_labeled.png
 INPUT figures/dataset/3_4_3_unknown_labeled.png
 INPUT ./figures/dataset/3_4_3_unknown_labeled.png
 INPUT ./figures/dataset/3_4_3_unknown_labeled.png
+INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmtt10.tfm
 INPUT ./chapters/methodology.tex
 INPUT ./chapters/methodology.tex
 INPUT ./chapters/methodology.tex
@@ -880,7 +881,6 @@ INPUT ./figures/methodology/4_3_unmasked.png
 INPUT figures/methodology/4_3_unmasked.png
 INPUT ./figures/methodology/4_3_unmasked.png
 INPUT ./figures/methodology/4_3_unmasked.png
-INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmtt10.tfm
 INPUT ./figures/methodology/4_3_masked.png
 INPUT ./figures/methodology/4_3_masked.png
 INPUT figures/methodology/4_3_masked.png
@@ -1088,8 +1088,8 @@ OUTPUT /home/aidan/repos/masters/report/build/main.run.xml
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rmsc.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc
-INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb
