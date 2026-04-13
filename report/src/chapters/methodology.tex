@@ -1,3 +1,4 @@
+\newpage
 \section{Methodology}
 
 \subsection{YOLO-Based Object Detection}
@@ -7,12 +8,12 @@ within an image and assigning them class labels. Unlike image classification,
 which predicts a single label for an entire image, object detection must determine
 both what objects are present and where they are located.
 
-In this work, vehicle detection is performed using the YOLO family of models. 
-This popular framework predicts bounding boxes, provides objectness scores, and
-class probabilities directly from the input image in a single forward pass of the
-network. This formulation allows fast inference while maintaining strong detection
+In this work, vehicle detection is performed using the YOLO family of models.
+YOLO processes an image in a single pass and directly outputs predicted bounding boxes, 
+confidence scores, and class labels for the objects it detects.
+This formulation allows fast inference while maintaining strong detection
 performance, making YOLO well suited for traffic-camera imagery and other 
-real-time scene understanding tasks.
+real-time scene-understanding tasks.
 
 \begin{figure}[!htbp]
     \centering
@@ -24,6 +25,7 @@ real-time scene understanding tasks.
 % ------------------------------------------------------------------------------
 
 \subsubsection{Convolutional Neural Networks (CNNs)}
+\label{sec:cnn}
 
 Object detection models such as YOLO use convolutional neural networks (CNNs) to 
 extract visual information from images \cite{redmon2016YOLO}. Unlike traditional 
@@ -51,16 +53,17 @@ the image. At each position, the kernel performs a dot product with the underlyi
 pixels to produce a single output value. Repeating this process across the image 
 produces a feature map, which highlights where the pattern represented by the kernel 
 appears in the image. During training, the network learns kernels that respond to 
-useful visual patterns \cite{Goodfellow-et-al-2016} \cite{oshea2015introCNN}.
+useful visual patterns \cite{Goodfellow-et-al-2016, oshea2015introCNN}.
 
-Several parameters control how these operations are applied. One important parameter 
-is the stride, which determines how far the kernel moves between successive positions. 
-When the stride is greater than one, the resulting feature map has a lower spatial 
+Several parameters control how these operations are applied. One important parameter
+is the stride, which determines how far the kernel moves between successive positions.
+When the stride is greater than one, the resulting feature map has a lower spatial
 resolution than the original image. CNN architectures may also include pooling 
-operations, which further reduce the spatial resolution while preserving the most 
-important activations. As convolution and pooling layers are applied sequentially,
-each location in the resulting feature map corresponds to a larger region of the 
-input image, known as the receptive field \cite{oshea2015introCNN}.
+operations, which further reduce spatial resolution while preserving the strongest
+responses. As convolution and pooling layers are applied repeatedly, each value
+in a deeper feature map reflects information from a larger portion of the input 
+image. This region is called the receptive field.
+\cite{oshea2015introCNN}.
 
 In Fig.~\ref{fig:cnn-diagram}, a simple binary image is processed using a 
 $3 \times 3$ kernel with stride $1$, producing a feature map. This feature map 
@@ -76,17 +79,17 @@ This property allows models to generate localized predictions across the image
 rather than producing a single output for the entire input. Object detection 
 models such as YOLO leverage this spatial structure to generate predictions at 
 multiple positions in the feature map, enabling the detection of objects in different
-parts of the scene. The following section describes how YOLO processes images to 
-generate object detections and the YOLOv11 architecture used in this work.
+parts of the scene. 
 
 % ------------------------------------------------------------------------------
 
 \subsubsection{Grid-Based Prediction}
+\label{sec:grid-preds}
 
 To perform object detection, the input image is conceptually divided into a $W \times H$
 grid of cells, as illustrated in Figure~\ref{fig:yolo-grid}. In practice, this 
 grid corresponds to the spatial resolution of the feature map produced by the 
-convolutional neural network. As stated in the previous section, because convolutional
+convolutional neural network. As stated in the Section~\ref{sec:cnn}, because convolutional
 layers often use strides greater than one and pooling operations reduce spatial 
 resolution, the feature map is smaller than the original image.
 
@@ -111,10 +114,9 @@ Where $W_{input}$ and $H_{input}$ are the width and height of the input image
 respectively. Each grid location therefore corresponds to a region of the original 
 image and serves as a prediction point. YOLO uses these spatial locations to 
 produce candidate bounding boxes, objectness scores, and class probabilities for
-objects whose centers fall within the corresponding image region.
-
-This grid-based formulation enables the model to perform dense prediction across
-the image, allowing multiple objects to be detected simultaneously within a single
+objects whose centers fall within the corresponding image region. This grid-based
+formulation enables the model to perform dense prediction across the image, 
+allowing multiple objects to be detected simultaneously within a single
 forward pass of the network \cite{redmon2016YOLO}.
 
 % ------------------------------------------------------------------------------
@@ -138,7 +140,7 @@ where:
     \item $c$ represents the confidence score associated with the prediction.
 \end{itemize}
 
-These parameters jointly the location and size of the predicted object within the 
+These parameters jointly represent the location and size of the predicted object within the 
 image. The bounding box predictions are conceptually shown in Figure~\ref{fig:yolo-bbox}.
 
 \begin{figure}[!htbp]
@@ -160,10 +162,9 @@ c = P(\text{object}) \times \mathrm{IoU}^{\text{truth}}_{\text{pred}}
 Where $P(\text{object})$ is the probability that an object exists in the predicted region 
 and $\mathrm{IoU}^{\text{truth}}_{\text{pred}}$ is the Intersection over Union 
 (IoU) between the predicted bounding box and the ground truth bounding box \cite{redmon2016YOLO}. 
-See Section~\ref{sec:iou} for more details regarding IoU.
-
-This formulation allows the model to simultaneously capture both object presence 
-and localization accuracy in a single prediction score.
+See Section~\ref{sec:iou} for more details regarding IoU. This formulation allows
+the model to simultaneously capture both object presence and localization accuracy 
+in a single prediction score.
 
 % ------------------------------------------------------------------------------
 
@@ -181,25 +182,29 @@ If the model is trained to detect $C$ object classes, each grid cell predicts:
 P(\text{Class}_i \mid \text{object})
 \end{equation}
 
-for $i = 1, 2, \ldots, C$. During inference, the final class-specific confidence
-score for a detection is computed by combining the class probability with the
-object confidence score:
+for \(i = 1, 2, \ldots, C\). During inference, the final class-specific
+confidence score for a predicted bounding box is computed by combining the
+conditional class probability with the confidence score of that box \(c\). Then,
 
 \begin{equation}
 \text{Score}_i = c \times P(\text{Class}_i \mid \text{object})
 \end{equation}
 
-This allows the detector to produce a class confidence score for every predicted
-bounding box, which reflects both the likelihood that an object exists and the
-probability that the object belongs to a particular class. The spatial
-distribution of these class predictions across the image is illustrated
-conceptually in Figure~\ref{fig:yolo-class-prob} \cite{redmon2016YOLO}.
+This gives a class-specific confidence score for each predicted bounding box, 
+reflecting both the likelihood that an object is present and the probability that
+the object belongs to a particular class. Conceptually, these class predictions 
+are produced across the spatial grid of the image. Figure~\ref{fig:yolo-class-prob}
+illustrates this idea, where the colors indicate the dominant predicted class at
+different grid locations rather than the final post-processed detections \cite{redmon2016YOLO}.
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=6cm]{figures/methodology/4_1_4_class_prob.png}
-    \caption{Example class predictions within each grid cell.
-             Adapted from \cite{redmon2016YOLO}.}
+    \caption{Conceptual illustration of class predictions across the YOLO grid. 
+             Each colored region indicates the dominant predicted class at that spatial 
+             location, based on the highest class-specific score. The figure is intended 
+             to show how class predictions are distributed across the image and does not 
+             represent the final post-processed detections. Adapted from \cite{redmon2016YOLO}.}
     \label{fig:yolo-class-prob}
 \end{figure}
 
@@ -210,9 +215,8 @@ conceptually in Figure~\ref{fig:yolo-class-prob} \cite{redmon2016YOLO}.
 Because each grid cell may produce multiple candidate bounding boxes, the raw 
 output of the network often contains several overlapping predictions that correspond
 to the same object. To produce the final detections, a post-processing step known 
-as Non-Maximum Suppression (NMS) is applied.
+as Non-Maximum Suppression (NMS) is applied. Non-Maximum Suppression operates by:
 
-Non-Maximum Suppression operates by:
 \begin{enumerate}
     \item Ranking all predicted bounding boxes according to their confidence scores.
     \item Selecting the highest-scoring prediction.
@@ -225,6 +229,8 @@ This procedure removes redundant detections while preserving the most confident
 prediction for each object in the scene. The resulting set of bounding boxes are 
 the final object detections, which include the predicted object class, bounding 
 box coordinates, and associated confidence score, as shown in Figure~\ref{fig:yolo-predictions}.
+For further information regarding the YOLO architecture and training procedure, 
+please refer to the original work by Redmon et al. \cite{redmon2016YOLO}.
 
 \begin{figure}[!htbp]
     \centering
@@ -234,50 +240,47 @@ box coordinates, and associated confidence score, as shown in Figure~\ref{fig:yo
     \label{fig:yolo-predictions}
 \end{figure}
 
-For further information regarding the YOLO architecture and training procedure, 
-please refer to the original work by Redmon et al. \cite{redmon2016YOLO}.
-
 % ------------------------------------------------------------------------------
 
 \subsubsection{YOLOv11 Architecture}
 \label{sec:yolov11}
 
-The experiments in this work primarily use the YOLOv11 object detection model, 
-a recent member of the YOLO family designed to improve detection accuracy and 
-training efficiency while maintaining the real-time inference capabilities 
-characteristic of YOLO-based detectors. YOLOv11 follows the same general detection
-pipeline described in the previous sections, where bounding boxes, objectness 
-scores, and class probabilities are predicted directly from convolutional feature
-maps in a single forward pass of the network.
+This study evaluated several YOLO variants, including YOLOv8, YOLOv11, and YOLOv26.
+Because YOLOv11 was ultimately selected as the strongest-performing model in the later
+experiments, its architecture is described here in more detail. Like the other YOLO
+variants considered in this work, YOLOv11 follows the general detection pipeline
+described in the previous sections, in which bounding boxes, object confidence scores,
+and class probabilities are predicted directly from convolutional feature maps in a
+single pass through the network. YOLOv11 is a recent member of the YOLO family that
+builds on earlier YOLO detectors with architectural refinements aimed at improving
+detection accuracy and computational efficiency.
 
-Like many modern object detectors, YOLOv11 adopts a backbone-neck-head architecture. 
-The backbone consists of a deep convolutional network that extracts visual features 
-from the input image. These features are then processed by a neck module that 
-aggregates information across multiple spatial scales, allowing the detector to 
-recognize objects of different sizes. Finally, the detection head produces bounding
-box coordinates, objectness scores, and class probability predictions at multiple
+Like many modern object detectors, YOLOv11 uses a backbone-neck-head architecture.
+The backbone is a deep convolutional network that extracts visual features from the
+input image. These features are then passed to a neck module, which combines
+information across multiple spatial scales so that objects of different sizes can be
+recognized more effectively. Finally, the detection head outputs bounding box
+coordinates, object confidence scores, and class probability predictions at multiple
 spatial locations in the feature maps \cite{YOLOv11paper}.
 
-Compared to earlier YOLO models, YOLOv11 has several architectural refinements 
-which improves both detection accuracy and computational efficiency. One key 
-improvement is the C3k2 module, an enhanced convolutional block that improves
-feature extraction while reducing computational cost by efficiently reusing 
-intermediate feature representations. The architecture also incorporates improved
-feature aggregation through PAN/FPN-style neck layers, which combine information 
-from multiple feature map resolutions to better detect objects at different 
-spatial scales. In addition, refinements to the detection head improve bounding
-box localization and classification accuracy while maintaining fast inference 
-speeds. Together, these changes enable YOLOv11 to achieve stronger detection 
-performance while remaining computationally efficient for real-time 
-applications \cite{YOLOv11paper}.
+Compared with earlier YOLO models, YOLOv11 introduces several refinements intended to
+improve both accuracy and efficiency. One important component is the C3k2 module, an
+enhanced convolutional block designed to improve feature extraction while reducing
+computational cost through more efficient reuse of intermediate feature
+representations. YOLOv11 also uses PAN/FPN-style neck layers to improve feature
+aggregation across multiple resolutions, which helps the detector handle objects at
+different spatial scales. In addition, refinements to the detection head improve
+bounding box localization and class prediction while preserving the fast inference
+speed associated with YOLO-based detectors. Together, these changes make YOLOv11 a
+strong and computationally efficient detector for real-time applications
+\cite{YOLOv11paper}.
 
-For this work, YOLOv11 was selected because it provided the best empirical 
-detection performance on the vehicle detection dataset used in this study while
-maintaining efficient inference suitable for large-scale traffic camera imagery. 
-A detailed description of the YOLOv11 architecture and training procedure is
-available in the Ultralytics model documentation \cite{yolo11_ultralytics}
-and paper by Khanam and Hussain \cite{YOLOv11paper}.
-
+In this study, YOLOv11 was selected for the final detector because it achieved the
+best empirical performance on the vehicle detection dataset while maintaining
+inference efficiency suitable for large-scale traffic-camera imagery. Additional
+details on the YOLOv11 architecture and training procedure are available in the
+Ultralytics documentation \cite{yolo11_ultralytics} and in the work of Khanam and
+Hussain \cite{YOLOv11paper}.
 
 % ==============================================================================
 
@@ -323,7 +326,7 @@ than to infer every possible subtype within each category. As such, the bus
 attribute, \verb|is_school|, was preserved as useful annotation metadata and a potential
 avenue for future refinement, but it was not treated as essential to the core 
 detector taxonomy. The final mapping between the dataset taxonomy and the MOVES 
-taxonomy is shown below in Figure~\ref{fig:moves-mapping}.
+taxonomy is shown in Figure~\ref{fig:moves-mapping}.
 
 \begin{figure}[!htbp]
     \centering
@@ -405,27 +408,31 @@ emissions coefficients in New York City, the vehicle detection pipeline must be
 rigorously evaluated. Unlike standard image classification, object detection 
 requires assessing two distinct tasks simultaneously: accurately localizing a 
 vehicle within a complex urban environment and correctly classifying its 
-emissions profile category (e.g., distinguishing a heavy-duty vehicle from a 
-light-duty vehicle). This subsection details the metrics selected to quantify 
+emissions profile category (e.g., distinguishing a truck from a bus). 
+This subsection details the metrics selected to quantify 
 the model's performance. It begins by establishing the spatial evaluation 
-criteria, builds toward aggregate threshold-agnostic metrics like mean Average 
-Precision (mAP), and concludes by justifying these choices against traditional 
+criteria, builds toward aggregate threshold-agnostic metrics like mean average 
+arecision (mAP), and concludes by justifying these choices against traditional 
 classification metrics that fall short in dynamic spatial contexts.
 
 \subsubsection{Intersection over Union}
 \label{sec:iou}
 
-Before assessing the classification accuracy of the model, it is necessary to 
-quantify the spatial accuracy of the predicted bounding boxes. This is achieved 
-using the Intersection over Union (IoU) metric. IoU measures the overlap between 
-a predicted bounding box and a ground truth bounding box. It is calculated as 
-the area of their intersection divided by the area of their union.
+Before assessing the classification accuracy of the model, it is necessary to
+quantify the spatial accuracy of the predicted bounding boxes. This is achieved
+using the Intersection over Union (IoU) metric. IoU measures the overlap between
+a predicted bounding box and a ground-truth bounding box. It is calculated as
+the area of their intersection divided by the area of their union. Figure~\ref{fig:intersection-union}
+illustrates the intersection and union regions for an example prediction, while
+Figure~\ref{fig:iou_calc} shows the corresponding IoU calculation.
 
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=3.5cm]{figures/methodology/4_4_intersection_union.png}
-    % \caption{Confusion Matrix}
-    % \label{fig:conf_matrix}
+    \caption{Example of the intersection and union between a ground-truth bounding box ({\color{red}red}) 
+             and a predicted bounding box ({\color{myyellow}gold}). The figures show the original overlap, 
+             the intersection area, and the union area used in the IoU calculation.}
+    \label{fig:intersection-union}
 \end{figure}
 
 \begin{figure}[!htbp]
@@ -448,17 +455,15 @@ for a bounding box prediction to be considered valid.
     \label{fig:conf_matrix}
 \end{figure}
 
-With a defined IoU threshold, the traditional elements of a confusion matrix 
-(Figure~\ref{fig:conf_matrix})
-can be adapted for object detection. Unlike pure image classification, where every 
-image has a discrete label, object detection occurs in a continuous spatial 
-domain. This is because bounding box coordinates can take on virtually infinite 
-combinations across an image, so a model's spatial prediction will rarely align 
-pixel-for-pixel with a human annotation. Thus, setting a threshold on the IoU 
-metric acts as a spatial tolerance mechanism, converting continuous coordinate 
-overlaps into the discrete \textit{True Positive} or \textit{False Positive} 
-categories required to calculate performance metrics. Within the context of this
-project, the entries of the confusion matrix correspond to: 
+With an IoU threshold in place, the standard confusion-matrix categories shown in
+Figure~\ref{fig:conf_matrix} can also be applied to object detection. Unlike image
+classification, where each image is assigned a single label, object detection must
+evaluate both what the object is and where it is located. Because predicted bounding
+boxes will rarely match the annotated box exactly, the IoU threshold provides a
+practical way to decide whether a detection is close enough to count as correct. In
+this way, the IoU threshold converts box overlap into the discrete categories needed
+for evaluation, such as true positives, false positives, and false negatives. Within
+the context of this project, the entries of the confusion matrix correspond to:
 
 \begin{itemize}
     \item \textbf{True Positive (TP)}: A detection that matches a human-annotated
@@ -467,27 +472,26 @@ project, the entries of the confusion matrix correspond to:
     sedan and correctly classifies it as a Light-Duty Vehicle (LDV) with an IoU 
     that exceeds the threshold.
 
-    \item \textbf{False Positive (FP)}: A predicted box that fails either the 
-    spatial or classification criteria. In the context of urban traffic 
-    monitoring, this typically occurs in three ways:
+    \item \textbf{False Positive (FP)}: A predicted box that does not satisfy the
+    matching criteria for a correct detection. In this study, false positives
+    generally occur in three ways:
     \begin{enumerate}
-        \item{\textit{Misclassification}}: The model perfectly localizes an LDV but
-        incorrectly classifies it as a Heavy-Duty-Vehicle (HDV), skewing the 
-        emissions profile for that frame.
+        \item \textit{Misclassification}: The predicted box overlaps a ground-truth
+        object sufficiently, but the assigned class label is incorrect.
 
-        \item{\textit{Poor Localization}}: The model correctly identifies a Bus, but the
-        bounding box only captures a fraction of the vehicle, resulting in an 
-        IoU below the required threshold.
+        \item \textit{Poor Localization}: The predicted class is correct, but the
+        bounding box does not overlap the ground-truth box enough to satisfy the
+        required IoU threshold.
 
-        \item{\textit{Background/Duplicate}}: The model hallucinates a vehicle where 
-        there is only an empty patch of road, or it draws two separate bounding 
-        boxes over the same motorcycle.
+        \item \textit{Background/Duplicate}: The predicted box either does not
+        correspond to any ground-truth object or duplicates another prediction for
+        the same object.
     \end{enumerate}
 
-    \item \textbf{False Negative (FN)}: A ground truth vehicle that the model 
-    failed to detect entirely, or localized so poorly that it was discarded. 
-    For instance, an LDV partially occluded by a building is completely ignored 
-    by the model, resulting in an uncounted emissions source.
+    \item \textbf{False Negative (FN)}: A ground-truth vehicle that is not successfully
+    matched by any prediction. This can occur when the model fails to detect the
+    vehicle entirely, assigns it the wrong class, or predicts a bounding box that
+    does not overlap sufficiently to meet the IoU threshold.
 
     \item \textbf{True Negative (TN)}: Conceptually, a true negative represents
     every possible empty region in an image (such as patches of bare asphalt, 
@@ -499,8 +503,8 @@ project, the entries of the confusion matrix correspond to:
 \end{itemize}
 
 \subsubsection{Precision-Recall Curve}
-Using the \textit{TP}, \textit{FP}, and \textit{FN} counts defined above, we can calculate Precision and 
-Recall to evaluate the pipeline's ability and reliability in tracking 
+Using the \textit{TP}, \textit{FP}, and \textit{FN} counts defined above, we can calculate 
+precision and recall to evaluate the pipeline's ability and reliability in tracking 
 urban traffic.
 
 \begin{itemize}
@@ -511,7 +515,7 @@ urban traffic.
     \end{equation}
 
     In the context of this project, out of all the bounding boxes the model predicted 
-    for a certain class (ex. Claiming to detect 50 HDVs), what fraction were correct? 
+    for a certain class (e.g. claiming to detect 50 trucks), what fraction were correct? 
     A high precision score ensures the model is not predicting false ``ghost'' 
     vehicles or misclassifying vehicle types.
 
@@ -527,59 +531,59 @@ urban traffic.
 \end{itemize}
 
 Modern object detectors like the YOLO output a confidence score with each 
-predicted bounding box, creating a trade-off between Precision and 
-Recall. Lowering the confidence threshold allows the model to predict more 
-vehicles (increasing Recall), but it simultaneously increases the risk of 
-capturing background noise as valid vehicles (False Positives), thereby 
-lowering Precision. By calculating Precision and Recall at every possible 
-confidence threshold and plotting the results, we generate the Precision-Recall 
-(PR) Curve.
+predicted bounding box, creating a trade-off between precision and 
+recall. Lowering the confidence threshold allows the model to predict more 
+vehicles (increasing recall), but it simultaneously increases the risk of 
+capturing background noise as valid vehicles (false positives), thereby 
+lowering precision. By calculating precision and recall at every possible 
+confidence threshold and plotting the results, we generate the precision-recall 
+(PR) curve.
 
-\begin{figure}[!htbp]
-    \centering
-    \includegraphics[height=6.5cm]{figures/methodology/4_4_example_pr_curve.png}
-    \caption{Example Precision-Recall Curve}
-    \label{fig:ex_pr_curve}
-\end{figure}
+% \begin{figure}[!htbp]
+%     \centering
+%     \includegraphics[height=6.5cm]{figures/methodology/4_4_example_pr_curve.png}
+%     \caption{Example Precision-Recall Curve}
+%     \label{fig:ex_pr_curve}
+% \end{figure}
 
-The PR Curve illustrates the model's overarching stability and allows us to 
+The PR curve illustrates the model's overarching stability and allows us to 
 visualize the exact penalty in precision when we tune the model to capture a 
 higher volume of traffic.
 
 \subsubsection{Average Precision and mAP}
 
-To quantify the trade-off depicted in the PR Curve into a single scalar value, 
-we use the Average Precision (AP). AP represents the total area under the PR 
-Curve, depicted below in Figure~\ref{fig:ex_pr_curve_ap}. 
+To quantify the trade-off depicted in the PR curve into a single scalar value, 
+we use the average precision (AP). AP represents the total area under the PR 
+curve, depicted in Figure~\ref{fig:ex_pr_curve_ap}. It represents the model's 
+reliability across every possible confidence threshold for a single specific 
+vehicle class (e.g., evaluating solely the model's ability to isolate trucks
+from the rest of the traffic flow). AP is calculated as follows:
 
 \begin{figure}[!htbp]
     \centering
-    \includegraphics[height=6.5cm]{figures/methodology/4_4_example_pr_curve_ap.png}
+    \includegraphics[height=6cm]{figures/methodology/4_4_example_pr_curve_ap.png}
     \caption{Average Precision within a Precision-Recall Curve}
     \label{fig:ex_pr_curve_ap}
 \end{figure}
 
-It represents the model's reliability across every possible confidence 
-threshold for a single specific vehicle class (e.g., evaluating solely the 
-model's ability to isolate Heavy-Duty Vehicles from the rest of the traffic 
-flow). AP is calculated as follows:
 
 \begin{equation}
 AP = \int_{0}^{1} p(r) dr
 \end{equation}
 
-Where $p(r)$ is the precision at recall $r$. By calculating the area under the 
+where $p(r)$ is the precision at recall $r$. By calculating the area under the 
 curve, AP penalizes models that suffer severe drops in precision when attempting 
 to retrieve the hardest-to-find vehicles (such as heavily occluded trucks).
+
 To evaluate the air quality modeling pipeline across the entire vehicle, the 
-individual AP scores for all distinct classes (LDV, MDV, HDV, Bus, and 
-Two-Wheeler) are averaged to produce the Mean Average Precision (mAP):
+individual AP scores for all distinct classes are averaged to produce the 
+mean average precision (mAP):
 
 \begin{equation}
 mAP = \frac{1}{N} \sum_{i=1}^{N} AP_i
 \end{equation}
 
-Where $N$ is the total number of classes ($N=5$ in this study). 
+where $N$ is the total number of classes ($N=5$ in this study). 
 Because the mAP score relies on the initial spatial overlap requirement, standard 
 evaluation protocols report performance at different Intersection over Union (IoU) 
 thresholds. A common baseline is AP50 (AP calculated at an IoU threshold of 0.50), which 
@@ -593,36 +597,36 @@ from 0.50 to 0.95 with a step size of 0.05:
 mAP_{COCO} = \frac{1}{10} \sum_{t \in T}mAP_t
 \end{equation}
 
-Where $T = \{0.50, 0.55, 0.60, \dots, 0.95\}$ and $mAP_t$ is the Mean Average 
-Precision evaluated at IoU threshold $t$. The primary objective of this thesis 
-is accurately labeling vehicles for emissions modeling which makes the looser 
-spatial tolerance of AP50 an intuitively appealing metric. However, this study 
-utilizes the stricter COCO-style mAP as the primary performance indicator for 
-several reasons:
+Where $T = \{0.50, 0.55, 0.60, \dots, 0.95\}$ and $mAP_t$ is the mean average 
+precision evaluated at IoU threshold $t$. 
+
+The primary objective of this thesis is accurate vehicle detection and classification
+for emissions-oriented traffic analysis, which makes AP50 an intuitive metric because
+it measures whether a vehicle was detected with moderate spatial overlap. However,
+this study reports both AP50 and COCO-style mAP, and uses mAP as the primary
+performance indicator for several reasons:
 \begin{itemize}
-    \item The proposed pipeline relies on cropping the detected bounding boxes 
-    to feed into a secondary classification model (see Section —). A loose 
-    bounding box that barely satisfies a 0.50 IoU may contain excessive background
-    scene or partial features of nearby vehicles. This noise degrades the quality
-    of the image crop, leading to downstream misclassification of the vehicle 
-    type (e.g., confusing an MDV with an HDV). Therefore, accurate vehicle 
-    classification depends on high quality localization.
+    \item First, mAP evaluates detection performance across multiple IoU thresholds
+    from 0.50 to 0.95 rather than at a single cutoff, providing a more complete
+    measure of localization quality.
 
-    \item In heavily congested New York City traffic, relying solely on AP50 can 
-    hide localization failures. Sloppy bounding boxes that overlap multiple 
-    tailgating vehicles can still score under a 0.50 threshold, but will cause
-    the system to merge distinct emission sources, leading to undercounting.
+    \item Second, localization accuracy is especially important in low-resolution
+    urban traffic imagery, where vehicles are often small, partially occluded, and
+    closely spaced. In these conditions, a loose bounding box may still count as
+    correct under AP50 while failing to isolate the vehicle precisely.
 
-    \item Finally, COCO mAP is the standard in modern computer vision literature. 
-    By integrating across ten spatial strictnesses, it reduces the metric's 
-    sensitivity to any single arbitrary cutoff and prevents the model from 
-    artificially inflating its performance by outputting overly large regions 
-    of interest.
+    \item Third, in congested scenes, detections that overlap multiple nearby
+    vehicles can appear acceptable at IoU $= 0.50$ even when they are too coarse
+    for reliable counting and class-specific analysis. Using mAP helps penalize
+    these cases more appropriately.
+
+    \item Finally, COCO-style mAP is the standard summary metric in modern object
+    detection literature, making the results easier to compare with prior work.
 \end{itemize}
 
-Utilizing the COCO mAP ensures that the detection architecture is not hallucinating
-large active regions, but is learning the boxes required to reliably isolate 
-vehicles in urban environments.
+COCO-style mAP therefore provides a more rigorous measure of detector quality in 
+this study, since it rewards models that not only detect vehicles, but also localize
+them precisely in dense urban traffic scenes.
 
 % ==============================================================================
 

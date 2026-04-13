@@ -16,7 +16,11 @@ scalable environmental health monitoring in dense urban environments.
 
 The selection of a primary detection model for this study was driven by a rigorous 
 comparison across three distinct paradigms: one-stage convolutional neural networks,
-two-stage networks, and transformer-based architectures. As the data in Table~\ref{tab:architecture-comparison-summary} 
+two-stage networks, and transformer-based architectures. 
+Here, one-stage detectors refer to models such as YOLO that predict object locations 
+and classes directly from the image in a single pass, whereas two-stage models first 
+propose candidate object regions and then classify them.
+As the data in Table~\ref{tab:architecture-comparison-summary} 
 indicates, the YOLO models performed consistently better than Faster R-CNN and the 
 DETR models in terms of AP50 and mAP on the validation set.
 

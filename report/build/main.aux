@@ -271,8 +271,6 @@
 \newlabel{tab:split-class-counts}{{7}{25}}
 \@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Positive attribute counts across dataset splits\relax }}{25}{}\protected@file@percent }
 \newlabel{tab:split_attribute_counts}{{8}{25}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{25}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}YOLO-Based Object Detection}{25}{}\protected@file@percent }
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
@@ -289,11 +287,14 @@
 \abx@aux@segm{0}{0}{Goodfellow-et-al-2016}
 \abx@aux@cite{0}{oshea2015introCNN}
 \abx@aux@segm{0}{0}{oshea2015introCNN}
-\abx@aux@cite{0}{oshea2015introCNN}
-\abx@aux@segm{0}{0}{oshea2015introCNN}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{26}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}YOLO-Based Object Detection}{26}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Example of the YOLO pipeline. Figure adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{26}{}\protected@file@percent }
 \newlabel{fig:yolo-pipeline}{{14}{26}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Convolutional Neural Networks (CNNs)}{26}{}\protected@file@percent }
+\newlabel{sec:cnn}{{4.1.1}{26}}
+\abx@aux@cite{0}{oshea2015introCNN}
+\abx@aux@segm{0}{0}{oshea2015introCNN}
 \@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Example of convolutional neural network operations. A convolutional kernel slides across the input image and performs a dot product with local pixel values to produce a feature map highlighting the presence of specific patterns. In typical CNN architectures, a nonlinear activation function such as ReLU is applied after convolution. A pooling layer may then downsample the feature map while preserving the strongest activations. Figure adapted from \blx@tocontentsinit {0}\cite {islam_pooling_2025}.\relax }}{27}{}\protected@file@percent }
 \newlabel{fig:cnn-diagram}{{15}{27}}
 \abx@aux@cite{0}{redmon2016YOLO}
@@ -303,10 +304,9 @@
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Grid-Based Prediction}{28}{}\protected@file@percent }
+\newlabel{sec:grid-preds}{{4.1.2}{28}}
 \@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Conceptual grid created by the YOLO architecture. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{28}{}\protected@file@percent }
 \newlabel{fig:yolo-grid}{{16}{28}}
-\abx@aux@cite{0}{redmon2016YOLO}
-\abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
@@ -320,28 +320,30 @@
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
+\abx@aux@cite{0}{redmon2016YOLO}
+\abx@aux@segm{0}{0}{redmon2016YOLO}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Class Probability Prediction}{30}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.5}Post-Processing and Final Detections}{30}{}\protected@file@percent }
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
 \abx@aux@cite{0}{redmon2016YOLO}
 \abx@aux@segm{0}{0}{redmon2016YOLO}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Example class predictions within each grid cell. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{31}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces Conceptual illustration of class predictions across the YOLO grid. Each colored region indicates the dominant predicted class at that spatial location, based on the highest class-specific score. The figure is intended to show how class predictions are distributed across the image and does not represent the final post-processed detections. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{31}{}\protected@file@percent }
 \newlabel{fig:yolo-class-prob}{{18}{31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Example final class-predictions and bounding boxes. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{31}{}\protected@file@percent }
-\newlabel{fig:yolo-predictions}{{19}{31}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.5}Post-Processing and Final Detections}{31}{}\protected@file@percent }
 \abx@aux@cite{0}{YOLOv11paper}
 \abx@aux@segm{0}{0}{YOLOv11paper}
 \abx@aux@cite{0}{YOLOv11paper}
 \abx@aux@segm{0}{0}{YOLOv11paper}
+\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Example final class-predictions and bounding boxes. Adapted from \blx@tocontentsinit {0}\cite {redmon2016YOLO}.\relax }}{32}{}\protected@file@percent }
+\newlabel{fig:yolo-predictions}{{19}{32}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.6}YOLOv11 Architecture}{32}{}\protected@file@percent }
+\newlabel{sec:yolov11}{{4.1.6}{32}}
 \abx@aux@cite{0}{yolo11_ultralytics}
 \abx@aux@segm{0}{0}{yolo11_ultralytics}
 \abx@aux@cite{0}{YOLOv11paper}
 \abx@aux@segm{0}{0}{YOLOv11paper}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.6}YOLOv11 Architecture}{32}{}\protected@file@percent }
-\newlabel{sec:yolov11}{{4.1.6}{32}}
 \abx@aux@cite{0}{USEPA_def_truck_2019}
 \abx@aux@segm{0}{0}{USEPA_def_truck_2019}
 \abx@aux@cite{0}{us_epa_moves3_2020}
@@ -358,17 +360,17 @@
 \newlabel{sub@fig:masked-unknown}{{b}{35}}
 \@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Example of \texttt  {unknown\_vehicle} masking during training set preparation. Subfigure (a) shows the \texttt  {unknown\_vehicle} regions outlined in purple for reference, while subfigure (b) shows the same image after the \texttt  {unknown\_vehicle} regions were masked with the neutral fill value used for training.\relax }}{35}{}\protected@file@percent }
 \newlabel{fig:masking-vehicle-example}{{21}{35}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Performance Metrics}{35}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Performance Metrics}{36}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1}Intersection over Union}{36}{}\protected@file@percent }
 \newlabel{sec:iou}{{4.4.1}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces IoU Calculation\relax }}{36}{}\protected@file@percent }
-\newlabel{fig:iou_calc}{{22}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Confusion Matrix\relax }}{37}{}\protected@file@percent }
-\newlabel{fig:conf_matrix}{{23}{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Example of the intersection and union between a ground-truth bounding box ({\color  {red}red}) and a predicted bounding box ({\color  {myyellow}gold}). The figures show the original overlap, the intersection area, and the union area used in the IoU calculation.\relax }}{36}{}\protected@file@percent }
+\newlabel{fig:intersection-union}{{22}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces IoU Calculation\relax }}{37}{}\protected@file@percent }
+\newlabel{fig:iou_calc}{{23}{37}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.2}Confusion Matrix}{37}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Confusion Matrix\relax }}{37}{}\protected@file@percent }
+\newlabel{fig:conf_matrix}{{24}{37}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.3}Precision-Recall Curve}{38}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Example Precision-Recall Curve\relax }}{39}{}\protected@file@percent }
-\newlabel{fig:ex_pr_curve}{{24}{39}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.4}Average Precision and mAP}{39}{}\protected@file@percent }
 \abx@aux@cite{0}{lin_microsoft_2015}
 \abx@aux@segm{0}{0}{lin_microsoft_2015}
@@ -511,14 +513,14 @@
 \newlabel{sub@fig:atr-broadway-norm}{{f}{62}}
 \@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Hourly detector-derived and ATR traffic-count comparisons for the selected camera-day pairs. The plots compare YOLO-derived counts from March 2026 against matched ATR counts from March 2025. Subfigures (a) and (b) show Pelham Parkway Westbound at Boston Road, with a YOLO-derived daily total of 4,376 and an ATR total of 18,096, and a Pearson correlation of 0.906. Subfigures (c) and (d) show Atlantic Avenue at Boerum Place, with a YOLO-derived daily total of 7,559 and an ATR total of 8,725, and a Pearson correlation of 0.844. Subfigures (e) and (f) show Broadway at Houston, with a YOLO-derived daily total of 3,431 and an ATR total of 12,382, and a Pearson correlation of 0.234. The left column shows raw hourly counts, while the right column shows normalized hourly profiles, with each hour expressed as a fraction of that source's daily total.\relax }}{62}{}\protected@file@percent }
 \newlabel{fig:atr-hourly-comparisons}{{33}{62}}
-\abx@aux@cite{0}{yolo11_ultralytics}
-\abx@aux@segm{0}{0}{yolo11_ultralytics}
-\abx@aux@cite{0}{ultralytics_rtdetrv2_yolo11}
-\abx@aux@segm{0}{0}{ultralytics_rtdetrv2_yolo11}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{63}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Evaluation of Detection Architectures for NYC Imagery}{63}{}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {20}{\ignorespaces Baseline validation performance of the principal detector architectures evaluated in this study\relax }}{63}{}\protected@file@percent }
 \newlabel{tab:architecture-comparison-summary}{{20}{63}}
+\abx@aux@cite{0}{yolo11_ultralytics}
+\abx@aux@segm{0}{0}{yolo11_ultralytics}
+\abx@aux@cite{0}{ultralytics_rtdetrv2_yolo11}
+\abx@aux@segm{0}{0}{ultralytics_rtdetrv2_yolo11}
 \abx@aux@cite{0}{us_epa_moves3_2020}
 \abx@aux@segm{0}{0}{us_epa_moves3_2020}
 \abx@aux@cite{0}{USEPA_overview_2025}
@@ -560,7 +562,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{75}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {A}Transformer Training Augmentation Pipeline}{77}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{References}{79}{}\protected@file@percent }
-\abx@aux@read@bbl@mdfivesum{0DBBA2ACEF1D6AAEB00DBED2FA119C87}
+\abx@aux@read@bbl@mdfivesum{0A89C7C90BC2119939EE6B20AC71A697}
 \abx@aux@defaultrefcontext{0}{world_health_organization_air_nodate}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{health_effects_institute_state_2025}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{ipcc_climate_2022}{none/global//global/global}
