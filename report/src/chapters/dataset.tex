@@ -134,7 +134,7 @@ Only cameras with reliable uptime during the collection window were selected.
         \caption{No live camera feed message.}
         \label{fig:camera-no-feed}
     \end{subfigure}
-    \caption{Images returned by unavailble cameras.}
+    \caption{Images returned by unavailable cameras.}
     \label{fig:camera-down}
 \end{figure}
 
@@ -313,12 +313,15 @@ Examples of different conditions are shown in Figure~\ref{fig:image-weather-cond
         \caption{Image taken under normal sunny/cloudy conditions.}
     \end{subfigure}
 
-    \caption{
-        Different views of vehicles through different traffic cameras.
-        The images are colored such that vehicles highlighted in \textcolor{myyellow}{yellow} show its 
-        front, vehicles highlighted in \textcolor{red}{red} show its rear, and vehicles highlighted 
-        in \textcolor{blue}{blue} show its side.
-    }
+    % \caption{
+    %     Different views of vehicles through different traffic cameras.
+    %     The images are colored such that vehicles highlighted in \textcolor{myyellow}{yellow} show its 
+    %     front, vehicles highlighted in \textcolor{red}{red} show its rear, and vehicles highlighted 
+    %     in \textcolor{blue}{blue} show its side.
+    % }
+    \caption{Examples of traffic camera images collected under different lighting and weather conditions. 
+             The dataset includes scenes affected by sun glare, rain, nighttime lighting, and more typical daytime 
+             conditions.}
     \label{fig:image-weather-conditions}
 \end{figure}
 
@@ -396,7 +399,7 @@ profile and a more downward-sloping rear.
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
         \includegraphics[height=3.5cm]{figures/dataset/3_4_1_sedan_suv_heuristics.png}
-        \caption{Sedan and SUV distinguishing hueristics.}
+        \caption{Sedan and SUV distinguishing heuristics.}
     \end{subfigure}
     \hfill
     \begin{subfigure}[c]{0.48\textwidth}
@@ -547,7 +550,7 @@ Figure~\ref{fig:minivan-attribute}.
     \centering
     \includegraphics[height=5cm]{figures/dataset/3_4_2_minivan_attribute.png}
     \caption{Example of an attribute given to a vehicle in CVAT. In this case, the 
-             \texttt{van} was given the attriubute \texttt{is\_minivan} due to
+             \texttt{van} was given the attribute \texttt{is\_minivan} due to
              the labeling heuristics described in Section~\ref{sec:label-classes}.}
     \label{fig:minivan-attribute}
 \end{figure}

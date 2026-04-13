@@ -1,3 +1,4 @@
+\newpage
 \section{Experimentation and Results}
 
 Vehicle detection experiments in this study were centered on a 6-class taxonomy 
@@ -194,7 +195,7 @@ were predicted for background regions was reduced.
         \label{fig:val-cm-26s-post}
     \end{subfigure}
     \caption{Ignore-aware validation confusion matrices for the baseline YOLOv11s
-             and YOLOv26s models prior to dataset refinement.}
+             and YOLOv26s models after dataset refinement.}
     \label{fig:val-cm-post}
 \end{figure}
 \FloatBarrier
@@ -259,7 +260,7 @@ truck, bus, and motorcycle, while light commercial truck decreased by one instan
 \textbf{Hard Negative Mining}
 
 The primary refinement strategy that followed was hard negative mining. As indicated
-by the post-refinement validation confusion matrices in Figure~X, the dominant 
+by the post-refinement validation confusion matrices in Figure~\ref{fig:val-cm-post}, the dominant 
 remaining error for both baseline models was the confusion between passenger cars 
 and passenger trucks. To target this directly, the training set was scanned using
 the baseline YOLOv11s model for YOLOv11s refinement and the baseline YOLOv26s 
@@ -536,7 +537,7 @@ exhaustive search, since a single training run required several hours. In practi
 parameter settings were chosen by monitoring whether validation performance remained 
 stable and continued improving over training, while avoiding configurations that caused
 the detector to stall or degrade early. The best learning rates for Deformable DETR 
-and RT-DETR are summarized in Table~X.
+and RT-DETR are summarized in Table~\ref{tab:detr-results}.
 
 Training augmentation was ultimately kept light, consisting primarily of horizontal
 flipping and modest brightness/contrast perturbations. This decision was motivated 
@@ -545,7 +546,7 @@ that transformer-based detectors were sensitive to stronger image transformation
 in this low-resolution traffic-camera setting. In this section, heavier Albumentations 
 pipeline refers to the augmentation setup used in the first Deformable DETR 
 experiment, and lighter Albumentations pipeline refers to the simplified setup used
-in the subsequent experiments. The exact transform definitions are listed in Appendix~\ref{app:B}.
+in the subsequent experiments. The exact transform definitions are listed in Appendix~\ref{app:A}.
 As in the YOLO and R-CNN experiments, \verb|unknown_vehicle| instances were masked 
 during training, and treated as ignore regions during evaluation.
 
@@ -831,7 +832,7 @@ Images were collected from March 13, 2026 at 12:01 AM through March 20, 2026 at
 the sampling rate used during dataset creation, to reduce the risk of the same 
 scene being counted more than once, since the camera feeds updated slowly and 
 explicit image-to-image vehicle matching was not implemented.
-See Table X. for information regarding the
+See Table~\ref{tab:atr-image-collection}. for information regarding the
 dates in which the collected images are compared against the true ATR counts. 
 These comparison dates were chosen as they were when the 2025 ATR data was collected 
 for the specified street intersections.
@@ -897,7 +898,7 @@ for a per-day summary at each camera location, comparing the YOLO and ATR detect
 \end{table}
 \FloatBarrier
 
-As shown in Table~X, agreement with ATR counts varied substantially across locations. 
+As shown in Table~\ref{tab:atr-count-comparison}, agreement with ATR counts varied substantially across locations. 
 The closest match between counts was observed at Atlantic Avenue at Boerum Place,
 where detector totals of 7,060 to 7,559 were compared with ATR totals of 8,725 to 
 9,188, with mean absolute percentage error values of 22.96\% and 27.28\%. Broadway
@@ -917,9 +918,9 @@ Place showed consistently strong hourly agreement, with correlation values of 0.
 and 0.803. Broadway at Houston showed weaker and less consistent agreement, with 
 values ranging from 0.234 to 0.753. Pelham Parkway Westbound at Boston Road generally 
 showed strong hourly-pattern agreement despite larger differences in total volume, 
-with correlations ranging from 0.780 to 0.906. See Figure X. for hourly count 
+with correlations ranging from 0.780 to 0.906. See Figure~\ref{fig:atr-hourly-comparisons} for hourly count 
 comparisons for selected camera-day pairs, showing both the raw hourly counts and 
-the normalized horly counts for the YOLO and ATR detections.
+the normalized hourly counts for the YOLO and ATR detections.
 
 \begin{figure}[!htbp]
     \centering

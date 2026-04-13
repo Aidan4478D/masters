@@ -147,7 +147,7 @@ image. The bounding box predictions are conceptually shown in Figure~\ref{fig:yo
     \centering
     \includegraphics[height=6cm]{figures/methodology/4_1_3_bounding_box.png}
     \caption{Bounding boxes created by the YOLO architecture. The thickness of 
-             each box corresponds to the models confidence score. The higher the 
+             each box corresponds to the model's confidence score. The higher the 
              confidence, the thicker the box. Adapted from \cite{redmon2016YOLO}.}
     \label{fig:yolo-bbox}
 \end{figure}
@@ -289,7 +289,7 @@ Hussain \cite{YOLOv11paper}.
 
 For the experiments reported in this chapter, model training and evaluation were 
 conducted using a final 6-class taxonomy: 
-\verb|passenger_car|, \verb|passenger_truck|, \verb|light_commerical_truck|, 
+\verb|passenger_car|, \verb|passenger_truck|, \verb|light_commercial_truck|, 
 \verb|bus|, \verb|truck|, and \verb|motorcycle|. 
 This label set was selected to provide a practical balance between compatibility
 with downstream MOVES-based emissions analysis and what could be distinguished 
@@ -306,7 +306,7 @@ difficult to visually determine whether a vehicle should be treated as a
 passenger car or a light-duty truck, but classifies many SUVs and minivans as 
 light-duty trucks rather than passenger cars \cite{USEPA_def_truck_2019}. 
 
-The remaining van instances were mapped to \verb|light_commercial_vehicle|. 
+The remaining van instances were mapped to \verb|light_commercial_truck|. 
 This separation is useful from a computer-vision standpoint, as commercial vans 
 tend to have more consistent shapes and usage patterns than SUVs and pickup trucks.
 It also aligns with MOVES technical guidance, which treats passenger trucks and 

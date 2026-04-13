@@ -3,7 +3,7 @@
 The experimental framework established in this research serves to validate the 
 feasibility of utilizing New York City’s existing traffic surveillance infrastructure
 for high-resolution vehicle classification and emissions estimation. The results 
-demonstrate that anoptimized vehicle detection pipeline, specifically one centered
+demonstrate that an optimized vehicle detection pipeline, specifically one centered
 on the YOLOv11s architecture, can successfully overcome the visual challenges 
 inherent in low-resolution, 352$\times$240 traffic imagery. This discussion 
 synthesizes the technical performance of the evaluated models, the importance of 
@@ -100,7 +100,7 @@ passenger car and passenger trucks, which make up over 77\% of all identified-ve
 Under these conditions, the most significant risk to model performance was not a failure 
 to detect vehicles, but a failure to distinguish between the two passenger vehicle 
 categories. This visual overlap motivated the handling of the \verb|unknown_vehicle|
-class, which was the single largest category in the dataset with 9,586 instances.
+class, which was the single largest category in the dataset with 9,625 instances.
 
 Using \verb|unknown_vehicle| as an ignore region rather than a normal training class
 helped avoid forcing the model to learn from ambiguous examples. In supervised vision
