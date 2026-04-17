@@ -84,7 +84,8 @@ in Figure~\ref{fig:ptz-cameras}.
         \caption{Axis Q1614-E \cite{axis_communications_axis_2026}.}
     \end{subfigure}
 
-    \caption{Example PTZ camera models used in NYSDOT/NYC traffic monitoring infrastructure. Note: camera sizes are not to scale.}
+    \caption[Example PTZ camera models used in NYSDOT/NYC traffic monitoring infrastructure.]
+            {Example PTZ camera models used in NYSDOT/NYC traffic monitoring infrastructure. Note: camera sizes are not to scale.}
     \label{fig:ptz-cameras}
 \end{figure}
 
@@ -210,7 +211,11 @@ locations within NYC are depicted in Figure~\ref{fig:camera-map}.
         \label{fig:side-front-rear-view}
     \end{subfigure}
 
-    \caption{
+    \caption
+    [
+        Examples of vehicle viewpoints across traffic cameras.
+    ]
+    {
         Different views of vehicles through different traffic cameras.
         The images are colored such that vehicles regions highlighted in \textcolor{myyellow}{yellow} show its 
         front, vehicles regions highlighted in \textcolor{red}{red} show its rear, and vehicles regions highlighted 
@@ -313,13 +318,8 @@ Examples of different conditions are shown in Figure~\ref{fig:image-weather-cond
         \caption{Image taken under normal sunny/cloudy conditions.}
     \end{subfigure}
 
-    % \caption{
-    %     Different views of vehicles through different traffic cameras.
-    %     The images are colored such that vehicles highlighted in \textcolor{myyellow}{yellow} show its 
-    %     front, vehicles highlighted in \textcolor{red}{red} show its rear, and vehicles highlighted 
-    %     in \textcolor{blue}{blue} show its side.
-    % }
-    \caption{Examples of traffic camera images collected under different lighting and weather conditions. 
+    \caption[Traffic camera images under different weather and lighting conditions.]
+            {Examples of traffic camera images collected under different lighting and weather conditions. 
              The dataset includes scenes affected by sun glare, rain, nighttime lighting, and more typical daytime 
              conditions.}
     \label{fig:image-weather-conditions}
@@ -407,7 +407,10 @@ profile and a more downward-sloping rear.
         \includegraphics[height=3.5cm]{figures/dataset/3_4_1_sedan_suv_label.png}
         \caption{Sedan (yellow) and SUV (blue) labels used.}
     \end{subfigure}
-    \caption{In this example, the two vehicles in the front of the image are being
+
+    \caption
+             [Example of sedan and SUV labeling heuristics.]
+             {In this example, the two vehicles in the front of the image are being
              compared against each other. Using the colored arrows as a comparison,
              the white vehicle has a shorter cabin profile and a more-downward sloping
              rear compared to the red vehicle. Thus, the white vehicle was labeled as
@@ -440,7 +443,9 @@ front-door handle. This distinction is shown in Figure~\ref{fig:minivan-suv-heur
         \caption{SUV handles and vehicle height.}
         \label{fig:suv-heuristics}
     \end{subfigure}
-    \caption{In this example, a vehicle with the attribute \texttt{is\_minivan} 
+    \caption
+             [Example of SUV and minivan labeling heuristics.]
+             {In this example, a vehicle with the attribute \texttt{is\_minivan} 
              (a) and a vehicle with the label \texttt{suv} (b) are compared in 
              the same camera position. The handles (boxed in red) on the minivan 
              are closer together, while the handles on the SUV are farther apart. 
@@ -549,7 +554,9 @@ Figure~\ref{fig:minivan-attribute}.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=5cm]{figures/dataset/3_4_2_minivan_attribute.png}
-    \caption{Example of an attribute given to a vehicle in CVAT. In this case, the 
+    \caption
+             [Example of an attribute given to a vehicle in CVAT.]
+             {Example of an attribute given to a vehicle in CVAT. In this case, the 
              \texttt{van} was given the attribute \texttt{is\_minivan} due to
              the labeling heuristics described in Section~\ref{sec:label-classes}.}
     \label{fig:minivan-attribute}
@@ -621,7 +628,9 @@ images was preferred.
         \caption{Ambiguous vehicles from (b) are given the \texttt{unknown\_vehicle} class.}
     \end{subfigure}
 
-    \caption{
+    \caption
+    [Example of ambiguous vehicles labeled as \texttt{unknown\_vehicle}.]
+    {
         Figure (a) shows an example frame with confidently labeled vehicles.
         The classes of the vehicles approaching the camera behind the crosswalk,
         shown in (b), are unclear because side-view features are not visible and

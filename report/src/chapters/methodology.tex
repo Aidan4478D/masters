@@ -37,7 +37,8 @@ such as edges, textures, and shapes \cite{geeks4geeks_2017}.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=6.5cm]{figures/methodology/4_1_1_cnn_diagram.png}
-    \caption{Example of convolutional neural network operations. A
+    \caption [Example of convolutional neural network operations.]
+             {Example of convolutional neural network operations. 
              convolutional kernel slides across the input image and performs
              a dot product with local pixel values to produce a feature map
              highlighting the presence of specific patterns. In typical CNN
@@ -96,7 +97,8 @@ resolution, the feature map is smaller than the original image.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=6cm]{figures/methodology/4_1_2_grid.png}
-    \caption{Conceptual grid created by the YOLO architecture. 
+    \caption[Conceptual grid created by the YOLO architecture.]
+            {Conceptual grid created by the YOLO architecture. 
              Adapted from \cite{redmon2016YOLO}.}
     \label{fig:yolo-grid}
 \end{figure}
@@ -146,7 +148,8 @@ image. The bounding box predictions are conceptually shown in Figure~\ref{fig:yo
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=6cm]{figures/methodology/4_1_3_bounding_box.png}
-    \caption{Bounding boxes created by the YOLO architecture. The thickness of 
+    \caption[Bounding boxes created by the YOLO architecture.]
+            {Bounding boxes created by the YOLO architecture. The thickness of 
              each box corresponds to the model's confidence score. The higher the 
              confidence, the thicker the box. Adapted from \cite{redmon2016YOLO}.}
     \label{fig:yolo-bbox}
@@ -200,7 +203,8 @@ different grid locations rather than the final post-processed detections \cite{r
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=6cm]{figures/methodology/4_1_4_class_prob.png}
-    \caption{Conceptual illustration of class predictions across the YOLO grid. 
+    \caption[Conceptual illustration of class predictions across the YOLO grid.]
+            {Conceptual illustration of class predictions across the YOLO grid. 
              Each colored region indicates the dominant predicted class at that spatial 
              location, based on the highest class-specific score. The figure is intended 
              to show how class predictions are distributed across the image and does not 
@@ -235,7 +239,8 @@ please refer to the original work by Redmon et al. \cite{redmon2016YOLO}.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=6cm]{figures/methodology/4_1_5_predictions.png}
-    \caption{Example final class-predictions and bounding boxes.
+    \caption[Example final class-predictions and bounding boxes.]
+            {Example final class-predictions and bounding boxes.
              Adapted from \cite{redmon2016YOLO}.}
     \label{fig:yolo-predictions}
 \end{figure}
@@ -331,7 +336,8 @@ taxonomy is shown in Figure~\ref{fig:moves-mapping}.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=7cm]{figures/methodology/4_2_class_taxonomy.png}
-    \caption{Final MOVES-based class mapping used in this study. Dataset classes 
+    \caption[Final MOVES-based class mapping used in this study.] 
+        {Final MOVES-based class mapping used in this study. Dataset classes 
          on the left were mapped to the MOVES-aligned detector classes on the 
          right. Arrows of the same color indicate the corresponding class 
          mapping, with van instances labeled \texttt{is\_minivan} grouped into 
@@ -379,7 +385,8 @@ for an example of a training image before and after masking.
         \caption{Same training image after masking regions annotated as \texttt{unknown\_vehicle} with the neutral fill value.}
         \label{fig:masked-unknown}
     \end{subfigure}
-    \caption{Example of \texttt{unknown\_vehicle} masking during training set preparation.
+    \caption[Example of \texttt{unknown\_vehicle} masking during training set preparation.]
+            {Example of \texttt{unknown\_vehicle} masking during training set preparation.
              Subfigure (a) shows the \texttt{unknown\_vehicle} regions outlined in purple 
              for reference, while subfigure (b) shows the same image after the 
              \texttt{unknown\_vehicle} regions were masked with the neutral fill value 
@@ -429,7 +436,8 @@ Figure~\ref{fig:iou_calc} shows the corresponding IoU calculation.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=3.5cm]{figures/methodology/4_4_intersection_union.png}
-    \caption{Example of the intersection and union between a ground-truth bounding box ({\color{red}red}) 
+    \caption[Example of intersection and union for IoU]
+            {Example of the intersection and union between a ground-truth bounding box ({\color{red}red}) 
              and a predicted bounding box ({\color{myyellow}gold}). The figures show the original overlap, 
              the intersection area, and the union area used in the IoU calculation.}
     \label{fig:intersection-union}
@@ -438,7 +446,7 @@ Figure~\ref{fig:iou_calc} shows the corresponding IoU calculation.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.6\textwidth]{figures/methodology/4_4_iou_calculation.png}
-    \caption{IoU Calculation}
+    \caption{Intersection over Union calculation.}
     \label{fig:iou_calc}
 \end{figure}
 
@@ -451,7 +459,7 @@ for a bounding box prediction to be considered valid.
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=6.5cm]{figures/methodology/4_4_confusion_matrix.png}
-    \caption{Confusion Matrix}
+    \caption{Confusion matrix structure.}
     \label{fig:conf_matrix}
 \end{figure}
 
@@ -562,7 +570,7 @@ from the rest of the traffic flow). AP is calculated as follows:
 \begin{figure}[!htbp]
     \centering
     \includegraphics[height=6cm]{figures/methodology/4_4_example_pr_curve_ap.png}
-    \caption{Average Precision within a Precision-Recall Curve}
+    \caption{Average precision on a precision-recall curve.}
     \label{fig:ex_pr_curve_ap}
 \end{figure}
 

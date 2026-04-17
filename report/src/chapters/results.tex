@@ -87,7 +87,8 @@ procedure described in Section \ref{sec:unknown-vehicles}.
         \caption{Validation mAP versus training epoch for the baseline YOLOv8s, YOLOv11s, and YOLOv26s models.}
         \label{fig:baseline-maps}
     \end{subfigure}
-    \caption{Validation AP50 and mAP over 50 epochs for the baseline YOLOv8s, 
+    \caption[Baseline YOLO validation AP50 and mAP over 50 epochs.]
+            {Validation AP50 and mAP over 50 epochs for the baseline YOLOv8s, 
              YOLOv11s, and YOLOv26s models. All three models showed rapid early 
              improvement followed by a gradual plateau, with YOLOv26s achieving the 
              strongest baseline mAP and YOLOv11s remaining competitive in AP50.}
@@ -159,7 +160,8 @@ evaluation outlined in Section~\ref{sec:unknown-vehicles}.
         \caption{Validation confusion matrix for the baseline YOLOv26s model before dataset refinement}
         \label{fig:val-cm-26s-pre}
     \end{subfigure}
-    \caption{Ignore-aware validation confusion matrices for the baseline YOLOv11s
+    \caption[YOLOv11s and YOLOv26s validation confusion matrix before refinement.]
+            {Ignore-aware validation confusion matrices for the baseline YOLOv11s
              and YOLOv26s models prior to dataset refinement. No annotations were 
              modified directly from model predictions. Instead, questionable cases 
              were reviewed individually and corrected only when a labeling 
@@ -194,7 +196,8 @@ were predicted for background regions was reduced.
         \caption{Validation confusion matrix for the baseline YOLOv26s model after dataset refinement}
         \label{fig:val-cm-26s-post}
     \end{subfigure}
-    \caption{Ignore-aware validation confusion matrices for the baseline YOLOv11s
+    \caption[YOLOv11s and YOLOv26s validation confusion matrix after refinement.]
+            {Ignore-aware validation confusion matrices for the baseline YOLOv11s
              and YOLOv26s models after dataset refinement.}
     \label{fig:val-cm-post}
 \end{figure}
@@ -288,15 +291,16 @@ confused between the passenger car and passenger truck classes.
         \caption{Same image with hard negative passenger car - passenger truck confusions identified by the mining procedure.}
         \label{fig:hardneg-boxes}
     \end{subfigure}
-    \caption{Example of a hard negative identified during passenger car - passenger 
-    truck mining with the YOLOv11s baseline. Subfigure (a) shows the original training image, while subfigure 
-    (b) shows the same image with class-swap detections highlighted. \textcolor{blue}{Blue} 
-    boxes denote passenger trucks predicted as passenger cars, and \textcolor{darkgreen}{green}
-    boxes denote passenger cars predicted as passenger trucks. The number next 
-    to the bounding boxes represents the prediction confidence score. These visually 
-    difficult boundary cases were duplicated back into the training set during 
-    retraining so that the detector would be exposed more frequently to the most 
-    informative class confusions.}
+    \caption[Example of a hard negative from car-truck confusion mining.]
+            {Example of a hard negative identified during passenger car - passenger 
+            truck mining with the YOLOv11s baseline. Subfigure (a) shows the original training image, while subfigure 
+            (b) shows the same image with class-swap detections highlighted. \textcolor{blue}{Blue} 
+            boxes denote passenger trucks predicted as passenger cars, and \textcolor{darkgreen}{green}
+            boxes denote passenger cars predicted as passenger trucks. The number next 
+            to the bounding boxes represents the prediction confidence score. These visually 
+            difficult boundary cases were duplicated back into the training set during 
+            retraining so that the detector would be exposed more frequently to the most 
+            informative class confusions.}
     \label{fig:hard-negative-example}
 \end{figure}
 
@@ -656,7 +660,9 @@ and visual clutter, but may also suppress vehicles that would otherwise be count
         \label{fig:nms-threshold-example-c}
     \end{subfigure}
 
-    \caption{Qualitative example of confidence-threshold and NMS sensitivity for the final YOLOv11s model. Each panel shows the same traffic scene under a different inference configuration, with red boxes indicating retained detections and adjacent numbers indicating confidence scores. Lowering the NMS IoU threshold reduces overlapping detections, while increasing the confidence threshold further suppresses weaker predictions.}
+    \caption
+        [Example of confidence-threshold and NMS sensitivity.]
+        {Qualitative example of confidence-threshold and NMS sensitivity for the final YOLOv11s model. Each panel shows the same traffic scene under a different inference configuration, with red boxes indicating retained detections and adjacent numbers indicating confidence scores. Lowering the NMS IoU threshold reduces overlapping detections, while increasing the confidence threshold further suppresses weaker predictions.}
     \label{fig:nms-threshold-example}
 \end{figure}
 
@@ -694,7 +700,9 @@ NMS IoU grid for the final YOLOv11s model.
         \caption{Validation mAP across confidence-threshold and NMS IoU settings for the final YOLOv11s model.}
         \label{fig:conf-nms-map}
     \end{subfigure}
-    \caption{Heatmaps showing the sensitivity of validation performance to inference-time confidence and NMS IoU settings for the final YOLOv11s model. Subfigure (a) shows AP50 and subfigure (b) shows mAP over the evaluated confidence-threshold and NMS IoU grid.}
+
+    \caption[Heatmaps showing performance sensitivity to confidence and NMS settings.]
+            {Heatmaps showing the sensitivity of validation performance to inference-time confidence and NMS IoU settings for the final YOLOv11s model. Subfigure (a) shows AP50 and subfigure (b) shows mAP over the evaluated confidence-threshold and NMS IoU grid.}
     \label{fig:conf-nms-heatmaps}
 \end{figure}
 \FloatBarrier
@@ -972,7 +980,8 @@ the normalized hourly counts for the YOLO and ATR detections.
         \label{fig:atr-broadway-norm}
     \end{subfigure}
 
-    \caption{Hourly detector-derived and ATR traffic-count comparisons for the 
+    \caption[Hourly YOLO and ATR traffic-count comparisons.]
+            {Hourly detector-derived and ATR traffic-count comparisons for the 
              selected camera-day pairs. The plots compare YOLO-derived counts from 
              March 2026 against matched ATR counts from March 2025. Subfigures 
              (a) and (b) show Pelham Parkway Westbound at Boston Road, with a 
