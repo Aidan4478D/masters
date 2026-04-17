@@ -115,7 +115,7 @@ uncertain regions.
 
 % ==============================================================================
 
-\subsection{Data-Centric Refinement vs. Model Complexity}
+\subsection{Performance Gains from Targeted Data Refinement}
 
 The improvement from the baseline YOLOv11s model (AP50 of 0.804) to the final selected 
 version (AP50 of 0.857) is consistent with recent work emphasizing that model performance
@@ -145,7 +145,7 @@ is weakest.
 
 % ==============================================================================
 
-\subsection{Evaluation and Inference Results}
+\subsection{Confidence Threshold Selection for Practical Inference}
 
 A key result from the threshold sensitivity analysis in Section~\ref{sec:conf-nms-analysis}
 is that the validation metrics were driven much more by the confidence threshold 
@@ -176,7 +176,7 @@ that gives the cleanest and most reliable vehicle counts.
 
 % ==============================================================================
 
-\subsection{Generalization Stability and Domain Sensitivity}
+\subsection{Cross-Camera Generalization and Domain Sensitivity}
 
 A key question for practical deployment is how well the final detector generalizes 
 beyond the data used for model selection. To examine this, the final YOLOv11s model 

@@ -2,60 +2,63 @@
 \contentsline {section}{\numberline {2}Background and Related Work}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}MOtor Vehicle Emission Simulator (MOVES)}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}NYC Traffic Monitoring}{4}{subsection.2.2}%
-\contentsline {subsubsection}{Traditional Vehicle Monitoring Methods}{4}{section*.5}%
-\contentsline {subsubsection}{Traffic-Camera Based Monitoring}{7}{section*.8}%
+\contentsline {subsubsection}{\numberline {2.2.1}Traditional Vehicle Monitoring Methods}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Traffic-Camera Based Monitoring}{7}{subsubsection.2.2.2}%
 \contentsline {section}{\numberline {3}Dataset}{8}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Data Source}{8}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Camera Hardware}{9}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Dataset Curation}{10}{subsection.3.3}%
-\contentsline {subsubsection}{Camera Selection}{10}{section*.10}%
-\contentsline {subsubsection}{Image Collection}{13}{section*.15}%
+\contentsline {subsubsection}{\numberline {3.3.1}Camera Selection}{10}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Image Collection}{13}{subsubsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.4}Data Labeling}{15}{subsection.3.4}%
-\contentsline {subsubsection}{Annotation Class Design}{16}{section*.19}%
-\contentsline {subsubsection}{Attributes}{19}{section*.22}%
-\contentsline {subsubsection}{Unknown Vehicle Class}{20}{section*.24}%
-\contentsline {subsubsection}{Annotation Procedure}{22}{section*.26}%
+\contentsline {subsubsection}{\numberline {3.4.1}Annotation Class Design}{16}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Attributes}{19}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Unknown Vehicle Class}{20}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Annotation Procedure}{22}{subsubsection.3.4.4}%
 \contentsline {subsection}{\numberline {3.5}Dataset Statistics}{23}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Dataset Splits}{23}{subsection.3.6}%
 \contentsline {section}{\numberline {4}Methodology}{26}{section.4}%
 \contentsline {subsection}{\numberline {4.1}YOLO-Based Object Detection}{26}{subsection.4.1}%
-\contentsline {subsubsection}{Convolutional Neural Networks (CNNs)}{26}{section*.33}%
-\contentsline {subsubsection}{Grid-Based Prediction}{28}{section*.35}%
-\contentsline {subsubsection}{Bounding Box Prediction}{29}{section*.37}%
-\contentsline {subsubsection}{Class Probability Prediction}{30}{section*.39}%
-\contentsline {subsubsection}{Post-Processing and Final Detections}{31}{section*.41}%
-\contentsline {subsubsection}{YOLOv11 Architecture}{32}{section*.43}%
+\contentsline {subsubsection}{\numberline {4.1.1}Convolutional Neural Networks (CNNs)}{26}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Grid-Based Prediction}{28}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Bounding Box Prediction}{29}{subsubsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.4}Class Probability Prediction}{30}{subsubsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.5}Post-Processing and Final Detections}{31}{subsubsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.6}YOLOv11 Architecture}{32}{subsubsection.4.1.6}%
 \contentsline {subsection}{\numberline {4.2}MOVES-based Taxonomy}{33}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Handling Unknown Vehicles}{34}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Performance Metrics}{36}{subsection.4.4}%
-\contentsline {subsubsection}{Intersection over Union}{36}{section*.46}%
-\contentsline {subsubsection}{Confusion Matrix}{37}{section*.49}%
-\contentsline {subsubsection}{Precision-Recall Curve}{38}{section*.51}%
-\contentsline {subsubsection}{Average Precision and mAP}{39}{section*.52}%
+\contentsline {subsubsection}{\numberline {4.4.1}Intersection over Union}{36}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Confusion Matrix}{37}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Precision-Recall Curve}{38}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}Average Precision and mAP}{39}{subsubsection.4.4.4}%
 \contentsline {subsection}{\numberline {4.5}Experimental Environment}{41}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Experimentation and Results}{42}{section.5}%
 \contentsline {subsection}{\numberline {5.1}YOLO-Based Detector Development and Results}{42}{subsection.5.1}%
-\contentsline {subsubsection}{Baseline YOLO Experiments}{42}{section*.54}%
-\contentsline {subsubsection}{Data-Centric Refinements}{44}{section*.57}%
-\contentsline {subsubsection}{Final YOLO Model Selection and Test-Set Evaluation}{51}{section*.63}%
-\contentsline {subsection}{\numberline {5.2}Comparison with Alternative Detection Architectures}{51}{subsection.5.2}%
-\contentsline {subsubsection}{Faster R-CNN}{51}{section*.65}%
-\contentsline {subsubsection}{Detection Transformer (DETR)}{53}{section*.67}%
-\contentsline {subsection}{\numberline {5.3}Model Robustness and Cross-Camera Generalization}{54}{subsection.5.3}%
-\contentsline {subsubsection}{Confidence Threshold and NMS Sensitivity Analysis}{55}{section*.69}%
-\contentsline {subsubsection}{Cross-Camera Generalization}{58}{section*.72}%
-\contentsline {subsection}{\numberline {5.4}Comparison with ATR Traffic Counts}{59}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Discussion}{63}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Evaluation of Detection Architectures for NYC Imagery}{63}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Rationale for the MOVES-Based Taxonomy}{64}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Data-Centric Refinement vs. Model Complexity}{65}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Evaluation and Inference Results}{66}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Generalization Stability and Domain Sensitivity}{67}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {5.1.1}Baseline YOLO Experiments}{42}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Data-Centric Refinements}{44}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Final YOLO Model Selection and Test-Set Evaluation}{51}{subsubsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.2}Comparison with Alternative Detection Architectures}{52}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Faster R-CNN}{52}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Detection Transformer (DETR)}{54}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}Model Robustness and Cross-Camera Generalization}{55}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Confidence Threshold and NMS Sensitivity Analysis}{55}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Cross-Camera Generalization}{58}{subsubsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.4}Comparison with ATR Traffic Counts}{60}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Discussion}{64}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Evaluation of Detection Architectures for NYC Imagery}{64}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Rationale for the MOVES-Based Taxonomy}{65}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Performance Gains from Targeted Data Refinement}{66}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Confidence Threshold Selection for Practical Inference}{67}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Cross-Camera Generalization and Domain Sensitivity}{68}{subsection.6.5}%
 \contentsline {subsection}{\numberline {6.6}Analysis of Traffic Count Agreement}{69}{subsection.6.6}%
-\contentsline {subsection}{\numberline {6.7}Implications for Public Health and Environmental Policy}{70}{subsection.6.7}%
-\contentsline {section}{\numberline {7}Limitations}{71}{section.7}%
+\contentsline {subsection}{\numberline {6.7}Implications for Public Health and Environmental Policy}{71}{subsection.6.7}%
+\contentsline {section}{\numberline {7}Limitations}{72}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Imaging and Dataset Constraints}{72}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Modeling and Taxonomy}{73}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Downstream Counting and Deployment}{74}{subsection.7.3}%
 \contentsline {section}{\numberline {8}Future Work}{75}{section.8}%
 \contentsline {section}{\numberline {9}Conclusion}{76}{section.9}%
-\contentsline {section}{Appendix}{78}{section*.82}%
+\contentsline {section}{Appendix}{78}{section*.57}%
 \contentsline {section}{\numberline {A}Transformer Training Augmentation Pipeline}{78}{appendix.A}%
-\contentsline {section}{References}{80}{section*.83}%
+\contentsline {section}{References}{80}{section*.58}%

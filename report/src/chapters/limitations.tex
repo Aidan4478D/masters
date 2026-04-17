@@ -4,7 +4,7 @@ Despite the success of the final YOLOv11s pipeline, several limitations must be
 acknowledged regarding the data, the modeling approach, and the downstream application 
 of the system.
 
-\textbf{Imaging and Dataset Constraints}
+\subsection{Imaging and Dataset Constraints}
 
 First, the $352 \times 240$ resolution of the 511NY and NYSDOT camera feeds places
 a clear limit on how much visual detail the detector can use. Many vehicles appear 
@@ -64,7 +64,7 @@ bicycles or other small two-wheeled objects.
 
 % ------------------------------------------------------------------------------
 
-\textbf{Modeling and Taxonomy}
+\subsection{Modeling and Taxonomy}
 
 The 6-class taxonomy was designed to support MOVES-based emissions analysis, but
 it is still a simplified representation of the full vehicle categories used in MOVES. 
@@ -96,7 +96,7 @@ if that comes with some loss of classification detail.
 
 % ------------------------------------------------------------------------------
 
-\textbf{Downstream Counting and Deployment}
+\subsection{Downstream Counting and Deployment}
 
 A major limitation of the proposed system is that it operates on isolated still 
 frames rather than continuous video. The current pipeline does not track vehicles

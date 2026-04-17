@@ -1443,6 +1443,7 @@
       \field{urlday}{2}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.nyc.gov/html/dot/html/about/datafeeds.shtml
@@ -1899,6 +1900,7 @@
       \field{urlday}{11}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
+      \field{year}{2026}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://afdc.energy.gov/data/10380
@@ -2825,6 +2827,7 @@
       \field{urlday}{6}
       \field{urlmonth}{4}
       \field{urlyear}{2026}
+      \field{year}{2024}
       \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://docs.ultralytics.com/modes/val/
