@@ -1,12 +1,13 @@
 \begin{abstract}
     Traffic-related air pollution remains an important public health concern in 
     dense urban environments, but traditional monitoring infrastructure cannot 
-    easily provide continuous, street-level measurements by vehicle type. This 
+    easily provide continuous, street-level measurements that distinguish between 
+    different types of vehicles. This 
     thesis investigates whether existing New York City traffic-camera feeds can 
     be used to estimate traffic flow and vehicle composition for downstream emissions
     analysis. To address this problem, a 1,200-image low-resolution vehicle detection 
     dataset was constructed from 511NY and NYSDOT imagery and annotated using a 
-    6-class taxonomy aligned with broad EPA MOVES vehicle categories. Several 
+    6-class structure aligned with broad EPA MOVES vehicle categories. Several 
     object-detection architectures were evaluated, including YOLO, Faster R-CNN, 
     RT-DETR, and Deformable DETR, with YOLOv11s providing the strongest overall 
     performance. The baseline YOLOv11s model achieved an AP50 of 0.804 and an mAP 
@@ -15,7 +16,7 @@
     held-out test set, the final model reached an AP50 of 0.772 and an mAP of
     0.607, while performance on a cross-camera benchmark of unseen locations dropped
     to an AP50 of 0.658 and an mAP of 0.488, showing that generalization to new 
-    camera views remained a challenge. Comparison against New York City Automated 
+    camera views remains a challenge. Comparison against New York City Automated 
     Traffic Recorder (ATR) data showed that the pipeline was better at recovering 
     the temporal pattern of traffic flow than exact count magnitude, with the 
     strongest agreement at Atlantic Avenue at Boerum Place, where Pearson correlation
