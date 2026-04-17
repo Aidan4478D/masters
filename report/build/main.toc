@@ -36,13 +36,13 @@
 \contentsline {section}{\numberline {5}Experimentation and Results}{42}{section.5}%
 \contentsline {subsection}{\numberline {5.1}YOLO-Based Detector Development and Results}{42}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}Baseline YOLO Experiments}{42}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Data-Centric Refinements}{44}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2}Data-Centric Refinements}{45}{subsubsection.5.1.2}%
 \contentsline {subsubsection}{\numberline {5.1.3}Final YOLO Model Selection and Test-Set Evaluation}{51}{subsubsection.5.1.3}%
 \contentsline {subsection}{\numberline {5.2}Comparison with Alternative Detection Architectures}{52}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Faster R-CNN}{52}{subsubsection.5.2.1}%
 \contentsline {subsubsection}{\numberline {5.2.2}Detection Transformer (DETR)}{54}{subsubsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.3}Model Robustness and Cross-Camera Generalization}{55}{subsection.5.3}%
-\contentsline {subsubsection}{\numberline {5.3.1}Confidence Threshold and NMS Sensitivity Analysis}{55}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1}Confidence Threshold and NMS Sensitivity Analysis}{56}{subsubsection.5.3.1}%
 \contentsline {subsubsection}{\numberline {5.3.2}Cross-Camera Generalization}{58}{subsubsection.5.3.2}%
 \contentsline {subsection}{\numberline {5.4}Comparison with ATR Traffic Counts}{60}{subsection.5.4}%
 \contentsline {section}{\numberline {6}Discussion}{64}{section.6}%
@@ -54,7 +54,7 @@
 \contentsline {subsection}{\numberline {6.6}Analysis of Traffic Count Agreement}{69}{subsection.6.6}%
 \contentsline {subsection}{\numberline {6.7}Implications for Public Health and Environmental Policy}{71}{subsection.6.7}%
 \contentsline {section}{\numberline {7}Limitations}{72}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Imaging and Dataset Constraints}{72}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.1}Imaging and Dataset}{72}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Modeling and Taxonomy}{73}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Downstream Counting and Deployment}{74}{subsection.7.3}%
 \contentsline {section}{\numberline {8}Future Work}{75}{section.8}%

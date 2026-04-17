@@ -4,7 +4,7 @@ The experimental framework established in this research serves to validate the
 feasibility of utilizing New York City’s existing traffic surveillance infrastructure
 for high-resolution vehicle classification and emissions estimation. The results 
 demonstrate that an optimized vehicle detection pipeline, specifically one centered
-on the YOLOv11s architecture, can successfully overcome the visual challenges 
+on the YOLOv11s architecture, can effectively address many of the visual challenges 
 inherent in low-resolution, 352$\times$240 traffic imagery. This discussion 
 synthesizes the technical performance of the evaluated models, the importance of 
 the MOVES-based taxonomy, and the broader implications of these findings for 
@@ -49,7 +49,7 @@ two-stage detectors like Faster R-CNN try to locate candidate objects first and 
 them second. However, across the 1,200-image dataset, this two-stage approach struggled 
 to reliably detect the vehicles. Even when the Faster R-CNN model was tuned 
 (the \verb|fasterrcnn_resnet50_fpn_v2| version) with 8 to 128-pixel anchors, it 
-still couldn't beat the baseline performance scores (AP50) of the YOLO models.
+still could not beat the baseline performance scores (AP50) of the YOLO models.
 
 Furthermore, the transformer-based models (the DETR family) demonstrated a clear 
 sensitivity to data volume and augmentation strategy. As noted in Section~\ref{sec:detr},
@@ -206,7 +206,7 @@ more surrounding buildings and more distant vehicles.
 
 \begin{table}[!htbp]
     \centering
-    \caption{Comparison of held-out test-set and cross-camera benchmark performance for the final YOLOv11s model. The change column reports the difference between the cross-camera benchmark and the held-out test set ($\Delta = \text{cross-camera} - \text{held-out test}$).}
+    \caption{Comparison of held-out test set and cross-camera benchmark performance for the final YOLOv11s model. The change column reports the difference between the cross-camera benchmark and the held-out test set ($\Delta = \text{cross-camera} - \text{held-out test}$).}
     \label{tab:cross-test-comparison}
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{l c c c}
@@ -230,8 +230,8 @@ more surrounding buildings and more distant vehicles.
 \end{table}
 \FloatBarrier
 
-The Table~\ref{tab:cross-test-comparison}. class-level AP50 differences from test
-set to the cross-camera benchmark show that the performance decline was not uniform. 
+Table~\ref{tab:cross-test-comparison} shows that the class-level AP50 differences from the test
+set to the cross-camera benchmark were not uniform.
 Passenger trucks were the most stable major class, while passenger cars, light 
 commercial trucks, trucks, and especially buses were more sensitive to the unseen 
 views. This pattern suggests that cross-camera generalization depended not just 

@@ -1,7 +1,7 @@
 \section{Dataset}
 
 To train and evaluate the vehicle detection pipeline, a custom dataset of real-world 
-NYC traffic  was required. Rather than relying on pre-existing generic vehicle 
+NYC traffic imagery was required. Rather than relying on pre-existing generic vehicle 
 datasets (e.g., Stanford Cars \cite{Krause2013CollectingAL} or BIT-Vehicle \cite{dong_vehicle_2015}), 
 this study utilized publicly available traffic camera closed-circuit television 
 (CCTV) feeds. This is because the physical camera infrastructure is already installed  
@@ -92,9 +92,9 @@ in Figure~\ref{fig:ptz-cameras}.
 \FloatBarrier
 
 While these cameras are capable of high-resolution video, the images returned 
-by the 511NY API \verb|GetCamera| endpoint have a resolution of $352 \times 240$, and are 
+by the 511NY API \verb|GetCameras| endpoint have a resolution of $352 \times 240$, and are 
 generally low-quality. Examples of such images can be seen in Figure~\ref{fig:image-weather-conditions}.
-It is possible that the images returned from the \verb|GetCamera| endpoint are intentionally 
+It is possible that the images returned from the \verb|GetCameras| endpoint are intentionally 
 downsampled and compressed, as this reduces server bandwidth and inherently 
 enforces privacy by making it impossible to read license plates or use facial 
 recognition. Thus the images used in this dataset all have the dimensions $352 \times 240$.
@@ -168,7 +168,7 @@ on any NYC traffic camera, it is necessary to make sure all views of different
 vehicle orientations are captured so the model is robust to any view of the vehicle.
 Figure~\ref{fig:vehicle-views} shows four different views of vehicle orientations the cameras can 
 record. The images are colored such that vehicle regions highlighted in yellow show 
-its front, vehicles regions highlighted in red show its rear, and vehicles regions highlighted
+its front, vehicle regions highlighted in red show its rear, and vehicle regions highlighted
 in blue show its side. There are some cameras which only see one orientation 
 of vehicles (Figure~\ref{fig:front-side-view}), but there are also cameras which see two 
 (Figures~\ref{fig:side-rear-view} and \ref{fig:rear-front-view}) or three 
@@ -217,8 +217,8 @@ locations within NYC are depicted in Figure~\ref{fig:camera-map}.
     ]
     {
         Different views of vehicles through different traffic cameras.
-        The images are colored such that vehicles regions highlighted in \textcolor{myyellow}{yellow} show its 
-        front, vehicles regions highlighted in \textcolor{red}{red} show its rear, and vehicles regions highlighted 
+        The images are colored such that vehicle regions highlighted in \textcolor{myyellow}{yellow} show its 
+        front, vehicle regions highlighted in \textcolor{red}{red} show its rear, and vehicle regions highlighted 
         in \textcolor{blue}{blue} show its side.
     }
     \label{fig:vehicle-views}

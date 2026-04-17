@@ -100,7 +100,7 @@ procedure described in Section \ref{sec:unknown-vehicles}.
 \begin{table}[!htbp]
     \centering
     \caption{Baseline validation performance of the three YOLO model variants under 
-             the final 6-class formulationm reported at the checkpoint with the best 
+             the final 6-class formulation reported at the checkpoint with the best 
              validation mAP for each model. The top score for each metric is in bold.}
     \label{tab:yolo-baseline-results}
     \begin{tabular}{l c c c}
@@ -126,7 +126,7 @@ whether these baseline results could be further improved through data-centric
 refinement strategies.
 
 % ==============================================================================
-
+\newpage
 \subsubsection{Data-Centric Refinements}
 \label{sec:data-refinement}
 
@@ -157,7 +157,7 @@ evaluation outlined in Section~\ref{sec:unknown-vehicles}.
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
         \includegraphics[height=9cm]{figures/results/5_1_2_v26s_cm_pre.png}
-        \caption{Validation confusion matrix for the baseline YOLOv26s model before dataset refinement}
+        \caption{Validation confusion matrix for the baseline YOLOv26s model before dataset refinement.}
         \label{fig:val-cm-26s-pre}
     \end{subfigure}
     \caption[YOLOv11s and YOLOv26s validation confusion matrix before refinement.]
@@ -189,7 +189,7 @@ were predicted for background regions was reduced.
     \begin{subfigure}[c]{0.48\textwidth}
         \centering
         \includegraphics[height=9cm]{figures/results/5_1_2_v26s_cm_post.png}
-        \caption{Validation confusion matrix for the baseline YOLOv26s model after dataset refinement}
+        \caption{Validation confusion matrix for the baseline YOLOv26s model after dataset refinement.}
         \label{fig:val-cm-26s-post}
     \end{subfigure}
     \caption[YOLOv11s and YOLOv26s validation confusion matrix after refinement.]
@@ -283,11 +283,11 @@ confused between the passenger car and passenger truck classes.
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[height=5cm]{figures/results/5_1_2_hardneg_boxes.png}
-        \caption{Same image with hard negative passenger car - passenger truck confusions identified by the mining procedure.}
+        \caption{Same image with hard negative passenger car / passenger truck confusions identified by the mining procedure.}
         \label{fig:hardneg-boxes}
     \end{subfigure}
-    \caption[Example of a hard negative from car-truck confusion mining.]
-            {Example of a hard negative identified during passenger car - passenger 
+    \caption[Example of a hard negative from car/truck confusion mining.]
+            {Example of a hard negative identified during passenger car / passenger 
             truck mining with the YOLOv11s baseline. Subfigure (a) shows the original training image, while subfigure 
             (b) shows the same image with class-swap detections highlighted. \textcolor{blue}{Blue} 
             boxes denote passenger trucks predicted as passenger cars, and \textcolor{darkgreen}{green}
@@ -394,7 +394,7 @@ freeze = 10
 
 Overall, the data-centric refinement experiments showed that the largest performance 
 gains were obtained from adding mined hard examples targeting the 
-\verb|passenger_car|–\verb|passenger_truck| boundary, whereas broader
+\verb|passenger_car|/\verb|passenger_truck| boundary, whereas broader
 class-specific oversampling and additional hyperparameter changes did not yield 
 further improvement.
 
@@ -414,16 +414,16 @@ upon the validation performance of the final YOLOv11s model. It was therefore
 selected for all remaining evaluations and was assessed once on the held-out test
 set, which had been reserved exclusively for final evaluation. The test set was 
 evaluated using the same ignore-aware procedure used for validation, as outlined 
-in Section~\ref{sec:unknown-vehicles}. The resulting test-set performance is 
+in Section~\ref{sec:unknown-vehicles}. The resulting test set performance is 
 summarized by class in Table~\ref{tab:yolo-final-test-results}.
 
 \begin{table}[!htbp]
     \centering
-    \caption{Held-out test-set performance of the final YOLOv11s model, reported by class.}
+    \caption{Held-out test set performance of the final YOLOv11s model, reported by class.}
     \label{tab:yolo-final-test-results}
     \begin{tabular}{l c c c c}
         \toprule
-        Class & Images & Instances & AP50 & mAPj \\
+        Class & Images & Instances & AP50 & mAP \\
         \midrule
         passenger\_car            & 114 & 363  & 0.779 & 0.620 \\
         passenger\_truck          & 117 & 643  & 0.868 & 0.705 \\
@@ -626,24 +626,7 @@ IoU threshold remains at 0.40 while the confidence threshold is increased to 0.1
 removing many weaker detections and leaving a sparser set of predictions. Together,
 these examples show how stricter inference settings can reduce duplicate detections 
 and visual clutter, but may also suppress vehicles that would otherwise be counted.
-To examine the stability of the detector across a reasonable operating range, the 
-confidence threshold was swept over:
-\[
-\{0.001,\ 0.005,\ 0.01,\ 0.05,\ 0.10,\ 0.25,\ 0.35,\ 0.50,\ 0.75\}
-\]
-and the NMS IoU threshold was swept over
-\[
-\{0.40,\ 0.50,\ 0.60,\ 0.70\}.
-\]
 
-For each combination, predictions were evaluated on the validation set using the
-same ignore-aware evaluation procedure described in Section~\ref{sec:unknown-vehicles},
-in which detections overlapping \verb|unknown_vehicle| regions above the specified
-ignore IoU threshold were removed before scoring. This produced a grid of 36 inference
-configurations, allowing the sensitivity of both AP50 and mAP to be assessed without 
-using the held-out test set for tuning. Figure~\ref{fig:conf-nms-heatmaps} presents 
-heatmaps of validation AP50 and mAP across the evaluated confidence-threshold and 
-NMS IoU grid for the final YOLOv11s model.
 
 \begin{figure}[!htbp]
     \centering
@@ -679,6 +662,24 @@ NMS IoU grid for the final YOLOv11s model.
     \label{fig:nms-threshold-example}
 \end{figure}
 
+To examine the stability of the detector across a reasonable operating range, the 
+confidence threshold was swept over:
+\[
+\{0.001,\ 0.005,\ 0.01,\ 0.05,\ 0.10,\ 0.25,\ 0.35,\ 0.50,\ 0.75\}
+\]
+and the NMS IoU threshold was swept over
+\[
+\{0.40,\ 0.50,\ 0.60,\ 0.70\}.
+\]
+
+For each combination, predictions were evaluated on the validation set using the
+same ignore-aware evaluation procedure described in Section~\ref{sec:unknown-vehicles},
+in which detections overlapping \verb|unknown_vehicle| regions above the specified
+ignore IoU threshold were removed before scoring. This produced a grid of 36 inference
+configurations, allowing the sensitivity of both AP50 and mAP to be assessed without 
+using the held-out test set for tuning. Figure~\ref{fig:conf-nms-heatmaps} presents 
+heatmaps of validation AP50 and mAP across the evaluated confidence-threshold and 
+NMS IoU grid for the final YOLOv11s model.
 
 \begin{figure}[!htbp]
     \centering
@@ -836,7 +837,7 @@ Images were collected from March 13, 2026 at 12:01 AM through March 20, 2026 at
 the sampling rate used during dataset creation, to reduce the risk of the same 
 scene being counted more than once, since the camera feeds updated slowly and 
 explicit image-to-image vehicle matching was not implemented.
-See Table~\ref{tab:atr-image-collection}. for information regarding the
+See Table~\ref{tab:atr-image-collection} for information regarding the
 dates in which the collected images are compared against the true ATR counts. 
 These comparison dates were chosen as they were when the 2025 ATR data was collected 
 for the specified street intersections.
