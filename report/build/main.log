@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  25 APR 2026 15:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  25 APR 2026 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1270,7 +1270,7 @@ pt>
 File: figures/methodology/4_4_example_pr_curve_ap.png Graphic file (type png)
 <use figures/methodology/4_4_example_pr_curve_ap.png>
 Package pdftex.def Info: figures/methodology/4_4_example_pr_curve_ap.png  used 
-on input line 572.
+on input line 564.
 (pdftex.def)             Requested size: 214.42197pt x 170.71652pt.
  [39] [40 <./figures/methodology/4_4_example_pr_curve_ap.png>])
 (./chapters/results.tex [41] [42]
@@ -1282,11 +1282,6 @@ File: figures/results/5_1_1_baseline_overlayed_ap50.png Graphic file (type png)
 Package pdftex.def Info: figures/results/5_1_1_baseline_overlayed_ap50.png  use
 d on input line 79.
 (pdftex.def)             Requested size: 210.78392pt x 128.0374pt.
-
-Underfull \hbox (badness 1509) in paragraph at lines 80--80
-[]\OT1/lmr/m/n/10.95 (a) |Val-i-da-tion AP50 ver-sus train-ing epoch
- []
-
 <figures/results/5_1_1_baseline_overlayed_map.png, id=780, 642.4803pt x 390.258
 pt>
 File: figures/results/5_1_1_baseline_overlayed_map.png Graphic file (type png)
@@ -1294,13 +1289,8 @@ File: figures/results/5_1_1_baseline_overlayed_map.png Graphic file (type png)
 Package pdftex.def Info: figures/results/5_1_1_baseline_overlayed_map.png  used
  on input line 86.
 (pdftex.def)             Requested size: 210.78392pt x 128.0374pt.
-
-Underfull \hbox (badness 1769) in paragraph at lines 87--87
-[]\OT1/lmr/m/n/10.95 (b) |Val-i-da-tion mAP ver-sus train-ing epoch
- []
-
-[43] [44 <./figures/results/5_1_1_baseline_overlayed_ap50.png> <./figures/resul
-ts/5_1_1_baseline_overlayed_mAP.png>]
+ [43] [44 <./figures/results/5_1_1_baseline_overlayed_ap50.png> <./figures/resu
+lts/5_1_1_baseline_overlayed_mAP.png>]
 <figures/results/5_1_2_v11s_cm_pre.png, id=798, 754.4988pt x 701.7417pt>
 File: figures/results/5_1_2_v11s_cm_pre.png Graphic file (type png)
 <use figures/results/5_1_2_v11s_cm_pre.png>
@@ -1368,11 +1358,31 @@ Overfull \hbox (7.12027pt too wide) in paragraph at lines 390--390
  []
 
 
+Overfull \hbox (7.28636pt too wide) in paragraph at lines 390--390
+ []|\OT1/lmr/m/n/10.95 mAP50| 
+ []
+
+
+Overfull \hbox (8.4936pt too wide) in paragraph at lines 390--390
+ []|\OT1/lmr/m/n/10.95 mAP50-- 
+ []
+
+
 Overfull \hbox (7.12027pt too wide) in paragraph at lines 390--390
 []|\OT1/lmr/m/n/10.95 Backbone|  
  []
 
 
+Overfull \hbox (7.28636pt too wide) in paragraph at lines 390--390
+ []|\OT1/lmr/m/n/10.95 mAP50| 
+ []
+
+
+Overfull \hbox (8.4936pt too wide) in paragraph at lines 390--390
+ []|\OT1/lmr/m/n/10.95 mAP50-- 
+ []
+
+
 Overfull \hbox (13.87367pt too wide) in paragraph at lines 390--390
 []|\OT1/lmr/m/n/10.95 YOLOv11s|  
  []
@@ -1422,7 +1432,12 @@ Overfull \hbox (1.84099pt too wide) in paragraph at lines 390--390
 []|[]|  
  []
 
-[50] [51] [52] [53] [54] [55]
+[50] [51] [52]
+Overfull \hbox (14.82599pt too wide) in paragraph at lines 488--496
+ [][] 
+ []
+
+[53] [54] [55]
 <figures/results/5_3_1_nms_th_top.png, id=887, 543.53062pt x 368.1253pt>
 File: figures/results/5_3_1_nms_th_top.png Graphic file (type png)
 <use figures/results/5_3_1_nms_th_top.png>
@@ -1450,8 +1465,8 @@ Package pdftex.def Info: figures/results/5_3_1_ap50_conf_nms.png  used on input
  line 688.
 (pdftex.def)             Requested size: 210.78976pt x 156.49014pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 689--689
-[]\OT1/lmr/m/n/10.95 (a) |Val-i-da-tion AP50 across confidence-
+Underfull \hbox (badness 7064) in paragraph at lines 689--689
+[]\OT1/lmr/m/n/10.95 (a) |Val-i-da-tion mAP50 across confidence-
  []
 
 <figures/results/5_3_1_map_conf_nms.png, id=906, 483.4863pt x 354.123pt>
@@ -1580,7 +1595,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  22182 strings out of 480247
  414493 string characters out of 5896151
- 1148397 words of memory out of 5000000
+ 1149452 words of memory out of 5000000
  39394 multiletter control sequences out of 15000+600000
  515753 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1600,7 +1615,7 @@ mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmtt12.pfb>
 Output written on /home/aidan/repos/masters/report/build/main.pdf (99 pages, 19
-006195 bytes).
+006643 bytes).
 PDF statistics:
  1588 PDF objects out of 1728 (max. 8388607)
  1305 compressed objects within 14 object streams

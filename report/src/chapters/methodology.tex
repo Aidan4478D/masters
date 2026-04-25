@@ -400,7 +400,7 @@ Instead, a custom ignore-aware evaluation procedure was used. The \verb|unknown_
 boxes were reconstructed directly from the original CVAT XML annotations, and any
 prediction overlapping one of these regions above an IoU threshold of 0.40 was 
 removed before scoring. The remaining predictions were then matched against the 
-MOVES-based classes to compute AP50 and mAP. This ensured that detections falling
+MOVES-based classes to compute mAP50 and mAP50--95. This ensured that detections falling
 on visually ambiguous vehicles were not counted as false positives, while preserving
 the standard inference settings for confidence threshold, NMS IoU threshold, and 
 maximum detections. This same ignore-region procedure was applied consistently 
@@ -419,7 +419,7 @@ emissions profile category (e.g., distinguishing a truck from a bus).
 This subsection details the metrics selected to quantify 
 the model's performance. It begins by establishing the spatial evaluation 
 criteria, builds toward aggregate threshold-agnostic metrics like mean average 
-arecision (mAP), and concludes by justifying these choices against traditional 
+arecision (mAP50--95), and concludes by justifying these choices against traditional 
 classification metrics that fall short in dynamic spatial contexts.
 
 \subsubsection{Intersection over Union}
@@ -546,21 +546,13 @@ capturing background noise as valid vehicles (false positives), thereby
 lowering precision. By calculating precision and recall at every possible 
 confidence threshold and plotting the results, we generate the precision-recall 
 (PR) curve.
-
-% \begin{figure}[!htbp]
-%     \centering
-%     \includegraphics[height=6.5cm]{figures/methodology/4_4_example_pr_curve.png}
-%     \caption{Example Precision-Recall Curve}
-%     \label{fig:ex_pr_curve}
-% \end{figure}
-
 The PR curve illustrates the model's overarching stability and allows us to 
 visualize the exact penalty in precision when we tune the model to capture a 
 higher volume of traffic.
 
-\subsubsection{Average Precision and mAP}
+\subsubsection{Average Precision and mAP50--95}
 
-To quantify the trade-off depicted in the PR curve into a single scalar value, 
+To quantify the trade-off in the PR curve into a single scalar value, 
 we use the average precision (AP). AP represents the total area under the PR 
 curve, depicted in Figure~\ref{fig:ex_pr_curve_ap}. It represents the model's 
 reliability across every possible confidence threshold for a single specific 
@@ -583,22 +575,22 @@ where $p(r)$ is the precision at recall $r$. By calculating the area under the
 curve, AP penalizes models that suffer severe drops in precision when attempting 
 to retrieve the hardest-to-find vehicles (such as heavily occluded trucks).
 
-To evaluate the air quality modeling pipeline across the entire vehicle, the 
+To evaluate the model across each of the MOVES-based classes, the 
 individual AP scores for all distinct classes are averaged to produce the 
-mean average precision (mAP):
+mean average precision (mAP50--95):
 
 \begin{equation}
-mAP = \frac{1}{N} \sum_{i=1}^{N} AP_i
+mAP50--95 = \frac{1}{N} \sum_{i=1}^{N} AP_i
 \end{equation}
 
 where $N$ is the total number of classes. 
-Because the mAP score relies on the initial spatial overlap requirement, standard 
+Because the mAP50--95 score relies on the initial spatial overlap requirement, standard 
 evaluation protocols report performance at different Intersection over Union (IoU) 
-thresholds. A common baseline is AP50 (AP calculated at an IoU threshold of 0.50), which 
+thresholds. A common baseline is mAP50 (AP calculated at an IoU threshold of 0.50), which 
 tolerates moderate bounding box looseness. However, modern object detection systems
 evaluate performance using the protocol established by the Microsoft Common 
-Objects in Context (MS COCO) dataset \cite{lin_microsoft_2015}. The COCO-style mAP (often denoted 
-as $AP@[.50:.05:.95]$) averages the mAP across ten distinct IoU thresholds ranging 
+Objects in Context (MS COCO) dataset \cite{lin_microsoft_2015}. The COCO-style mAP50--95 (often denoted 
+as $AP@[.50:.05:.95]$) averages the mAP50--95 across ten distinct IoU thresholds ranging 
 from 0.50 to 0.95 with a step size of 0.05:
 
 \begin{equation}
@@ -609,30 +601,30 @@ Where $T = \{0.50, 0.55, 0.60, \dots, 0.95\}$ and $mAP_t$ is the mean average
 precision evaluated at IoU threshold $t$. 
 
 The primary objective of this thesis is accurate vehicle detection and classification
-for emissions-oriented traffic analysis, which makes AP50 an intuitive metric because
+for emissions-oriented traffic analysis, which makes mAP50 an intuitive metric because
 it measures whether a vehicle was detected with moderate spatial overlap. However,
-this study reports both AP50 and COCO-style mAP, and uses mAP as the primary
+this study reports both mAP50 and COCO-style mAP50--95, and uses mAP50--95 as the primary
 performance indicator for several reasons:
 \begin{itemize}
-    \item First, mAP evaluates detection performance across multiple IoU thresholds
+    \item First, mAP50--95 evaluates detection performance across multiple IoU thresholds
     from 0.50 to 0.95 rather than at a single cutoff, providing a more complete
     measure of localization quality.
 
     \item Second, localization accuracy is especially important in low-resolution
     urban traffic imagery, where vehicles are often small, partially occluded, and
     closely spaced. In these conditions, a loose bounding box may still count as
-    correct under AP50 while failing to isolate the vehicle precisely.
+    correct under mAP50 while failing to isolate the vehicle precisely.
 
     \item Third, in congested scenes, detections that overlap multiple nearby
     vehicles can appear acceptable at IoU $= 0.50$ even when they are too coarse
-    for reliable counting and class-specific analysis. Using mAP helps penalize
+    for reliable counting and class-specific analysis. Using mAP50--95 helps penalize
     these cases more appropriately.
 
-    \item Finally, COCO-style mAP is the standard summary metric in modern object
+    \item Finally, COCO-style mAP50--95 is the standard summary metric in modern object
     detection literature, making the results easier to compare with prior work.
 \end{itemize}
 
-COCO-style mAP therefore provides a more rigorous measure of detector quality in 
+COCO-style mAP50--95 therefore provides a more rigorous measure of detector quality in 
 this study, since it rewards models that not only detect vehicles, but also localize
 them precisely in dense urban traffic scenes.
 

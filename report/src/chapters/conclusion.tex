@@ -7,9 +7,9 @@ emissions analysis. To address this question, a low-resolution urban traffic dat
 was constructed from 511NY and NYSDOT camera imagery, annotated using a MOVES-aligned 
 6-class vehicle taxonomy, and used to evaluate several modern object-detection 
 architectures. Across the models tested, the YOLO family performed best for this 
-setting, with the baseline YOLOv11s model achieving an AP50 of 0.804 and an mAP of 
+setting, with the baseline YOLOv11s model achieving an mAP50 of 0.804 and an mAP50--95 of 
 0.615 on the validation set. After targeted refinement, the final selected YOLOv11s 
-configuration reached an AP50 of 0.857 and an mAP of 0.661, showing that careful 
+configuration reached an mAP50 of 0.857 and an mAP50--95 of 0.661, showing that careful 
 data curation and hard negative mining were more effective in this case than simply 
 changing to a more complex architecture or adding more untargeted data.
 
@@ -27,10 +27,10 @@ in the images.
 
 Beyond validation performance, the experiments provided a clearer picture of where 
 the detector generalized well and where important limitations remained. On the 
-held-out test set, the final model achieved an overall AP50 of 0.772 and an mAP of 
+held-out test set, the final model achieved an overall mAP50 of 0.772 and an mAP50--95 of 
 0.607, indicating that the selected improvements transferred beyond the validation 
 split. On the separate cross-camera benchmark of unseen locations, performance fell 
-to an AP50 of 0.658 and an mAP of 0.488, showing that transfer to new camera views 
+to an mAP50 of 0.658 and an mAP50--95 of 0.488, showing that transfer to new camera views 
 was still more difficult. The comparison between real 2025 NYC ATR counts further 
 showed that the pipeline was better at recovering the hourly pattern of traffic than exact count magnitude. 
 For example, Atlantic Avenue at Boerum Place produced the closest count agreement, with 

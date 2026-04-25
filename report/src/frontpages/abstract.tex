@@ -10,12 +10,12 @@
     6-class structure aligned with broad EPA MOVES vehicle categories. Several 
     object-detection architectures were evaluated, including YOLO, Faster R-CNN, 
     RT-DETR, and Deformable DETR, with YOLOv11s providing the strongest overall 
-    performance. The baseline YOLOv11s model achieved an AP50 of 0.804 and an mAP 
+    performance. The baseline YOLOv11s model achieved an mAP50 of 0.804 and an mAP50--95 
     of 0.615 on the validation set, while the final refined model improved to an 
-    AP50 of 0.857 and an mAP of 0.661 through targeted data refinement. On a 
-    held-out test set, the final model reached an AP50 of 0.772 and an mAP of
+    mAP50 of 0.857 and an mAP50--95 of 0.661 through targeted data refinement. On a 
+    held-out test set, the final model reached an mAP50 of 0.772 and an mAP50--95 of
     0.607, while performance on a cross-camera benchmark of unseen locations dropped
-    to an AP50 of 0.658 and an mAP of 0.488, showing that generalization to new 
+    to an mAP50 of 0.658 and an mAP50--95 of 0.488, showing that generalization to new 
     camera views remains a challenge. Comparison against New York City Automated 
     Traffic Recorder (ATR) data showed that the pipeline was better at recovering 
     the temporal pattern of traffic flow than exact count magnitude, with the 
