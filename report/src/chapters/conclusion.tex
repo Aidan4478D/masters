@@ -9,7 +9,7 @@ was constructed from 511NY and NYSDOT camera imagery, annotated using a MOVES-al
 architectures. Across the models tested, the YOLO family performed best for this 
 setting, with the baseline YOLOv11s model achieving an mAP50 of 0.804 and an mAP50--95 of 
 0.615 on the validation set. After targeted refinement, the final selected YOLOv11s 
-configuration reached an mAP50 of 0.857 and an mAP50--95 of 0.661, showing that careful 
+configuration reached an mAP50 of 0.857 and an mAP50--95 of 0.661 on the validation set, showing that careful 
 data curation and hard negative mining were more effective in this case than simply 
 changing to a more complex architecture or adding more untargeted data.
 
@@ -19,7 +19,7 @@ vehicle body styles into broader MOVES-relevant classes and treating
 \verb|unknown_vehicle| regions as ignore areas rather than a learnable class, the 
 detector was able to focus on vehicle distinctions that were both visually reliable 
 and meaningful for downstream environmental analysis. This made the final system a 
-better match for the limits of 352$\times$240 traffic imagery, where many vehicles 
+better match for the limitations of 352$\times$240 traffic imagery, where many vehicles 
 are too distant, too small, or too occluded to support fine-grained labeling. In 
 that sense, the strongest gains in this study came not only from model selection, 
 but from aligning the dataset and class structure with the actual information present 

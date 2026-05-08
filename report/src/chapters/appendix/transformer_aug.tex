@@ -54,7 +54,7 @@ def get_train_transforms():
 
 The lighter augmentation pipeline consisted of:
 \begin{itemize}
-    \item Horizontal flipping with probability 0.5,
+    \item Horizontal flipping with probability 0.5.
     \item Random brightness and contrast adjustment with brightness limit 0.12, contrast limit 0.12, and probability 0.3.
 \end{itemize}
 
@@ -82,3 +82,8 @@ def get_train_transforms():
 In both cases, bounding boxes were processed using Albumentations with Pascal VOC 
 box format. The associated class labels were tracked through the \texttt{label\_fields} 
 argument, and boxes with visibility below 0.1 after transformation were discarded.
+As discussed in Section~\ref{sec:detr}, the heavier augmentation pipeline was used in the
+initial Deformable DETR experiment, while the lighter pipeline was used in the later
+transformer-based experiments. The lighter pipeline produced stronger validation
+performance and was therefore used for most of the transformer results reported in
+Section~\ref{sec:detr}.

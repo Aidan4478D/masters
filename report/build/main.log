@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  8 MAY 2026 12:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.5)  8 MAY 2026 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1431,19 +1431,19 @@ Overfull \hbox (14.82599pt too wide) in paragraph at lines 516--524
 File: figures/results/5_3_1_nms_th_top.png Graphic file (type png)
 <use figures/results/5_3_1_nms_th_top.png>
 Package pdftex.def Info: figures/results/5_3_1_nms_th_top.png  used on input li
-ne 664.
+ne 665.
 (pdftex.def)             Requested size: 231.05965pt x 156.49014pt.
 <figures/results/5_3_1_nms_th_mid.png, id=895, 544.28343pt x 368.1253pt>
 File: figures/results/5_3_1_nms_th_mid.png Graphic file (type png)
 <use figures/results/5_3_1_nms_th_mid.png>
 Package pdftex.def Info: figures/results/5_3_1_nms_th_mid.png  used on input li
-ne 673.
+ne 674.
 (pdftex.def)             Requested size: 231.37968pt x 156.49014pt.
 <figures/results/5_3_1_nms_th_bot.png, id=896, 545.78906pt x 368.87813pt>
 File: figures/results/5_3_1_nms_th_bot.png Graphic file (type png)
 <use figures/results/5_3_1_nms_th_bot.png>
 Package pdftex.def Info: figures/results/5_3_1_nms_th_bot.png  used on input li
-ne 682.
+ne 683.
 (pdftex.def)             Requested size: 231.53671pt x 156.49014pt.
  [56] [57 <./figures/results/5_3_1_nms_th_top.png> <./figures/results/5_3_1_nms
 _th_mid.png> <./figures/results/5_3_1_nms_th_bot.png>]
@@ -1451,10 +1451,10 @@ _th_mid.png> <./figures/results/5_3_1_nms_th_bot.png>]
 File: figures/results/5_3_1_ap50_conf_nms.png Graphic file (type png)
 <use figures/results/5_3_1_ap50_conf_nms.png>
 Package pdftex.def Info: figures/results/5_3_1_ap50_conf_nms.png  used on input
- line 716.
+ line 717.
 (pdftex.def)             Requested size: 210.78976pt x 156.49014pt.
 
-Underfull \hbox (badness 7064) in paragraph at lines 717--717
+Underfull \hbox (badness 7064) in paragraph at lines 718--718
 []\OT1/lmr/m/n/10.95 (a) |Val-i-da-tion mAP50 across confidence-
  []
 
@@ -1462,7 +1462,7 @@ Underfull \hbox (badness 7064) in paragraph at lines 717--717
 File: figures/results/5_3_1_map_conf_nms.png Graphic file (type png)
 <use figures/results/5_3_1_map_conf_nms.png>
 Package pdftex.def Info: figures/results/5_3_1_map_conf_nms.png  used on input 
-line 723.
+line 724.
 (pdftex.def)             Requested size: 213.66417pt x 156.49014pt.
 [58 <./figures/results/5_3_1_ap50_conf_nms.png> <./figures/results/5_3_1_map_co
 nf_nms.png>] [59]
@@ -1470,16 +1470,16 @@ nf_nms.png>] [59]
 File: figures/results/5_4_new_broadway_ex.jpg Graphic file (type jpg)
 <use figures/results/5_4_new_broadway_ex.jpg>
 Package pdftex.def Info: figures/results/5_4_new_broadway_ex.jpg  used on input
- line 834.
+ line 835.
 (pdftex.def)             Requested size: 146.05359pt x 99.58464pt.
 <figures/results/5_4_new_pelham_ex.jpg, id=935, 353.32pt x 240.9pt>
 File: figures/results/5_4_new_pelham_ex.jpg Graphic file (type jpg)
 <use figures/results/5_4_new_pelham_ex.jpg>
 Package pdftex.def Info: figures/results/5_4_new_pelham_ex.jpg  used on input l
-ine 840.
+ine 841.
 (pdftex.def)             Requested size: 146.05359pt x 99.58464pt.
 
-Underfull \hbox (badness 5133) in paragraph at lines 841--841
+Underfull \hbox (badness 5133) in paragraph at lines 842--842
 []\OT1/lmr/m/n/10.95 (b) |Pel-ham Park-way West-
  []
 
@@ -1487,7 +1487,7 @@ Underfull \hbox (badness 5133) in paragraph at lines 841--841
 File: figures/results/5_4_new_atl_ex.jpg Graphic file (type jpg)
 <use figures/results/5_4_new_atl_ex.jpg>
 Package pdftex.def Info: figures/results/5_4_new_atl_ex.jpg  used on input line
- 846.
+ 847.
 (pdftex.def)             Requested size: 146.05359pt x 99.58464pt.
 [60 <./figures/results/5_4_new_broadway_ex.jpg> <./figures/results/5_4_new_pelh
 am_ex.jpg> <./figures/results/5_4_new_atl_ex.jpg>] [61]
@@ -1533,28 +1533,28 @@ _hourly_norm.png> <./figures/results/5_4_broad_hourly.png> <./figures/results/5
 _4_broad_hourly_norm.png>]) (./chapters/discussion.tex [64] [65] [66] [67] [68]
  [69] [70] [71])
 (./chapters/limitations.tex
-<figures/limitations/7_night_glare.png, id=1051, 400.49625pt x 240.9pt>
+<figures/limitations/7_night_glare.png, id=1054, 400.49625pt x 240.9pt>
 File: figures/limitations/7_night_glare.png Graphic file (type png)
 <use figures/limitations/7_night_glare.png>
 Package pdftex.def Info: figures/limitations/7_night_glare.png  used on input l
 ine 29.
 (pdftex.def)             Requested size: 150.32504pt x 90.42181pt.
-<figures/limitations/7_sun_glare.png, id=1052, 399.74344pt x 238.64156pt>
+<figures/limitations/7_sun_glare.png, id=1055, 399.74344pt x 238.64156pt>
 File: figures/limitations/7_sun_glare.png Graphic file (type png)
 <use figures/limitations/7_sun_glare.png>
 Package pdftex.def Info: figures/limitations/7_sun_glare.png  used on input lin
 e 36.
 (pdftex.def)             Requested size: 150.32504pt x 89.74161pt.
-<figures/limitations/7_glitched_frame.png, id=1053, 399.74344pt x 240.14719pt>
+<figures/limitations/7_glitched_frame.png, id=1056, 399.74344pt x 240.14719pt>
 File: figures/limitations/7_glitched_frame.png Graphic file (type png)
 <use figures/limitations/7_glitched_frame.png>
 Package pdftex.def Info: figures/limitations/7_glitched_frame.png  used on inpu
 t line 43.
 (pdftex.def)             Requested size: 150.32504pt x 90.3078pt.
  [72] [73 <./figures/limitations/7_night_glare.png> <./figures/limitations/7_su
-n_glare.png> <./figures/limitations/7_glitched_frame.png>]) (./chapters/future_
-work.tex [74]) (./chapters/conclusion.tex [75]
-[76]) [77] (./chapters/appendix/transformer_aug.tex [78] [79]) [80]
+n_glare.png> <./figures/limitations/7_glitched_frame.png>] [74]) (./chapters/fu
+ture_work.tex [75]) (./chapters/conclusion.tex
+[76] [77]) [78] (./chapters/appendix/transformer_aug.tex [79] [80]) [81]
 LaTeX Font Info:    Trying to load font information for OMS+lmr on input line 6
 1.
 
@@ -1563,7 +1563,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 61.
- [81] [82] [83] [84]
+ [82] [83] [84] [85]
 
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 61.
@@ -1572,19 +1572,20 @@ Package biblatex Warning: No driver for entry type 'artwork'.
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 61.
 
+[86]
 
 Package biblatex Warning: No driver for entry type 'artwork'.
 (biblatex)                Using fallback driver on input line 61.
 
-[85] [86] [87] [88] [89] (/home/aidan/repos/masters/report/build/main.aux)
+[87] [88] [89] [90] (/home/aidan/repos/masters/report/build/main.aux)
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22191 strings out of 480247
- 414835 string characters out of 5896151
- 1148637 words of memory out of 5000000
+ 22192 strings out of 480247
+ 414842 string characters out of 5896151
+ 1148723 words of memory out of 5000000
  39401 multiletter control sequences out of 15000+600000
  515753 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1603,11 +1604,11 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmtt12.pfb>
-Output written on /home/aidan/repos/masters/report/build/main.pdf (99 pages, 19
-008387 bytes).
+Output written on /home/aidan/repos/masters/report/build/main.pdf (100 pages, 1
+9009059 bytes).
 PDF statistics:
- 1599 PDF objects out of 1728 (max. 8388607)
- 1316 compressed objects within 14 object streams
- 317 named destinations out of 1000 (max. 500000)
+ 1606 PDF objects out of 1728 (max. 8388607)
+ 1322 compressed objects within 14 object streams
+ 318 named destinations out of 1000 (max. 500000)
  833 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,14 +7,14 @@ this study utilized publicly available traffic camera closed-circuit television
 (CCTV) feeds. This is because the physical camera infrastructure is already installed  
 on hundreds of streets across the five boroughs, eliminating the need for new 
 equipment and installations. Additionally, images collected from the NYC CCTV 
-traffic cameras have a unique resolution and viewing angles, making it difficult 
+traffic cameras have a unique resolution and viewing angle, making it difficult 
 to generalize vehicles from other datasets to vehicles from NYC CCTV images. 
 Furthermore, recent state legislation authorized the New York City Department 
 of Transportation (NYC DOT) to quadruple its automated camera network, expanding 
 to 600 equipped intersections by the end of 2026 \cite{office_of_the_governor_2024}. 
 By building off of this existing and continually expanding network, 
 this methodology ensures that the proposed vehicle detection pipeline can be 
-deployed and scaled citywide with zero additional physical infrastructural work.
+deployed and scaled citywide without requiring any additional physical infrastructure installation.
 
 % ------------------------------------------------------------------------------%
 
@@ -56,7 +56,7 @@ the dataset was built exclusively using the unrestricted NYSDOT and Skyline feed
 
 \subsection{Camera Hardware}
 
-The physical infrastructure powering these feeds are industrial-grade pan-tilt-zoom
+The physical infrastructure powering these feeds consists of industrial-grade pan-tilt-zoom
 (PTZ) cameras. According to NYSDOT engineering specifications, the standard hardware 
 deployed for these remote traffic monitoring tasks includes the Pelco Esprit Model 
 ES31PC22-2N, legacy Pelco 9760 units, and Axis Communications Q1614-E models
@@ -146,7 +146,7 @@ highways because intersections have accelerating, braking, and idling vehicles
 which produce higher emissions than steady highway cruising 
 \cite{us_epa_moves3_2020}. High-resolution
 studies further demonstrate that emissions vary sharply across short distances, 
-with hotspots frequently forming at congested intersections which is often missed
+with hotspots frequently forming at congested intersections that may be missed
 by imprecise emission estimates \cite{wang_high-resolution_2025}. 
 Also, NYC's truck route regulations concentrate
 large through-trucks on designated expressways \cite{NYCDOT_truck_routing}, 
@@ -168,8 +168,8 @@ on any NYC traffic camera, it is necessary to make sure all views of different
 vehicle orientations are captured so the model is robust to any view of the vehicle.
 Figure~\ref{fig:vehicle-views} shows four different views of vehicle orientations the cameras can 
 record. The images are colored such that vehicle regions highlighted in yellow show 
-its front, vehicle regions highlighted in red show its rear, and vehicle regions highlighted
-in blue show its side. There are some cameras which only see one orientation 
+their front, vehicle regions highlighted in red show their rear, and vehicle regions highlighted
+in blue show their side. There are some cameras which only see one orientation 
 of vehicles (Figure~\ref{fig:front-side-view}), but there are also cameras which see two 
 (Figures~\ref{fig:side-rear-view} and \ref{fig:rear-front-view}) or three 
 (Figure~\ref{fig:side-front-rear-view}) different vehicle orientations. The twelve
@@ -545,8 +545,8 @@ attributes function as additional object properties that can enrich labels
 without introducing a separate object category, making them well suited for 
 subtypes that may be analytically meaningful but are not always reliable as 
 standalone detection classes in low-resolution imagery 
-\cite{CVAT_label_guide, CVAT_attributes}. See how this was performed in 
-Figure~\ref{fig:minivan-attribute}.
+\cite{CVAT_label_guide, CVAT_attributes}. An example of this attribute assignment 
+process is shown in Figure~\ref{fig:minivan-attribute}.
 
 
 \begin{figure}[!htbp]

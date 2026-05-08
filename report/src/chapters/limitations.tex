@@ -13,12 +13,12 @@ in the dataset by the large number of \verb|unknown_vehicle| annotations. This l
 resolution is helpful from a privacy standpoint, since it makes license plates and 
 faces effectively unreadable, but it also makes the system less reliable for smaller
 or farther vehicles. In addition, the camera imagery itself is not always consistent.
-As shown in Figure~\ref{fig:camera-no-feed}, some cameras occasionally produce degraded 
-frames due to servicing, feed glitches, motion blur, or strong lighting effects. 
+As shown in Figure~\ref{fig:camera-down} and Figure~\ref{fig:image-weather-conditions},
+some cameras occasionally produce degraded frames due to servicing, or strong lighting effects. 
 Nighttime glare (Figure~\ref{fig:camera-artifact-a}), 
-direct sunlight striking (Figure~\ref{fig:camera-artifact-b}), 
+direct sunlight and lens flare (Figure~\ref{fig:camera-artifact-b}), 
 and image corruption (Figure~\ref{fig:camera-artifact-c})
-can all reduce visibility and make vehicle boundaries harder to distinguish. These 
+can also reduce visibility and make vehicle boundaries harder to distinguish. These 
 imaging inconsistencies introduce an additional source of noise that cannot be fully 
 controlled during training.
 
@@ -49,18 +49,33 @@ controlled during training.
         {Examples of image-quality issues observed in the 511NY and NYSDOT traffic-camera feeds. These artifacts reduce visibility and make vehicle boundaries harder to distinguish during annotation and detection.}
     \label{fig:camera-artifacts}
 \end{figure}
+%
+% Furthermore, although the training set contains 1,200 unique images, it was drawn 
+% from only 12 camera intersections, with more than half located in Manhattan and 
+% fewer examples from other boroughs such as the Bronx and Queens. In addition, because 
+% these are Pan-Tilt-Zoom (PTZ) cameras, their viewpoints are not fixed, so the dataset 
+% does not represent every viewing angle that may occur in practice. This could help 
+% explain why performance dropped on the unseen-camera benchmark, as the model learned
+% the original camera set well, but generalized less reliably to new views. Class 
+% imbalance was another important limitation. Some categories, especially \verb|motorcycle|, 
+% were represented by very few examples in training. With only 49 labeled motorcycles, 
+% that class had the weakest test-set performance and was often visually confused with 
+% bicycles or other small two-wheeled objects.
 
 Furthermore, although the training set contains 1,200 unique images, it was drawn 
 from only 12 camera intersections, with more than half located in Manhattan and 
-fewer examples from other boroughs such as the Bronx and Queens. In addition, because 
-these are Pan-Tilt-Zoom (PTZ) cameras, their viewpoints are not fixed, so the dataset 
-does not represent every viewing angle that may occur in practice. This could help 
-explain why performance dropped on the unseen-camera benchmark, as the model learned
-the original camera set well, but generalized less reliably to new views. Class 
-imbalance was another important limitation. Some categories, especially \verb|motorcycle|, 
-were represented by very few examples in training. With only 49 labeled motorcycles, 
-that class had the weakest test-set performance and was often visually confused with 
-bicycles or other small two-wheeled objects.
+fewer examples from other boroughs such as Brooklyn, the Bronx, and Queens. Camera viewpoint 
+was another source of limitation. A fixed camera view can be useful for deployment 
+because it provides consistent scene geometry, but the cameras used in this study 
+are Pan-Tilt-Zoom (PTZ) cameras whose orientation and zoom can change over time. 
+As a result, images collected from a given location may not capture every view that 
+the same camera could produce in practice. This could help explain why performance 
+dropped on the unseen-camera benchmark, as the model learned the original camera 
+views well but generalized less reliably to new scene layouts and viewing angles. 
+Class imbalance was another important limitation. Some categories, especially 
+\verb|motorcycle|, were represented by very few examples in training. With only 
+49 labeled motorcycles, that class had the weakest test-set performance and was 
+often visually confused with bicycles or other small two-wheeled objects.
 
 % ------------------------------------------------------------------------------
 
@@ -105,7 +120,7 @@ a vehicle seen in one image is the same vehicle seen again later. It also cannot
 recover trajectories for vehicles that are briefly hidden by larger vehicles, 
 surrounding infrastructure, or other occlusions. This limits the system’s ability 
 to measure true vehicle flow in the same way as a continuous traffic sensor such 
-as an Automated Traffic Recorder (ATR).
+as an automated traffic recorder (ATR).
 
 The two-minute sampling interval also creates an additional mismatch between 
 detections and real traffic counts. Vehicles that pass through the scene between 

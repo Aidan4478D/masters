@@ -57,8 +57,8 @@
 \contentsline {subsection}{\numberline {7.1}Imaging and Dataset}{72}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Modeling and Taxonomy}{73}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Downstream Counting and Deployment}{74}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Future Work}{75}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{76}{section.9}%
-\contentsline {section}{Appendix}{78}{section*.57}%
-\contentsline {section}{\numberline {A}Transformer Training Augmentation Pipeline}{78}{appendix.A}%
-\contentsline {section}{References}{80}{section*.58}%
+\contentsline {section}{\numberline {8}Future Work}{76}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{77}{section.9}%
+\contentsline {section}{Appendix}{79}{section*.57}%
+\contentsline {section}{\numberline {A}Transformer Training Augmentation Pipeline}{79}{appendix.A}%
+\contentsline {section}{References}{81}{section*.58}%

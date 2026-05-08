@@ -40,7 +40,7 @@ such as edges, textures, and shapes \cite{geeks4geeks_2017}.
     \includegraphics[height=6.5cm]{figures/methodology/4_1_1_cnn_diagram.png}
     \caption [Example of convolutional neural network operations.]
              {Example of convolutional neural network operations. 
-             convolutional kernel slides across the input image and performs
+             A convolutional kernel slides across the input image and performs
              a dot product with local pixel values to produce a feature map
              highlighting the presence of specific patterns. In typical CNN
              architectures, a nonlinear activation function such as ReLU is
@@ -90,7 +90,7 @@ parts of the scene.
 To perform object detection, the input image is conceptually divided into a $W \times H$
 grid of cells, as illustrated in Figure~\ref{fig:yolo-grid}. In practice, this 
 grid corresponds to the spatial resolution of the feature map produced by the 
-convolutional neural network. As stated in the Section~\ref{sec:cnn}, because convolutional
+convolutional neural network. As stated in Section~\ref{sec:cnn}, because convolutional
 layers often use strides greater than one and pooling operations reduce spatial 
 resolution, the feature map is smaller than the original image.
 
@@ -230,7 +230,7 @@ as non-maximum suppression (NMS) is applied. NMS operates by:
 \end{enumerate}
 
 This procedure removes redundant detections while preserving the most confident 
-prediction for each object in the scene. The resulting set of bounding boxes are 
+prediction for each object in the scene. The resulting bounding boxes are
 the final object detections, which include the predicted object class, bounding 
 box coordinates, and associated confidence score, as shown in Figure~\ref{fig:yolo-predictions}.
 For further information regarding the YOLO architecture and training procedure, 
@@ -306,7 +306,7 @@ learn consistently.
 To achieve this balance, fine-grained vehicle labels were grouped accordingly. 
 Sedan instances were mapped to \verb|passenger_car|, while \verb|SUV| instances, 
 \verb|pickup_truck| instances, and \verb|van| instances with the attribute \verb|is_minivan| 
-instances were grouped into \verb|passenger_truck|. The EPA notes that it is 
+ were grouped into \verb|passenger_truck|. The EPA notes that it is 
 difficult to visually determine whether a vehicle should be treated as a 
 passenger car or a light-duty truck, but classifies many SUVs and minivans as 
 light-duty trucks rather than passenger cars \cite{USEPA_def_truck_2019}. 
@@ -361,7 +361,7 @@ detector pipeline, these regions were not treated as a seventh learnable class.
 Instead, they were handled as ignore regions during both dataset preparation and 
 evaluation.
 
-When making the dataloader for the model training splits, regions that were labeled
+During preparation of the model training splits, regions that were labeled
 \verb|unknown_vehicle| during dataset annotation were masked in the images using 
 a neutral fill value of \verb|RGB(114,114,114)|. This meant that the detector was trained 
 only on the MOVES-based target classes, while ambiguous vehicles were masked so 
@@ -419,7 +419,7 @@ emissions profile category (e.g., distinguishing a truck from a bus).
 This subsection details the metrics selected to quantify 
 the model's performance. It begins by establishing the spatial evaluation 
 criteria, builds toward aggregate threshold-agnostic metrics like mean average 
-arecision (mAP50--95), and concludes by justifying these choices against traditional 
+precision (mAP50--95), and concludes by justifying these choices against traditional 
 classification metrics that fall short in dynamic spatial contexts.
 
 \subsubsection{Intersection over Union}
@@ -480,7 +480,7 @@ the context of this project, the entries of the confusion matrix correspond to:
     \item \textbf{True Positive (TP)}: A detection that matches a human-annotated
     ground truth box of the correct vehicle class with an IoU $\geq$ the defined 
     threshold. For example, the model successfully draws a bounding box around a 
-    sedan and correctly classifies it as a seden with an IoU 
+    sedan and correctly classifies it as a passenger car with an IoU 
     that exceeds the threshold.
 
     \item \textbf{False Positive (FP)}: A predicted box that does not satisfy the
@@ -627,9 +627,9 @@ performance indicator for several reasons:
     \cite{lin_microsoft_2015, ultralytics_coco}.
 \end{itemize}
 
-The mAP50--95 metric therefore provides a more rigorous measure of detector quality in 
-this study over mAP50, as it rewards models that not only detect vehicles, but also localize
-them precisely in dense urban traffic scenes.
+The mAP50--95 metric therefore provides a more rigorous measure of detector quality
+than mAP50 in this study because it rewards models that not only detect vehicles, but
+also localize them precisely in dense urban traffic scenes.
 
 % ==============================================================================
 

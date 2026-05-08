@@ -39,15 +39,15 @@ this study focused on YOLOv8, YOLOv11, and YOLOv26, which represent three distin
 generations of the Ultralytics YOLO family. YOLOv8 (2023) was selected as a strong and 
 widely adopted baseline, since it introduced the anchor-free split head and was 
 designed as a general-purpose real-time detector with a favorable speed-accuracy 
-tradeoff \cite{yolov8_ultralytics} \cite{ultralytics_yolov8_vs_yolov11}. 
+tradeoff \cite{yolov8_ultralytics, ultralytics_yolov8_vs_yolov11}. 
 YOLOv11 (2024) was included because it is a newer Ultralytics detector that builds 
 on earlier YOLO models with improved feature extraction, training efficiency, and 
 parameter efficiency, making it a natural candidate for higher accuracy under 
-the same general framework \cite{yolo11_ultralytics} \cite{ultralytics_yolov8_vs_yolov11}. 
+the same general framework \cite{yolo11_ultralytics, ultralytics_yolov8_vs_yolov11}. 
 As of April 2026, YOLOv26 is Ultralytics' most recent YOLO model, tested as an 
 edge-oriented variant designed for simpler deployment, with end-to-end NMS-free 
 inference and targeted improvements for efficiency and small-object recognition 
-\cite{yolo26_ultralytics} \cite{ultralytics_yolov8_vs_yolov11}. 
+\cite{yolo26_ultralytics, ultralytics_yolov8_vs_yolov11}. 
 Evaluating these three models therefore allowed comparison across a 
 consistent detector family while covering a useful range of design priorities: 
 a mature baseline (YOLOv8), a newer accuracy-focused refinement (YOLOv11), and a
@@ -527,9 +527,10 @@ strongest Faster R-CNN results produced in this study.
 Among the tested configurations, the best overall Faster R-CNN result was obtained
 with the \verb|fasterrcnn_resnet50_fpn_v2| backbone using a learning rate of $2\times10^{-4}$,
 flip-plus-color-jitter augmentation, and 5 trainable backbone layers. On the 
-validation set, this model achieved an mAP50 of 0.706 and a mAP50--95 of 0.509. Other 
-strong \verb|fasterrcnn_resnet50_fpn_v2| runs achieved mAP50 and mAP50--95 values of 0.693/0.686 
-and 0.500/0.497, indicating that the v2 backbone was consistently the strongest 
+validation set, this model achieved an mAP50 of 0.706 and a mAP50--95 of 0.509. 
+Other strong \verb|fasterrcnn_resnet50_fpn_v2| runs achieved mAP50 values of 0.693 and 0.686,
+with corresponding mAP50--95 values of 0.500 and 0.497, indicating that the v2 
+backbone was consistently the strongest 
 Faster R-CNN variant across the tested settings. By comparison, the best standard 
 \verb|fasterrcnn_resnet50_fpn| configuration achieved an mAP50 of 0.658 and a mAP50--95 
 of 0.440. 
@@ -820,7 +821,7 @@ vehicle instances.
 
 To evaluate whether the detector-derived counts reflected real traffic patterns,
 hourly vehicle counts produced by the final YOLOv11s model were compared with
-New York City Automated Traffic Recorder (ATR) counts \cite{NYC_open_data_atr}
+New York City automated traffic recorder (ATR) counts \cite{NYC_open_data_atr}
 at three unseen camera locations: Atlantic Avenue at Boerum Place, Broadway at
 Houston, and Pelham Parkway Westbound at Boston Road. These were the same three
 locations used in the cross-camera benchmark in Section~\ref{sec:camera-generalization},
@@ -861,14 +862,13 @@ March 2026 camera imagery was then matched to March 2025 ATR dates with broadly
 similar weather conditions \cite{zippenfenig_open-meteocom_2024}.
 
 Images were collected from March 13, 2026 at 12:01 AM through March 20, 2026 at 
-12:00 PM. An image was sampled from each camera every two minutes, consistent with
-the sampling rate used during dataset creation, to reduce the risk of the same 
-scene being counted more than once, since the camera feeds update slowly and 
-explicit image-to-image vehicle matching was not implemented. Since March 2026
-ATR records were not yet publicly available for these locations, the comparison
-used the March 2025 ATR dates that were publicly available for the same three
-street intersections. Table~\ref{tab:atr-image-collection} summarizes the
-camera locations, comparison dates, and total number of collected images.
+12:00 PM. An image was sampled from eac
+h camera every two minutes, consistent 
+with the sampling rate used during dataset creation, to reduce the risk of the
+same scene being counted more than once, since the camera feeds update slowly 
+and explicit image-to-image vehicle matching was not implemented. 
+Table~\ref{tab:atr-image-collection} summarizes the camera locations, matched 
+comparison dates, and total number of collected images.
 
 \begin{table}[!htbp]
     \centering
@@ -896,8 +896,8 @@ noticeably beyond 0.25, so a confidence threshold of 0.25 and an NMS IoU thresho
 0.70 were used for inference. The resulting detections were aggregated into hourly 
 vehicle counts and matched to ATR hourly traffic volumes by camera-specific road 
 segment and hour of day. Because the ATR data were reported in 15-minute intervals, 
-those records were first summed to hourly totals before comparison. See Table~\ref{tab:atr-count-comparison} 
-for a per-day summary at each camera location, comparing the YOLO and ATR detections.
+those records were first summed to hourly totals before comparison. Table~\ref{tab:atr-count-comparison} 
+provides a per-day summary at each camera location, comparing the YOLO-derived counts with the ATR counts.
 
 \begin{table}[!htbp]
     \centering
@@ -966,13 +966,13 @@ while agreement with ATR count magnitude remained strongly location-dependent.
         \centering
         \includegraphics[width=\linewidth]{figures/results/5_4_pel_hourly.png}
         % \includegraphics[height=3.5cm]{figures/results/5_4_new_broadway_ex.jpg}
-        \caption{Pelham Parkway Westbound at Boston Road. Raw hourly counts.}
+        \caption{Pelham Parkway Westbound at Boston Road (3/17). Raw hourly counts.}
         \label{fig:atr-pelham-raw}
     \end{subfigure}\hfill
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/results/5_4_pel_hourly_norm.png}
-        \caption{Pelham Parkway Westbound at Boston Road. Normalized hourly counts.}
+        \caption{Pelham Parkway Westbound at Boston Road (3/17). Normalized hourly counts.}
         \label{fig:atr-pelham-norm}
     \end{subfigure}
 
@@ -982,13 +982,13 @@ while agreement with ATR count magnitude remained strongly location-dependent.
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/results/5_4_atl_hourly.png}
-        \caption{Atlantic Avenue at Boerum Place. Raw hourly counts.}
+        \caption{Atlantic Avenue at Boerum Place (3/18). Raw hourly counts.}
         \label{fig:atr-atlantic-raw}
     \end{subfigure}\hfill
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/results/5_4_atl_hourly_norm.png}
-        \caption{Atlantic Avenue at Boerum Place. Normalized hourly counts.}
+        \caption{Atlantic Avenue at Boerum Place (3/18). Normalized hourly counts.}
         \label{fig:atr-atlantic-norm}
     \end{subfigure}
 
@@ -998,13 +998,13 @@ while agreement with ATR count magnitude remained strongly location-dependent.
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/results/5_4_broad_hourly.png}
-        \caption{Broadway at Houston. Raw hourly counts.}
+        \caption{Broadway at Houston (3/16). Raw hourly counts.}
         \label{fig:atr-broadway-raw}
     \end{subfigure}\hfill
     \begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/results/5_4_broad_hourly_norm.png}
-        \caption{Broadway at Houston. Normalized hourly counts.}
+        \caption{Broadway at Houston (3/16). Normalized hourly counts.}
         \label{fig:atr-broadway-norm}
     \end{subfigure}
 

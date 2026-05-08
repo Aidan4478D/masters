@@ -28,7 +28,7 @@ localized transportation emissions not only requires the total traffic volume, b
 information about the composition of traffic flow.
 
 Obtaining this type of information continuously and at the street level remains difficult.
-Traditional traffic-monitoring methods, such as manual counts and Automated Traffic Recorders
+Traditional traffic-monitoring methods, such as manual counts and automated traffic recorders
 (ATRs), remain essential for transportation planning, but they are often collected over limited
 durations and at limited locations \cite{FHWA_traffic_2010,
 NYC_open_data_atr}. Likewise, fixed air-quality monitoring stations measure
@@ -48,21 +48,21 @@ occlusion, glare, rain, and non-ideal viewing angles. Even with the low-image qu
 this infrastructure offers an appealing foundation for scalable observation if 
 vehicles can be detected and categorized reliably enough for downstream analysis.
 
-To tackle this problem, a vehicle-detection pipeline has been developed using publicly available
+To tackle this problem, a vehicle-detection pipeline was developed using publicly available
 New York City traffic-camera imagery and evaluated for emissions-oriented traffic measurement.
 The approach is built around a YOLOv11-based detector trained on a custom annotated dataset of
 low-resolution urban traffic scenes.
 Rather than using a generic vehicle taxonomy, the detector is trained and evaluated with 
 a class structure tailored to the EPA's MOtor Vehicle Emission Simulator (MOVES). This 
 taxonomy balances what can be distinguished reliably in low-resolution imagery with what
-remains useful for downstream emissions analysis.
+remains useful for downstream emissions analysis
 \cite{us_epa_moves3_2020}. Ambiguous vehicles are handled explicitly
 through an \verb|unknown_vehicle| label during annotation and through ignore-aware training 
 and evaluation procedures, rather than being forced into potentially incorrect supervised classes.
 
 The experimental results show that the final YOLOv11s detector outperformed the Faster R-CNN
 and DETR-style alternatives evaluated in this study, and that the most meaningful gains came from
-targeted data-centric refinement rather than broader tuning alone. The final model has been assessed
+targeted data-centric refinement rather than broader tuning alone. The final model was assessed
 not only on a held-out test set, but also on unseen traffic cameras and through comparison with ATR
 hourly traffic counts. These evaluations were included because the goal of the work was not simply
 to maximize object-detection benchmark performance, but to determine whether traffic-camera

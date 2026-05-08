@@ -42,9 +42,9 @@ DETR models in terms of mAP50 and mAP50--95 on the validation set.
     \end{tabular}
 \end{table}
 
-The performance difference in architectures suggests that when dealing with low-quality, 
-352$\times$240 traffic camera images, having a highly efficient model design (like YOLO)
-is actually more important than using a massive, complex architecture. Traditional 
+The performance differences across architectures suggest that, for low-quality
+352 $\times$ 240 traffic-camera images, an efficient detector design such as YOLO may be
+more effective than a larger, more complex architecture. Traditional 
 two-stage detectors like Faster R-CNN try to locate candidate objects first and classify 
 them second. However, across the 1,200-image dataset, this two-stage approach struggled 
 to reliably detect the vehicles. Even when the Faster R-CNN model was tuned 
@@ -67,10 +67,10 @@ ability to efficiently process objects at multiple scales. As outlined in
 Section~\ref{sec:yolov11}, its architecture combines visual features from different resolutions, 
 which appears to help the model preserve semantic information for vehicles ranging 
 from large buses in the foreground to small sedans in the distance. This multi-scale
-capability is particularly critical for New York City’s traffic environment, where 
-the high mounting of the cameras means a vehicle close to the lens appears massive, 
-while the exact same type of vehicle further down the street appears as just a few 
-pixels.
+capability is particularly important for New York City's traffic-camera imagery, where
+perspective, camera placement, and intersection geometry cause vehicles near the camera
+to occupy a large portion of the frame while vehicles farther down the street may appear
+as only a few pixels.
 
 % ==============================================================================
 
@@ -80,7 +80,7 @@ The performance of the final detector was contingent not only on the architectur
 but on how the vehicle classes were defined. The MOVES-based taxonomy was created 
 to balance what is actually visible in low-resolution traffic cameras with the data
 required by the MOVES emissions software. Instead of forcing the model to distinguish
-between vehicle body styles that look nearly identical at 352x240 pixels, this
+between vehicle body styles that look nearly identical at $352 \times 240$ pixels, this
 approach grouped vehicles into broader categories based on their emissions profiles.
 
 This strategy was applied from the very beginning of the data annotation process. 
@@ -95,12 +95,13 @@ distinct on-road source types, and computes criteria-pollutant emissions such as
 and $PM_{2.5}$ through source-type-specific emission-rate tables 
 \cite{us_epa_moves3_2020, USEPA_overview_2025}.
 
-The dataset statistics in Table~\ref{tab:class-counts} highlight the dominance of 
-passenger car and passenger trucks, which make up over 77\% of all identified-vehicle annotations. 
-Under these conditions, the most significant risk to model performance was not a failure 
-to detect vehicles, but a failure to distinguish between the two passenger vehicle 
-categories. This visual overlap motivated the handling of the \verb|unknown_vehicle|
-class, which was the single largest category in the dataset with 9,625 instances.
+The dataset statistics in Table~\ref{tab:class-counts} highlight two important properties
+of the annotated data. First, passenger cars and passenger trucks make up over 77\% of all
+identified-vehicle annotations, making the boundary between these two categories especially
+important for model performance. Second, \verb|unknown_vehicle| was the single largest
+category in the dataset, with 9,625 instances, reflecting the large number of vehicles that
+were visible but could not be assigned confidently to a supervised class because of distance,
+occlusion, blur, or limited viewing angle.
 
 Using \verb|unknown_vehicle| as an ignore region rather than a normal training class
 helped avoid forcing the model to learn from ambiguous examples. In supervised vision
@@ -125,8 +126,8 @@ The experiments in Section~\ref{sec:data-refinement}
 suggest that the main limitation was not model capacity alone, but a concentrated 
 weakness between predicting \verb|passenger_car| and \verb|passenger_truck|.
 
-Manual inspection of the Figure~\ref{fig:val-cm-pre} and Figure~\ref{fig:val-cm-post}
-confusion matrices revealed that while the model had learned to localize vehicles 
+Manual inspection of the confusion matrices in Figure~\ref{fig:val-cm-pre} and Figure~\ref{fig:val-cm-post}
+revealed that while the model had learned to localize vehicles 
 with high precision, it frequently swapped labels between sedans and SUVs.
 The hard negative mining strategy in Section~\ref{sec:data-refinement} addressed this by identifying
 100 images where these swaps occurred and duplicating them back into the training set.
@@ -181,7 +182,7 @@ that gives the cleanest and most reliable vehicle counts.
 A key question for practical deployment is how well the final detector generalizes 
 beyond the data used for model selection. To examine this, the final YOLOv11s model 
 was evaluated at two levels: first on the held-out test set drawn from the same 
-12-camera pool as training and validation, and then on a separate cross-camera 
+12-camera pool as training and validation, and then on a separate unseen-camera 
 benchmark built from three entirely unseen cameras.
 
 On the held-out test set, the model achieved an overall mAP50 of 0.772 and an overall
@@ -198,10 +199,11 @@ Relative to the held-out test set, this corresponds to an additional decrease of
 0.114 in mAP50 and 0.119 in mAP50--95. This result shows that the model transferred less 
 effectively to unseen camera views than to new images from the original camera set
 \cite{hsu2019progressivedomainadaptationobject, vis_domain_adapt_paper}. 
-That benchmark also appeared harder visually than the training set. The unseen 
+That imagery in this benchmark, shown in Figure~\ref{fig:new-cameras}, 
+also presented more challenging visual conditions than the training set. The unseen 
 cameras showed broader urban scenes, more background content, and many vehicles 
 that appeared smaller because they were farther from the camera. Broadway and 
-Houston seemed especially difficult, since it captured a wider street view with 
+Houston was especially difficult, since it captured a wider street view with 
 more surrounding buildings and more distant vehicles.
 
 \begin{table}[!htbp]
@@ -228,7 +230,7 @@ more surrounding buildings and more distant vehicles.
     \end{tabular}%
     }
 \end{table}
-\FloatBarrier
+% \FloatBarrier
 
 Table~\ref{tab:cross-test-comparison} shows that the class-level mAP50 differences from the test
 set to the cross-camera benchmark were not uniform.
@@ -248,7 +250,7 @@ support a broader conclusion.
 Taken together, these results show two levels of generalization. The model remained 
 strong on the held-out test set, which indicates that the selected improvements were 
 not limited to the validation split alone. However, performance dropped more noticeably
-on the unseen-camera benchmark, showing that transfer to new camera views was still 
+on the unseen-camera benchmark, showing that transfer to new camera views is still 
 a harder problem. For deployment, this suggests that the detector can still be used 
 out of the box for broad traffic monitoring, but more accurate class-specific 
 estimation would likely require adding labeled example images from each new location 
@@ -260,7 +262,7 @@ at that camera.
 
 \subsection{Analysis of Traffic Count Agreement}
 
-The Section~\ref{sec:atr-analysis} ATR comparison was used to test whether the 
+The ATR comparison in Section~\ref{sec:atr-analysis} was used to test whether the 
 detection pipeline could recover not only the daily pattern of traffic, but also 
 the overall scale of vehicle activity. To evaluate this, three metrics were used: 
 Pearson correlation, mean absolute error (MAE), and mean absolute percentage error 
@@ -283,10 +285,10 @@ reasonably well.
 The other two locations showed a different pattern. At Pelham Parkway Westbound 
 at Boston Road, Pearson correlation was consistently strong, ranging from 0.780 to
 0.906, which indicates that the detector generally tracked the timing of higher-
-and lower-volume hours well. However MAE ranged from 421.04 to 644.83 vehicles 
+and lower-volume hours well. However, MAE ranged from 421.04 to 644.83 vehicles 
 per hour, and MAPE ranged from 70.66\% to 78.47\%. This means that the model
 captured the daily traffic shape but substantially undercounted the true number 
-of vehicles. Broadway at Houston showed the weakest and least consistent agreement 
+of vehicles. Broadway and Houston showed the weakest and least consistent agreement 
 overall. Pearson correlation ranged from 0.234 to 0.753, while MAPE remained high 
 on all four days, from 67.22\% to 69.08\%. The worst single-day result occurred 
 on March 16, when the detector counted 3,431 vehicles compared with 12,382 from
@@ -333,7 +335,8 @@ The results of this study suggest that existing traffic-camera networks could
 support a more spatially detailed approach to traffic-related air-quality analysis.
 In New York City, traffic contributes about 14\% of citywide $PM_{2.5}$, and prior
 work has shown that trucks and buses account for a particularly large share of 
-traffic-attributable ambient $PM_{2.5}$ in the city. Within that context, the main
+traffic-attributable ambient $PM_{2.5}$ in the city \cite{nyc_department_of_health_and_mental_hygiene_traffic_nodate}.
+Within that context, the main
 contribution of this pipeline is not direct pollution measurement, but the ability
 to estimate vehicle composition at specific intersections using a MOVES-aligned taxonomy.
 That is potentially useful because fixed air-quality monitors provide only limited 
@@ -348,7 +351,9 @@ performance declined on unseen views, and the ATR comparison showed that hourly
 traffic patterns were recovered more reliably than exact count magnitude. In practical
 terms, this means the pipeline is better suited to highlighting relative differences
 across locations, time periods, or vehicle mixes than to producing perfectly calibrated
-traffic totals without local adjustment. Even so, that kind of intersection-level 
+traffic totals without local adjustment. 
+
+Even so, that kind of intersection-level 
 screening could still be useful for public-health and planning decisions, such as
 identifying corridors where freight or bus activity is concentrated and where 
 follow-up interventions or measurements may be warranted. More broadly, the benefit
