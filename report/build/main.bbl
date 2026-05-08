@@ -2400,6 +2400,38 @@
       \endverb
       \keyw{Computer Science - Computer Vision and Pattern Recognition}
     \endentry
+    \entry{ultralytics_coco}{online}{}
+      \name{author}{1}{}{%
+        {{hash=88f069848482a556e416f713d2819905}{%
+           family={{Ultralytics}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{88f069848482a556e416f713d2819905}
+      \strng{fullhash}{88f069848482a556e416f713d2819905}
+      \strng{bibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorbibnamehash}{88f069848482a556e416f713d2819905}
+      \strng{authornamehash}{88f069848482a556e416f713d2819905}
+      \strng{authorfullhash}{88f069848482a556e416f713d2819905}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Explore the {COCO} dataset for object detection and segmentation. Learn about its structure, usage, pretrained models, and key features.}
+      \field{langid}{english}
+      \field{title}{{COCO} Dataset}
+      \field{urlday}{6}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.ultralytics.com/datasets/detect/coco/
+      \endverb
+      \verb{url}
+      \verb https://docs.ultralytics.com/datasets/detect/coco/
+      \endverb
+    \endentry
     \entry{yolov8_ultralytics}{software}{}
       \name{author}{3}{}{%
         {{hash=c5c5e5cd7f4f477f617289b32613deb0}{%
@@ -2450,7 +2482,7 @@
       \strng{authorbibnamehash}{88f069848482a556e416f713d2819905}
       \strng{authornamehash}{88f069848482a556e416f713d2819905}
       \strng{authorfullhash}{88f069848482a556e416f713d2819905}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
@@ -2505,36 +2537,108 @@
       \verb https://github.com/ultralytics/ultralytics
       \endverb
     \endentry
-    \entry{ultralytics_coco}{online}{}
-      \name{author}{1}{}{%
-        {{hash=88f069848482a556e416f713d2819905}{%
-           family={{Ultralytics}},
-           familyi={U\bibinitperiod}}}%
+    \entry{ren_faster_2015}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=bb295293acacd54387339079ebbe4ead}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Shaoqing},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Kaiming},
+           giveni={K\bibinitperiod}}}%
+        {{hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           familyi={G\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f85751488058842b5777c7b4074077b5}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
       }
-      \strng{namehash}{88f069848482a556e416f713d2819905}
-      \strng{fullhash}{88f069848482a556e416f713d2819905}
-      \strng{bibnamehash}{88f069848482a556e416f713d2819905}
-      \strng{authorbibnamehash}{88f069848482a556e416f713d2819905}
-      \strng{authornamehash}{88f069848482a556e416f713d2819905}
-      \strng{authorfullhash}{88f069848482a556e416f713d2819905}
-      \field{extraname}{2}
+      \strng{namehash}{4bf4b5f7210e9b6395f54bde43f47ca5}
+      \strng{fullhash}{008a132af3e2d4ff15eb01a8fb4b005c}
+      \strng{bibnamehash}{008a132af3e2d4ff15eb01a8fb4b005c}
+      \strng{authorbibnamehash}{008a132af3e2d4ff15eb01a8fb4b005c}
+      \strng{authornamehash}{4bf4b5f7210e9b6395f54bde43f47ca5}
+      \strng{authorfullhash}{008a132af3e2d4ff15eb01a8fb4b005c}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Explore the {COCO} dataset for object detection and segmentation. Learn about its structure, usage, pretrained models, and key features.}
-      \field{langid}{english}
-      \field{title}{{COCO} Dataset}
-      \field{urlday}{6}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{year}{2024}
-      \field{urldateera}{ce}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1506.01497
+      \endverb
       \verb{urlraw}
-      \verb https://docs.ultralytics.com/datasets/detect/coco/
+      \verb https://arxiv.org/abs/1506.01497
       \endverb
       \verb{url}
-      \verb https://docs.ultralytics.com/datasets/detect/coco/
+      \verb https://arxiv.org/abs/1506.01497
+      \endverb
+    \endentry
+    \entry{lin_feature_2017}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=08f925fe4692d130a1d7cb7d94483351}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Tsung-Yi},
+           giveni={T\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=ecd149fdcb3e0503881d49e545744c3d}{%
+           family={Dollár},
+           familyi={D\bibinitperiod},
+           given={Piotr},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           familyi={G\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Kaiming},
+           giveni={K\bibinitperiod}}}%
+        {{hash=9cadf8ca1dd9b5f5a830ba2059b2517f}{%
+           family={Hariharan},
+           familyi={H\bibinitperiod},
+           given={Bharath},
+           giveni={B\bibinitperiod}}}%
+        {{hash=044d1db5259b74e4975282f599d8e767}{%
+           family={Belongie},
+           familyi={B\bibinitperiod},
+           given={Serge},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{810de9a8158d576bdd055e689072c3b1}
+      \strng{fullhash}{407b643cc48d7ba78686be05e508bfa5}
+      \strng{bibnamehash}{407b643cc48d7ba78686be05e508bfa5}
+      \strng{authorbibnamehash}{407b643cc48d7ba78686be05e508bfa5}
+      \strng{authornamehash}{810de9a8158d576bdd055e689072c3b1}
+      \strng{authorfullhash}{407b643cc48d7ba78686be05e508bfa5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Feature Pyramid Networks for Object Detection}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1612.03144
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1612.03144
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1612.03144
       \endverb
     \endentry
     \entry{torchvision2016}{software}{}

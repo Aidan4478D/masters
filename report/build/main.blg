@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is '/home/aidan/repos/masters/report/build/main.blg'
-[78] biber:340> INFO - === Fri Apr 17, 2026, 16:39:10
-[87] Biber.pm:418> INFO - Reading '/home/aidan/repos/masters/report/build/main.bcf'
-[135] Biber.pm:972> INFO - Found 79 citekeys in bib section 0
-[143] Biber.pm:4383> INFO - Processing section 0
-[150] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[175] bibtex.pm:1713> INFO - LaTeX decoding ...
-[229] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[495] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[495] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[495] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[495] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[520] bbl.pm:654> INFO - Writing '/home/aidan/repos/masters/report/build/main.bbl' with encoding 'UTF-8'
-[546] bbl.pm:757> INFO - Output to /home/aidan/repos/masters/report/build/main.bbl
+[50] biber:340> INFO - === Thu May  7, 2026, 15:02:04
+[59] Biber.pm:418> INFO - Reading '/home/aidan/repos/masters/report/build/main.bcf'
+[108] Biber.pm:972> INFO - Found 81 citekeys in bib section 0
+[115] Biber.pm:4383> INFO - Processing section 0
+[122] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[126] bibtex.pm:1713> INFO - LaTeX decoding ...
+[179] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[456] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[456] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[456] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[456] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[482] bbl.pm:654> INFO - Writing '/home/aidan/repos/masters/report/build/main.bbl' with encoding 'UTF-8'
+[511] bbl.pm:757> INFO - Output to /home/aidan/repos/masters/report/build/main.bbl

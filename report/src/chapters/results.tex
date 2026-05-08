@@ -25,7 +25,7 @@ for traffic-monitoring applications.
 
 \subsubsection{Baseline YOLO Experiments}
 
-The first YOLO experiments under the MOVES-based taxonomy were conducted by 
+The first YOLO experiments using the MOVES-based taxonomy were conducted by 
 fine-tuning baseline YOLO models on the training split and validating them on 
 the validation split defined in Section \ref{sec:data-splits}. Each model was 
 trained to predict the six final vehicle classes --- passenger car, passenger truck, 
@@ -35,23 +35,23 @@ images. The purpose of this stage was to assess whether YOLO could learn the
 refinement.
 
 To evaluate CNN-based one-stage detectors in a controlled and comparable way, 
-this study focused on YOLOv8, YOLO11, and YOLO26, which represent three distinct 
+this study focused on YOLOv8, YOLOv11, and YOLOv26, which represent three distinct 
 generations of the Ultralytics YOLO family. YOLOv8 (2023) was selected as a strong and 
 widely adopted baseline, since it introduced the anchor-free split head and was 
 designed as a general-purpose real-time detector with a favorable speed-accuracy 
 tradeoff \cite{yolov8_ultralytics} \cite{ultralytics_yolov8_vs_yolov11}. 
-YOLO11 (2024) was included because it is a newer Ultralytics detector that builds 
+YOLOv11 (2024) was included because it is a newer Ultralytics detector that builds 
 on earlier YOLO models with improved feature extraction, training efficiency, and 
 parameter efficiency, making it a natural candidate for higher accuracy under 
 the same general framework \cite{yolo11_ultralytics} \cite{ultralytics_yolov8_vs_yolov11}. 
-As of April 2026, YOLO26 is Ultralytics' most recent YOLO model, tested as an 
+As of April 2026, YOLOv26 is Ultralytics' most recent YOLO model, tested as an 
 edge-oriented variant designed for simpler deployment, with end-to-end NMS-free 
 inference and targeted improvements for efficiency and small-object recognition 
 \cite{yolo26_ultralytics} \cite{ultralytics_yolov8_vs_yolov11}. 
 Evaluating these three models therefore allowed comparison across a 
 consistent detector family while covering a useful range of design priorities: 
-a mature baseline (YOLOv8), a newer accuracy-focused refinement (YOLO11), and a
-deployment-oriented architecture with simplified inference (YOLO26). This made 
+a mature baseline (YOLOv8), a newer accuracy-focused refinement (YOLOv11), and a
+deployment-oriented architecture with simplified inference (YOLOv26). This made 
 them well suited for the present task, which required not only accurate vehicle 
 detection but also practical applicability to traffic-monitoring and counting 
 workflows. To enable a more controlled comparison across YOLO generations, all 
@@ -200,9 +200,9 @@ were predicted for background regions was reduced.
 
 As shown in Table~\ref{tab:dataset-refinement-results}, the dataset refinement 
 step led to small but consistent improvements in validation performance for both 
-baseline models. YOLOv11s improved from an mAP50 of 0.785 to 0.795 and from an 
-mAP50--95 of 0.606 to 0.613, while YOLOv26s improved from an mAP50 of 0.774 to 0.781 
-and from a mAP50--95 of 0.622 to 0.627. These gains were modest, but they support 
+baseline models. YOLOv11s improved from an mAP50 of 0.804 to 0.814 and from an 
+mAP50--95 of 0.615 to 0.622, while YOLOv26s improved from an mAP50 of 0.802 to 0.809
+and from a mAP50--95 of 0.632 to 0.637. These gains were modest, but they support 
 the conclusion that manually reassessing flagged examples and preserving genuinely 
 ambiguous vehicles as \verb|unknown_vehicle| improved dataset quality.
 
@@ -216,11 +216,11 @@ ambiguous vehicles as \verb|unknown_vehicle| improved dataset quality.
         \toprule
         Base Model & Dataset Version & mAP50 & mAP50--95 \\
         \midrule
-        YOLOv11s & Pre-refinement  & 0.785 & 0.606 \\
-                 & Post-refinement & \textbf{0.795} & \textbf{0.613} \\
+        YOLOv11s & Pre-refinement  & 0.804 & 0.615 \\
+                 & Post-refinement & \textbf{0.814} & \textbf{0.622} \\
         \midrule
-        YOLOv26s & Pre-refinement  & 0.774 & 0.622 \\
-                 & Post-refinement & \textbf{0.781} & \textbf{0.627} \\
+        YOLOv26s & Pre-refinement  & 0.802 & 0.632 \\
+                 & Post-refinement & \textbf{0.809} & \textbf{0.637} \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -252,6 +252,29 @@ truck, bus, and motorcycle, while light commercial truck decreased by one instan
     \end{tabular}
 \end{table}
 \FloatBarrier
+%
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Full-dataset class counts before and after dataset refinement, aggregated across the training, validation, and test splits.}
+%     \label{tab:full-class-counts-refinement}
+%     \begin{tabular}{l c c}
+%         \toprule
+%         Class & Pre-Refinement & Post-Refinement \\
+%         \midrule
+%         bus                  & 593   & 596   \\
+%         pickup\_truck        & 182   & 184   \\
+%         sedan                & 3347  & 3357  \\
+%         suv                  & 5016  & 5010  \\
+%         truck                & 819   & 829   \\
+%         two\_wheeler         & 47    & 48    \\
+%         unknown\_vehicle     & 9491  & 9625  \\
+%         van                  & 1334  & 1326  \\
+%         \midrule
+%         all                  & 20829 & 20975 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
+% \FloatBarrier
 
 % ------------------------------------------------------------------------------
 
@@ -305,7 +328,7 @@ images retained, and the strongest configuration used a confidence threshold of
 targeted refinement produced the best-performing detector in the study. Compared
 with the baseline YOLOv11s experiment, training a new YOLOv11s model on the 
 original training set augmented with the mined hard examples improved validation
-performance from mAP50 = 0.804 to 0.857 and from mAP50--95 = 0.615 to 0.661. This was 
+performance from mAP50 of 0.804 to 0.857 and from mAP50--95 of 0.615 to 0.661. This was 
 the strongest overall result obtained among the YOLO experiments.
 
 Additional data-centric experiments were also explored through selective oversampling
@@ -335,8 +358,8 @@ in Table~\ref{tab:yolo-refinement-summary}.
 \arrayrulecolor{black!25}
 \setlength{\tabcolsep}{4pt}
 
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1.38cm} >{\centering\arraybackslash}p{1.85cm} >{\raggedright\arraybackslash}p{3.05cm} >{\centering\arraybackslash}p{1.0cm} >{\centering\arraybackslash}p{1.15cm} >{\raggedright\arraybackslash}X}
-\caption{Summary of the principal YOLO refinement experiments conducted under the MOVES-based taxonomy. mAP50 and mAP50--95 are reported at the best validation checkpoint for each run. Extra images refers to the additional images added to the training set.}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1.38cm} >{\centering\arraybackslash}p{1.65cm} >{\raggedright\arraybackslash}p{2.80cm} >{\centering\arraybackslash}p{1.35cm} >{\centering\arraybackslash}p{1.85cm} >{\raggedright\arraybackslash}X}
+\caption{Summary of the YOLO refinement experiments conducted under the MOVES-based taxonomy. mAP50 and mAP50--95 are reported at the best validation checkpoint for each run. Extra images refers to the additional images added to the training set.}
 \label{tab:yolo-refinement-summary} \\
 \toprule
 Backbone & Extra Images & Hyperparameters & mAP50 & mAP50--95 & \multicolumn{1}{c}{Notes} \\
@@ -394,7 +417,7 @@ freeze = 10
 
 Overall, the data-centric refinement experiments showed that the largest performance 
 gains were obtained from adding mined hard examples targeting the 
-\verb|passenger_car|/\verb|passenger_truck| boundary, whereas broader
+\verb|passenger_car| and \verb|passenger_truck| boundary, whereas broader
 class-specific oversampling and additional hyperparameter changes did not yield 
 further improvement.
 
@@ -410,7 +433,7 @@ YOLO experiments, this configuration achieved the strongest validation performan
 with an mAP50 of 0.857 and a mAP50--95 of 0.661.
 
 Although additional refinement runs were explored after this stage, none improved 
-upon the validation performance of the final YOLOv11s model. It was therefore 
+upon the validation performance of the final YOLOv11s model. This model was therefore 
 selected for all remaining evaluations and was assessed once on the held-out test
 set, which had been reserved exclusively for final evaluation. The test set was 
 evaluated using the same ignore-aware procedure used for validation, as outlined 
@@ -423,7 +446,7 @@ summarized by class in Table~\ref{tab:yolo-final-test-results}.
     \label{tab:yolo-final-test-results}
     \begin{tabular}{l c c c c}
         \toprule
-        Class & Images & Instances & mAP50 & mAP50--95 \\
+        Class & Images & Instances & AP50 & AP50--95 \\
         \midrule
         passenger\_car            & 114 & 363  & 0.779 & 0.620 \\
         passenger\_truck          & 117 & 643  & 0.868 & 0.705 \\
@@ -449,29 +472,34 @@ detection architectures.
 \subsubsection{Faster R-CNN}
 
 Like the YOLO experiments, Faster R-CNN experiments were conducted under the 
-MOVES-based taxonomy. For implementation, torchvision Faster R-CNN models with 
-ResNet-50 feature pyramid backbones were used, including both the standard 
-\verb|fasterrcnn_resnet50_fpn| model and the newer \verb|fasterrcnn_resnet50_fpn_v2|
-variant provided in torchvision. The \verb|fasterrcnn_resnet50_fpn_v2| model is 
-described in the torchvision documentation as an improved Faster R-CNN model with 
-a ResNet-50-FPN backbone \cite{torchvision2016}.
+MOVES-based taxonomy. Faster R-CNN is a two-stage object detector that first 
+generates candidate object regions using a Region Proposal Network and then 
+classifies and refines those regions in a second stage~\cite{ren_faster_2015}. 
+For implementation, torchvision Faster R-CNN models with ResNet-50 feature 
+pyramid backbones were used, including both the standard 
+\verb|fasterrcnn_resnet50_fpn| model and the newer 
+\verb|fasterrcnn_resnet50_fpn_v2| variant provided in torchvision. Feature 
+pyramid backbones are commonly used to improve multi-scale object detection
+~\cite{lin_feature_2017}, and the specific torchvision implementation is 
+documented by the torchvision maintainers~\cite{torchvision2016}.
 
 For the Faster R-CNN experiments, the detector head was adapted to the MOVES-based
 taxonomy by replacing the default box predictor with a new predictor for six 
 foreground classes plus background. The training pipeline used the same train/validation
-split as the other detectors. A small-object-oriented anchor generator was used 
-with anchor sizes of 8, 16, 32, 64, and 128 pixels across the feature pyramid, 
-and like the YOLO experiments, images were resized to $768 \times 1280$. Training used 
-AdamW with a learning rate of $2\times10^{-4}$, weight decay of $10^{-4}$, and 
-a cosine annealing learning-rate schedule over 50 epochs. Light augmentation was 
-applied during training, consisting of random horizontal flipping and modest 
-color jitter in the best runs. Batch size was set to 4 for training and 2 for 
-validation. As in the YOLO and transformer experiments, \verb|unknown_vehicle| 
-instances were masked during training and treated as ignore regions during evaluation, 
-following the same ignore-aware procedure outlined in Section~\ref{sec:unknown-vehicles}.
+split as the other detectors. To better match the small vehicles that appear in the
+traffic-camera images, the anchor generator used box sizes of 8, 16, 32, 64, and
+128 pixels across the feature pyramid. As in the YOLO experiments, images were
+resized to $768 \times 1280$. Training used AdamW with a learning rate of
+$2\times10^{-4}$, weight decay of $10^{-4}$, and a cosine annealing learning-rate
+schedule over 50 epochs. Light augmentation was applied during training, consisting
+of random horizontal flipping and modest color jitter in the best runs. Batch size
+was set to 4 for training and 2 for validation. As in the YOLO and transformer
+experiments, \verb|unknown_vehicle| instances were masked during training and
+treated as ignore regions during evaluation, following the same ignore-aware
+procedure outlined in Section~\ref{sec:unknown-vehicles}.
 
 A light targeted grid search was conducted for the Faster R-CNN experiments to 
-evaluate a small number of influential training choices without the cost of a 
+evaluate a small number of influential hyperparameters without the cost of a 
 full exhaustive sweep. The search varied four factors: backbone variant 
 (\verb|fasterrcnn_resnet50_fpn_v2| versus \verb|fasterrcnn_resnet50_fpn|), \
 learning rate ($1\times10^{-4}$ and $2\times10^{-4}$), augmentation strategy 
@@ -508,8 +536,8 @@ of 0.440.
 
 Although the \verb|fasterrcnn_resnet50_fpn_v2| experiments produced the strongest 
 Faster R-CNN results in this study, their validation performance remained below that 
-of the YOLO baselines reported in Table~\ref{tab:yolo-baseline-results}. In particular,
-the best Faster R-CNN configuration achieved an mAP50 of 0.706 and a mAP50--95 of 0.509, 
+of the YOLO baselines reported in Table~\ref{tab:yolo-baseline-results}. 
+The best Faster R-CNN configuration achieved an mAP50 of 0.706 and a mAP50--95 of 0.509, 
 whereas the strongest baseline YOLO results were already higher before additional 
 refinement. Since the Faster R-CNN baselines did not approach the performance of the 
 leading YOLO configurations, further iteration on the Faster R-CNN models was not
@@ -532,8 +560,8 @@ For these experiments, the detector backbone was kept frozen for the first 10 ep
 and then unfrozen for the remainder of training, with the full model trained for 50 
 epochs using AdamW and a weight decay of $10^{-4}$. A cosine learning-rate schedule
 was used, and learning rates were selected through iterative tuning rather than 
-exhaustive search, since a single training run required several hours. In practice, 
-parameter settings were chosen by monitoring whether validation performance remained 
+exhaustive search, since a single training run required several hours. 
+Parameter settings were chosen by monitoring whether validation performance remained 
 stable and continued improving over training, while avoiding configurations that caused
 the detector to stall or degrade early. The best learning rates for Deformable DETR 
 and RT-DETR are summarized in Table~\ref{tab:detr-results}.
@@ -588,7 +616,7 @@ pursued further as candidates for the final detector.
 
 \subsection{Model Robustness and Cross-Camera Generalization}
 
-After selecting the final detector, additional experiments were conducted to evaluate 
+After selecting the final YOLOv11s detector, additional experiments were conducted to evaluate 
 its robustness and generalization beyond the original validation split. These 
 experiments focused on two questions. First, the sensitivity of the detector to
 confidence-threshold and non-maximum-suppression settings was examined to determine 
@@ -676,8 +704,8 @@ For each combination, predictions were evaluated on the validation set using the
 same ignore-aware evaluation procedure described in Section~\ref{sec:unknown-vehicles},
 in which detections overlapping \verb|unknown_vehicle| regions above the specified
 ignore IoU threshold were removed before scoring. This produced a grid of 36 inference
-configurations, allowing the sensitivity of both mAP50 and mAP50--95 to be assessed without 
-using the held-out test set for tuning. Figure~\ref{fig:conf-nms-heatmaps} presents 
+configurations, allowing the sensitivity of both mAP50 and mAP50--95 to be assessed for tuning
+without using the held-out test set. Figure~\ref{fig:conf-nms-heatmaps} presents 
 heatmaps of validation mAP50 and mAP50--95 across the evaluated confidence-threshold and 
 NMS IoU grid for the final YOLOv11s model.
 
@@ -715,7 +743,6 @@ results indicate that detector performance was much more sensitive to aggressive
 confidence filtering than to the specific NMS IoU setting within the tested range.
 
 % ------------------------------------------------------------------------------
-
 \subsubsection{Cross-Camera Generalization}
 \label{sec:camera-generalization}
 
@@ -769,7 +796,7 @@ vehicle instances.
     \label{tab:cross-camera-results}
     \begin{tabular}{l c c}
         \toprule
-        Class & mAP50 & mAP50--95 \\
+        Class & AP50 & AP50--95 \\
         \midrule
         passenger\_car            & 0.626 & 0.487 \\
         passenger\_truck          & 0.761 & 0.592 \\
@@ -791,13 +818,14 @@ vehicle instances.
 \subsection{Comparison with ATR Traffic Counts}
 \label{sec:atr-analysis}
 
-This experiment was conducted to assess how closely hourly vehicle counts produced
-by the final YOLOv11s model aligned with New York City Automated Traffic Recorder 
-(ATR) counts \cite{NYC_open_data_atr} at three unseen camera locations: Atlantic 
-Avenue at Boerum Place, Broadway at Houston, and Pelham Parkway Westbound at Boston 
-Road. These were the same three locations used in the cross-camera benchmark in 
-Section~\ref{sec:camera-generalization}, allowing the detector's performance on
-unseen views to be examined further through a traffic-count comparison.
+To evaluate whether the detector-derived counts reflected real traffic patterns,
+hourly vehicle counts produced by the final YOLOv11s model were compared with
+New York City Automated Traffic Recorder (ATR) counts \cite{NYC_open_data_atr}
+at three unseen camera locations: Atlantic Avenue at Boerum Place, Broadway at
+Houston, and Pelham Parkway Westbound at Boston Road. These were the same three
+locations used in the cross-camera benchmark in Section~\ref{sec:camera-generalization},
+allowing the detector's performance on unseen views to be examined further through
+a traffic-count comparison.
 
 \begin{figure}[!htbp]
     \centering
@@ -835,27 +863,27 @@ similar weather conditions \cite{zippenfenig_open-meteocom_2024}.
 Images were collected from March 13, 2026 at 12:01 AM through March 20, 2026 at 
 12:00 PM. An image was sampled from each camera every two minutes, consistent with
 the sampling rate used during dataset creation, to reduce the risk of the same 
-scene being counted more than once, since the camera feeds updated slowly and 
-explicit image-to-image vehicle matching was not implemented.
-See Table~\ref{tab:atr-image-collection} for information regarding the
-dates in which the collected images are compared against the true ATR counts. 
-These comparison dates were chosen as they were when the 2025 ATR data was collected 
-for the specified street intersections.
+scene being counted more than once, since the camera feeds update slowly and 
+explicit image-to-image vehicle matching was not implemented. Since March 2026
+ATR records were not yet publicly available for these locations, the comparison
+used the March 2025 ATR dates that were publicly available for the same three
+street intersections. Table~\ref{tab:atr-image-collection} summarizes the
+camera locations, comparison dates, and total number of collected images.
 
 \begin{table}[!htbp]
     \centering
     \caption{Camera locations, comparison dates, and total number of collected images used in the ATR traffic-count analysis.}
     \label{tab:atr-image-collection}
-    \begin{tabular}{p{7cm} c c c}
+    \begin{tabular}{l c c}
         \toprule
         \centering Camera Intersection &
-        \centering Borough &
-        \centering\shortstack{Vehicle Count\\Comparison Dates} &
+        % \centering Borough &
+        \centering\arraybackslash \shortstack{Comparison Dates\\(2026 images / 2025 ATR)} &
         \centering Total Images \tabularnewline
         \midrule
-        Broadway @ Houston           & Manhattan & 3/14 -- 3/17 & 2,774 \\
-        Pelham Pkwy W/B @ Boston Rd  & Bronx     & 3/13 -- 3/17 & 3,488 \\
-        Atlantic Ave @ Boerum Place  & Brooklyn  & 3/18 -- 3/19 & 1,440 \\
+        Broadway @ Houston           & \centering\arraybackslash 3/14 -- 3/17 & 2,774 \\
+        Pelham Pkwy W/B @ Boston Rd  & \centering\arraybackslash 3/13 -- 3/17 & 3,488 \\
+        Atlantic Ave @ Boerum Place  & \centering\arraybackslash 3/18 -- 3/19 & 1,440 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -901,7 +929,7 @@ for a per-day summary at each camera location, comparing the YOLO and ATR detect
     \end{tabular}%
     }
 \end{table}
-\FloatBarrier
+% \FloatBarrier
 
 As shown in Table~\ref{tab:atr-count-comparison}, agreement with ATR counts varied substantially across locations. 
 The closest match between counts was observed at Atlantic Avenue at Boerum Place,
@@ -926,6 +954,9 @@ showed strong hourly-pattern agreement despite larger differences in total volum
 with correlations ranging from 0.780 to 0.906. See Figure~\ref{fig:atr-hourly-comparisons} for hourly count 
 comparisons for selected camera-day pairs, showing both the raw hourly counts and 
 the normalized hourly counts for the YOLO and ATR detections.
+Overall, these results showed that the final YOLOv11s model reproduced hourly 
+traffic patterns more consistently at some unseen camera locations than others, 
+while agreement with ATR count magnitude remained strongly location-dependent.
 
 \begin{figure}[!htbp]
     \centering
@@ -993,9 +1024,5 @@ the normalized hourly counts for the YOLO and ATR detections.
              that source's daily total.}
     \label{fig:atr-hourly-comparisons}
 \end{figure}
-
-Overall, these results showed that the final YOLOv11s model reproduced hourly 
-traffic patterns more consistently at some unseen camera locations than others, 
-while agreement with ATR count magnitude remained strongly location-dependent.
-
 \FloatBarrier
+

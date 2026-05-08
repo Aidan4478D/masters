@@ -93,7 +93,7 @@ in Figure~\ref{fig:ptz-cameras}.
 
 While these cameras are capable of high-resolution video, the images returned 
 by the 511NY API \verb|GetCameras| endpoint have a resolution of $352 \times 240$, and are 
-generally low-quality. Examples of such images can be seen in Figure~\ref{fig:image-weather-conditions}.
+generally low-quality. Examples of such images under various conditions can be seen in Figure~\ref{fig:image-weather-conditions}.
 It is possible that the images returned from the \verb|GetCameras| endpoint are intentionally 
 downsampled and compressed, as this reduces server bandwidth and inherently 
 enforces privacy by making it impossible to read license plates or use facial 
@@ -367,7 +367,6 @@ The vehicle classes were designed to balance two needs: visual distinguishabilit
 low-resolution CCTV imagery and relevance to downstream emissions estimation. 
 Thus, in total, eight classes were used: \verb|sedan|, \verb|suv|, \verb|pickup_truck|,
 \verb|van|, \verb|bus|, \verb|truck|, \verb|two_wheeler|, and \verb|unknown_vehicle|.
-
 These labels were chosen because they represent vehicle groupings that are reasonably 
 aligned with broader transportation and emissions categories while still remaining 
 visually identifiable in $352 \times 240$ traffic-camera images. In particular, 
@@ -381,7 +380,7 @@ DOE materials similarly distinguish broad classes such as passenger cars, passen
 trucks, buses, trucks, and motorcycles for transportation and emissions analysis 
 \cite{FHWA_traffic_2014, USEPA_def_truck_2019, USDOE_AFDC}.
 
-This simplification was also necessary because the dataset consists of low-resolution
+This grouping was also necessary because the dataset consists of low-resolution
 CCTV images, in which fine-grained distinctions between similar passenger body styles 
 are often visually unreliable. In many views, differences in roofline, rear profile, 
 ride height, and body proportions are subtle and can be obscured by distance, motion 
@@ -393,6 +392,18 @@ SUVs in side or angled views were typically identified by a taller cabin profile
 greater apparent ride height, and larger overall body proportions relative to nearby 
 sedans. Sedans, by contrast, were generally lower to the ground, with a slimmer body 
 profile and a more downward-sloping rear.
+Minivans, which were labeled under the \verb|van| class and marked with a separate 
+attribute, were usually distinguished from SUVs, when visible with sufficient clarity, 
+by their lower stance and by the alignment of the rear sliding-door handle near the 
+front-door handle. This distinction is shown in Figure~\ref{fig:minivan-suv-heuristics}.
+
+These cues were not treated as absolute rules, but rather as 
+consistent guidelines used to reduce labeling variability across ambiguous cases. 
+Grouping visually similar body styles into broader categories therefore reduced 
+annotation ambiguity and helped limit label noise, which is especially important 
+in a manually labeled dataset where forcing uncertain distinctions can degrade 
+downstream model performance.
+
 
 \begin{figure}[!htbp]
     \centering
@@ -421,12 +432,7 @@ profile and a more downward-sloping rear.
     \label{fig:sedan-suv-heuristics}
 \end{figure}
 
-\FloatBarrier
-
-Minivans, which were labeled under the \verb|van| class and marked with a separate 
-attribute, were usually distinguished from SUVs, when visible with sufficient clarity, 
-by their lower stance and by the alignment of the rear sliding-door handle near the 
-front-door handle. This distinction is shown in Figure~\ref{fig:minivan-suv-heuristics}.
+% \FloatBarrier
 
 \begin{figure}[!htbp]
     \centering
@@ -455,14 +461,6 @@ front-door handle. This distinction is shown in Figure~\ref{fig:minivan-suv-heur
 \end{figure}
 
 \FloatBarrier
-
-These cues were not treated as absolute rules, but rather as 
-consistent guidelines used to reduce labeling variability across ambiguous cases. 
-Grouping visually similar body styles into broader categories therefore reduced 
-annotation ambiguity and helped limit label noise, which is especially important 
-in a manually labeled dataset where forcing uncertain distinctions can degrade 
-downstream model performance.
-
 At the same time, the annotation classes were intentionally made somewhat more 
 descriptive than the final class structure used in the present training pipeline. 
 Although \verb|suv| and \verb|pickup_truck| are ultimately grouped into the MOVES 
@@ -587,18 +585,21 @@ annotations can degrade model training and evaluation quality \cite{CVAT_annotat
 
 An additional class, \verb|unknown_vehicle|, was introduced to handle ambiguous 
 cases where a vehicle was clearly present but could not be labeled confidently as
-one of the primary types. In practice, this most often occurred when the low image
+one of the primary types. In practice, this generally occurred when the low image
 quality, occlusion, motion blur, extreme viewing angle, or vehicle distance made 
 it difficult to distinguish between visually similar classes, especially sedans and
-SUVs. See Figure~\ref{fig:unknown-vehicles} for an example.
+SUVs. See Figure~\ref{fig:unknown-vehicles} for examples.
 
 Including the \verb|unknown_vehicle| class served two purposes. First, it prevented
-uncertain objects from being forced into incorrect labels, which would introduce 
-label noise into the training data. Second, it allowed the annotation process to
-remain consistent as vehicles were still marked as present in the scene, but without 
-overstating certainty about their exact type. This is especially important in 
-low-resolution urban traffic imagery, where fine-grained body-style distinctions 
-are not always visually reliable. 
+uncertain objects from being forced to have incorrect labels, which would
+introduce label noise into the training data. Second, it allowed vehicles with uncertain
+class identity to remain explicitly marked as vehicles rather than being omitted from
+the annotations. If these regions were left unlabeled, the model could incorrectly
+learn that visible but ambiguous vehicles are background, and evaluation metrics
+could be deflated by penalizing predictions on objects whose ground-truth class was
+not known with sufficient confidence. This is especially important in low-resolution
+urban traffic imagery, where fine-grained body-style distinctions are not always
+visually reliable.
 Because the goal of the dataset was not simply to maximize the number of labeled 
 vehicles, but to create a high-quality training set for downstream emissions-oriented
 classification, preserving uncertainty explicitly rather than introducing mislabeled
@@ -608,7 +609,7 @@ images was preferred.
     \centering
     \begin{subfigure}[c]{0.8\textwidth}
         \centering
-        \includegraphics[height=6cm]{figures/dataset/3_4_3_unknown_example.png}
+        \includegraphics[height=5cm]{figures/dataset/3_4_3_unknown_example.png}
         \caption{Image with vehicles that are difficult to distinguish in the background 
                  (vehicles without a colorful box around them).}
     \end{subfigure}
@@ -618,13 +619,13 @@ images was preferred.
 
     \begin{subfigure}[t]{0.42\textwidth}
         \centering
-        \includegraphics[height=3.5cm]{figures/dataset/3_4_3_unknown_zoomed.png}
+        \includegraphics[height=3cm]{figures/dataset/3_4_3_unknown_zoomed.png}
         \caption{Close-up of the background in (a) with unknown vehicles.}
     \end{subfigure}
     \hspace{2em}
     \begin{subfigure}[t]{0.42\textwidth}
         \centering
-        \includegraphics[height=3.5cm]{figures/dataset/3_4_3_unknown_labeled.png}
+        \includegraphics[height=3cm]{figures/dataset/3_4_3_unknown_labeled.png}
         \caption{Ambiguous vehicles from (b) are given the \texttt{unknown\_vehicle} class.}
     \end{subfigure}
 
@@ -655,7 +656,7 @@ Aidan Cusa.
 
 To maintain consistency, each frame was treated as an independent labeling instance.
 In other words, class assignments were based only on the visual evidence available in
-the current frame rather than on how the same vehicle may have appeared in a previous
+the current frame rather than how the same vehicle may have appeared in a previous
 or subsequent frame. This was especially important under changing lighting,
 occlusion, or motion conditions, where a vehicle that was clearly identifiable in one
 frame might be less distinguishable in another. Both moving and parked vehicles were
@@ -670,7 +671,7 @@ correct earlier labeling issues, including missed vehicles, misclassifications, 
 bounding boxes that were too loose or otherwise imprecise.
 See Section~\ref{sec:data-refinement} for more information regarding annotation revision.
 
-This annotation procedure was repeated across all 1,200 images in the dataset.
+This procedure was repeated for all 1,200 images in the dataset.
 Because the images were collected from multiple camera locations and viewing angles,
 the labeling process captured vehicles under a wide range of perspectives, including
 front-facing, rear-facing, side-facing, and mixed-angle views. Vehicles also appeared
@@ -728,20 +729,20 @@ substantially smaller than the corresponding parent-class totals.
         \toprule
         \textbf{Parent Class} & \textbf{Attribute} & \textbf{Count} \\
         \midrule
-        bus    & is\_school     & 174 \\
-        \midrule
         sedan  & is\_taxi       & 17 \\
         sedan  & is\_police     & 19 \\
         \midrule
         suv    & is\_taxi       & 201 \\
         suv    & is\_police     & 30 \\
         \midrule
+        van    & is\_taxi       & 161 \\
+        van    & is\_minivan    & 301 \\
+        \midrule
         truck  & is\_delivery   & 54 \\
         truck  & is\_firetruck  & 4 \\
         truck  & is\_ambulance  & 13 \\
         \midrule
-        van    & is\_taxi       & 161 \\
-        van    & is\_minivan    & 301 \\
+        bus    & is\_school     & 174 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -796,20 +797,20 @@ evaluation.
 
 \begin{table}[!htbp]
     \centering
-    \caption{Annotated vehicle instances by class across dataset splits}
+    \caption{Annotated vehicle instances by class across dataset splits. Percentages indicate each class's share within the corresponding split.}
     \label{tab:split-class-counts}
-    \begin{tabular}{lrrr}
+    \begin{tabular}{lccc}
         \toprule
         \textbf{Class} & \textbf{Train} & \textbf{Validation} & \textbf{Test} \\
         \midrule
-        bus              & 476   & 53  & 67  \\
-        pickup\_truck    & 142   & 25  & 17  \\
-        sedan            & 2,683 & 311 & 363 \\
-        suv              & 3,955 & 467 & 588 \\
-        truck            & 644   & 120 & 65  \\
-        two\_wheeler     & 37    & 6   & 5   \\
-        unknown\_vehicle & 7,712 & 928 & 985 \\
-        van              & 1,053 & 125 & 148 \\
+        bus              & 476 (2.8\%)    & 53 (2.6\%)   & 67 (3.0\%)   \\
+        pickup\_truck    & 142 (0.9\%)    & 25 (1.2\%)   & 17 (0.8\%)   \\
+        sedan            & 2,683 (16.1\%) & 311 (15.3\%) & 363 (16.2\%) \\
+        suv              & 3,955 (23.7\%) & 467 (22.9\%) & 588 (26.3\%) \\
+        truck            & 644 (3.9\%)    & 120 (5.9\%)  & 65 (2.9\%)   \\
+        two\_wheeler     & 37 (0.2\%)     & 6 (0.3\%)    & 5 (0.2\%)    \\
+        unknown\_vehicle & 7,712 (46.2\%) & 928 (45.6\%) & 985 (44.0\%) \\
+        van              & 1,053 (6.3\%)  & 125 (6.1\%)  & 148 (6.6\%)  \\
         \midrule
         \textbf{Total}   & \textbf{16,702} & \textbf{2,035} & \textbf{2,238} \\
         \bottomrule
@@ -817,7 +818,9 @@ evaluation.
 \end{table}
 
 \FloatBarrier
-
+The percentages show that the overall class distribution was largely preserved 
+across the three splits, with unknown vehicles, SUVs, and sedans remaining the 
+dominant categories in each subset.
 Table~\ref{tab:split_attribute_counts} summarizes the distribution of positively
 assigned attributes across the three splits. The counts of each attribute are 
 roughly proportional to the 80/10/10 dataset split. 
@@ -830,20 +833,20 @@ roughly proportional to the 80/10/10 dataset split.
         \toprule
         \textbf{Parent Class} & \textbf{Attribute} & \textbf{Train} & \textbf{Validation} & \textbf{Test} \\
         \midrule
-        bus   & is\_school       & 132 & 15 & 27 \\
-        \midrule
         sedan & is\_taxi         & 15  & 0  & 2  \\
         sedan & is\_police       & 16  & 2  & 1  \\
         \midrule
         suv   & is\_taxi         & 166 & 25 & 10 \\
         suv   & is\_police       & 27  & 2  & 1  \\
         \midrule
+        van   & is\_taxi         & 135 & 15 & 11 \\
+        van   & is\_minivan      & 231 & 32 & 38 \\
+        \midrule
         truck & is\_delivery     & 50  & 4  & 0  \\
         truck & is\_firetruck    & 3   & 1  & 0  \\
         truck & is\_ambulance    & 11  & 2  & 0  \\
         \midrule
-        van   & is\_taxi         & 135 & 15 & 11 \\
-        van   & is\_minivan      & 231 & 32 & 38 \\
+        bus   & is\_school       & 132 & 15 & 27 \\
         \bottomrule
     \end{tabular}
 \end{table}

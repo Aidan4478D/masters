@@ -9,7 +9,8 @@ which predicts a single label for an entire image, object detection must determi
 both what objects are present and where they are located.
 
 In this work, vehicle detection is performed using the YOLO family of models.
-YOLO processes an image in a single pass and directly outputs predicted bounding boxes, 
+As shown in Figure~\ref{fig:yolo-pipeline}, YOLO processes an image in a single 
+pass and directly outputs predicted bounding boxes, 
 confidence scores, and class labels for the objects it detects.
 This formulation allows fast inference while maintaining strong detection
 performance, making YOLO well suited for traffic-camera imagery and other 
@@ -63,8 +64,7 @@ resolution than the original image. CNN architectures may also include pooling
 operations, which further reduce spatial resolution while preserving the strongest
 responses. As convolution and pooling layers are applied repeatedly, each value
 in a deeper feature map reflects information from a larger portion of the input 
-image. This region is called the receptive field.
-\cite{oshea2015introCNN}.
+image. This region is called the receptive field \cite{oshea2015introCNN}.
 
 In Fig.~\ref{fig:cnn-diagram}, a simple binary image is processed using a 
 $3 \times 3$ kernel with stride $1$, producing a feature map. This feature map 
@@ -112,7 +112,7 @@ and vertical axes is approximately:
     W_{grid} = \frac{W_{input}}{s}, \qquad H_{grid} = \frac{H_{input}}{s}
 \end{equation}
 
-Where $W_{input}$ and $H_{input}$ are the width and height of the input image 
+where $W_{input}$ and $H_{input}$ are the width and height of the input image 
 respectively. Each grid location therefore corresponds to a region of the original 
 image and serves as a prediction point. YOLO uses these spatial locations to 
 produce candidate bounding boxes, objectness scores, and class probabilities for
@@ -162,7 +162,7 @@ contains an object and is defined as:
 c = P(\text{object}) \times \mathrm{IoU}^{\text{truth}}_{\text{pred}}
 \end{equation}
 
-Where $P(\text{object})$ is the probability that an object exists in the predicted region 
+where $P(\text{object})$ is the probability that an object exists in the predicted region 
 and $\mathrm{IoU}^{\text{truth}}_{\text{pred}}$ is the Intersection over Union 
 (IoU) between the predicted bounding box and the ground truth bounding box \cite{redmon2016YOLO}. 
 See Section~\ref{sec:iou} for more details regarding IoU. This formulation allows
@@ -216,10 +216,10 @@ different grid locations rather than the final post-processed detections \cite{r
 
 \subsubsection{Post-Processing and Final Detections}
 
-Because each grid cell may produce multiple candidate bounding boxes, the raw 
+Because each grid cell may contain multiple candidate bounding boxes, the raw 
 output of the network often contains several overlapping predictions that correspond
 to the same object. To produce the final detections, a post-processing step known 
-as Non-Maximum Suppression (NMS) is applied. Non-Maximum Suppression operates by:
+as non-maximum suppression (NMS) is applied. NMS operates by:
 
 \begin{enumerate}
     \item Ranking all predicted bounding boxes according to their confidence scores.
@@ -328,10 +328,12 @@ were retained as an annotation attribute and grouped into the broader bus class.
 This is because the primary objective of this study is to identify the broad 
 vehicle categories most relevant to downstream emissions-oriented analysis rather
 than to infer every possible subtype within each category. As such, the bus 
-attribute, \verb|is_school|, was preserved as useful annotation metadata and a potential
+attribute, \verb|is_school|, was preserved as useful metadata and a potential
 avenue for future refinement, but it was not treated as essential to the core 
 detector taxonomy. The final mapping between the dataset taxonomy and the MOVES 
 taxonomy is shown in Figure~\ref{fig:moves-mapping}.
+This MOVES-based taxonomy was used for the remainder of the study as the common 
+label mapping for the dataset and for all subsequent training, testing, and evaluation.
 
 \begin{figure}[!htbp]
     \centering
@@ -346,8 +348,6 @@ taxonomy is shown in Figure~\ref{fig:moves-mapping}.
     \label{fig:moves-mapping}
 \end{figure}
 
-This MOVES-based taxonomy was used for the remainder of the study as the common 
-label mapping for the dataset and for all subsequent training, testing, and evaluation.
 
 % ==============================================================================
 
@@ -398,7 +398,7 @@ for an example of a training image before and after masking.
 During validation and later test-time evaluation, the images were not modified. 
 Instead, a custom ignore-aware evaluation procedure was used. The \verb|unknown_vehicle| 
 boxes were reconstructed directly from the original CVAT XML annotations, and any
-prediction overlapping one of these regions above an IoU threshold of 0.40 was 
+prediction overlapping one of these regions above a set IoU threshold was 
 removed before scoring. The remaining predictions were then matched against the 
 MOVES-based classes to compute mAP50 and mAP50--95. This ensured that detections falling
 on visually ambiguous vehicles were not counted as false positives, while preserving
@@ -454,7 +454,9 @@ An IoU score ranges from 0 (no overlap) to 1 (perfect alignment). By
 establishing an IoU threshold (ex., 0.50), we define the strictness required 
 for a bounding box prediction to be considered valid.
 
+\FloatBarrier
 \subsubsection{Confusion Matrix}
+\FloatBarrier
 
 \begin{figure}[!htbp]
     \centering
@@ -473,11 +475,12 @@ this way, the IoU threshold converts box overlap into the discrete categories ne
 for evaluation, such as true positives, false positives, and false negatives. Within
 the context of this project, the entries of the confusion matrix correspond to:
 
+
 \begin{itemize}
     \item \textbf{True Positive (TP)}: A detection that matches a human-annotated
     ground truth box of the correct vehicle class with an IoU $\geq$ the defined 
     threshold. For example, the model successfully draws a bounding box around a 
-    sedan and correctly classifies it as a Light-Duty Vehicle (LDV) with an IoU 
+    sedan and correctly classifies it as a seden with an IoU 
     that exceeds the threshold.
 
     \item \textbf{False Positive (FP)}: A predicted box that does not satisfy the
@@ -545,8 +548,7 @@ vehicles (increasing recall), but it simultaneously increases the risk of
 capturing background noise as valid vehicles (false positives), thereby 
 lowering precision. By calculating precision and recall at every possible 
 confidence threshold and plotting the results, we generate the precision-recall 
-(PR) curve.
-The PR curve illustrates the model's overarching stability and allows us to 
+(PR) curve. The PR curve illustrates the model's overarching stability and allows us to 
 visualize the exact penalty in precision when we tune the model to capture a 
 higher volume of traffic.
 
@@ -577,33 +579,33 @@ to retrieve the hardest-to-find vehicles (such as heavily occluded trucks).
 
 To evaluate the model across each of the MOVES-based classes, the 
 individual AP scores for all distinct classes are averaged to produce the 
-mean average precision (mAP50--95):
+mean average precision (mAP):
 
 \begin{equation}
-mAP50--95 = \frac{1}{N} \sum_{i=1}^{N} AP_i
+mAP = \frac{1}{N} \sum_{i=1}^{N} AP_i
 \end{equation}
 
 where $N$ is the total number of classes. 
-Because the mAP50--95 score relies on the initial spatial overlap requirement, standard 
+Because the mAP score relies on the initial spatial overlap requirement, standard 
 evaluation protocols report performance at different Intersection over Union (IoU) 
 thresholds. A common baseline is mAP50 (AP calculated at an IoU threshold of 0.50), which 
 tolerates moderate bounding box looseness. However, modern object detection systems
 evaluate performance using the protocol established by the Microsoft Common 
-Objects in Context (MS COCO) dataset \cite{lin_microsoft_2015}. The COCO-style mAP50--95 (often denoted 
-as $AP@[.50:.05:.95]$) averages the mAP50--95 across ten distinct IoU thresholds ranging 
+Objects in Context (MS COCO) dataset \cite{lin_microsoft_2015}. The COCO-style mAP (often denoted 
+as mAP50--95) averages the mAP across ten distinct IoU thresholds ranging 
 from 0.50 to 0.95 with a step size of 0.05:
 
 \begin{equation}
 mAP_{COCO} = \frac{1}{10} \sum_{t \in T}mAP_t
 \end{equation}
 
-Where $T = \{0.50, 0.55, 0.60, \dots, 0.95\}$ and $mAP_t$ is the mean average 
+where $T = \{0.50, 0.55, 0.60, \dots, 0.95\}$ and $mAP_t$ is the mean average 
 precision evaluated at IoU threshold $t$. 
 
 The primary objective of this thesis is accurate vehicle detection and classification
 for emissions-oriented traffic analysis, which makes mAP50 an intuitive metric because
 it measures whether a vehicle was detected with moderate spatial overlap. However,
-this study reports both mAP50 and COCO-style mAP50--95, and uses mAP50--95 as the primary
+this study reports both mAP50 and mAP50--95, and uses mAP50--95 as the primary
 performance indicator for several reasons:
 \begin{itemize}
     \item First, mAP50--95 evaluates detection performance across multiple IoU thresholds
@@ -620,12 +622,13 @@ performance indicator for several reasons:
     for reliable counting and class-specific analysis. Using mAP50--95 helps penalize
     these cases more appropriately.
 
-    \item Finally, COCO-style mAP50--95 is the standard summary metric in modern object
-    detection literature, making the results easier to compare with prior work.
+    \item Finally, mAP50--95 is the standard summary metric in modern object
+    detection literature, making the results easier to compare with prior work
+    \cite{lin_microsoft_2015, ultralytics_coco}.
 \end{itemize}
 
-COCO-style mAP50--95 therefore provides a more rigorous measure of detector quality in 
-this study, since it rewards models that not only detect vehicles, but also localize
+The mAP50--95 metric therefore provides a more rigorous measure of detector quality in 
+this study over mAP50, as it rewards models that not only detect vehicles, but also localize
 them precisely in dense urban traffic scenes.
 
 % ==============================================================================
