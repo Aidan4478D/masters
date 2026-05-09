@@ -20,8 +20,8 @@ two-stage networks, and transformer-based architectures.
 Here, one-stage detectors refer to models such as YOLO that predict object locations 
 and classes directly from the image in a single pass, whereas two-stage models first 
 propose candidate object regions and then classify them.
-As the data in Table~\ref{tab:architecture-comparison-summary} 
-indicates, the YOLO models performed consistently better than Faster R-CNN and the 
+As shown in Table~\ref{tab:architecture-comparison-summary}, the YOLO models 
+performed consistently better than Faster R-CNN and the 
 DETR models in terms of mAP50 and mAP50--95 on the validation set.
 
 \begin{table}[!htbp]
@@ -57,7 +57,7 @@ Deformable DETR's performance improved significantly (from 0.428 to 0.564 mAP50)
 the image augmentation pipeline was lightened. This suggests that these types of 
 models struggle to learn from a small dataset if the training images are too heavily
 modified or distorted. While newer variants like RT-DETRv2 showed promise, reaching 
-an mAP50 of 0.688, they still remained less accurate than the YOLOv11s model. 
+a mAP50 of 0.688, they still remained less accurate than the YOLOv11s model. 
 Ultimately, YOLO's architecture proved more effective at extracting the necessary 
 visual features from these low-resolution traffic scenes 
 \cite{yolo11_ultralytics, ultralytics_rtdetrv2_yolo11}.
@@ -83,7 +83,7 @@ required by the MOVES emissions software. Instead of forcing the model to distin
 between vehicle body styles that look nearly identical at $352 \times 240$ pixels, this
 approach grouped vehicles into broader categories based on their emissions profiles.
 
-This strategy was applied from the very beginning of the data annotation process. 
+This strategy was applied from the beginning of the data annotation process. 
 Visually similar body styles like coupes and hatchbacks were labeled as \verb|sedan|,
 while crossovers were labeled as \verb|suv|, relying on dependable visual cues 
 like cabin height and rear profile sloping. In the final taxonomy, these labels were 
@@ -141,7 +141,7 @@ addresses the model’s existing failures. Here, the smaller hard negative set p
 better because it directly reinforced the difficult boundary between similar vehicle
 classes. For urban monitoring applications, this suggests that iterative human-in-the-loop
 data refinement is more effective than untargeted dataset expansion. By reviewing the 
-model's own errors, researchers can improve the training set precisely where the detector 
+model's own errors, the training set can be improved precisely where the detector 
 is weakest.
 
 % ==============================================================================
@@ -199,7 +199,7 @@ Relative to the held-out test set, this corresponds to an additional decrease of
 0.114 in mAP50 and 0.119 in mAP50--95. This result shows that the model transferred less 
 effectively to unseen camera views than to new images from the original camera set
 \cite{hsu2019progressivedomainadaptationobject, vis_domain_adapt_paper}. 
-That imagery in this benchmark, shown in Figure~\ref{fig:new-cameras}, 
+The imagery in this benchmark, shown in Figure~\ref{fig:new-cameras}, 
 also presented more challenging visual conditions than the training set. The unseen 
 cameras showed broader urban scenes, more background content, and many vehicles 
 that appeared smaller because they were farther from the camera. Broadway and 
@@ -272,7 +272,7 @@ count magnitude. MAE measures the average hourly difference in raw vehicle count
 MAPE measures the average hourly error as a percentage of the ATR count, which 
 makes it easier to compare error across locations with different traffic volumes.
 
-As observed from Table~\ref{tab:atr-count-comparison}, the closest agreement was 
+As shown in Table~\ref{tab:atr-count-comparison}, the closest agreement was 
 at Atlantic Avenue at Boerum Place. On March 18, the detector produced a daily 
 total of 7,559 vehicles compared with an ATR total of 8,725, with a Pearson 
 correlation of 0.844, an MAE of 82.67 vehicles per hour, and a MAPE of 22.96\%. 
@@ -359,7 +359,7 @@ identifying corridors where freight or bus activity is concentrated and where
 follow-up interventions or measurements may be warranted. More broadly, the benefit
 of this approach is that it can build on infrastructure already being expanded by 
 NYC DOT, which has described plans to scale connected-vehicle and smart-intersection
-deployments from about 150 to as many as 600 intersections. If paired with limited 
+deployments to as many as 600 intersections. If paired with limited 
 site-specific calibration, the pipeline could offer a relatively low-cost and 
 privacy-preserving way to add transportation exposure intelligence to existing 
 urban traffic systems.

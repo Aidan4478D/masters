@@ -10,13 +10,13 @@ final 6-class setting.
 
 First, YOLO-based experiments are presented, including comparisons across model
 variants and refinements through data-centric strategies such as hard negative 
-mining and dataset refinement. Other detectors like DETR-based models and Faster
-R-CNN were examined to compare architectures within the project’s context. 
+mining and dataset refinement. Alternative detectors, including DETR-based models and Faster
+R-CNN, were examined to compare architectures within the project’s context. 
 
 After identifying the strongest detector, additional experiments evaluate its 
 robustness through threshold and NMS sensitivity analysis, cross-camera generalization,
 and agreement between predicted vehicle counts and reference ATR or manual counts. 
-Together, these experiments exhibit the practical suitability of the final system 
+Together, these experiments assess the practical suitability of the final system 
 for traffic-monitoring applications.
 
 % ==============================================================================
@@ -91,7 +91,7 @@ procedure described in Section \ref{sec:unknown-vehicles}.
             {Validation mAP50 and mAP50--95 over 50 epochs for the baseline YOLOv8s, 
              YOLOv11s, and YOLOv26s models. All three models showed rapid early 
              improvement followed by a gradual plateau, with YOLOv26s achieving the 
-             strongest baseline mAP50--95 and YOLOv11s remaining competitive in mAP50.}
+             strongest baseline mAP50--95 and YOLOv11s achieving the strongest baseline mAP50.}
     \label{fig:baseline-yolo-charts}
 \end{figure}
 
@@ -116,9 +116,9 @@ procedure described in Section \ref{sec:unknown-vehicles}.
 
 As shown in Table~\ref{tab:yolo-baseline-results} and Figure~\ref{fig:baseline-yolo-charts}, 
 all three baseline YOLO variants converged within 50 epochs on the validation set 
-under the MOVES-based taxonomy. YOLOv8s achieved an mAP50 of 0.750 and a mAP50--95 of 0.606,
-while YOLOv11s improved this to an mAP50 of 0.804 and a mAP50--95 of 0.615. YOLOv26s 
-produced the highest baseline mAP50--95 at 0.632, while remaining close to YOLOv11s 
+under the MOVES-based taxonomy. YOLOv8s achieved a mAP50 of 0.750 and a mAP50--95 of 0.606,
+while YOLOv11s improved this to a mAP50 of 0.804 and a mAP50--95 of 0.615. YOLOv26s 
+produced the highest baseline mAP50--95 value of 0.632, while remaining close to YOLOv11s 
 in mAP50 with a value of 0.802. Since YOLOv11s and YOLOv26s represented the strongest 
 baseline models in terms of mAP50 and mAP50--95, respectively, both were carried forward 
 into the subsequent refinement experiments. The next stage of experiments investigated
@@ -169,7 +169,7 @@ evaluation outlined in Section~\ref{sec:unknown-vehicles}.
 After this review, the dataset was refined by reassessing flagged examples individually.
 Vehicles whose labels could be determined more confidently from the imagery were 
 reassigned to the appropriate class, while vehicles that remained too ambiguous 
-were labeled as \verb|unknown_vehicle| and excluded from the learnable class set. 
+were labeled as \verb|unknown_vehicle| and treated as ignore regions. 
 The post-refinement validation confusion matrices for the YOLOv11s and YOLOv26s 
 models are shown in Figure~\ref{fig:val-cm-post}. Relative to the pre-refinement 
 results, these matrices show larger values along the main diagonal and smaller 
@@ -200,8 +200,8 @@ were predicted for background regions was reduced.
 
 As shown in Table~\ref{tab:dataset-refinement-results}, the dataset refinement 
 step led to small but consistent improvements in validation performance for both 
-baseline models. YOLOv11s improved from an mAP50 of 0.804 to 0.814 and from an 
-mAP50--95 of 0.615 to 0.622, while YOLOv26s improved from an mAP50 of 0.802 to 0.809
+baseline models. YOLOv11s improved from a mAP50 of 0.804 to 0.814 and from a 
+mAP50--95 of 0.615 to 0.622, while YOLOv26s improved from a mAP50 of 0.802 to 0.809
 and from a mAP50--95 of 0.632 to 0.637. These gains were modest, but they support 
 the conclusion that manually reassessing flagged examples and preserving genuinely 
 ambiguous vehicles as \verb|unknown_vehicle| improved dataset quality.
@@ -430,7 +430,7 @@ the final detector selected for this study was YOLOv11s, saved as checkpoint
 \verb|vehicle_6c_v11s11|. For readability, this checkpoint is referred to 
 throughout the remainder of the thesis as the final YOLOv11s model. Among all 
 YOLO experiments, this configuration achieved the strongest validation performance,
-with an mAP50 of 0.857 and a mAP50--95 of 0.661.
+with a mAP50 of 0.857 and a mAP50--95 of 0.661.
 
 Although additional refinement runs were explored after this stage, none improved 
 upon the validation performance of the final YOLOv11s model. This model was therefore 
@@ -475,10 +475,10 @@ Like the YOLO experiments, Faster R-CNN experiments were conducted under the
 MOVES-based taxonomy. Faster R-CNN is a two-stage object detector that first 
 generates candidate object regions using a Region Proposal Network and then 
 classifies and refines those regions in a second stage~\cite{ren_faster_2015}. 
-For implementation, torchvision Faster R-CNN models with ResNet-50 feature 
+For implementation, Torchvision Faster R-CNN models with ResNet-50 feature 
 pyramid backbones were used, including both the standard 
 \verb|fasterrcnn_resnet50_fpn| model and the newer 
-\verb|fasterrcnn_resnet50_fpn_v2| variant provided in torchvision. Feature 
+\verb|fasterrcnn_resnet50_fpn_v2| variant provided in Torchvision. Feature 
 pyramid backbones are commonly used to improve multi-scale object detection
 ~\cite{lin_feature_2017}, and the specific torchvision implementation is 
 documented by the torchvision maintainers~\cite{torchvision2016}.
@@ -527,18 +527,18 @@ strongest Faster R-CNN results produced in this study.
 Among the tested configurations, the best overall Faster R-CNN result was obtained
 with the \verb|fasterrcnn_resnet50_fpn_v2| backbone using a learning rate of $2\times10^{-4}$,
 flip-plus-color-jitter augmentation, and 5 trainable backbone layers. On the 
-validation set, this model achieved an mAP50 of 0.706 and a mAP50--95 of 0.509. 
+validation set, this model achieved a mAP50 of 0.706 and a mAP50--95 of 0.509. 
 Other strong \verb|fasterrcnn_resnet50_fpn_v2| runs achieved mAP50 values of 0.693 and 0.686,
 with corresponding mAP50--95 values of 0.500 and 0.497, indicating that the v2 
 backbone was consistently the strongest 
 Faster R-CNN variant across the tested settings. By comparison, the best standard 
-\verb|fasterrcnn_resnet50_fpn| configuration achieved an mAP50 of 0.658 and a mAP50--95 
+\verb|fasterrcnn_resnet50_fpn| configuration achieved a mAP50 of 0.658 and a mAP50--95 
 of 0.440. 
 
 Although the \verb|fasterrcnn_resnet50_fpn_v2| experiments produced the strongest 
 Faster R-CNN results in this study, their validation performance remained below that 
 of the YOLO baselines reported in Table~\ref{tab:yolo-baseline-results}. 
-The best Faster R-CNN configuration achieved an mAP50 of 0.706 and a mAP50--95 of 0.509, 
+The best Faster R-CNN configuration achieved a mAP50 of 0.706 and a mAP50--95 of 0.509, 
 whereas the strongest baseline YOLO results were already higher before additional 
 refinement. Since the Faster R-CNN baselines did not approach the performance of the 
 leading YOLO configurations, further iteration on the Faster R-CNN models was not
@@ -589,10 +589,10 @@ during training, and treated as ignore regions during evaluation.
         \toprule
         Backbone & \shortstack{Head LR\\(Frozen)} & \shortstack{Backbone LR\\(Unfrozen)} & \shortstack{Head LR\\(Unfrozen)} & Augmentations & mAP50 & mAP50--95 \\
         \midrule
-        SenseTime/deformable-detr & $1\times10^{-4}$ & $1\times10^{-5}$ & $7\times10^{-5}$ & Heavy & 0.428 & 0.318 \\
-        SenseTime/deformable-detr & $1\times10^{-4}$ & $1\times10^{-5}$ & $7\times10^{-5}$ & Light & 0.564 & 0.421 \\
-        PekingU/rtdetr\_r50vd     & $1\times10^{-5}$ & $5\times10^{-6}$ & $7\times10^{-6}$ & Light & 0.596 & 0.437 \\
-        PekingU/rtdetr\_v2\_r50vd & $1\times10^{-5}$ & $5\times10^{-6}$ & $7\times10^{-6}$ & Light & 0.688 & 0.516 \\
+        Deformable DETR & $1\times10^{-4}$ & $1\times10^{-5}$ & $7\times10^{-5}$ & Heavy & 0.428 & 0.318 \\
+        Deformable DETR & $1\times10^{-4}$ & $1\times10^{-5}$ & $7\times10^{-5}$ & Light & 0.564 & 0.421 \\
+        RT-DETR         & $1\times10^{-5}$ & $5\times10^{-6}$ & $7\times10^{-6}$ & Light & 0.596 & 0.437 \\
+        RT-DETRv2       & $1\times10^{-5}$ & $5\times10^{-6}$ & $7\times10^{-6}$ & Light & 0.688 & 0.516 \\
         \bottomrule
     \end{tabular}%
     }
@@ -600,13 +600,13 @@ during training, and treated as ignore regions during evaluation.
 \FloatBarrier
 
 The transformer experiments showed a clear progression across the tested DETR 
-variants. For SenseTime Deformable DETR, an initial 50-epoch run achieved an mAP50 
+variants. For SenseTime Deformable DETR, an initial 50-epoch run achieved a mAP50 
 of 0.428 and a mAP50--95 of 0.318, while a second run with less aggressive image 
 transforms improved performance to 0.564 mAP50 and 0.421 mAP50--95. Additional 
 hyperparameter and augmentation adjustments were also tested, but none exceeded 
-this result. Under the same 50-epoch training schedule, RT-DETR achieved an mAP50 
+this result. Under the same 50-epoch training schedule, RT-DETR achieved a mAP50 
 of 0.596 and a mAP50--95 of 0.437, and RT-DETRv2 produced the strongest transformer-based
-result in this study, reaching an mAP50 of 0.688 and a mAP50--95 of 0.516.
+result in this study, reaching a mAP50 of 0.688 and a mAP50--95 of 0.516.
 
 Although RT-DETRv2 was the strongest transformer-based model evaluated, its 
 performance still remained below the baseline YOLO results reported in 
@@ -631,7 +631,7 @@ at varying times of day in order to capture a range of traffic and viewing condi
 \label{sec:conf-nms-analysis}
 
 To evaluate how dependent the final detector was on inference-time settings, a 
-threshold and non-maximum suppression (NMS) sensitivity analysis was performed 
+confidence-threshold and non-maximum suppression (NMS) sensitivity analysis was performed 
 using the final YOLOv11s model. In this context, the confidence threshold determines
 the minimum prediction confidence required for a detection to be kept, while 
 the NMS IoU threshold controls how aggressively overlapping detections are suppressed 
@@ -788,7 +788,7 @@ the benchmark is summarized in Table~\ref{tab:cross-camera-benchmark-class-count
 The cross-camera benchmark was evaluated using the same ignore-aware procedure as 
 described in Section~\ref{sec:unknown-vehicles}. Table~\ref{tab:cross-camera-results}
 summarizes the per-class results on this 75-image benchmark. Overall, the final 
-YOLOv11s model achieved an mAP50 of 0.658 and a mAP50--95 of 0.488 across 364 annotated 
+YOLOv11s model achieved a mAP50 of 0.658 and a mAP50--95 of 0.488 across 364 annotated 
 vehicle instances.
 
 \begin{table}[!htbp]
@@ -862,8 +862,7 @@ March 2026 camera imagery was then matched to March 2025 ATR dates with broadly
 similar weather conditions \cite{zippenfenig_open-meteocom_2024}.
 
 Images were collected from March 13, 2026 at 12:01 AM through March 20, 2026 at 
-12:00 PM. An image was sampled from eac
-h camera every two minutes, consistent 
+12:00 PM. An image was sampled from each camera every two minutes, consistent 
 with the sampling rate used during dataset creation, to reduce the risk of the
 same scene being counted more than once, since the camera feeds update slowly 
 and explicit image-to-image vehicle matching was not implemented. 

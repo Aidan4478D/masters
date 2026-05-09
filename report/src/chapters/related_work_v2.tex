@@ -14,11 +14,11 @@ to ``develop emission inventories for the development of state implementation
 plans (SIPs), transportation conformity determinations, and analyses required 
 under the National Environmental Policy Act (NEPA)'' \cite{USEPA_tech_2024}.
 
-MOVES operates by calculating baseline emission rates, or coefficients, for various 
-vehicle classes under specific operating conditions. To compute these coefficients,
+MOVES operates by calculating baseline emission rates for various 
+vehicle classes under specific operating conditions. To compute these values,
 the model requires detailed inputs, including vehicle fleet composition, age 
 distributions, fuel properties, weather conditions, and roadway activity data \cite{USEPA_tech_2024}.
-By scaling these calculated emission coefficients with localized traffic data 
+By scaling these calculated emission rates with localized traffic data 
 such as vehicle miles traveled (VMT) and traffic speeds, planners can conduct 
 air quality assessments \cite{NY911_hill_ghg, california_air_resources_board_brake, octc_final_2021}, 
 evaluate congestion mitigation strategies \cite{TAYARANI2020102620}, 
@@ -35,7 +35,7 @@ However, these methods typically produce sparse or
 short-duration measurements \cite{FHWA_traffic_2010}. 
 This spatial and temporal limitation prevents the ability to capture the complete 
 distribution of urban traffic at any point in the year, making it difficult to 
-determine localized emissions coefficients.
+determine localized emissions rates.
 
 \begin{table}[!htbp]
     \centering
@@ -64,9 +64,10 @@ determine localized emissions coefficients.
 
 The approach proposed in this thesis aims to bridge this data gap. By applying 
 computer vision techniques to existing public traffic camera networks, the proposed
-pipeline detects and classifies vehicles to generate continuous, high-resolution 
-traffic composition data. Replacing short-term samples with long-term observations
-allows for a much more accurate calculation of vehicle emissions coefficients. 
+pipeline detects and classifies vehicles to generate higher-resolution traffic composition
+estimates across more locations and times than short-duration manual or ATR campaigns alone.
+Replacing short-term samples with longer-term observations can improve the activity 
+inputs used in MOVES and support more accurate localized emissions estimates.
 Ultimately, this methodology is built to support the MOVES framework, bridging 
 the gap between static monitoring practices and the dynamic reality of urban traffic.
 
@@ -181,7 +182,7 @@ agency data rather than continuous direct observation of traffic flows.
 
 \subsubsection{Traffic-Camera Based Monitoring}
 
-In recent years, New York City has begun exploring camera based approaches to 
+In recent years, New York City has begun exploring camera-based approaches to 
 street monitoring that can capture traffic activity continuously and across more 
 locations. In 2023, NYC DOT launched a pilot program with the analytics company 
 Viva to use ``street activity sensors'' developed by Viva to analyze street activity

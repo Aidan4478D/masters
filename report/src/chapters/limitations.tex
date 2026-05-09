@@ -14,7 +14,7 @@ resolution is helpful from a privacy standpoint, since it makes license plates a
 faces effectively unreadable, but it also makes the system less reliable for smaller
 or farther vehicles. In addition, the camera imagery itself is not always consistent.
 As shown in Figure~\ref{fig:camera-down} and Figure~\ref{fig:image-weather-conditions},
-some cameras occasionally produce degraded frames due to servicing, or strong lighting effects. 
+some cameras occasionally produce degraded frames due to servicing or strong lighting effects. 
 Nighttime glare (Figure~\ref{fig:camera-artifact-a}), 
 direct sunlight and lens flare (Figure~\ref{fig:camera-artifact-b}), 
 and image corruption (Figure~\ref{fig:camera-artifact-c})
@@ -65,7 +65,7 @@ controlled during training.
 Furthermore, although the training set contains 1,200 unique images, it was drawn 
 from only 12 camera intersections, with more than half located in Manhattan and 
 fewer examples from other boroughs such as Brooklyn, the Bronx, and Queens. Camera viewpoint 
-was another source of limitation. A fixed camera view can be useful for deployment 
+presented an additional source of limitation. A fixed camera view can be useful for deployment 
 because it provides consistent scene geometry, but the cameras used in this study 
 are Pan-Tilt-Zoom (PTZ) cameras whose orientation and zoom can change over time. 
 As a result, images collected from a given location may not capture every view that 
@@ -74,7 +74,7 @@ dropped on the unseen-camera benchmark, as the model learned the original camera
 views well but generalized less reliably to new scene layouts and viewing angles. 
 Class imbalance was another important limitation. Some categories, especially 
 \verb|motorcycle|, were represented by very few examples in training. With only 
-49 labeled motorcycles, that class had the weakest test-set performance and was 
+48 labeled motorcycles, that class had the weakest test-set performance and was 
 often visually confused with bicycles or other small two-wheeled objects.
 
 % ------------------------------------------------------------------------------
@@ -101,8 +101,8 @@ static snapshots alone.
 In addition, the detector was evaluated only with spatial bounding-box metrics such
 as mAP50 and mAP50--95 on still images. These metrics measure detection and classification 
 quality within individual frames, but they do not capture temporal consistency or 
-full video-level understanding. More advanced models, like foundation large 
-vision-language models, may be able to reason about some ambiguous cases more 
+full video-level understanding. More advanced models, such as large vision-language foundation
+models, may be able to reason about some ambiguous cases more 
 flexibly, but they are not practical for this deployment setting. Running a large 
 commercial model across hundreds of traffic cameras at frequent intervals would 
 introduce substantial cost and latency. For that reason, efficient detectors such

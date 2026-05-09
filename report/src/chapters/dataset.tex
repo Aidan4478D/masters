@@ -4,7 +4,7 @@ To train and evaluate the vehicle detection pipeline, a custom dataset of real-w
 NYC traffic imagery was required. Rather than relying on pre-existing generic vehicle 
 datasets (e.g., Stanford Cars \cite{Krause2013CollectingAL} or BIT-Vehicle \cite{dong_vehicle_2015}), 
 this study utilized publicly available traffic camera closed-circuit television 
-(CCTV) feeds. This is because the physical camera infrastructure is already installed  
+(CCTV) feeds. This choice was motivated by the fact that the physical camera infrastructure is already installed  
 on hundreds of streets across the five boroughs, eliminating the need for new 
 equipment and installations. Additionally, images collected from the NYC CCTV 
 traffic cameras have a unique resolution and viewing angle, making it difficult 
@@ -12,7 +12,7 @@ to generalize vehicles from other datasets to vehicles from NYC CCTV images.
 Furthermore, recent state legislation authorized the New York City Department 
 of Transportation (NYC DOT) to quadruple its automated camera network, expanding 
 to 600 equipped intersections by the end of 2026 \cite{office_of_the_governor_2024}. 
-By building off of this existing and continually expanding network, 
+By building on this existing and continually expanding network, 
 this methodology ensures that the proposed vehicle detection pipeline can be 
 deployed and scaled citywide without requiring any additional physical infrastructure installation.
 
@@ -34,11 +34,11 @@ By utilizing these live feeds, transportation agencies can actively detect incid
 analyze urban congestion, and broadcast real-time travel conditions to the public
 \cite{NYCDOT_item_2024}.
 
-The data can be accessed online through an online GUI or through the 511NY 
+The data can be accessed through a web-based GUI or through the 511NY 
 Developer REST API. Developers with access to this API can query various 
 transportation endpoints, including 
 \verb|GetCameras|, \verb|GetEvents|, and \verb|GetMessageSigns| \cite{511ny_api_docs}. 
-The \verb|GetCameras| endpoint was primarily queried as it returned metadata for a 
+The \verb|GetCameras| endpoint was queried primarily as it returned metadata for a 
 camera's unique ID, exact coordinates (latitude and longitude), the roadway name,
 and a URL to fetch the current camera image.
 
@@ -217,9 +217,9 @@ locations within NYC are depicted in Figure~\ref{fig:camera-map}.
     ]
     {
         Different views of vehicles through different traffic cameras.
-        The images are colored such that vehicle regions highlighted in \textcolor{myyellow}{yellow} show its 
-        front, vehicle regions highlighted in \textcolor{red}{red} show its rear, and vehicle regions highlighted 
-        in \textcolor{blue}{blue} show its side.
+        The images are colored such that vehicle regions highlighted in \textcolor{myyellow}{yellow} show the vehicle
+        front, vehicle regions highlighted in \textcolor{red}{red} show the vehicle rear, and vehicle regions highlighted 
+        in \textcolor{blue}{blue} show the vehicle side.
     }
     \label{fig:vehicle-views}
 \end{figure}
@@ -285,8 +285,8 @@ afternoon peak traffic period (3 PM to 6 PM).
     \label{fig:vehicles-hour-chart}
 \end{figure}
 
-Images were collected during various weather and lighting patterns so that the 
-model learns a robust representation of vehicles under different conditions. 
+Images were collected during various weather and lighting conditions so that the 
+model could learn a robust representation of vehicles under different conditions. 
 Examples of different conditions are shown in Figure~\ref{fig:image-weather-conditions}.
 
 \begin{figure}[!htbp]

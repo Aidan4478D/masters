@@ -403,15 +403,15 @@ removed before scoring. The remaining predictions were then matched against the
 MOVES-based classes to compute mAP50 and mAP50--95. This ensured that detections falling
 on visually ambiguous vehicles were not counted as false positives, while preserving
 the standard inference settings for confidence threshold, NMS IoU threshold, and 
-maximum detections. This same ignore-region procedure was applied consistently 
+maximum detections. This handling of unknown-vehicle regions was applied consistently 
 across model architectures during training, validation, and test evaluation.
 
 % ==============================================================================
 
 \subsection{Performance Metrics}
 
-To determine if using computer vision is an adequate method to estimate 
-emissions coefficients in New York City, the vehicle detection pipeline must be 
+To determine whether computer vision can support emissions-oriented traffic
+measurement in New York City, the vehicle detection pipeline must be 
 rigorously evaluated. Unlike standard image classification, object detection 
 requires assessing two distinct tasks simultaneously: accurately localizing a 
 vehicle within a complex urban environment and correctly classifying its 
@@ -451,7 +451,7 @@ Figure~\ref{fig:iou_calc} shows the corresponding IoU calculation.
 \end{figure}
 
 An IoU score ranges from 0 (no overlap) to 1 (perfect alignment). By
-establishing an IoU threshold (ex., 0.50), we define the strictness required 
+establishing an IoU threshold (e.g., 0.50), we define the strictness required 
 for a bounding box prediction to be considered valid.
 
 \FloatBarrier
@@ -515,8 +515,8 @@ the context of this project, the entries of the confusion matrix correspond to:
 
 \subsubsection{Precision-Recall Curve}
 Using the \textit{TP}, \textit{FP}, and \textit{FN} counts defined above, we can calculate 
-precision and recall to evaluate the pipeline's ability and reliability in tracking 
-urban traffic.
+precision and recall to evaluate the pipeline's ability to detect vehicles reliably in  
+urban traffic settings.
 
 \begin{itemize}
     \item \textbf{Precision} measures the reliability of the model’s vehicle predictions.
@@ -541,7 +541,7 @@ urban traffic.
     emission sources are not undercounted in the final analysis.
 \end{itemize}
 
-Modern object detectors like the YOLO output a confidence score with each 
+Modern object detectors like YOLO output a confidence score with each 
 predicted bounding box, creating a trade-off between precision and 
 recall. Lowering the confidence threshold allows the model to predict more 
 vehicles (increasing recall), but it simultaneously increases the risk of 
@@ -586,7 +586,7 @@ mAP = \frac{1}{N} \sum_{i=1}^{N} AP_i
 \end{equation}
 
 where $N$ is the total number of classes. 
-Because the mAP score relies on the initial spatial overlap requirement, standard 
+Because the mAP score still depends on the spatial overlap threshold, standard 
 evaluation protocols report performance at different Intersection over Union (IoU) 
 thresholds. A common baseline is mAP50 (AP calculated at an IoU threshold of 0.50), which 
 tolerates moderate bounding box looseness. However, modern object detection systems
